@@ -43,6 +43,26 @@ export const productSeries: ProductSeries[] = [
     color: 'linear-gradient(135deg, #7b3f00, #c8a84b)',
     models: [
 
+      {
+        id: 'mh3848x120t',
+        model: 'MH3848X120T',
+        zh: '热压机',
+        en: 'Hot Press',
+        images: [
+          '/热压机/热压机_MH3848X120T_20260205_绿白/热压机_MH3848X120T_20260205_绿白_up(2)_001.webp',
+          '/热压机/热压机_MH3848X120T_20260205_绿白/热压机_MH3848X120T_20260205_绿白_up (2)_001.webp',
+          '/热压机/热压机_MH3848X120T_20260205_绿白/热压机_MH3848X120T_20260205_绿白_up (3)_001.webp',
+        ],
+        specs: [
+          { keyZh: '产品描述', keyEn: 'Description', valueZh: '三面4层热压拼板机', valueEn: 'Three-sided 4-layer hot press splicing machine' },
+          { keyZh: '开距', keyEn: 'Opening Distance', valueZh: '100mm', valueEn: '100mm' },
+          { keyZh: '发热管功率', keyEn: 'Heating Tube Power', valueZh: '72kW', valueEn: '72kW' },
+          { keyZh: '热油泵功率', keyEn: 'Hot Oil Pump Power', valueZh: '2.2kW', valueEn: '2.2kW' },
+          { keyZh: '油缸', keyEn: 'Hydraulic Cylinders', valueZh: 'φ100×4PCS', valueEn: 'φ100×4PCS' },
+          { keyZh: '压板尺寸', keyEn: 'Press Plate Size', valueZh: '1370×1200×40mm', valueEn: '1370×1200×40mm' },
+        ],
+        features: []
+      },
     ]
   },
   {

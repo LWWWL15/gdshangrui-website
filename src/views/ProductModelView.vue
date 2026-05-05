@@ -52,7 +52,7 @@
               <table class="specs-table">
                 <tr v-for="spec in model.specs" :key="spec.keyZh">
                   <td class="spec-key">{{ t(spec.keyZh, spec.keyEn) }}</td>
-                  <td class="spec-value">{{ spec.valueEn && spec.valueEn !== spec.valueZh ? spec.valueEn : spec.valueZh }}</td>
+                  <td class="spec-value">{{ isZh ? spec.valueZh : spec.valueEn }}</td>
                 </tr>
               </table>
             </div>
