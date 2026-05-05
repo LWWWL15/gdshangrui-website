@@ -125,6 +125,26 @@ export const productSeries: ProductSeries[] = [
         ],
         features: []
       },
+      {
+        id: 'mh3248x100t',
+        model: 'MH3248x100T',
+        zh: '冷压机',
+        en: 'Cold Press',
+        images: [
+          '/冷压机/冷压机_MH3248x100T_20260425_黑黄白/冷压机_MH3248x100T_20260425_黑黄白 _up(4)_001.webp',
+          '/冷压机/冷压机_MH3248x100T_20260425_黑黄白/冷压机_MH3248x100T_20260425_黑黄白 _up(5)_001.webp',
+          '/冷压机/冷压机_MH3248x100T_20260425_黑黄白/冷压机_MH3248x100T_20260425_黑黄白_up (3)_001.webp',
+        ],
+        specs: [
+          { keyZh: '台面尺寸', keyEn: 'Table Size', valueZh: '3200×1600mm', valueEn: '3200×1600mm' },
+          { keyZh: '油缸数量', keyEn: 'Number of Cylinders', valueZh: '6支', valueEn: '6 Pcs' },
+          { keyZh: '最大压力', keyEn: 'Max Pressure', valueZh: '100T', valueEn: '100T' },
+          { keyZh: '机器重量', keyEn: 'Machine Weight', valueZh: '约4600kg', valueEn: 'approx. 4600kg' },
+          { keyZh: '功率', keyEn: 'Power', valueZh: '5.5kW', valueEn: '5.5kW' },
+          { keyZh: '最大加工高度', keyEn: 'Max Processing Height', valueZh: '1000mm', valueEn: '1000mm' },
+        ],
+        features: []
+      },
 
     ]
   },
