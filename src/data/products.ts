@@ -188,7 +188,25 @@ export const productSeries: ProductSeries[] = [
     icon: '🚪',
     color: "url('/door-frame-bg.webp')",
     models: [
-
+      {
+        id: 'mh2210',
+        model: 'MH2210',
+        zh: '门框组合机',
+        en: 'Door Frame Assembly Machine',
+        images: [
+          '/门框组合机/门框组合机_MH2210_20260325_蓝白/门框组合机_MH2210_20260325_蓝白_up_001.webp'
+        ],
+        specs: [
+          { keyZh: '最大组合尺寸', keyEn: 'Max. Combination Size', valueZh: '1220×2440mm', valueEn: '1220×2440mm' },
+          { keyZh: '液压电机功率', keyEn: 'Hydraulic Motor Power', valueZh: '2.2kW', valueEn: '2.2kW' },
+          { keyZh: '重量', keyEn: 'Weight', valueZh: '约2000kg', valueEn: 'Approx. 2000kg' },
+          { keyZh: '正压油缸', keyEn: 'Front Pressing Cylinders', valueZh: '4条', valueEn: '4 Pcs' },
+          { keyZh: '侧压油缸', keyEn: 'Side Pressing Cylinders', valueZh: '3条', valueEn: '3 Pcs' },
+          { keyZh: '单面或双面', keyEn: 'Single/Double Sided', valueZh: '双面', valueEn: 'Double-sided' },
+          { keyZh: '压料架', keyEn: 'Material Pressing Frame', valueZh: '有', valueEn: 'Included' }
+        ],
+        features: []
+      }
     ]
   },
   {
