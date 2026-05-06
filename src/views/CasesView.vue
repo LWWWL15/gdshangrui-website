@@ -11,7 +11,7 @@
     <section class="section">
       <div class="container">
         <div class="cases-grid">
-          <div v-for="c in cases" :key="c.id" class="card case-card">
+          <router-link v-for="c in cases" :key="c.id" :to="'/cases/' + c.id" class="card case-card">
             <div class="case-img" :style="{ background: c.color }">
               <span class="case-region">{{ c.region }}</span>
               <span class="case-icon">{{ c.icon }}</span>
@@ -21,7 +21,7 @@
               <h3>{{ t(c.titleZh, c.titleEn) }}</h3>
               <p>{{ t(c.descZh, c.descEn) }}</p>
             </div>
-          </div>
+          </router-link>
         </div>
       </div>
     </section>
@@ -75,6 +75,16 @@ const cases = [
 }
 
 .case-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+  }
+
   .case-img {
     height: 200px;
     display: flex;
