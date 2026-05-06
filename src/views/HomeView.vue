@@ -920,9 +920,25 @@ background-image: url('/hero-bg.webp');
 
 .section-cta {
   padding: $s-2xl 0;
-  background: #f5f5f5;
+  background-image: url(/contact-get-in-touch-bg.webp);
+  background-size: cover;
+  background-position: center;
   text-align: center;
   border-top: 1px solid #e0e0e0;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.85);
+    pointer-events: none;
+  }
+
+  > .container {
+    position: relative;
+    z-index: 1;
+  }
 
   @media (max-width: $bp-sm) {
     padding: $s-lg 0;

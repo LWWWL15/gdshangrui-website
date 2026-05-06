@@ -40,7 +40,7 @@ export const productSeries: ProductSeries[] = [
     descZh: '高温热压，适用于贴面板、胶合板、密度板等产品的生产，加热均匀，效率高。',
     descEn: 'High-temperature pressing for veneered panels, plywood and MDF production with uniform heating.',
     icon: '🔶',
-    color: 'linear-gradient(135deg, #7b3f00, #c8a84b)',
+    color: 'url(/hot-press-bg.webp)',
     models: [
 
       {
@@ -155,7 +155,7 @@ export const productSeries: ProductSeries[] = [
     descZh: '一次性多片切割，大幅提高生产效率，切割精度高，适用于实木、板材的纵向开料。',
     descEn: 'Multiple blade cutting in one pass for high efficiency. Suitable for solid wood and panel longitudinal cutting.',
     icon: '⚙️',
-    color: 'linear-gradient(135deg, #1a4a2e, #2d9e5f)',
+    color: 'url(/multi-blade-saw-bg.webp)',
     models: [
     ]
   },
@@ -176,7 +176,7 @@ export const productSeries: ProductSeries[] = [
     descZh: '高效拼板设备，适用于木板拼接，拼接牢固平整。',
     descEn: 'Efficient splicing equipment for wood board splicing with strong and flat joints.',
     icon: '📐',
-    color: 'linear-gradient(135deg, #3d1a6b, #8b5cf6)',
+    color: 'url(/splicing-machine-bg.webp)',
     models: []
   },
   {
@@ -216,7 +216,7 @@ export const productSeries: ProductSeries[] = [
     descZh: '更多木工机械设备，满足您的多样化需求。',
     descEn: 'More woodworking machinery to meet your diverse needs.',
     icon: '📦',
-    color: 'linear-gradient(135deg, #4a4a4a, #8e8e8e)',
+    color: 'url(/other-bg.webp)',
     models: []
   },
 ]
