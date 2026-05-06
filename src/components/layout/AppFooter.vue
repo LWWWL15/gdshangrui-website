@@ -171,16 +171,13 @@ const navItems = [
   height: 32px;
   border-radius: 6px;
   color: white;
+  opacity: 0.85;
   transition: opacity 0.2s ease, transform 0.2s ease;
 
   &:hover {
-    opacity: 0.85;
+    opacity: 1;
     transform: translateY(-1px);
   }
-
-  &.fb { background: #1877F2; }
-  &.ig { background: linear-gradient(135deg, #f58529 0%, #dd2a7b 50%, #8134af 100%); }
-  &.yt { background: #FF0000; }
 }
 
 .footer-bottom {

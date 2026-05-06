@@ -54,6 +54,8 @@ const { t } = useLang()
   }
 }
 
+.section { padding-top: $s-lg; }
+
 .series-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));

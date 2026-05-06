@@ -318,7 +318,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   left: 0;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 20px;
 }
 
 .header-social-icons {
@@ -337,17 +337,14 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   height: 28px;
   border-radius: 4px;
   color: #ffffff;
+  opacity: 0.85;
   transition: opacity 0.2s ease;
   text-decoration: none;
   flex-shrink: 0;
 
   svg { width: 16px; height: 16px; }
 
-  &:hover { opacity: 0.8; }
-
-  &.fb { background: #1877F2; }
-  &.ig { background: linear-gradient(135deg, #f58529 0%, #dd2a7b 50%, #8134af 100%); }
-  &.yt { background: #FF0000; }
+  &:hover { opacity: 1; }
 }
 
 .header-right {

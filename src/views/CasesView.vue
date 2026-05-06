@@ -64,6 +64,8 @@ const cases = [
   }
 }
 
+.section { padding-top: $s-lg; }
+
 .cases-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

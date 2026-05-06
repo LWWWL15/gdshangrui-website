@@ -177,6 +177,7 @@ const values = [
 }
 
 .section-intro {
+  padding-top: $s-lg;
   @media (max-width: $bp-sm) {
     padding-top: $s-lg;
     padding-bottom: $s-lg;

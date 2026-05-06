@@ -145,6 +145,8 @@ const handleSubmit = async () => {
   }
 }
 
+.section { padding-top: $s-lg; }
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
