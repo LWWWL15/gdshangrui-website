@@ -197,7 +197,24 @@ const navItems = [
   p { font-size: $fs-xs; color: rgba(255,255,255,0.7); }
 }
 
-.lang-switch { display: flex; gap: 4px; }
+.lang-switch {
+  display: flex;
+  gap: 4px;
+
+  .lang-btn {
+    color: #ffffff;
+    border-color: rgba(255,255,255,0.3);
+
+    &.active {
+      background: rgba(255,255,255,0.15);
+      border-color: #ffffff;
+    }
+
+    &:hover {
+      background: rgba(255,255,255,0.1);
+    }
+  }
+}
 
 // 公司logo样式
 .brand-logo {
