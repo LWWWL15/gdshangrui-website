@@ -96,7 +96,7 @@
     <!-- Core Value -->
     <section class="section-value section-hide-mobile">
       <div class="container">
-        <h2>{{ t('为什么选择上锐', 'Why Choose SHANGRUI', t('为什么选择上锐', 'Why Choose Shang Rui', 'Tại sao chọn Shang Rui', 'Почему выбирают Shang Rui'), t('为什么选择上锐', 'Why Choose Shang Rui', 'Tại sao chọn Shang Rui', 'Почему выбирают Shang Rui')) }}</h2>
+        <h2>{{ t('为什么选择上锐？', 'Why Choose SHANGRUI?', t('为什么选择上锐？', 'Why Choose Shang Rui?', 'Tại sao chọn Shang Rui?', 'Почему выбирают Shang Rui?'), t('为什么选择上锐？', 'Why Choose Shang Rui?', 'Tại sao chọn Shang Rui?', 'Почему выбирают Shang Rui?')) }}</h2>
         <div class="value-grid">
           <div class="value-item" v-for="v in values" :key="v.icon">
             <div class="value-icon">{{ v.icon }}</div>
@@ -151,6 +151,7 @@
           </div>
         </div>
       </div>
+      <DeliveryBanner />
     </section>
 
     <!-- CTA -->
@@ -169,6 +170,7 @@ import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { useLang } from '@/composables/useLang'
 import { productSeries, getAllModels } from '@/data/products'
+import DeliveryBanner from '@/components/DeliveryBanner.vue'
 const { t, tm, lang } = useLang()
 const route = useRoute()
 
