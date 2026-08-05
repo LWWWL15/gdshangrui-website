@@ -1,0 +1,234 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "products": "Sản phẩm",
+    "blog": "Tin tức",
+    "tools": "Công cụ",
+    "contact": "Liên hệ"
+  },
+  "cta": {
+    "getQuote": "ĐƯỢC BÁO GIÁ",
+    "contact": "Liên hệ",
+    "viewProducts": "Xem sản phẩm →"
+  },
+  "footer": {
+    "contact": "Liên hệ",
+    "address": "Số 6, Đại lộ Shilong, Khu công nghiệp Xintang, Phường Lunjiao, Quận Shunde, Thành phố Foshan, Quảng Đông, Trung Quốc",
+    "addressLabel": "Địa chỉ nhà máy",
+    "addressLink": "Xem trên bản đồ",
+    "copyright": "Shang Rui Machinery. Tất cả quyền được bảo lưu.",
+    "lang": {
+      "cn": "中文",
+      "en": "EN",
+      "vn": "VN",
+      "ru": "RU"
+    }
+  },
+  "bestSellers": {
+    "title": "Sản phẩm bán chạy"
+  },
+  "certificates": {
+    "title": "Chứng nhận",
+    "ce": "Chứng nhận CE",
+    "iso9001": "ISO9001"
+  },
+  "home": {
+    "title": "Bộ chọn tuyệt vời của bạn!",
+    "subtitle": "ISO9001 | Chứng nhận CE | OEM, ODM",
+    "getQuote": "ĐƯỢC BÁO GIÁ",
+    "bestSellers": "Sản phẩm bán chạy",
+    "weCanMeetNeeds": "Chúng tôi có thể đáp ứng những nhu cầu này vì",
+    "since2013": "Chúng tôi thành lập nhà máy Shang Rui Machinery tại Trung Quốc năm 2013,",
+    "focusing": "liên tục tập trung vào tùy chỉnh, sản xuất và xuất khẩu máy móc gỗ,",
+    "experience": "đội ngũ nhân viên có hơn 10 năm kinh nghiệm (một số hơn 30 năm), và có kinh nghiệm xuất khẩu sang 20+ quốc gia bao gồm Việt Nam, Ả Rập Xê Út, Indonesia, Hàn Quốc và hơn nữa.",
+    "contactUs": "Liên hệ",
+    "viewProducts": "Xem sản phẩm",
+    "whyChoose": "Tại sao chọn Shang Rui",
+    "productSeries": "Danh sách sản phẩm",
+    "viewMore": "Xem thêm",
+    "since2013Title": "Từ năm 2013",
+    "since2013P1": "Từ năm 2013, Shang Rui Machinery liên tục tập trung vào tùy chỉnh, sản xuất và xuất khẩu máy móc gỗ.",
+    "since2013P2": "Chúng tôi hiện có kinh nghiệm xuất khẩu sang 20+ quốc gia và phục vụ hơn 1000 khách hàng trên toàn cầu.",
+    "since2013P3": "Chúng tôi sản xuất từng sản phẩm dưới sự kiểm soát chất lượng nghiêm ngặt, có chứng nhận CE và ISO-9001 để đáp ứng các tiêu chuẩn quốc tế.",
+    "statFounded": "Năm thành lập",
+    "statCountries": "Quốc gia xuất khẩu",
+    "statCustomers": "Khách hàng",
+    "weSupport": "Chúng tôi hỗ trợ những thách thức của bạn",
+    "fromConsult": "Từ tư vấn sản phẩm đến lịch trình giao hàng, chúng tôi phục vụ bạn bằng kết quả thực tế.",
+    "since2013Cert": "Từ 2013 | ISO9001 | CE",
+    "delivery.galleryAlt.1": "Nhân viên giao hàng tận nơi",
+    "delivery.galleryAlt.2": "Phân loại hàng trong kho",
+    "delivery.galleryAlt.3": "Xe vận chuyển chuỗi lạnh",
+    "delivery.galleryAlt.4": "Khách hàng ký nhận hàng",
+    "delivery.galleryAlt.5": "Đóng gói nguyên vẹn",
+    "delivery.galleryAlt.6": "Xe logistics khởi hành",
+    "deliveryCta": "Nhấp để xem thêm hình ảnh xuất hàng →"
+  },
+  "about": {
+    "tag": "Về Shang Rui",
+    "title": "Về Shang Rui Machinery",
+    "since2013": "Từ năm 2013, chúng tôi tập trung vào tùy chỉnh, sản xuất và xuất khẩu máy móc gỗ",
+    "proven": "Kết quả thực tế và niềm tin",
+    "exportDetail": "Năm 2013, Shang Rui Machinery được thành lập và tập trung vào tùy chỉnh, sản xuất và xuất khẩu máy móc gỗ. Chúng tôi hiện có kinh nghiệm xuất khẩu sang 20+ quốc gia bao gồm Việt Nam, Ả Rập Xê Út, Indonesia, Hàn Quốc, và phục vụ hơn 1000 khách hàng trên toàn cầu.",
+    "qualityDetail": "Chúng tôi sản xuất từng sản phẩm dưới sự kiểm soát chất lượng nghiêm ngặt. Chúng tôi có chứng nhận CE và ISO-9001, cung cấp sản phẩm tuân thủ các tiêu chuẩn quốc tế.",
+    "founded": "Năm thành lập",
+    "exportCountries": "Quốc gia xuất khẩu",
+    "customers": "Khách hàng",
+    "certifications": "Chứng nhận",
+    "productionBase": "Cơ sở sản xuất",
+    "factoryPhoto": "Ảnh nhà máy",
+    "factoryPhoto1": "Ảnh nhà máy 1",
+    "factoryPhoto2": "Ảnh nhà máy 2",
+    "factoryPhoto3": "Ảnh nhà máy 3",
+    "factoryPhoto4": "Ảnh nhà máy 4",
+    "contactUs": "Liên hệ",
+    "address": "Địa chỉ",
+    "factoryAddress": "Số 6, Đại lộ Shilong, Khu công nghiệp Xintang, Phường Lunjiao, Quận Shunde, Thành phố Foshan, Quảng Đông, Trung Quốc",
+    "phoneWhatsApp": "Điện thoại / WhatsApp",
+    "email": "Email",
+    "certItems": {
+      "iso": "Từ 2013 | ISO9001 | CE"
+    }
+  },
+  "contact": {
+    "tag": "Liên hệ",
+    "title": "Liên hệ với chúng tôi",
+    "subtitle": "Chào mừng bạn gửi yêu cầu, chúng tôi sẽ phản hồi trong vòng 24 giờ.",
+    "infoTitle": "Thông tin liên hệ",
+    "infoDesc": "Liên hệ với chúng tôi qua các kênh sau để nhận báo giá sản phẩm và hỗ trợ kỹ thuật.",
+    "followUs": "Theo dõi chúng tôi",
+    "facebookPage": "Trang Facebook",
+    "instagramPage": "Trang Instagram",
+    "youtubePage": "Trang YouTube",
+    "sendInquiry": "Gửi yêu cầu",
+    "name": "Tên",
+    "namePlaceholder": "Tên của bạn",
+    "email": "Email",
+    "productInterest": "Sản phẩm quan tâm",
+    "selectPlaceholder": "Vui lòng chọn",
+    "message": "Tin nhắn",
+    "messagePlaceholder": "Vui lòng mô tả yêu cầu của bạn...",
+    "submitInquiry": "Gửi yêu cầu",
+    "sending": "Đang gửi...",
+    "sentSuccess": "✅ Yêu cầu đã được gửi! Chúng tôi sẽ phản hồi trong vòng 24 giờ.",
+    "sendFailed": "❌ Gửi thất bại. Vui lòng gửi email trực tiếp đến caya15@qq.com"
+  },
+  "blog": {
+    "blogTag": "Tin tức",
+    "blogTitle": "Thông tin ngành",
+    "blogSubtitle": "Cập nhật tin tức mới nhất và xu hướng ngành máy móc gỗ của Shang Rui",
+    "becomePartner": "Trở thành đối tác của chúng tôi",
+    "contactForSolution": "Liên hệ với chúng tôi để có giải pháp riêng",
+    "contactNow": "Liên hệ ngay"
+  },
+  "allProducts": {
+    "tag": "Sản phẩm",
+    "title": "Tất cả sản phẩm",
+    "subtitle": "Máy móc gỗ chuyên nghiệp cho nhiều nhu cầu sản xuất đa dạng",
+    "viewSeries": "Xem dòng sản phẩm →",
+    "allSeries": "Tất cả dòng",
+    "searchPlaceholder": "Tìm theo mẫu hoặc thông số",
+    "noProducts": "Không tìm thấy sản phẩm phù hợp",
+    "loading": "Đang tải...",
+    "noMore": "Đã hết sản phẩm"
+  },
+  "products": {
+    "tag": "Sản phẩm",
+    "title": "Dòng sản phẩm chính",
+    "subtitle": "Máy móc gỗ chuyên nghiệp cho nhiều nhu cầu sản xuất đa dạng",
+    "models": "mẫu",
+    "viewDetails": "Xem chi tiết →"
+  },
+  "model": {
+    "trialNotice": "Tất cả sản phẩm có thể cung cấp video và hình ảnh chạy thử trước khi giao hàng. Chúng tôi cũng hỗ trợ gửi mẫu để chạy thử. Vui lòng liên hệ trước nếu cần.",
+    "breadcrumbProducts": "Sản phẩm",
+    "specs": "Thông số kỹ thuật",
+    "linkCopied": "Đã sao chép liên kết",
+    "copyLink": "Sao chép liên kết sản phẩm",
+    "specsCopied": "Đã sao chép thông số",
+    "copySpecs": "Sao chép thông số sản phẩm",
+    "specsPending": "Thông số sản phẩm đang được cập nhật. Vui lòng liên hệ với chúng tôi để biết chi tiết.",
+    "features": "Tính năng",
+    "getQuote": "Nhận báo giá",
+    "otherModels": "Các mẫu khác trong dòng này"
+  },
+  "seriesPage": {
+    "tag": "Sản phẩm",
+    "titleSuffix": " - Dòng sản phẩm",
+    "viewAll": "Xem tất cả",
+    "viewDetails": "Xem chi tiết →",
+    "noModels": "Chưa có mẫu nào"
+  },
+  "tools": {
+    "toolsTag": "Công cụ",
+    "toolsTitle": "Bộ công cụ hữu ích",
+    "toolsSubtitle": "Chọn công cụ phù hợp để hoàn thành tính toán nhanh chóng",
+    "groundPressureCalculator": "Máy tính áp suất mặt đất",
+    "groundPressureCalculatorDesc": "Tính áp suất mặt đất dựa trên kích thước và trọng lượng sản phẩm",
+    "pressureCalculator": "Bảng chuyển đổi áp suất",
+    "pressureCalculatorDesc": "Tự động chuyển đổi áp suất làm việc dựa trên thông số và số lượng xi-lanh",
+    "pressureCalcTitle": "Bảng chuyển đổi áp suất",
+    "pressureCalcSubtitle": "Cách dùng: Biết diện tích phôi và áp suất mục tiêu, tra áp lực bàn; biết áp lực và diện tích phôi, tra áp suất.",
+    "findPressure": "Tra áp lực",
+    "findMpa": "Tra áp suất",
+    "cylinderSpec": "Thông số xi-lanh",
+    "cylinderQty": "Số lượng xi-lanh",
+    "maxPressure": "Áp lực tối đa",
+    "workpieceArea": "Diện tích phôi (m²)",
+    "lengthPlaceholder": "Chiều dài (mm)",
+    "widthPlaceholder": "Chiều rộng (mm)",
+    "displayRange": "Phạm vi hiển thị",
+    "pressureMpa": "Áp suất (MPa)",
+    "pressureT": "Áp lực (T)",
+    "totalForce": "Tổng lực (T)",
+    "workpieceAreaM2": "Diện tích phôi (m²)",
+    "groundPressureTitle": "Máy tính áp suất mặt đất",
+    "groundPressureSubtitle": "Tính áp suất mặt đất dựa trên kích thước và trọng lượng sản phẩm",
+    "lengthLabel": "Chiều dài (mm)",
+    "widthLabel": "Chiều rộng (mm)",
+    "weightLabel": "Trọng lượng (kg)",
+    "weightPlaceholder": "VD: 5000",
+    "groundPressureResult": "Áp suất mặt đất",
+    "formula": "Công thức: Trọng lượng (kg) ÷ [Dài (mm) × Rộng (mm) ÷ 1.000.000] = Áp suất (kg/m²)"
+  },
+  "notFound": {
+    "title": "Không tìm thấy trang",
+    "message": "Xin lỗi, trang bạn truy cập không tồn tại hoặc đã bị xóa.",
+    "backHome": "Về trang chủ",
+    "contactUs": "Liên hệ"
+  },
+  "series": {
+    "hot-press": {
+      "name": "Máy ép nóng"
+    },
+    "cold-press": {
+      "name": "Máy ép lạnh"
+    },
+    "multi-blade-saw": {
+      "name": "Máy cưa đa lưỡi"
+    },
+    "lifting-platform": {
+      "name": "Bục nâng"
+    },
+    "splicing-machine": {
+      "name": "Máy ghép gỗ"
+    },
+    "door-frame-machine": {
+      "name": "Máy ghép khung cửa"
+    },
+    "parts": {
+      "name": "Phụ tùng"
+    },
+    "other": {
+      "name": "Khác"
+    }
+  },
+  "gallery": {
+    "title": "Hình ảnh xuất hàng",
+    "subtitle": "Lưu lại mỗi khoảnh khắc giao hàng thiết bị",
+    "countText": "Đã tải :count trên :total ảnh",
+    "loading": "Đang tải...",
+    "end": "Đã đến cuối"
+  }
+}

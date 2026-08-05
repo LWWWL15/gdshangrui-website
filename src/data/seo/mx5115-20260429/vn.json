@@ -1,0 +1,37 @@
+{
+  "market": "vn",
+  "language": "Tiếng Việt",
+  "languageCode": "vi",
+  "productId": "mx5115-20260429",
+  "productSeries": "other",
+  "productSeriesName": "Máy khác",
+  "seoTitle": "Máy phay đứng MX5115 - Bàn 640×580mm 18000r/min | Shang Rui Vietnam",
+  "metaDesc": "Máy phay đứng MX5115, bàn 640×580mm, hành trình nâng 100mm, nghiêng 45°. Tốc độ trục 18000r/min, công suất 3kW. Kẹp dao 12.7mm. Kích thước nhỏ gọn 1000×600×900mm.",
+  "keywords": [
+    "máy phay đứng",
+    "máy phay gỗ",
+    "máy phay CNC",
+    "shangrui máy phay"
+  ],
+  "description": "Máy phay đứng MX5115 (Vertical Milling Machine) là thiết bị gia công gỗ và kim loại nhẹ với thiết kế chắc chắn và kích thước nhỏ gọn. Bàn làm việc 640×580mm với hành trình nâng 100mm và khả năng nghiêng 45°. Tốc độ trục chính 18000r/min với công suất 3kW. Đường kính kẹp dao 12.7mm. Kích thước máy 1000×600×900mm và trọng lượng khoảng 170kg. Phù hợp cho các xưởng mộc cần gia công chính xác các chi tiết nhỏ và vừa.",
+  "faq": [
+    {
+      "q": "Có thể phay được những loại gì?",
+      "a": "Máy phù hợp để phay các rãnh, mặt phẳng, góc và các chi tiết trang trí trên gỗ và kim loại nhẹ."
+    },
+    {
+      "q": "Có thể nghiêng bàn được không?",
+      "a": "Có, bàn máy có thể nghiêng đến 45°, cho phép gia công các bề mặt nghiêng và rãnh xiên."
+    },
+    {
+      "q": "Có cần nguồn điện đặc biệt không?",
+      "a": "Máy sử dụng điện 3 pha hoặc 1 pha tùy theo cấu hình, phù hợp với hệ thống điện tiêu chuẩn tại Việt Nam."
+    }
+  ],
+  "altTexts": {
+    "立式铣床_立式铣床_MX5115立铣_20260429_蓝白/立式铣床_MX5115立铣_20260429_蓝白 (12)_up_001.webp": "Máy phay đứng MX5115 màu xanh trắng góc 12",
+    "立式铣床_立式铣床_MX5115立铣_20260429_蓝白/立式铣床_MX5115立铣_20260429_蓝白 (13)_up_001.webp": "Máy phay đứng MX5115 màu xanh trắng góc 13",
+    "立式铣床_立式铣床_MX5115立铣_20260429_蓝白/立式铣床_MX5115立铣_20260429_蓝白 (30)_up_001.webp": "Máy phay đứng MX5115 màu xanh trắng góc 30"
+  },
+  "urlSlug": "may-phay-dung-mx5115"
+}

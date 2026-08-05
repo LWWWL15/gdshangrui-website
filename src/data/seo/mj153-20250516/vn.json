@@ -1,0 +1,35 @@
+{
+  "market": "vn",
+  "language": "Tiếng Việt",
+  "languageCode": "vi",
+  "productId": "mj153-20250516",
+  "productSeries": "other",
+  "productSeriesName": "Máy khác",
+  "seoTitle": "Máy cưa đĩa đơn MJ153 - Lưỡi 305mm cắt nhanh 32m/phút | Shang Rui Vietnam",
+  "metaDesc": "Máy cưa đĩa đơn MJ153, lưỡi 305mm, cắt sâu 85mm, rộng 360mm. Tốc độ 3700r/min, tốc độ đẩy 12-32m/phút. Motor 7.5kW. Phù hợp xẻ gỗ khối và tấm ván.",
+  "keywords": [
+    "máy cưa đĩa đơn",
+    "máy cưa gỗ đơn",
+    "máy cưa 305mm",
+    "shangrui máy cưa"
+  ],
+  "description": "Máy cưa đĩa đơn MJ153 là thiết bị xẻ gỗ đơn giản nhưng hiệu quả với lưỡi cưa đường kính 305mm. Máy có khả năng cắt sâu tối đa 85mm và chiều rộng cắt 360mm. Tốc độ trục 3700r/min với tốc độ đẩy có thể điều chỉnh từ 12 đến 32m/phút. Motor chính 7.5kW và motor đẩy 0.75kW với tổng công suất 8.25kW. Bàn làm việc 1500×950mm. Kích thước máy 1600×1050×1500mm và trọng lượng khoảng 750kg. Phù hợp cho các xưởng cần xẻ gỗ khối và tấm ván với năng suất ổn định.",
+  "faq": [
+    {
+      "q": "Cắt được độ dày bao nhiêu?",
+      "a": "Máy cắt được độ dày tối đa 85mm, phù hợp với hầu hết các loại gỗ xẻ thông thường."
+    },
+    {
+      "q": "Có thể điều chỉnh tốc độ đẩy không?",
+      "a": "Có, tốc độ đẩy có thể điều chỉnh từ 12 đến 32m/phút, cho phép tối ưu theo loại gỗ và yêu cầu cắt."
+    },
+    {
+      "q": "Cần bao nhiêu người vận hành?",
+      "a": "Máy có thể vận hành bởi 1 người, nhưng khuyến nghị 2 người để đảm bảo an toàn khi xẻ gỗ khối lớn."
+    }
+  ],
+  "altTexts": {
+    "其他_其他_单片锯_MJ153_20250516_灰白/单片锯_MJ153_20250516_灰白_up_001.webp": "Máy cưa đĩa đơn MJ153 màu xám trắng"
+  },
+  "urlSlug": "may-cua-dia-don-mj153"
+}

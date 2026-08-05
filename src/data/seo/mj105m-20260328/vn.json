@@ -1,0 +1,36 @@
+{
+  "market": "vn",
+  "language": "Tiếng Việt",
+  "languageCode": "vi",
+  "productId": "mj105m-20260328",
+  "productSeries": "other",
+  "productSeriesName": "Máy khác",
+  "seoTitle": "Máy đục mộng MH105M - Bàn 800×1000mm rãnh 800mm | Shang Rui Vietnam",
+  "metaDesc": "Máy đục mộng MH105M, bàn 800×1000mm, rãnh dài 800mm, rộng 25mm. Điều chỉnh mộng đuôi én 10-200mm. Motor 3kW trước và sau. Phù hợp làm mộng gỗ chính xác cao.",
+  "keywords": [
+    "máy đục mộng",
+    "máy làm mộng gỗ",
+    "máy mộng đuôi én",
+    "shangrui máy đục mộng"
+  ],
+  "description": "Máy đục mộng MH105M (Mortise Machine) là thiết bị chuyên dụng để làm các loại mộng (mortise) và rãnh trên gỗ với độ chính xác cao. Bàn làm việc 800×1000mm với rãnh dài 800mm và rộng 25mm. Có thể điều chỉnh rãnh mộng đuôi én từ 10mm đến 200mm. Hệ thống gồm motor 3kW phía trước (có đầu kẹp lưỡi cưa) và motor 3kW phía sau (có trục đặc biệt cho dao phay). Điều chỉnh motor bằng vitme me để di chuyển lên xuống và ra trước sau. Phù hợp cho các xưởng mộc chuyên nghiệp cần làm mộng chính xác.",
+  "faq": [
+    {
+      "q": "Có thể làm rãnh kích thước bao nhiêu?",
+      "a": "Rãnh có chiều rộng cố định 25mm và chiều dài 800mm. Rãnh mộng đuôi én có thể điều chỉnh từ 10mm đến 200mm."
+    },
+    {
+      "q": "Có thể lắp thiết bị đẩy tự động không?",
+      "a": "Có, máy có thể lắp thêm thiết bị đẩy tự động để tăng năng suất khi sản xuất số lượng lớn."
+    },
+    {
+      "q": "Có thể dùng cho gỗ cứng không?",
+      "a": "Có, với motor 3kW và hệ thống trục chính chắc chắn, máy phù hợp với hầu hết các loại gỗ công nghiệp và một số loại gỗ cứng."
+    }
+  ],
+  "altTexts": {
+    "母榫机_母榫机_MJ105M_20260328_蓝白/母榫机_MJ105M_20260328_蓝白_1_up_001.webp": "Máy đục mộng MH105M màu xanh trắng góc 1",
+    "母榫机_母榫机_MJ105M_20260328_蓝白/母榫机_MJ105M_20260328_蓝白_4_up_001.webp": "Máy đục mộng MH105M màu xanh trắng góc 4"
+  },
+  "urlSlug": "may-duc-mong-mj105m"
+}

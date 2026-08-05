@@ -1,0 +1,234 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "products": "产品展示",
+    "blog": "博客",
+    "tools": "工具",
+    "contact": "联系我们"
+  },
+  "cta": {
+    "getQuote": "获得报价",
+    "contact": "联系我们",
+    "viewProducts": "查看产品 →"
+  },
+  "footer": {
+    "contact": "联系我们",
+    "address": "佛山市顺德区伦教街道新塘工业区世界龙大道6号",
+    "addressLabel": "工厂地址",
+    "addressLink": "在地图中查看",
+    "copyright": "Shang Rui Machinery. All rights reserved.",
+    "lang": {
+      "cn": "中文",
+      "en": "EN",
+      "vn": "VN",
+      "ru": "RU"
+    }
+  },
+  "bestSellers": {
+    "title": "畅销产品"
+  },
+  "certificates": {
+    "title": "认证证书",
+    "ce": "CE认证",
+    "iso9001": "ISO9001"
+  },
+  "home": {
+    "title": "您的上上之选！",
+    "subtitle": "ISO9001 | CE 认证 | OEM, ODM",
+    "getQuote": "获得报价",
+    "bestSellers": "畅销产品",
+    "weCanMeetNeeds": "我们能满足这些需求，是因为",
+    "since2013": "2013 年在中国成立了上锐机械工厂，",
+    "focusing": "一直专注于木工机械的定制、制造和出口，",
+    "experience": "拥有多名超过十年最高超过三十年经验的员工，并拥有向越南、沙特、印尼、韩国等 20多个国家出口的经验。",
+    "contactUs": "联系我们",
+    "viewProducts": "查看产品",
+    "whyChoose": "为什么选择上锐",
+    "productSeries": "产品系列",
+    "viewMore": "查看更多",
+    "since2013Title": "自2013年创业以来",
+    "since2013P1": "上锐机械自2013年创业以来，一直专注于木工机械的定制、制造和出口。",
+    "since2013P2": "目前，我们已向越南、沙特、印尼、韩国等20多个国家出口产品，拥有1000多家客户。",
+    "since2013P3": "在严格的质量管理下制造每一件产品，我们已获得CE认证和ISO-9001认证，提供符合国际标准的产品。",
+    "statFounded": "创业年份",
+    "statCountries": "出口国家",
+    "statCustomers": "合作客户",
+    "weSupport": "我们支持您的挑战",
+    "fromConsult": "从产品咨询到交期应对，我们以确实的实绩为您服务。",
+    "since2013Cert": "自2013年 | ISO9001 | CE",
+    "delivery.galleryAlt.1": "快递员上门配送",
+    "delivery.galleryAlt.2": "仓库分拣作业",
+    "delivery.galleryAlt.3": "冷链运输车辆",
+    "delivery.galleryAlt.4": "客户签收场景",
+    "delivery.galleryAlt.5": "包装完好无损",
+    "delivery.galleryAlt.6": "物流车辆出发",
+    "deliveryCta": "点击查看更多出货现场 →"
+  },
+  "about": {
+    "tag": "关于上锐",
+    "title": "关于上锐机械",
+    "since2013": "自2013年创业以来，专注于木工机械的定制、制造和出口",
+    "proven": "确实的实绩与信任",
+    "exportDetail": "上锐机械自2013年创业以来，一直专注于木工机械的定制、制造和出口。目前，我们已向越南、沙特、印尼、韩国等20多个国家出口产品，拥有1000多家客户。",
+    "qualityDetail": "在严格的质量管理下制造每一件产品，我们已获得CE认证和ISO-9001认证，提供符合国际标准的产品。",
+    "founded": "创业年份",
+    "exportCountries": "出口国家",
+    "customers": "合作客户",
+    "certifications": "资质认证",
+    "productionBase": "生产基地",
+    "factoryPhoto": "工厂照片",
+    "factoryPhoto1": "工厂照片 1",
+    "factoryPhoto2": "工厂照片 2",
+    "factoryPhoto3": "工厂照片 3",
+    "factoryPhoto4": "工厂照片 4",
+    "contactUs": "联系我们",
+    "address": "地址",
+    "factoryAddress": "中国广东省佛山市顺德区伦教街道新塘工业区世龙大道6号",
+    "phoneWhatsApp": "电话 / WhatsApp",
+    "email": "邮箱",
+    "certItems": {
+      "iso": "自2013年 | ISO9001 | CE"
+    }
+  },
+  "contact": {
+    "tag": "联系我们",
+    "title": "取得联系",
+    "subtitle": "欢迎询价，我们将在24小时内回复",
+    "infoTitle": "联系方式",
+    "infoDesc": "通过以下方式联系我们，获取产品报价和技术支持。",
+    "followUs": "关注我们",
+    "facebookPage": "Facebook主页",
+    "instagramPage": "Instagram主页",
+    "youtubePage": "YouTube主页",
+    "sendInquiry": "发送询盘",
+    "name": "姓名",
+    "namePlaceholder": "您的姓名",
+    "email": "邮箱",
+    "productInterest": "感兴趣的产品",
+    "selectPlaceholder": "请选择",
+    "message": "留言",
+    "messagePlaceholder": "请描述您的需求...",
+    "submitInquiry": "发送询盘",
+    "sending": "发送中...",
+    "sentSuccess": "✅ 询盘已发送！我们将在24小时内回复。",
+    "sendFailed": "❌ 发送失败，请直接发邮件至 caya15@qq.com"
+  },
+  "blog": {
+    "blogTag": "博客",
+    "blogTitle": "行业动态",
+    "blogSubtitle": "了解上锐机械的最新动态与行业资讯",
+    "becomePartner": "成为我们的合作伙伴",
+    "contactForSolution": "联系我们，获取专属解决方案",
+    "contactNow": "立即联系"
+  },
+  "allProducts": {
+    "tag": "产品展示",
+    "title": "所有产品",
+    "subtitle": "专业木工机械，满足多样化生产需求",
+    "viewSeries": "查看产品系列 →",
+    "allSeries": "所有系列",
+    "searchPlaceholder": "输入产品型号或参数搜索",
+    "noProducts": "未找到符合条件的产品",
+    "loading": "加载中...",
+    "noMore": "没有更多了"
+  },
+  "products": {
+    "tag": "产品展示",
+    "title": "主要产品系列",
+    "subtitle": "专业木工机械，满足多样化生产需求",
+    "models": "个型号",
+    "viewDetails": "查看详情 →"
+  },
+  "model": {
+    "trialNotice": "所有产品出厂前均可提供试机视频和图片，也支持寄样品试机，如有需要请提前联系",
+    "breadcrumbProducts": "产品",
+    "specs": "技术参数",
+    "linkCopied": "链接已复制",
+    "copyLink": "复制产品链接",
+    "specsCopied": "参数已复制",
+    "copySpecs": "复制产品参数",
+    "specsPending": "产品参数待补充，请联系我们获取详细信息。",
+    "features": "产品特点",
+    "getQuote": "立即询价",
+    "otherModels": "同系列其他型号"
+  },
+  "seriesPage": {
+    "tag": "产品展示",
+    "titleSuffix": "系列",
+    "viewAll": "查看全部",
+    "viewDetails": "查看详情 →",
+    "noModels": "暂无型号"
+  },
+  "tools": {
+    "toolsTag": "工具",
+    "toolsTitle": "实用工具集",
+    "toolsSubtitle": "选择合适的工具快速完成计算",
+    "groundPressureCalculator": "地面承重计算器",
+    "groundPressureCalculatorDesc": "根据产品尺寸与重量，计算对地面的压强",
+    "pressureCalculator": "压力换算表",
+    "pressureCalculatorDesc": "根据油缸规格与数量，自动换算工作压力",
+    "pressureCalcTitle": "压力换算表",
+    "pressureCalcSubtitle": "用法：已知工件面积和目标压强，可查对应工作台压力；已知压力和工件面积，可查对应压强。",
+    "findPressure": "查压力",
+    "findMpa": "查压强",
+    "cylinderSpec": "油缸规格",
+    "cylinderQty": "油缸数量",
+    "maxPressure": "最大总压力",
+    "workpieceArea": "工件面积 (m²)",
+    "lengthPlaceholder": "长度 (mm)",
+    "widthPlaceholder": "宽度 (mm)",
+    "displayRange": "显示范围",
+    "pressureMpa": "压强 (MPa)",
+    "pressureT": "压力 (T)",
+    "totalForce": "总压力 (T)",
+    "workpieceAreaM2": "工件面积 (m²)",
+    "groundPressureTitle": "地面承重计算器",
+    "groundPressureSubtitle": "根据产品尺寸与重量，计算对地面的压强",
+    "lengthLabel": "占地长度 (mm)",
+    "widthLabel": "占地宽度 (mm)",
+    "weightLabel": "重量 (kg)",
+    "weightPlaceholder": "例：5000",
+    "groundPressureResult": "地面压强",
+    "formula": "公式：重量 (kg) ÷ [长 (mm) × 宽 (mm) ÷ 1,000,000] = 压强 (kg/m²)"
+  },
+  "notFound": {
+    "title": "页面未找到",
+    "message": "抱歉，您访问的页面不存在或已被移除。",
+    "backHome": "返回首页",
+    "contactUs": "联系我们"
+  },
+  "series": {
+    "hot-press": {
+      "name": "热压机"
+    },
+    "cold-press": {
+      "name": "冷压机"
+    },
+    "multi-blade-saw": {
+      "name": "多片锯"
+    },
+    "lifting-platform": {
+      "name": "升降平台"
+    },
+    "splicing-machine": {
+      "name": "拼板机"
+    },
+    "door-frame-machine": {
+      "name": "门框组合机"
+    },
+    "parts": {
+      "name": "零件"
+    },
+    "other": {
+      "name": "其他"
+    }
+  },
+  "gallery": {
+    "title": "出货现场",
+    "subtitle": "记录每一台设备的交付瞬间",
+    "countText": "已加载 :count 张，共 :total 张",
+    "loading": "加载中...",
+    "end": "已经到底了"
+  }
+}
