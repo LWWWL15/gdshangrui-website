@@ -20,6 +20,7 @@ const router = useRouter()
 const visible = ref(false)
 let loadingTimer: ReturnType<typeof setTimeout> | null = null
 let hideTimer: ReturnType<typeof setTimeout> | null = null
+let initialLoadHandled = false
 
 // Show loading if page takes longer than threshold
 const showLoading = () => {
@@ -39,7 +40,35 @@ const hideLoading = () => {
     hideTimer = setTimeout(() => {
       visible.value = false
     }, 400)
+  } else {
+    visible.value = false
   }
+}
+
+// First paint: if document is not fully loaded within 300ms, show loading;
+// once window load fires, hide it. If already complete, stay silent.
+const handleInitialLoad = () => {
+  if (initialLoadHandled) return
+  initialLoadHandled = true
+  if (document.readyState === 'complete') {
+    // Page already loaded — nothing to show
+    return
+  }
+  // Slow first paint: show loading then hide on load
+  loadingTimer = setTimeout(() => {
+    visible.value = true
+  }, 300)
+  window.addEventListener('load', () => {
+    if (loadingTimer) {
+      clearTimeout(loadingTimer)
+      loadingTimer = null
+    }
+    if (visible.value) {
+      hideTimer = setTimeout(() => {
+        visible.value = false
+      }, 400)
+    }
+  }, { once: true })
 }
 
 onMounted(() => {
@@ -49,6 +78,7 @@ onMounted(() => {
   router.afterEach(() => {
     hideLoading()
   })
+  handleInitialLoad()
 })
 
 onUnmounted(() => {

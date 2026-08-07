@@ -128,7 +128,7 @@
     </section>
 
     <!-- Company History -->
-    <section class="section-history section-hide-mobile">
+    <section class="section-history">
       <div class="container">
         <h2>{{ t('自2013年创业以来', 'Since 2013', t('自2013年创业以来', 'Since 2013', 'Từ năm 2013', 'С 2013 года'), t('自2013年创业以来', 'Since 2013', 'Từ năm 2013', 'С 2013 года')) }}</h2>
         <div class="history-content">
@@ -136,6 +136,7 @@
           <p>{{ t('目前，我们已向越南、沙特、印尼、韩国等20多个国家出口产品，拥有1000多家客户。', 'We now have export experience to 20+ countries and serve 1000+ customers worldwide.', t('目前，我们已向越南、沙特、印尼、韩国等20多个国家出口产品，拥有1000多家客户。', 'We now have export experience to 20+ countries and serve 1000+ customers worldwide.', 'Chúng tôi hiện có kinh nghiệm xuất khẩu sang 20+ quốc gia và phục vụ hơn 1000 khách hàng trên toàn cầu.', 'Сегодня мы экспортируем продукцию в более чем 20 стран и обслуживаем свыше 1 000 клиентов по всему миру.'), t('目前，我们已向越南、沙特、印尼、韩国等20多个国家出口产品，拥有1000多家客户。', 'We now have export experience to 20+ countries and serve 1000+ customers worldwide.', 'Chúng tôi hiện có kinh nghiệm xuất khẩu sang 20+ quốc gia và phục vụ hơn 1000 khách hàng trên toàn cầu.', 'Сегодня мы экспортируем продукцию в более чем 20 стран и обслуживаем свыше 1 000 клиентов по всему миру.')) }}</p>
           <p>{{ t('在严格的质量管理下制造每一件产品，我们已获得CE认证和ISO-9001认证，提供符合国际标准的产品。', 'We manufacture each product under strict quality control, holding CE and ISO-9001 certifications to meet international standards.', t('在严格的质量管理下制造每一件产品，我们已获得CE认证和ISO-9001认证，提供符合国际标准的产品。', 'We manufacture each product under strict quality control, holding CE and ISO-9001 certifications to meet international standards.', 'Chúng tôi sản xuất từng sản phẩm dưới sự kiểm soát chất lượng nghiêm ngặt, có chứng nhận CE và ISO-9001 để đáp ứng các tiêu chuẩn quốc tế.', 'Каждое изделие изготавливается при строгом контроле качества; мы имеем сертификаты CE и ISO-9001, что подтверждает соответствие нашей продукции международным стандартам.'), t('在严格的质量管理下制造每一件产品，我们已获得CE认证和ISO-9001认证，提供符合国际标准的产品。', 'We manufacture each product under strict quality control, holding CE and ISO-9001 certifications to meet international standards.', 'Chúng tôi sản xuất từng sản phẩm dưới sự kiểm soát chất lượng nghiêm ngặt, có chứng nhận CE và ISO-9001 để đáp ứng các tiêu chuẩn quốc tế.', 'Каждое изделие изготавливается при строгом контроле качества; мы имеем сертификаты CE и ISO-9001, что подтверждает соответствие нашей продукции международным стандартам.')) }}</p>
         </div>
+        <DeliveryBanner />
         <div class="history-stats">
           <div class="stat">
             <span class="stat-num">2013</span>
@@ -151,7 +152,6 @@
           </div>
         </div>
       </div>
-      <DeliveryBanner />
     </section>
 
     <!-- CTA -->
@@ -953,7 +953,7 @@ background-image: url('/hero-bg.webp');
 
   &-label {
     font-size: $fs-xs;
-    color: rgba(255,255,255,0.5);
+    color: #555555;
     margin-top: $s-sm;
     letter-spacing: 0.05em;
   }
