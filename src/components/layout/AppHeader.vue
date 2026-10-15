@@ -1,11 +1,6 @@
 ﻿<template>
-  <!-- Top Info Bar -->
-  <div class="top-info-bar">
-    <a href="https://wa.me/8613929151908" target="_blank">{{ t('WA +86 139-2915-1908 (UTC+8) 8:00 - 22:00', 'WA +86 139-2915-1908 (UTC+8) 8:00 - 22:00', 'WA +86 139-2915-1908 (UTC+8) 8:00 - 22:00 (Giờ Việt Nam 7:00 - 21:00)', 'WA +86 139-2915-1908 (UTC+8) 8:00 - 22:00') }}</a>
-  </div>
-
   <header class="header" :class="{ scrolled: isScrolled }">
-    <!-- Top Info Bar -->
+    <!-- Top Info Bar (always visible, sticky) -->
     <div class="header-top-bar">
       <a href="https://wa.me/8613929151908" target="_blank">{{ t('WA +86 139-2915-1908 (UTC+8) 8:00 - 22:00', 'WA +86 139-2915-1908 (UTC+8) 8:00 - 22:00', 'WA +86 139-2915-1908 (UTC+8) 8:00 - 22:00 (Giờ Việt Nam 7:00 - 21:00)', 'WA +86 139-2915-1908 (UTC+8) 8:00 - 22:00') }}</a>
     </div>
@@ -286,7 +281,6 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   border-bottom: 1px solid rgba(255,255,255,0.1);
 
 
-  &.scrolled .header-top-bar { display: none; }
   &.scrolled .header-inner { padding-top: $s-sm; padding-bottom: $s-sm; }
 }
 
@@ -314,15 +308,17 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: $s-lg;
   position: relative;
-  padding-top: $s-md;
-  padding-bottom: $s-md;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: $s-md 40px;
   transition: padding $t-base;
 
+  @media (max-width: $bp-md) { padding: $s-md 24px; }
+  @media (max-width: $bp-sm) { padding: $s-md 16px; }
   @media (max-width: $bp-lg) {
-    justify-content: space-between;
     padding-top: $s-sm;
     padding-bottom: $s-sm;
   }
@@ -468,11 +464,10 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 }
 
 .header-brand {
-  position: absolute;
-  left: 0;
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-shrink: 0;
 }
 
 .header-social-icons {
@@ -502,11 +497,10 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 }
 
 .header-right {
-  position: absolute;
-  right: 0;
   display: flex;
   align-items: center;
   gap: $s-md;
+  flex-shrink: 0;
   @media (max-width: $bp-lg) { display: none; }
 }
 

@@ -123,6 +123,36 @@ export const productSeries: ProductSeries[] = [
         ],
         features: []
       },
+      {
+        id: 'mh3848x160t',
+        model: 'MH3848x160T',
+        cn: '热压机',
+        mic: 'Hot Press',
+        vn: 'Máy ép nóng',
+        ru: 'Горячий пресс',
+        images: [
+          '/热压机/热压机_MH3848x160T_20260618_黑黄白/热压机_MH3848x160T_20260618_黑黄白_up (1)_001.webp',
+          '/热压机/热压机_MH3848x160T_20260618_黑黄白/热压机_MH3848x160T_20260618_黑黄白_up (4)_001.webp',
+        ],
+        specs: [
+          { keyCn: '热压板规格', keyMic: 'Platen Size', keyVn: 'Kích thước tấm ép', valueCn: '3000×1500×42mm', valueMic: '3000×1500×42mm', valueVn: '3000×1500×42mm', valueRu: '3000 × 1500 × 42 мм', keyRu: 'Размер пресс-плиты' },
+          { keyCn: '工作层数', keyMic: 'Working Layers', keyVn: 'Số tầng làm việc', valueCn: '3层', valueMic: '3 Layers', valueVn: '3 tầng', valueRu: '3 этажа', keyRu: 'Количество рабочих этажей' },
+          { keyCn: '层距', keyMic: 'Layer Spacing', keyVn: 'Khoảng cách tầng', valueCn: '100mm', valueMic: '100mm', valueRu: '100 мм', keyRu: 'Расстояние между этажами' },
+          { keyCn: '加压方向', keyMic: 'Pressing Direction', keyVn: 'Hướng ép', valueCn: '下往上压', valueMic: 'Bottom-up pressing', valueVn: 'Ép từ dưới lên', valueRu: 'Снизу вверх', keyRu: 'Направление прессования' },
+          { keyCn: '最大工作压力', keyMic: 'Max Working Pressure', keyVn: 'Áp suất làm việc tối đa', valueCn: '160T', valueMic: '160T', valueRu: '160 т', keyRu: 'Максимальное рабочее усилие' },
+          { keyCn: '油缸', keyMic: 'Hydraulic Cylinders', keyVn: 'Xi-lanh thủy lực', valueCn: '90缸×10支', valueMic: '90 Cylinders × 10 PCS', valueVn: '90 xi-lanh × 10 cái', valueRu: '90 цилиндров × 10 шт.', keyRu: 'Гидроцилиндры' },
+          { keyCn: '加热温度', keyMic: 'Heating Temperature', keyVn: 'Nhiệt độ gia nhiệt', valueCn: '常温-120℃', valueMic: 'Room temp – 120°C', valueVn: 'Nhiệt độ phòng – 120°C', valueRu: 'От комнатной температуры до 120 °C', keyRu: 'Температура нагрева' },
+          { keyCn: '液压电机功率', keyMic: 'Hydraulic Motor Power', keyVn: 'Công suất động cơ thủy lực', valueCn: '5.5kW', valueMic: '5.5kW', valueRu: '5,5 кВт', keyRu: 'Мощность гидравлического двигателя' },
+          { keyCn: '热油泵功率', keyMic: 'Hot Oil Pump Power', keyVn: 'Công suất bơm dầu nóng', valueCn: '2.2kW', valueMic: '2.2kW', valueRu: '2,2 кВт', keyRu: 'Мощность маслонагревательного насоса' },
+          { keyCn: '热管功率', keyMic: 'Heating Tube Power', keyVn: 'Công suất ống nhiệt', valueCn: '72kW', valueMic: '72kW', valueRu: '72 кВт', keyRu: 'Мощность ТЭНов' },
+          { keyCn: '热压板表面', keyMic: 'Platen Surface', keyVn: 'Bề mặt tấm ép', valueCn: '铺高温膜', valueMic: 'Covered with high-temperature film', valueVn: 'Phủ màng chịu nhiệt cao', valueRu: 'Покрыта высокотемпературной плёнкой', keyRu: 'Поверхность пресс-плиты' },
+          { keyCn: '电压', keyMic: 'Voltage', keyVn: 'Điện áp', valueCn: '415V 50Hz 3P', valueMic: '415V 50Hz 3P', valueVn: '415V 50Hz 3P', valueRu: '415 В, 50 Гц, 3 фазы', keyRu: 'Напряжение' },
+          { keyCn: '总功率', keyMic: 'Total Power', keyVn: 'Tổng công suất', valueCn: '79.7kW', valueMic: '79.7kW', valueRu: '79,7 кВт', keyRu: 'Общая мощность' },
+          { keyCn: '包装', keyMic: 'Packaging', keyVn: 'Bao bì', valueCn: '珍珠棉缠绕膜', valueMic: 'EPE pearl cotton + stretch film', valueVn: 'Màng xốp EPE + màng PE', valueRu: 'Пупырчатая плёнка EPE + стрейч-плёнка', keyRu: 'Упаковка' },
+          { keyCn: '外形尺寸', keyMic: 'Overall Dimensions', keyVn: 'Kích thước tổng thể', valueCn: '4400×1950×2160mm', valueMic: '4400×1950×2160mm', valueVn: '4400×1950×2160mm', valueRu: '4400 × 1950 × 2160 мм', keyRu: 'Габаритные размеры' },
+        ],
+        features: []
+      },
     ]
   },
   {

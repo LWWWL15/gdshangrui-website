@@ -334,7 +334,7 @@ const copySpecs = async () => {
   display: flex;
   align-items: center;
   height: 40px;
-  margin-top: 80px;
+  margin-top: 120px;
 }
 
 .ticker-track {
