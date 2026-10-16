@@ -334,6 +334,31 @@ export const productSeries: ProductSeries[] = [
         ],
         features: []
       },
+      {
+        id: 'mh3248x150tx3',
+        model: 'MH3248x150Tx3',
+        cn: '冷压机',
+        mic: 'Cold Press',
+        vn: 'Máy ép lạnh',
+        ru: 'Холодный пресс',
+        images: [
+          '/冷压机/冷压机_MH3248x150Tx3_20190123_黄白/冷压机_MH3248x150Tx3_20190123_黄白_up(2)_001.webp',
+          '/冷压机/冷压机_MH3248x150Tx3_20190123_黄白/冷压机_MH3248x150Tx3_20190123_黄白_up(1)_001.webp',
+          '/冷压机/冷压机_MH3248x150Tx3_20190123_黄白/冷压机_MH3248x150Tx3_20190123_黄白_up(1)_002.webp',
+        ],
+        specs: [
+          { keyCn: '每段台面尺寸', keyMic: 'Table Size per Section', keyVn: 'Kích thước bàn mỗi đoạn', valueCn: '1250×1500mm', valueMic: '1250×1500mm', valueVn: '1250×1500mm', valueRu: '1250 × 1500 мм', keyRu: 'Размер стола каждой секции' },
+          { keyCn: '开距', keyMic: 'Opening Distance', keyVn: 'Hành trình mở', valueCn: '1300mm', valueMic: '1300mm', valueVn: '1300mm', valueRu: '1300 мм', keyRu: 'Раскрытие' },
+          { keyCn: '每段压力', keyMic: 'Pressure per Section', keyVn: 'Áp suất mỗi đoạn', valueCn: '50T', valueMic: '50T', valueVn: '50T', valueRu: '50 т', keyRu: 'Усилие на секцию' },
+          { keyCn: '规格', keyMic: 'Specification', keyVn: 'Thông số kỹ thuật', valueCn: '分三段', valueMic: '3 Sections', valueVn: '3 đoạn', valueRu: '3 секции', keyRu: 'Спецификация' },
+          { keyCn: '缸数', keyMic: 'Cylinder Quantity', keyVn: 'Số xi-lanh', valueCn: '每段 2 条，共 6 条', valueMic: '2 per section, 6 total', valueVn: '2 mỗi đoạn, tổng 6 cái', valueRu: '2 на секцию, всего 6 шт.', keyRu: 'Количество цилиндров' },
+          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '5.5kW', valueMic: '5.5kW', valueVn: '5.5kW', valueRu: '5,5 кВт', keyRu: 'Мощность' },
+          { keyCn: '下台面', keyMic: 'Lower Table', keyVn: 'Bàn làm việc dưới', valueCn: '配升降滚轮', valueMic: 'With lifting rollers', valueVn: 'Có con lăn nâng hạ', valueRu: 'С подъёмными роликами', keyRu: 'Нижний стол' },
+          { keyCn: '外形尺寸', keyMic: 'Overall Dimensions', keyVn: 'Kích thước tổng thể', valueCn: '约 4250×1500×2300mm', valueMic: 'Approx. 4250×1500×2300mm', valueVn: 'Khoảng 4250×1500×2300mm', valueRu: 'ок. 4250 × 1500 × 2300 мм', keyRu: 'Габаритные размеры' },
+          { keyCn: '重量', keyMic: 'Weight', keyVn: 'Trọng lượng', valueCn: '约 2000kg', valueMic: 'Approx. 2000kg', valueVn: 'Khoảng 2000kg', valueRu: 'ок. 2000 кг', keyRu: 'Масса' },
+        ],
+        features: []
+      },
 
     ]
   },
