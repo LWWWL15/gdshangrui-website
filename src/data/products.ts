@@ -626,6 +626,34 @@ export const productSeries: ProductSeries[] = [
           { keyCn: "重量", keyMic: "Weight", valueCn: "约750kg", valueMic: "Approx. 750kg" }
         ],
         features: []
+      },
+      {
+        id: 'ldx022',
+        model: 'LDX022',
+        cn: '磨齿机',
+        mic: 'Saw Blade Sharpener',
+        vn: 'Máy mài lưỡi cưa',
+        ru: 'Станок для заточки пил',
+        images: [
+          '/其他/磨齿机_LDX022_20261015_钢铁灰/磨齿机_LDX022_20261015_钢铁灰 _up(2)_001.webp',
+          '/其他/磨齿机_LDX022_20261015_钢铁灰/磨齿机_LDX022_20261015_钢铁灰_up(1)_001.webp',
+          '/其他/磨齿机_LDX022_20261015_钢铁灰/磨齿机_LDX022_20261015_钢铁灰_up(2)_001.webp',
+          '/其他/磨齿机_LDX022_20261015_钢铁灰/磨齿机_LDX022_20261015_钢铁灰_up_001.webp'
+        ],
+        specs: [
+          { keyCn: '加工锯条厚度', keyMic: 'Blade Thickness', keyVn: 'Độ dày lưỡi cưa', valueCn: '0.6~3mm', valueMic: '0.6–3 mm', valueVn: '0,6–3 mm', valueRu: '0,6–3 мм', keyRu: 'Толщина полотна' },
+          { keyCn: '锯条宽度', keyMic: 'Blade Width', keyVn: 'Chiều rộng lưỡi cưa', valueCn: '27~100mm', valueMic: '27–100 mm', valueVn: '27–100 mm', valueRu: '27–100 мм', keyRu: 'Ширина полотна' },
+          { keyCn: '工作速度', keyMic: 'Working Speed', keyVn: 'Tốc độ làm việc', valueCn: '最大18齿/分', valueMic: 'Max. 18 teeth/min', valueVn: 'Tối đa 18 răng/phút', valueRu: 'Макс. 18 зубьев/мин', keyRu: 'Скорость работы' },
+          { keyCn: '砂轮尺寸', keyMic: 'Grinding Wheel Size', keyVn: 'Kích thước đá mài', valueCn: 'φ125mm×32mm', valueMic: 'φ125 × 32 mm', valueVn: 'φ125 × 32 mm', valueRu: 'φ125 × 32 мм', keyRu: 'Размер шлифовального круга' },
+          { keyCn: '砂轮线速度', keyMic: 'Grinding Wheel Linear Speed', keyVn: 'Tốc độ đường tính đá mài', valueCn: '26m/s', valueMic: '26 m/s', valueVn: '26 m/s', valueRu: '26 м/с', keyRu: 'Линейная скорость круга' },
+          { keyCn: '冷却液水泵流量', keyMic: 'Coolant Pump Flow Rate', keyVn: 'Lưu lượng bơm nước làm mát', valueCn: '50L/min', valueMic: '50 L/min', valueVn: '50 L/phút', valueRu: '50 л/мин', keyRu: 'Расход охлаждающего насоса' },
+          { keyCn: '冷却油缸容积', keyMic: 'Coolant Tank Capacity', keyVn: 'Dung tích bình dầu làm mát', valueCn: '50L', valueMic: '50 L', valueVn: '50 L', valueRu: '50 л', keyRu: 'Объём бака СОЖ' },
+          { keyCn: '总功率', keyMic: 'Total Power', keyVn: 'Tổng công suất', valueCn: '1.8kW', valueMic: '1.8 kW', valueVn: '1,8 kW', valueRu: '1,8 кВт', keyRu: 'Общая мощность' },
+          { keyCn: '电压', keyMic: 'Voltage', keyVn: 'Điện áp', valueCn: '三相380V', valueMic: '3-phase 380V', valueVn: '3 pha 380V', valueRu: '3 фазы 380 В', keyRu: 'Напряжение' },
+          { keyCn: '机械重量约', keyMic: 'Machine Weight (approx.)', keyVn: 'Trọng lượng máy (khoảng)', valueCn: '300KG', valueMic: '300 kg', valueVn: '300 kg', valueRu: '300 кг', keyRu: 'Вес станка (прибл.)' },
+          { keyCn: '机械尺寸约', keyMic: 'Machine Dimensions (approx.)', keyVn: 'Kích thước máy (khoảng)', valueCn: '800×800×1380mm', valueMic: '800×800×1380 mm', valueVn: '800×800×1380 mm', valueRu: '800×800×1380 мм', keyRu: 'Габариты станка (прибл.)' }
+        ],
+        features: []
       }
     ]
   },
