@@ -153,6 +153,28 @@ export const productSeries: ProductSeries[] = [
         ],
         features: []
       },
+      {
+        id: 'mh3848x160t-20261008',
+        model: 'MH3848x160T',
+        cn: '热压机',
+        mic: 'Hot Press',
+        vn: 'Máy ép nóng',
+        ru: 'Горячий пресс',
+        images: [
+          '/热压机/热压机_MH3848x160T_20261008_蓝白/热压机_MH3848x160T_20261008_蓝白_up (1)_001.webp',
+          '/热压机/热压机_MH3848x160T_20261008_蓝白/热压机_MH3848x160T_20261008_蓝白_up (2)_001.webp',
+          '/热压机/热压机_MH3848x160T_20261008_蓝白/热压机_MH3848x160T_20261008_蓝白_up(3)_001.webp'
+        ],
+        specs: [
+          { keyCn: '层数', keyMic: 'Number of Layers', keyVn: 'Số tầng', keyRu: 'Количество слоёв', valueCn: '5层', valueMic: '5 Layers', valueVn: '5 tầng', valueRu: '5 слоёв' },
+          { keyCn: '电压', keyMic: 'Voltage', keyVn: 'Điện áp', keyRu: 'Напряжение', valueCn: '415V/50HZ/3P', valueMic: '415V/50HZ/3P', valueVn: '415V/50HZ/3P', valueRu: '415 В / 50 Гц / 3 фазы' },
+          { keyCn: '总功率', keyMic: 'Total Power', keyVn: 'Tổng công suất', keyRu: 'Общая мощность', valueCn: '80.5kW', valueMic: '80.5kW', valueVn: '80.5kW', valueRu: '80,5 кВт' },
+          { keyCn: '控制系统', keyMic: 'Control System', keyVn: 'Hệ thống điều khiển', keyRu: 'Система управления', valueCn: '带PLC', valueMic: 'With PLC', valueVn: 'Có PLC', valueRu: 'С ПЛК' },
+          { keyCn: '重量约', keyMic: 'Approx. Weight', keyVn: 'Trọng lượng (khoảng)', keyRu: 'Вес (прибл.)', valueCn: '9500kg', valueMic: '9500kg', valueVn: '9500 kg', valueRu: '9500 кг' },
+          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions (Approx.)', keyVn: 'Kích thước tổng thể (khoảng)', keyRu: 'Габариты (прибл.)', valueCn: '3800×1800×2500mm', valueMic: '3800×1800×2500mm', valueVn: '3800×1800×2500 mm', valueRu: '3800×1800×2500 мм' }
+        ],
+        features: []
+      },
     ]
   },
   {

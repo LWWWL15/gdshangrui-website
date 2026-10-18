@@ -52,6 +52,7 @@
           <button class="lang-btn" :class="{ active: lang === 'cn' }" @click="switchLang('cn')">中文</button>
           <button class="lang-btn" :class="{ active: lang === 'mic' }" @click="switchLang('mic')">EN</button>
           <button class="lang-btn" :class="{ active: lang === 'vn' }" @click="switchLang('vn')">VN</button>
+          <button class="lang-btn" :class="{ active: lang === 'ru' }" @click="switchLang('ru')">RU</button>
         </div>
       </div>
     </div>
