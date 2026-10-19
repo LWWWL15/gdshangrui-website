@@ -381,6 +381,26 @@ export const productSeries: ProductSeries[] = [
         ],
         features: []
       },
+      {
+        id: 'mh3248x60t',
+        model: 'MH3248x60T',
+        cn: '冷压机',
+        mic: 'Cold Press',
+        vn: 'Máy ép lạnh',
+        ru: 'Холодный пресс',
+        images: [
+          '/冷压机/冷压机_MH3248x60T_20261013_绿白/冷压机_MH3248x60T_20261013_绿白_up(2)_001.webp',
+          '/冷压机/冷压机_MH3248x60T_20261013_绿白/冷压机_MH3248x60T_20261013_绿白_up(3)_001.webp'
+        ],
+        specs: [
+          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', keyRu: 'Размер стола', valueCn: '1000×800mm', valueMic: '1000×800mm', valueVn: '1000×800mm', valueRu: '1000 × 800 мм' },
+          { keyCn: '开距', keyMic: 'Opening Distance', keyVn: 'Hành trình mở', keyRu: 'Раскрытие', valueCn: '1000mm', valueMic: '1000mm', valueVn: '1000mm', valueRu: '1000 мм' },
+          { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', keyRu: 'Максимальное усилие', valueCn: '60T', valueMic: '60T', valueVn: '60T', valueRu: '60 т' },
+          { keyCn: '缸数', keyMic: 'Cylinder Quantity', keyVn: 'Số xi-lanh', keyRu: 'Количество цилиндров', valueCn: '2支', valueMic: '2 Pcs', valueVn: '2 cái', valueRu: '2 шт.' },
+          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', keyRu: 'Мощность', valueCn: '4kW', valueMic: '4kW', valueVn: '4kW', valueRu: '4 кВт' },
+        ],
+        features: []
+      },
 
     ]
   },
