@@ -750,6 +750,31 @@ export const productSeries: ProductSeries[] = [
           { keyCn: '机械尺寸约', keyMic: 'Machine Dimensions (approx.)', keyVn: 'Kích thước máy (khoảng)', valueCn: '800×800×1380mm', valueMic: '800×800×1380 mm', valueVn: '800×800×1380 mm', valueRu: '800×800×1380 мм', keyRu: 'Габариты станка (прибл.)' }
         ],
         features: []
+      },
+      {
+        id: 'mc3026',
+        model: 'MC3026',
+        cn: '车床',
+        mic: 'Wood Lathe',
+        vn: 'Máy tiện gỗ',
+        ru: 'Токарный станок по дереву',
+        images: [
+          '/其他/车床_MC3026_20210707_绿白/车床_MC3026_20210707_绿白_up(1)_001.webp',
+          '/其他/车床_MC3026_20210707_绿白/车床_MC3026_20210707_绿白_up(2)_001.webp'
+        ],
+        specs: [
+          { keyCn: '导轨', keyMic: 'Guide Rail', keyVn: 'Ray dẫn hướng', valueCn: '铸件轨道', valueMic: 'Cast Iron Rail', valueVn: 'Ray đúc', valueRu: 'Чугунная направляющая', keyRu: 'Направляющая' },
+          { keyCn: '最大加工长度', keyMic: 'Max. Turning Length', keyVn: 'Chiều dài gia công tối đa', valueCn: '1500mm', valueMic: '1500mm', valueVn: '1500mm', valueRu: '1500 мм', keyRu: 'Макс. длина обработки' },
+          { keyCn: '最大加工直径', keyMic: 'Max. Turning Diameter', keyVn: 'Đường kính gia công tối đa', valueCn: '260mm', valueMic: '260mm', valueVn: '260mm', valueRu: '260 мм', keyRu: 'Макс. диаметр обработки' },
+          { keyCn: '刀架', keyMic: 'Tool Rest', keyVn: 'Bộ gốc dao', valueCn: '单刀架（不含刀具）', valueMic: 'Single Tool Rest (excl. tools)', valueVn: 'Một gốc dao (không kèm dao)', valueRu: 'Однопозиционные каретки (без резцов)', keyRu: 'Каретка резцедержателя' },
+          { keyCn: '中心圈', keyMic: 'Steady Rest', keyVn: 'Chống tâm', valueCn: '不含', valueMic: 'Not included', valueVn: 'Không bao gồm', valueRu: 'Не входит', keyRu: 'Цанговый суппорт' },
+          { keyCn: '电压', keyMic: 'Voltage', keyVn: 'Điện áp', valueCn: '380V 50Hz 3相', valueMic: '380V 50Hz 3-phase', valueVn: '380V 50Hz 3 pha', valueRu: '380 В, 50 Гц, 3 фазы', keyRu: 'Напряжение' },
+          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions (approx.)', keyVn: 'Kích thước tổng thể (khoảng)', valueCn: '约2700×850×1500mm', valueMic: 'Approx. 2700×850×1500mm', valueVn: 'Khoảng 2700×850×1500 mm', valueRu: 'Около 2700 × 850 × 1500 мм', keyRu: 'Габариты (прибл.)' },
+          { keyCn: '重量约', keyMic: 'Weight (approx.)', keyVn: 'Trọng lượng (khoảng)', valueCn: '约430kg', valueMic: 'Approx. 430kg', valueVn: 'Khoảng 430 kg', valueRu: 'Около 430 кг', keyRu: 'Вес (прибл.)' },
+          { keyCn: '随机附件', keyMic: 'Standard Accessories', keyVn: 'Phụ kiện đi kèm', valueCn: '靠模直角支架2个、扳手', valueMic: '2 pcs right-angle steady-rest brackets, wrench', valueVn: '2 giá đỡ góc vuông, cẩn vặt', valueRu: '2 кронштейна угловых упоров, гаечный ключ', keyRu: 'Стандартные принадлежности' },
+          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '2.2kW×4', valueMic: '2.2kW×4', valueVn: '2,2kW×4', valueRu: '2,2 кВт × 4', keyRu: 'Мощность' }
+        ],
+        features: []
       }
     ]
   },
