@@ -447,6 +447,35 @@ export const productSeries: ProductSeries[] = [
           { keyCn: '包装', keyMic: 'Packaging', keyVn: 'Đóng gói', valueCn: '珍珠棉缠绕膜', valueMic: 'EPE stretch film', valueVn: 'Màng xốp PE quấn', valueRu: 'Вспененный полиэтилен (EPE), стрейч-плёнка', keyRu: 'Упаковка' }
         ],
         features: []
+      },
+      {
+        id: 'mj1300-xd3-20201109',
+        model: 'MJ1300-XD3',
+        cn: '多片锯',
+        mic: 'Multi-blade Saw',
+        vn: 'Máy cưa đa lưỡi',
+        ru: 'Многопильный станок',
+        images: [
+          '/多片锯/多片锯_MJ1300-XD3_20201109_蓝白/多片锯_MJ1300-XD3_20201109_蓝白_up(1)_001.webp',
+          '/多片锯/多片锯_MJ1300-XD3_20201109_蓝白/多片锯_MJ1300-XD3_20201109_蓝白_up(2)_001.webp'
+        ],
+        specs: [
+          { keyCn: '整机总功率', keyMic: 'Total Power', keyVn: 'Tổng công suất', keyRu: 'Общая мощность', valueCn: '23.5kW', valueMic: '23.5kW', valueVn: '23.5kW', valueRu: '23,5 кВт' },
+          { keyCn: '主轴电机', keyMic: 'Spindle Motor', keyVn: 'Động cơ trục chính', keyRu: 'Шпиндельный двигатель', valueCn: '22kW，下锯可升降', valueMic: '22kW, lower blade, height adjustable', valueVn: '22kW, cưa dưới, nâng hạ được', valueRu: '22 кВт, нижняя пила, регулировка по высоте' },
+          { keyCn: '送料速度', keyMic: 'Feed Speed', keyVn: 'Tốc độ cấp liệu', keyRu: 'Скорость подачи', valueCn: '无极调速 0-12m/min', valueMic: 'Stepless adjustment 0-12m/min', valueVn: 'Điều chỉnh vô cấp 0-12m/min', valueRu: 'Бесступенчато 0–12 м/мин' },
+          { keyCn: '送料电机功率', keyMic: 'Feed Motor Power', keyVn: 'Công suất động cơ cấp liệu', keyRu: 'Мощность двигателя подачи', valueCn: '1.5kW', valueMic: '1.5kW', valueVn: '1.5kW', valueRu: '1,5 кВт' },
+          { keyCn: '加工厚度', keyMic: 'Processing Thickness', keyVn: 'Độ dày gia công', keyRu: 'Толщина обработки', valueCn: '5-30mm', valueMic: '5-30mm', valueVn: '5-30mm', valueRu: '5–30 мм' },
+          { keyCn: '加工宽度', keyMic: 'Processing Width', keyVn: 'Chiều rộng gia công', keyRu: 'Ширина обработки', valueCn: '1240mm', valueMic: '1240mm', valueVn: '1240mm', valueRu: '1240 мм' },
+          { keyCn: '最少加工长度', keyMic: 'Minimum Processing Length', keyVn: 'Chiều dài gia công tối thiểu', keyRu: 'Минимальная длина обработки', valueCn: '650mm', valueMic: '650mm', valueVn: '650mm', valueRu: '650 мм' },
+          { keyCn: '锯片规格', keyMic: 'Blade Specification', keyVn: 'Thông số lưỡi cưa', keyRu: 'Характеристики пильного диска', valueCn: '直径205×2.2×74mm，60T', valueMic: 'Diameter 205×2.2×74mm, 60T', valueVn: 'Đường kính 205×2.2×74mm, 60T', valueRu: 'Диаметр 205 × 2,2 × 74 мм, 60 зубьев' },
+          { keyCn: '主轴直径', keyMic: 'Spindle Diameter', keyVn: 'Đường kính trục chính', keyRu: 'Диаметр шпинделя', valueCn: '74mm', valueMic: '74mm', valueVn: '74mm', valueRu: '74 мм' },
+          { keyCn: '超耐磨胶辊', keyMic: 'Ultra-wear-resistant Rubber Rollers', keyVn: 'Con lăn cao su chống mài mòn', keyRu: 'Износостойкие резиновые ролики', valueCn: '前三组后三组（上下共12条）', valueMic: '3 groups front, 3 groups back (12 rollers total)', valueVn: '3 nhóm trước, 3 nhóm sau (tổng cộng 12 thanh trên dưới)', valueRu: '3 группы спереди, 3 сзади (всего 12 роликов сверху и снизу)' },
+          { keyCn: '吸尘口直径', keyMic: 'Dust Extraction Port', keyVn: 'Đường kính cổng hút bụi', keyRu: 'Диаметр аспирационного патрубка', valueCn: '150mm', valueMic: '150mm', valueVn: '150mm', valueRu: '150 мм' },
+          { keyCn: '包装', keyMic: 'Packaging', keyVn: 'Đóng gói', keyRu: 'Упаковка', valueCn: '珍珠棉缠绕膜', valueMic: 'EPE stretch film', valueVn: 'Màng xốp PE quấn', valueRu: 'Вспененный полиэтилен (EPE), стрейч-плёнка' },
+          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions', keyVn: 'Kích thước tổng thể', keyRu: 'Габаритные размеры', valueCn: '约2300×1760×1200mm', valueMic: 'Approx. 2300×1760×1200mm', valueVn: 'Khoảng 2300×1760×1200mm', valueRu: 'ок. 2300 × 1760 × 1200 мм' },
+          { keyCn: '重量约', keyMic: 'Weight', keyVn: 'Trọng lượng', keyRu: 'Масса', valueCn: '约2000kg', valueMic: 'Approx. 2000kg', valueVn: 'Khoảng 2000kg', valueRu: 'ок. 2000 кг' }
+        ],
+        features: []
       }
     ]
   },
