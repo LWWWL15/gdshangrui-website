@@ -750,6 +750,32 @@ export const productSeries: ProductSeries[] = [
           { keyCn: '机械尺寸约', keyMic: 'Machine Dimensions (approx.)', keyVn: 'Kích thước máy (khoảng)', valueCn: '800×800×1380mm', valueMic: '800×800×1380 mm', valueVn: '800×800×1380 mm', valueRu: '800×800×1380 мм', keyRu: 'Габариты станка (прибл.)' }
         ],
         features: []
+      },
+      {
+        id: 'mc3026',
+        model: 'MC3026',
+        cn: '车床',
+        mic: 'Wood Lathe',
+        vn: 'Máy tiện gỗ',
+        ru: 'Токарный станок по дереву',
+        images: [
+          '/其他/车床_MC3026_20210707_绿白/车床_MC3026_20210707_绿白_up(2)_001.webp',
+          '/其他/车床_MC3026_20210707_绿白/车床_MC3026_20210707_绿白_up(1)_001.webp'
+        ],
+        specs: [
+          { keyCn: '导轨长度', keyMic: 'Guide Rail Length', keyVn: 'Chiều dài ray dẫn hướng', valueCn: '1900mm', valueMic: '1900mm', valueVn: '1900mm', valueRu: '1900 мм', keyRu: 'Длина направляющей рейки' },
+          { keyCn: '推台尺寸', keyMic: 'Carriage Table Size', keyVn: 'Kích thước bàn đẩy', valueCn: '1000×600mm', valueMic: '1000×600mm', valueVn: '1000×600 mm', valueRu: '1000 × 600 мм', keyRu: 'Размер каретки' },
+          { keyCn: '最大榫头长度', keyMic: 'Max. Tenon Length', keyVn: 'Chiều dài đống tối đa', valueCn: '80mm', valueMic: '80mm', valueVn: '80mm', valueRu: '80 мм', keyRu: 'Максимальная длина шипа' },
+          { keyCn: '齿接高度', keyMic: 'Tooth Joint Height', keyVn: 'Chiều cao khớp răng', valueCn: '110mm', valueMic: '110mm', valueVn: '110mm', valueRu: '110 мм', keyRu: 'Высота зубчатого соединения' },
+          { keyCn: '最大锯片直径', keyMic: 'Max. Blade Diameter', keyVn: 'Đường kính lưỡi cưa tối đa', valueCn: '250mm', valueMic: '250mm', valueVn: '250mm', valueRu: '250 мм', keyRu: 'Максимальный диаметр пилы' },
+          { keyCn: '主轴直径', keyMic: 'Spindle Diameter', keyVn: 'Đường kính trục chính', valueCn: '30mm', valueMic: '30mm', valueVn: '30mm', valueRu: '30 мм', keyRu: 'Диаметр шпинделя' },
+          { keyCn: '主轴转速', keyMic: 'Spindle Speed', keyVn: 'Tốc độ trục chính', valueCn: '6000r/min', valueMic: '6000r/min', valueVn: '6000 vòng/phút', valueRu: '6000 об/мин', keyRu: 'Скорость шпинделя' },
+          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '9.2kW', valueMic: '9.2kW', valueVn: '9,2kW', valueRu: '9,2 кВт', keyRu: 'Мощность' },
+          { keyCn: '电压', keyMic: 'Voltage', keyVn: 'Điện áp', valueCn: '380V 50Hz 三相', valueMic: '380V 50Hz 3-phase', valueVn: '380V 50Hz 3 pha', valueRu: '380 В, 50 Гц, 3 фазы', keyRu: 'Напряжение' },
+          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions (approx.)', keyVn: 'Kích thước tổng thể (khoảng)', valueCn: '约1900×1000×1400mm', valueMic: 'Approx. 1900×1000×1400mm', valueVn: 'Khoảng 1900×1000×1400 mm', valueRu: 'Около 1900 × 1000 × 1400 мм', keyRu: 'Габариты (прибл.)' },
+          { keyCn: '重量约', keyMic: 'Weight (approx.)', keyVn: 'Trọng lượng (khoảng)', valueCn: '约400kg', valueMic: 'Approx. 400kg', valueVn: 'Khoảng 400 kg', valueRu: 'Около 400 кг', keyRu: 'Вес (прибл.)' }
+        ],
+        features: []
       }
     ]
   },
