@@ -775,6 +775,34 @@ export const productSeries: ProductSeries[] = [
           { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '2.2kW×4', valueMic: '2.2kW×4', valueVn: '2,2kW×4', valueRu: '2,2 кВт × 4', keyRu: 'Мощность' }
         ],
         features: []
+      },
+      {
+        id: 'md2108b',
+        model: 'MD2108B',
+        cn: '出榫机',
+        mic: 'Tenon Cutting Machine',
+        vn: 'Máy cưa tạo tenon',
+        ru: 'Станок для нарезки шипов',
+        images: [
+          '/其他/出榫机_MD2108B_20250214_蓝白/出榫机_MD2108B_20250214_蓝白_up(1)_001.webp',
+          '/其他/出榫机_MD2108B_20250214_蓝白/出榫机_MD2108B_20250214_蓝白_up(2)_001.webp'
+        ],
+        specs: [
+          { keyCn: '结构形式', keyMic: 'Structure', keyVn: 'Cấu trúc', valueCn: '单轨重型', valueMic: 'Single Rail Heavy Duty', valueVn: 'Rail đơn kiểu nặng', valueRu: 'Однорельсовый тяжёлый тип', keyRu: 'Конструкция' },
+          { keyCn: '锯片数量', keyMic: 'Number of Blades', keyVn: 'Số lưỡi cưa', valueCn: '五碟', valueMic: '5 Discs', valueVn: '5 đĩa', valueRu: '5 дисков', keyRu: 'Количество пил' },
+          { keyCn: '导轨长度', keyMic: 'Guide Rail Length', keyVn: 'Chiều dài rail dẫn hướng', valueCn: '1900mm', valueMic: '1900mm', valueVn: '1900mm', valueRu: '1900мм', keyRu: 'Длина направляющей' },
+          { keyCn: '推台尺寸', keyMic: 'Push Table Size', keyVn: 'Kích thước bàn đẩy', valueCn: '1000×600mm', valueMic: '1000×600mm', valueVn: '1000×600mm', valueRu: '1000×600мм', keyRu: 'Размер каретки' },
+          { keyCn: '最大榫头长度', keyMic: 'Max Tenon Length', keyVn: 'Chiều dài tenon tối đa', valueCn: '80mm', valueMic: '80mm', valueVn: '80mm', valueRu: '80мм', keyRu: 'Макс. длина шипа' },
+          { keyCn: '齿接高度', keyMic: 'Tooth Joint Height', keyVn: 'Chiều cao khớp răng', valueCn: '110mm', valueMic: '110mm', valueVn: '110mm', valueRu: '110мм', keyRu: 'Высота зубчатого соединения' },
+          { keyCn: '最大锯片直径', keyMic: 'Max Blade Diameter', keyVn: 'Đường kính lưỡi cưa tối đa', valueCn: '250mm', valueMic: '250mm', valueVn: '250mm', valueRu: '250мм', keyRu: 'Макс. диаметр пилы' },
+          { keyCn: '主轴直径', keyMic: 'Spindle Diameter', keyVn: 'Đường kính trục chính', valueCn: '30mm', valueMic: '30mm', valueVn: '30mm', valueRu: '30мм', keyRu: 'Диаметр шпинделя' },
+          { keyCn: '主轴转速', keyMic: 'Spindle Speed', keyVn: 'Tốc độ trục chính', valueCn: '6000r/min', valueMic: '6000r/min', valueVn: '6000 vòng/phút', valueRu: '6000 об/мин', keyRu: 'Частота вращения шпинделя' },
+          { keyCn: '电机功率', keyMic: 'Motor Power', keyVn: 'Công suất động cơ', valueCn: '9.2kW', valueMic: '9.2kW', valueVn: '9,2 kW', valueRu: '9,2 кВт', keyRu: 'Мощность двигателя' },
+          { keyCn: '电压', keyMic: 'Voltage', keyVn: 'Điện áp', valueCn: '380V 50Hz 3PH', valueMic: '380V 50Hz 3PH', valueVn: '380V 50Hz 3 pha', valueRu: '380 В, 50 Гц, 3 фазы', keyRu: 'Напряжение' },
+          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions (approx.)', keyVn: 'Kích thước tổng thể (khoảng)', valueCn: '约1900×1000×1400mm', valueMic: '1900×1000×1400mm', valueVn: '1900×1000×1400 mm', valueRu: '1900×1000×1400 мм', keyRu: 'Габариты (прибл.)' },
+          { keyCn: '重量约', keyMic: 'Weight (approx.)', keyVn: 'Trọng lượng (khoảng)', valueCn: '约400kg', valueMic: '400kg', valueVn: '400 kg', valueRu: '400 кг', keyRu: 'Вес (прибл.)' }
+        ],
+        features: []
       }
     ]
   },
