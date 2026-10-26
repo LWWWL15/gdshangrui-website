@@ -491,7 +491,26 @@ export const productSeries: ProductSeries[] = [
     descRu: 'Гидравлический подъём с высокой грузоподъёмностью. Безопасное и удобное управление, широко используется для перемещения материалов и регулировки высоты на деревообрабатывающих линиях.',
     icon: '🔧',
     color: "url('/lifting-platform-bg.webp')",
-    models: []
+    models: [
+      {
+        id: 'e1825',
+        model: 'E1825',
+        cn: '升降平台',
+        mic: 'Lifting Platform',
+        vn: 'Bục nâng',
+        ru: 'Подъёмный стол',
+        images: [
+          '/升降平台/升降平台_E1825_20201027_橙色/升降平台_E1825_20201027_橙色 (1)_up_001.webp'
+        ],
+        specs: [
+          { keyCn: '规格', keyMic: 'Type', keyVn: 'Loại', keyRu: 'Тип', valueCn: 'E型', valueMic: 'Type E', valueVn: 'Loại E', valueRu: 'Тип E' },
+          { keyCn: '承重', keyMic: 'Load Capacity', keyVn: 'Tải trọng', keyRu: 'Грузоподъёмность', valueCn: '3T', valueMic: '3T', valueVn: '3T', valueRu: '3 т' },
+          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', keyRu: 'Размер платформы', valueCn: '2000×1450mm', valueMic: '2000×1450mm', valueVn: '2000×1450mm', valueRu: '2000 × 1450 мм' },
+          { keyCn: '升降高度', keyMic: 'Lifting Height', keyVn: 'Chiều cao nâng hạ', keyRu: 'Высота подъёма', valueCn: '150-1000mm', valueMic: '150-1000mm', valueVn: '150-1000mm', valueRu: '150–1000 мм' }
+        ],
+        features: []
+      }
+    ]
   },
   {
     id: 'splicing-machine',
