@@ -401,6 +401,27 @@ export const productSeries: ProductSeries[] = [
         ],
         features: []
       },
+      {
+        id: 'mh3248x250t',
+        model: 'MH3248x250T',
+        cn: '冷压机',
+        mic: 'Cold Press',
+        vn: 'Máy ép lạnh',
+        ru: 'Холодный пресс',
+        images: [
+          '/冷压机/冷压机_MH3248x250T_20261028_黄白/冷压机_MH3248x250T_20261028_黄白_up(1)_001.webp',
+          '/冷压机/冷压机_MH3248x250T_20261028_黄白/冷压机_MH3248x250T_20261028_黄白_up(2)_001.webp'
+        ],
+        specs: [
+          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', keyRu: 'Размер стола', valueCn: '3000×1250mm', valueMic: '3000×1250mm', valueVn: '3000×1250mm', valueRu: '3000 × 1250 мм' },
+          { keyCn: '开距', keyMic: 'Opening Distance', keyVn: 'Hành trình mở', keyRu: 'Раскрытие', valueCn: '1000mm', valueMic: '1000mm', valueVn: '1000mm', valueRu: '1000 мм' },
+          { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', keyRu: 'Максимальное усилие', valueCn: '250T', valueMic: '250T', valueVn: '250T', valueRu: '250 т' },
+          { keyCn: '缸数', keyMic: 'Cylinder Quantity', keyVn: 'Số xi-lanh', keyRu: 'Количество цилиндров', valueCn: '8支140/100缸', valueMic: '8 x D140/100mm Cylinders', valueVn: '8 xi-lanh D140/100mm', valueRu: '8 цилиндров D140/100 мм' },
+          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', keyRu: 'Мощность', valueCn: '7.5kW', valueMic: '7.5kW', valueVn: '7.5kW', valueRu: '7,5 кВт' },
+          { keyCn: '电压', keyMic: 'Voltage', keyVn: 'Điện áp', keyRu: 'Напряжение', valueCn: '380V 50HZ 3PH', valueMic: '380V 50HZ 3PH', valueVn: '380V 50HZ 3PH', valueRu: '380 В, 50 Гц, 3 фазы' },
+        ],
+        features: []
+      },
 
     ]
   },
