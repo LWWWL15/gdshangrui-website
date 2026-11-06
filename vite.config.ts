@@ -1,64 +1,104 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
-import { writeFileSync } from 'node:fs'
+import { writeFileSync, mkdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { productSeries } from './src/data/products'
 
 // 站点域名配置（用于 sitemap）
 const hostname = 'https://gdshangrui.com'
 
+// 四种语言的前缀。mic = English（x-default），cn = 中文，vn = 越南语，ru = 俄语
+const LANGS = [
+  { key: 'cn', hreflang: 'zh-CN' },
+  { key: 'mic', hreflang: 'en' },
+  { key: 'vn', hreflang: 'vi' },
+  { key: 'ru', hreflang: 'ru' },
+]
+
+// 静态页面（与 router 中 LangLayout 的 children 对应）
+const STATIC_PATHS = [
+  '/',
+  '/about',
+  '/products',
+  '/products/series',
+  '/blog',
+  '/contact',
+  '/tools',
+  '/tools/pressure-calculator',
+  '/tools/ground-pressure-calculator',
+  '/gallery',
+]
+
 // 从 products.ts 动态生成所有需要预渲染的具体路径
 function getAllPaths() {
-  const basePages = [
-    { zh: '/', en: '/' },
-    { zh: '/about', en: '/about' },
-    { zh: '/products', en: '/products' },
-    { zh: '/blog', en: '/blog' },
-    { zh: '/contact', en: '/contact' },
-    { zh: '/tools', en: '/tools' },
-    { zh: '/tools/pressure-calculator', en: '/tools/pressure-calculator' },
-  ]
-
-  const productPages: { zh: string; en: string }[] = []
+  const productPages: string[] = []
   for (const series of productSeries) {
-    productPages.push({ zh: `/products/${series.id}`, en: `/products/${series.id}` })
+    productPages.push(`/products/${series.id}`)
     for (const model of series.models) {
-      productPages.push({ zh: `/products/${series.id}/${model.id}`, en: `/products/${series.id}/${model.id}` })
+      productPages.push(`/products/${series.id}/${model.id}`)
     }
   }
-
-  return [...basePages, ...productPages]
+  return [...STATIC_PATHS, ...productPages]
 }
 
-// 生成 sitemap（含 hreflang 注解，zh-CN 标准格式）
+// 型号 id 里带日期（mh3248-50t-20260207 → 2026-02-07），用它做 lastmod 比"每次构建都填今天"诚实
+function lastmodFor(path: string): string {
+  const m = path.match(/-(\d{4})(\d{2})(\d{2})$/)
+  if (m) return `${m[1]}-${m[2]}-${m[3]}`
+  return new Date().toISOString().split('T')[0]
+}
+
+function priorityFor(path: string): string {
+  if (path === '/') return '1.0'
+  if (path === '/products') return '0.9'
+  if (path.startsWith('/products/')) return '0.8'
+  if (path === '/gallery' || path === '/about') return '0.7'
+  return '0.6'
+}
+
+function changefreqFor(path: string): string {
+  if (path === '/' || path === '/products') return 'weekly'
+  if (path.startsWith('/products/')) return 'monthly'
+  return 'monthly'
+}
+
+// 生成每种语言一份 sitemap（每份都带全五语 hreflang 互指）
 function generateSitemap() {
   const allPaths = getAllPaths()
-  const today = new Date().toISOString().split('T')[0]
 
-  const urls = allPaths.map((entry) => {
-    const zhUrl = `${hostname}/cn${entry.zh}`
-    const enUrl = `${hostname}/mic${entry.en}`
-    const vnUrl = `${hostname}/vn${entry.zh}`
-    const ruUrl = `${hostname}/ru${entry.zh}`
-    const priority = entry.zh === '/' ? '1.0' : '0.8'
-    return `  <url>
-    <loc>${enUrl}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${priority}</priority>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="${zhUrl}"/>
-    <xhtml:link rel="alternate" hreflang="vi" href="${vnUrl}"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="${ruUrl}"/>
-    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>
+  for (const lang of LANGS) {
+    const urls = allPaths.map((p) => {
+      const alternates = LANGS.map(
+        (l) => `    <xhtml:link rel="alternate" hreflang="${l.hreflang}" href="${hostname}/${l.key}${p}"/>`
+      ).join('\n')
+      const enUrl = `${hostname}/mic${p}`
+      return `  <url>
+    <loc>${hostname}/${lang.key}${p}</loc>
+    <lastmod>${lastmodFor(p)}</lastmod>
+    <changefreq>${changefreqFor(p)}</changefreq>
+    <priority>${priorityFor(p)}</priority>
+${alternates}
     <xhtml:link rel="alternate" hreflang="x-default" href="${enUrl}"/>
   </url>`
-  }).join('\n')
+    }).join('\n')
 
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n  xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>`
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n  xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>`
 
-  writeFileSync(resolve(__dirname, 'dist/sitemap.xml'), xml, 'utf-8')
-  console.log('[sitemap] Generated sitemap.xml with', allPaths.length * 2, 'URLs (zh + en)')
+    const dir = resolve(__dirname, 'dist', lang.key)
+    if (!mkdirSync) { /* noop */ }
+    mkdirSync(dir, { recursive: true })
+    writeFileSync(resolve(dir, 'sitemap.xml'), xml, 'utf-8')
+  }
+
+  // 根 sitemap 改成 sitemap index，指向四份语言 sitemap
+  const indexItems = LANGS.map(
+    (l) => `  <sitemap>\n    <loc>${hostname}/${l.key}/sitemap.xml</loc>\n    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n  </sitemap>`
+  ).join('\n')
+  const indexXml = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${indexItems}\n</sitemapindex>`
+  writeFileSync(resolve(__dirname, 'dist/sitemap.xml'), indexXml, 'utf-8')
+
+  console.log('[sitemap] Generated 4 language sitemaps + index,', allPaths.length * LANGS.length, 'URLs total')
 }
 
 export default defineConfig({

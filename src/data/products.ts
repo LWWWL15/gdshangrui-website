@@ -28,16 +28,30 @@ export interface ProductModel {
   }[]
 }
 
+export interface MultiLangText {
+  cn: string
+  mic: string
+  vn?: string
+  ru?: string
+}
+
 export interface ProductSeries {
   id: string
   cn: string
   mic: string
   vn?: string
+  ru?: string
   descCn: string
   descMic: string
   descVn?: string
+  descRu?: string
   icon: string
   color: string
+  // 以下为可选的系列页扩展内容，只有填写了的系列才会渲染
+  intro?: MultiLangText[]      // 工位/定位叙述段落
+  highlights?: MultiLangText[] // 卖点条目
+  selection?: MultiLangText[]  // 选型需客户提供的资料
+  faq?: { q: MultiLangText; a: MultiLangText }[]
   models: ProductModel[]
 }
 
@@ -512,6 +526,162 @@ export const productSeries: ProductSeries[] = [
     descRu: 'Гидравлический подъём с высокой грузоподъёмностью. Безопасное и удобное управление, широко используется для перемещения материалов и регулировки высоты на деревообрабатывающих линиях.',
     icon: '🔧',
     color: "url('/lifting-platform-bg.webp')",
+    intro: [
+      {
+        cn: '升降平台通常不是一台单独使用的设备，而是板式生产线「自动入板工位」里的高度补偿单元。叉车把整垛模板放上平台，推板机逐张分离推走，平台随取随升，把下一张待取板材的取料面始终保持在同一高度。垛层再高再低，下游的压合与开料不用跟着变。',
+        mic: 'A lifting platform is usually not a stand-alone machine. It is the height compensation unit inside the automatic panel infeed station of a panel production line. A forklift places the full pallet of panels on the platform, the pusher separates and pushes off one sheet at a time, and the platform rises as each sheet is taken, keeping the pick-up face of the next panel at a constant height. However high or low the stack becomes, the downstream press and saw never have to change their own feeding height.',
+        vn: 'Bục nâng thường không hoạt động độc lập mà là bộ phận bù chiều cao trong trạm cấp liệu tự động của dây chuyền sản xuất ván. Xe nâng đặt cả pallet tấm lên bàn, máy đẩy tách từng tấm đẩy đi, bàn nâng lên theo từng tấm lấy đi, nhờ đó mặt lấy của tấm tiếp theo luôn giữ ở cùng một chiều cao. Dù chồng cao thấp thay đổi, phía ép và cưa phía sau không phải điều chỉnh lại chiều cao cấp liệu.',
+        ru: 'Подъёмный стол обычно работает не как отдельная машина, а как узел компенсации высоты в автоматической станции подачи панелей. Погрузчик ставит на платформу весь стопку панелей, толкатель отделяет и выталкивает по одному листу, а платформа поднимается по мере снятия каждого листа, поддерживая поверхность забора следующей панели на постоянной высоте. Как бы ни менялась высота стопки, пресс и пила downstream не подстраивают свою высоту подачи.'
+      },
+      {
+        cn: '平台采用液压驱动，E 型台面下方留有叉车通道，叉车或手动液压车可以直接把整垛模板推上平台、取走整垛模板，不需要在地面上二次倒垛。平台升起到工作高度后与辊筒输送线、压机或多片锯的进料辊台对接，整条线按一个取料高度设计。',
+        mic: 'The platform is hydraulically driven. The E-type deck leaves a fork access channel underneath, so a forklift or hand pallet truck can push a full pallet of panels onto the platform and take it away again — no re-stacking on the floor. Once raised to working height, the platform meets the roller conveyor, the press or the multi-blade saw infeed table, so the whole line is designed around a single pick-up height.',
+        vn: 'Bàn nâng dùng hệ thủy lực. Mặt bàn dạng E có khe để xỏ xe nâng, nhờ đó xe nâng hoặc xe nâng tay có thể đẩy cả pallet tấm lên bàn và lấy ra, không cần dọn lại pallet trên nền. Khi nâng lên cao làm việc, bàn nâng tiếp nối với băng tải con lăn, máy ép hoặc bàn nạp của cưa đa lưỡi, để cả dây chuyền được thiết kế theo một chiều cao lấy liệu duy nhất.',
+        ru: 'Платформа приводится в действие гидравликой. Платформа типа E имеет снизу проём для вил, поэтому погрузчик или ручной гидравлический штабелёр может завезти стопку панелей на платформу и забрать её обратно — без перекладки на полу. Поднявшись на рабочую высоту, платформа стыкуется с роликовым конвейером, прессом или подающим столом многопильного станка, и вся линия проектируется под одну высоту забора материала.'
+      }
+    ],
+    highlights: [
+      {
+        cn: '液压驱动，升降平稳无冲击，可在运行中连续微调取料高度',
+        mic: 'Hydraulic drive with smooth, shock-free travel; the pick-up height can be fine-tuned continuously while running',
+        vn: 'Dẫn động thủy lực, nâng hạ êm ái không va chạm, có thể tinh chỉnh liên tục chiều cao lấy liệu khi đang chạy',
+        ru: 'Гидравлический привод с плавным ходом без рывков; высоту забора можно точно подстраивать во время работы'
+      },
+      {
+        cn: 'E 型台面，叉车与手动液压车可直接上料取料，省去二次倒垛',
+        mic: 'E-type deck: a forklift or hand pallet truck loads and unloads directly, with no re-stacking',
+        vn: 'Mặt bàn dạng E: xe nâng và xe nâng tay lấy hàng trực tiếp, không cần dọn lại pallet',
+        ru: 'Платформа типа E: погрузчик и ручной штабелёр грузят и разгружают напрямую, без перекладки'
+      },
+      {
+        cn: '升降高度 150–1000mm，底面可压至 150mm，与辊筒线、压机进料高度直接对接',
+        mic: '150–1000mm lifting range, deck lowers to 150mm, matching roller line and press infeed heights directly',
+        vn: 'Hành trình nâng 150–1000mm, hạ mặt bàn xuống 150mm, khớp trực tiếp với băng tải con lăn và chiều cao nạp của máy ép',
+        ru: 'Ход подъёма 150–1000 мм, платформа опускается до 150 мм и напрямую стыкуется с роликовой линией и высотой подачи пресса'
+      },
+      {
+        cn: '额定承重 3T，满足整垛板材上料的载荷要求',
+        mic: '3T rated load capacity, sufficient for loading a full pallet of panels',
+        vn: 'Tải trọng định mức 3T, đáp ứng yêu cầu tải khi nạp cả pallet tấm',
+        ru: 'Номинальная грузоподъёмность 3 т — достаточно для загрузки целой стопки панелей'
+      },
+      {
+        cn: '与推板机组成自动入板工位，逐张补偿取料高度差，减少人工抬板',
+        mic: 'Forms an automatic infeed station together with the pusher, compensating the pick-up height sheet by sheet and reducing manual panel handling',
+        vn: 'Kết hợp với máy đẩy thành trạm cấp liệu tự động, bù chiều cao lấy từng tấm, giảm số lao động nâng tấm',
+        ru: 'Вместе с толкателем образует автоматическую станцию подачи, компенсируя высоту забора по каждому листу и сокращая ручной труд по переносу панелей'
+      },
+      {
+        cn: '台面尺寸、升降行程与承重可按产线非标定制',
+        mic: 'Deck size, lifting range and load capacity are customized to the production line',
+        vn: 'Kích thước mặt bàn, hành trình nâng hạ và tải trọng được đặt theo yêu cầu dây chuyền',
+        ru: 'Размер настила, ход подъёма и грузоподъёмность изготавливаются по параметрам линии'
+      }
+    ],
+    selection: [
+      {
+        cn: '板材规格与单垛重量（含板厚、堆垛层数）',
+        mic: 'Panel dimensions and weight per pallet (including thickness and number of layers)',
+        vn: 'Kích thước tấm và khối lượng mỗi pallet (gồm độ dày và số lớp)',
+        ru: 'Размер панелей и масса одной стопки (включая толщину и число слоёв)'
+      },
+      {
+        cn: '目标取料高度，以及下游压机或多片锯的进料辊台高度',
+        mic: 'Target pick-up height and the infeed roller height of the downstream press or multi-blade saw',
+        vn: 'Chiều cao lấy liệu mong muốn và chiều cao bàn nạp của máy ép hoặc cưa đa lưỡi phía sau',
+        ru: 'Требуемая высота забора и высота подающего ролика пресса или многопильного станка'
+      },
+      {
+        cn: '上料方向、工位布局与叉车/液压车的进出空间',
+        mic: 'Loading direction, station layout and the space for the forklift or pallet truck to enter and leave',
+        vn: 'Hướng cấp liệu, bố trí trạm và không gian cho xe nâng/xe nâng tay ra vào',
+        ru: 'Направление подачи, компоновка станции и пространство для въезда и выезда погрузчика'
+      },
+      {
+        cn: '供电条件（电压/相数）与联锁信号接口需求',
+        mic: 'Power supply (voltage / phase) and interlock signal interface requirements',
+        vn: 'Nguồn điện (điện áp/số pha) và yêu cầu giao diện tín hiệu liên động',
+        ru: 'Электропитание (напряжение/число фаз) и требования к интерфейсу сигналов блокировки'
+      },
+      {
+        cn: '是否需要防尘罩、安全光栅等附件',
+        mic: 'Whether accessories such as a dust cover or a light curtain are required',
+        vn: 'Có cần các phụ kiện như vỏ chống bụi, rào quang học hay không',
+        ru: 'Нужны ли дополнительные принадлежности: пылезащитный чехол, световая завеса и т. п.'
+      }
+    ],
+    faq: [
+      {
+        q: {
+          cn: '升降平台必须配推板机一起用吗？可以单独买吗？',
+          mic: 'Does the lifting platform have to be used with a pusher? Can it be bought on its own?',
+          vn: 'Bục nâng có bắt buộc phải dùng cùng máy đẩy không? Có thể mua riêng không?',
+          ru: 'Обязательно ли подъёмный стол работает вместе с толкателем? Можно ли купить отдельно?'
+        },
+        a: {
+          cn: '可以单独使用，作为物料举升与高度调节平台。但升降平台真正的价值在于「逐张补偿取料高度」——脱离推板机后，垛顶会随取料不断变矮，平台再高也补不回来。做成推板机 + 升降平台成套的自动入板工位，才能稳定连续供料。',
+          mic: 'It can be used on its own as a material lifting and height adjusting platform. But its real value lies in compensating the pick-up height sheet by sheet — without a pusher the stack top drops as material is taken away, and no platform height can compensate for that. Only a pusher and lifting platform working as a set deliver a stable, continuous supply.',
+          vn: 'Có thể dùng riêng như một bàn nâng vật liệu và điều chỉnh chiều cao. Nhưng giá trị thực sự của bục nâng nằm ở việc bù chiều cao lấy từng tấm — nếu không có máy đẩy, đỉnh chồng tấm hạ dần khi lấy hàng, không có cách nào bù lại. Chỉ khi kết hợp máy đẩy và bục nâng thành một bộ cấp liệu tự động mới cấp liệu liên tục ổn định.',
+          ru: 'Можно использовать и отдельно — как подъёмный стол для перемещения материалов и регулировки высоты. Но реальная ценность подъёмного стола — в компенсации высоты забора по каждому листу: без толкателя верх стопки опускается по мере снятия панелей, и никакая высота платформы это не компенсирует. Стабильная непрерывная подача получается только у комплекта «толкатель + подъёмный стол».'
+        }
+      },
+      {
+        q: {
+          cn: '最低台面 150mm，叉车能直接开上去吗？',
+          mic: 'The deck lowers to 150mm — can a forklift drive straight on?',
+          vn: 'Mặt bàn hạ thấp nhất 150mm, xe nâng có thể đi thẳng lên không?',
+          ru: 'Настил опускается до 150 мм — погрузчик может заехать прямо на него?'
+        },
+        a: {
+          cn: 'E1825 的升降高度为 150–1000mm，E 型台面底部留有叉车通道，就是按叉车或手动液压车直接上料设计的。能否整车驶上取决于您的叉车型号、货叉高度与进叉空间，请把叉车参数发给我们核对，我们出对接方案。',
+          mic: 'The E1825 has a 150–1000mm lifting range, and the E-type deck has a fork access channel underneath, designed for a forklift or hand pallet truck to load directly. Whether a full forklift can drive on depends on your truck model, fork height and entry clearance, so send us the forklift details and we will check the interface and propose the matching setup.',
+          vn: 'E1825 có hành trình nâng 150–1000mm và mặt bàn dạng E có khe xỏ xe nâng phía dưới, được thiết kế để xe nâng hoặc xe nâng tay nạp hàng trực tiếp. Việc xe nâng có vào được hay không phụ thuộc vào loại xe, chiều cao chân chẻ và không gian vào của chúng, xin gửi thông số xe nâng để chúng tôi đối chiếu và đưa ra phương án ghép nối.',
+          ru: 'У E1825 ход подъёма 150–1000 мм, а под настилом типа E предусмотрен проём для вил — платформа рассчитана на прямую загрузку погрузчиком или ручным штабелёром. Сможет ли погрузчик заехать целиком, зависит от модели, высоты вил и пространства для въезда, поэтому пришлите параметры погрузчика — мы проверим сопряжение и предложим схему стыковки.'
+        }
+      },
+      {
+        q: {
+          cn: '台面 2000×1450mm，2440mm 长的标准板放得下吗？',
+          mic: 'The deck is 2000×1450mm — does a standard 2440mm panel fit?',
+          vn: 'Mặt bàn 2000×1450mm, tấm tiêu chuẩn dài 2440mm có vừa không?',
+          ru: 'Настил 2000×1450 мм — поместится ли стандартная панель длиной 2440 мм?'
+        },
+        a: {
+          cn: '取决于您的堆垛方式与取料方向（横置上料、斜置上料，或由推板机直推过台面不下板）。标准幅面 1220×2440mm 的整垛通常需要更大台面或改用推板机直推对接。把板材规格、垛型与您现在怎么上料告诉我们，我们按实际幅面出配置方案。',
+          mic: 'It depends on how you stack and on the feeding direction — laid across, laid diagonally, or pushed straight over the deck by the pusher without resting on it. A full pallet of standard 1220×2440mm panels usually needs a larger deck, or the panels are pushed across by the pusher instead. Tell us the panel size, the stack layout and how you load today, and we will size the configuration to the actual format.',
+          vn: 'Tùy vào cách xếp chồng và hướng lấy liệu (đặt ngang, đặt chéo, hoặc để máy đẩy đẩy qua mà không đặt lên bàn). Một pallet đầy đủ tấm tiêu chuẩn 1220×2440mm thường cần mặt bàn lớn hơn, hoặc dùng máy đẩy đẩy thẳng qua. Hãy cho chúng tôi biết kích thước tấm, kiểu xếp và cách anh đang nạp hiện tại, chúng tôi sẽ tính cấu hình theo đúng khổ thực tế.',
+          ru: 'Зависит от способа укладки и направления подачи — поперёк, по диагонали либо панели толкателем проталкиваются прямо над платформой, без опирания на неё. Полная стопка стандартных панелей 1220×2440 мм обычно требует настила большего размера, либо панели проталкиваются толкателем насквозь. Пришлите размер панелей, схему укладки и то, как вы грузите сейчас, — мы подберём конфигурацию под фактический формат.'
+        }
+      },
+      {
+        q: {
+          cn: '能和压机、多片锯联动吗？',
+          mic: 'Can it be interlocked with the press and the multi-blade saw?',
+          vn: 'Có thể liên động với máy ép và cưa đa lưỡi không?',
+          ru: 'Возможна ли блокировка с прессом и многопильным станком?'
+        },
+        a: {
+          cn: '可以。我们按整线方案配套，提供与推板机、辊筒输送线、压机或多片锯之间的联锁信号对接方案，包括平台到位信号、允许推送信号与安全互锁。请说明下游设备型号与接口需求，我们一并出对接图。',
+          mic: 'Yes. We supply it as part of a complete line and provide the interlock interface between the platform, the pusher, the roller conveyor, the press or the multi-blade saw — including the platform-in-position signal, the allow-to-push signal and the safety interlocks. Tell us the downstream machine models and interface requirements, and we will issue the matching connection drawings.',
+          vn: 'Có. Chúng tôi cung cấp theo phương án dây chuyền hoàn chỉnh, kèm phương án ghép nối tín hiệu liên động giữa bàn nâng, máy đẩy, băng tải con lăn, máy ép hoặc cưa đa lưỡi, gồm tín hiệu bàn đã vị trí, tín hiệu cho phép đẩy và liên động an toàn. Hãy cho biết model thiết bị phía sau và yêu cầu giao diện, chúng tôi sẽ gửi bản vẽ ghép nối.',
+          ru: 'Да. Мы поставляем платформу в составе комплекса линии и предоставляем схему сигналов блокировки между платформой, толкателем, роликовым конвейером, прессом или многопильным станком — сигнал «платформа на позиции», сигнал разрешения толкания и аварийные блокировки. Укажите модели downstream-оборудования и требования к интерфейсу, и мы подготовим соответствующие чертежи стыковки.'
+        }
+      },
+      {
+        q: {
+          cn: '报价前我需要提供哪些资料？',
+          mic: 'What information do you need from me before quoting?',
+          vn: 'Tôi cần cung cấp thông tin gì trước khi nhận báo giá?',
+          ru: 'Какая информация нужна от меня до запроса цены?'
+        },
+        a: {
+          cn: '板材规格与单垛重量、目标取料高度与下游设备进料高度、上料方向与工位布局、供电条件与联锁接口需求，以及是否需要防尘罩/安全光栅等附件。资料齐了，我们出的就是能直接对接生产的方案，而不是一份通用报价单。',
+          mic: 'Panel dimensions and pallet weight, target pick-up height and the downstream infeed height, loading direction and station layout, power supply and interlock interface requirements, plus whether you need accessories such as a dust cover or light curtain. With that information we can give you a configuration that drops straight into production, not a generic quotation.',
+          vn: 'Kích thước tấm và khối lượng pallet, chiều cao lấy liệu mong muốn và chiều cao nạp của thiết bị phía sau, hướng cấp liệu và bố trí trạm, điều kiện nguồn điện và giao diện liên động, cùng nhu cầu phụ kiện như vỏ chống bụi, rào quang học. Có đủ thông tin, báo giá chúng tôi gửi là cấu hình lắp vào chạy được, không phải một bảng giá chung chung.',
+          ru: 'Размер панелей и масса стопки, требуемая высота забора и высота подачи downstream-оборудования, направление подачи и компоновка станции, условия электропитания и интерфейса блокировки, а также нужны ли аксессуары — пылезащитный чехол, световая завеса. С этими данными мы выдаём не общий прайс-лист, а конфигурацию, готовую к прямой стыковке с производством.'
+        }
+      }
+    ],
     models: [
       {
         id: 'e1825',
@@ -529,7 +699,38 @@ export const productSeries: ProductSeries[] = [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', keyRu: 'Размер платформы', valueCn: '2000×1450mm', valueMic: '2000×1450mm', valueVn: '2000×1450mm', valueRu: '2000 × 1450 мм' },
           { keyCn: '升降高度', keyMic: 'Lifting Height', keyVn: 'Chiều cao nâng hạ', keyRu: 'Высота подъёма', valueCn: '150-1000mm', valueMic: '150-1000mm', valueVn: '150-1000mm', valueRu: '150–1000 мм' }
         ],
-        features: []
+        features: [
+          {
+            cn: '液压驱动升降，运行平稳，可在取料过程中连续微调高度',
+            mic: 'Hydraulic lifting with smooth travel; height can be continuously fine-tuned during feeding',
+            vn: 'Nâng hạ thủy lực, vận hành êm, có thể tinh chỉnh chiều cao liên tục trong lúc lấy liệu',
+            ru: 'Гидравлический подъём с плавным ходом; высоту можно непрерывно подстраивать во время подачи'
+          },
+          {
+            cn: 'E 型台面底部留有叉车通道，叉车或手动液压车可直接上料取料',
+            mic: 'E-type deck with a fork access channel underneath for direct forklift or pallet truck loading',
+            vn: 'Mặt bàn dạng E có khe xỏ xe nâng phía dưới, xe nâng hoặc xe nâng tay nạp hàng trực tiếp',
+            ru: 'Платформа типа E с проёмом для вил снизу — прямая загрузка погрузчиком или штабелёром'
+          },
+          {
+            cn: '升降高度 150–1000mm，底面可压至 150mm，对接辊筒线与压机进料高度',
+            mic: '150–1000mm lifting range down to a 150mm deck height, matching roller lines and press infeed',
+            vn: 'Hành trình 150–1000mm, hạ mặt bàn xuống 150mm, khớp băng tải con lăn và chiều cao nạp máy ép',
+            ru: 'Ход 150–1000 мм с опусканием настила до 150 мм — стыковка с роликовой линией и подачей пресса'
+          },
+          {
+            cn: '额定承重 3T，满足整垛板材上料载荷',
+            mic: '3T rated load capacity, sufficient for loading a full pallet of panels',
+            vn: 'Tải trọng định mức 3T, đáp ứng tải khi nạp cả pallet tấm',
+            ru: 'Номинальная грузоподъёмность 3 т для загрузки целой стопки панелей'
+          },
+          {
+            cn: '与推板机组成自动入板工位，逐张补偿取料高度差',
+            mic: 'Forms an automatic infeed station with the pusher, compensating pick-up height sheet by sheet',
+            vn: 'Kết hợp máy đẩy thành trạm cấp liệu tự động, bù chiều cao lấy từng tấm',
+            ru: 'Образует с толкателем автоматическую станцию подачи, компенсируя высоту забора по каждому листу'
+          }
+        ]
       }
     ]
   },

@@ -10,6 +10,24 @@
 
     <section class="section">
       <div class="container">
+        <!-- 工位/定位叙述 -->
+        <div v-if="series?.intro && series.intro.length > 0" class="series-intro">
+          <p v-for="(para, idx) in series.intro" :key="idx" class="intro-para">
+            {{ t(para.cn, para.mic, para.vn, para.ru) }}
+          </p>
+        </div>
+
+        <!-- 卖点 -->
+        <div v-if="series?.highlights && series.highlights.length > 0" class="highlights">
+          <h2 class="block-title">{{ t('产品特点', 'Key Features', 'Đặc điểm', 'Особенности') }}</h2>
+          <ul class="highlights-list">
+            <li v-for="(item, idx) in series.highlights" :key="idx">
+              <span class="hl-dot" aria-hidden="true"></span>
+              <span>{{ t(item.cn, item.mic, item.vn, item.ru) }}</span>
+            </li>
+          </ul>
+        </div>
+
         <!-- 有型号的系列 -->
         <div v-if="series?.models && series.models.length > 0" class="models-grid">
           <router-link
@@ -23,7 +41,7 @@
               <img v-else :src="model.images[0]" :alt="model.model" loading="lazy" />
             </div>
             <div class="model-info">
-              <h3 class="model-name">{{ t(model.model, model.mic,  model.vn,  model.ru) }}</h3>
+              <h3 class="model-name">{{ model.model }}</h3>
               <p v-if="model.cn || model.mic" class="model-title">{{ t(model.cn, model.mic,  model.vn,  model.ru) }}</p>
               <span class="view-detail">{{ t('查看详情 →', 'View Details →',  t('查看详情 →', 'View Details →', 'Xem chi tiết →', 'Подробнее →'),  t('查看详情 →', 'View Details →', 'Xem chi tiết →', 'Подробнее →')) }}</span>
             </div>
@@ -38,7 +56,7 @@
             </div>
             <div class="placeholder-info">
               <h3>{{ t(series?.cn, series?.mic, series?.vn, series?.ru) }}</h3>
-              <p>{{ t(series?.descCn, series?.descMic,  series?.descVn,  series?.descVn) }}</p>
+              <p>{{ t(series?.descCn, series?.descMic,  series?.descVn,  series?.descRu) }}</p>
               <router-link :to="`/${lang}/contact`" class="btn btn-primary">
                 {{ t('联系我们获取详情', 'Contact Us for Details', 'Liên hệ với chúng tôi để biết chi tiết', 'Свяжитесь с нами для подробностей') }}
               </router-link>
@@ -46,10 +64,33 @@
           </div>
         </div>
 
+        <!-- 选型需提供的资料 -->
+        <div v-if="series?.selection && series.selection.length > 0" class="selection-box">
+          <h2 class="block-title">
+            {{ t('询价前请提供以下资料', 'Please Provide the Following for Quotation', 'Vui lòng cung cấp thông tin sau để nhận báo giá', 'Что указать для запроса цены') }}
+          </h2>
+          <ol class="selection-list">
+            <li v-for="(item, idx) in series.selection" :key="idx">
+              {{ t(item.cn, item.mic, item.vn, item.ru) }}
+            </li>
+          </ol>
+        </div>
+
+        <!-- 常见问题 -->
+        <div v-if="series?.faq && series.faq.length > 0" class="faq-block">
+          <h2 class="block-title">{{ t('常见问题', 'FAQ', 'Câu hỏi thường gặp', 'Частые вопросы') }}</h2>
+          <div class="faq-list">
+            <details v-for="(item, idx) in series.faq" :key="idx" class="faq-item">
+              <summary>{{ t(item.q.cn, item.q.mic, item.q.vn, item.q.ru) }}</summary>
+              <p>{{ t(item.a.cn, item.a.mic, item.a.vn, item.a.ru) }}</p>
+            </details>
+          </div>
+        </div>
+
         <!-- 快速询价 -->
         <div class="cta-section">
           <router-link :to="`/${lang}/contact`" class="btn btn-outline-dark btn-lg">
-            {{ t('询价此系列产品', 'Get Quote for This Series', 'Nhận báo giá cho dòng sản phẩm này', 'Get Quote for This Series') }}
+            {{ t('询价此系列产品', 'Get Quote for This Series', 'Nhận báo giá cho dòng sản phẩm này', 'Запросить цену на эту серию') }}
           </router-link>
         </div>
       </div>
@@ -111,6 +152,168 @@ const series = computed(() => getSeriesById(seriesId.value))
   @media (max-width: $bp-sm) {
     grid-template-columns: repeat(2, 1fr);
     gap: $s-sm;
+  }
+}
+
+// ---- 扩展内容块（工位叙述 / 卖点 / 选型资料 / FAQ）----
+
+.block-title {
+  font-size: $fs-xl;
+  font-weight: $fw-bold;
+  color: $c-text-primary;
+  margin-bottom: $s-lg;
+}
+
+.series-intro {
+  max-width: 900px;
+  margin-bottom: $s-2xl;
+
+  .intro-para {
+    color: $c-text-secondary;
+    line-height: 1.9;
+    font-size: $fs-base;
+    margin-bottom: $s-md;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.highlights {
+  margin-bottom: $s-3xl;
+}
+
+.highlights-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: $s-md $s-xl;
+
+  @media (max-width: $bp-sm) {
+    grid-template-columns: 1fr;
+    gap: $s-sm;
+  }
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: $s-sm;
+    color: $c-text-secondary;
+    line-height: 1.7;
+    font-size: $fs-sm;
+  }
+
+  .hl-dot {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    margin-top: 8px;
+    border-radius: $r-full;
+    background: $c-accent;
+  }
+}
+
+.selection-box {
+  background: $c-bg-secondary;
+  border: 1px solid $c-border;
+  border-radius: $r-md;
+  padding: $s-xl;
+  margin-bottom: $s-3xl;
+
+  @media (max-width: $bp-sm) {
+    padding: $s-lg;
+  }
+}
+
+.selection-list {
+  list-style: none;
+  counter-reset: selection;
+
+  li {
+    counter-increment: selection;
+    display: flex;
+    align-items: flex-start;
+    gap: $s-sm;
+    color: $c-text-secondary;
+    line-height: 1.7;
+    font-size: $fs-sm;
+    margin-bottom: $s-xs;
+
+    &::before {
+      content: counter(selection);
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: $r-full;
+      background: $c-accent;
+      color: #fff;
+      font-size: $fs-xs;
+      font-weight: $fw-bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.faq-block {
+  max-width: 900px;
+  margin-bottom: $s-3xl;
+}
+
+.faq-item {
+  border-bottom: 1px solid $c-border;
+  padding: $s-md 0;
+
+  &:first-child {
+    border-top: 1px solid $c-border;
+  }
+
+  summary {
+    cursor: pointer;
+    font-size: $fs-base;
+    font-weight: $fw-semibold;
+    color: $c-text-primary;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: $s-sm;
+    transition: color $t-fast;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: '+';
+      margin-left: auto;
+      color: $c-accent;
+      font-size: $fs-xl;
+      font-weight: $fw-regular;
+      line-height: 1;
+    }
+
+    &:hover {
+      color: $c-accent;
+    }
+  }
+
+  &[open] summary::after {
+    content: '−';
+  }
+
+  p {
+    color: $c-text-secondary;
+    line-height: 1.8;
+    font-size: $fs-sm;
+    margin-top: $s-sm;
+    padding-left: $s-lg;
   }
 }
 

@@ -16,6 +16,7 @@ import AppFooter from '@/components/layout/AppFooter.vue'
 import LoadingScreen from '@/components/LoadingScreen.vue'
 import { useLang } from '@/composables/useLang'
 import { getSeriesById, getModelById } from '@/data/products'
+import { getSeoPack } from '@/data/seo'
 
 const route = useRoute()
 const router = useRouter()
@@ -130,32 +131,48 @@ const pageDescMap: Record<string, { cn: string; mic: string; vn: string; ru: str
 // ============================================
 
 // Helper: get spec value by key (tries cn, mic, vn variants)
-function getSpecValue(routeLang: 'cn' | 'mic' | 'vn', specs: any[], cnKey: string, micKey: string, vnKey?: string): string | null {
+function getSpecValue(routeLang: 'cn' | 'mic' | 'vn' | 'ru', specs: any[], cnKey: string, micKey: string, vnKey?: string): string | null {
   const spec = specs.find(s => s.keyCn === cnKey || s.keyMic === micKey)
   if (!spec) return null
   if (routeLang === 'cn') return spec.valueCn
   if (routeLang === 'vn') return vnKey ? spec[vnKey] ?? spec.valueMic : spec.valueMic
+  if (routeLang === 'ru') return spec.valueRu ?? spec.valueMic
   return spec.valueMic
 }
 
 // Build product model page title: "MH3848X120T 热压机 | 上锐机械"
-function buildProductModelTitle(routeLang: 'cn' | 'mic' | 'vn', series: any, model: any): string {
-  const seriesName = routeLang === 'cn' ? series.cn : routeLang === 'vn' ? (series.vn || series.mic) : series.mic
+// Priority: SEO content pack (src/data/seo/<modelId>/<lang>.json) → auto-generated fallback.
+// Content packs hold independently-researched keywords per language, so they win when present.
+function buildProductModelTitle(routeLang: 'cn' | 'mic' | 'vn' | 'ru', series: any, model: any): string {
+  const pack = getSeoPack(model.id, routeLang)
+  if (pack?.seoTitle) return pack.seoTitle
+
+  const seriesName = routeLang === 'cn' ? series.cn
+    : routeLang === 'vn' ? (series.vn || series.mic)
+    : routeLang === 'ru' ? (series.ru || series.mic)
+    : series.mic
   const modelName = model.model
   if (routeLang === 'cn') return `${modelName} ${seriesName} | 上锐机械`
   if (routeLang === 'vn') return `${modelName} ${seriesName} | Shang Rui Vietnam`
+  if (routeLang === 'ru') return `${modelName} ${seriesName} | Shang Rui Machinery`
   return `${modelName} ${seriesName} | Shang Rui Machinery`
 }
 
 // Build product model page description
 // Priority: series description + key specs (table size, pressure, power, layers)
 // Only includes specs that actually exist in the model data
-function buildProductModelDesc(routeLang: 'cn' | 'mic' | 'vn', series: any, model: any): string {
+function buildProductModelDesc(routeLang: 'cn' | 'mic' | 'vn' | 'ru', series: any, model: any): string {
+  const pack = getSeoPack(model.id, routeLang)
+  if (pack?.metaDesc) return pack.metaDesc
+
   const specs = model.specs || []
   const parts: string[] = []
 
   // Series description first
-  const seriesDesc = routeLang === 'cn' ? series.descCn : routeLang === 'vn' ? (series.descVn || series.descMic) : series.descMic
+  const seriesDesc = routeLang === 'cn' ? series.descCn
+    : routeLang === 'vn' ? (series.descVn || series.descMic)
+    : routeLang === 'ru' ? (series.descRu || series.descMic)
+    : series.descMic
   if (seriesDesc) parts.push(seriesDesc)
 
   // Table size (try multiple possible key names)
@@ -188,28 +205,38 @@ function buildProductModelDesc(routeLang: 'cn' | 'mic' | 'vn', series: any, mode
 }
 
 // Build product series page title: "热压机系列 | 上锐机械木工机械"
-function buildProductSeriesTitle(routeLang: 'cn' | 'mic' | 'vn', series: any): string {
-  const seriesName = routeLang === 'cn' ? series.cn : routeLang === 'vn' ? (series.vn || series.mic) : series.mic
+function buildProductSeriesTitle(routeLang: 'cn' | 'mic' | 'vn' | 'ru', series: any): string {
+  const seriesName = routeLang === 'cn' ? series.cn
+    : routeLang === 'vn' ? (series.vn || series.mic)
+    : routeLang === 'ru' ? (series.ru || series.mic)
+    : series.mic
   if (routeLang === 'cn') return `${seriesName}系列 | 上锐机械木工机械`
   if (routeLang === 'vn') return `${seriesName} | Shang Rui Vietnam`
+  if (routeLang === 'ru') return `${seriesName} | Shang Rui Machinery`
   return `${seriesName} Series | Shang Rui Woodworking Machinery`
 }
 
 // Build product series page description: use series.desc
-function buildProductSeriesDesc(routeLang: 'cn' | 'mic' | 'vn', series: any): string {
-  return routeLang === 'cn' ? series.descCn : routeLang === 'vn' ? (series.descVn || series.descMic) : series.descMic
+function buildProductSeriesDesc(routeLang: 'cn' | 'mic' | 'vn' | 'ru', series: any): string {
+  return routeLang === 'cn' ? series.descCn
+    : routeLang === 'vn' ? (series.descVn || series.descMic)
+    : routeLang === 'ru' ? (series.descRu || series.descMic)
+    : series.descMic
 }
 
 // Route path helper: strip leading /:lang segment and trailing slash
 function getStrippedPath(): string {
-  return route.path.replace(/^\/(cn|mic|vn)/, '').replace(/\/$/, '') || '/'
+  return route.path.replace(/^\/(cn|mic|vn|ru)/, '').replace(/\/$/, '') || '/'
 }
 
 // Route-level language: use route.params.lang directly (not lang.value)
 // This avoids composable timing issues during SSR
-function getRouteLang(): 'cn' | 'mic' | 'vn' {
+function getRouteLang(): 'cn' | 'mic' | 'vn' | 'ru' {
   const l = route.params.lang as string
-  return l === 'cn' ? 'cn' : l === 'vn' ? 'vn' : 'mic'
+  if (l === 'cn') return 'cn'
+  if (l === 'vn') return 'vn'
+  if (l === 'ru') return 'ru'
+  return 'mic'
 }
 
 // ============================================
@@ -241,6 +268,7 @@ const currentTitle = computed(() => {
   const titleObj = pageTitleMap[path] || pageTitleMap['/']
   if (routeLang === 'cn') return titleObj.cn
   if (routeLang === 'vn') return titleObj.vn
+  if (routeLang === 'ru') return titleObj.ru
   return titleObj.mic
 })
 
@@ -269,10 +297,23 @@ const currentDesc = computed(() => {
   const descObj = pageDescMap[path] || pageDescMap['/']
   if (routeLang === 'cn') return descObj.cn
   if (routeLang === 'vn') return descObj.vn
+  if (routeLang === 'ru') return descObj.ru
   return descObj.mic
 })
 
 const ogImage = computed(() => `${SITE_URL}/og-image.jpg`)
+
+// SEO 内容包里的 keywords（该语言为这个型号页独立找的词）
+const currentKeywords = computed(() => {
+  if (route.params.seriesId && route.params.modelId) {
+    const model = getModelById(route.params.seriesId as string, route.params.modelId as string)
+    if (model) {
+      const pack = getSeoPack(model.id, getRouteLang())
+      if (pack?.keywords?.length) return pack.keywords.join(', ')
+    }
+  }
+  return undefined
+})
 
 // Organization Schema (for homepage)
 const organizationSchema = computed(() => {
@@ -443,6 +484,7 @@ useHead(() => {
     title: currentTitle.value,
     meta: [
       { name: 'description', content: currentDesc.value },
+      { name: 'keywords', content: currentKeywords.value },
       { name: 'robots', content: isNoIndex ? 'noindex, follow' : undefined },
       { property: 'og:title', content: currentTitle.value },
       { property: 'og:description', content: currentDesc.value },
