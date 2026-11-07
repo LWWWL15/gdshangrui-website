@@ -67,7 +67,7 @@
               <label>{{ t('感兴趣的产品', 'Product of Interest', t('感兴趣的产品', 'Product of Interest', 'Sản phẩm quan tâm', 'Интересующая продукция')) }}</label>
               <select v-model="form.product">
                 <option value="">{{ t('请选择', 'Please select', t('请选择', 'Please select', 'Vui lòng chọn', 'Пожалуйста, выберите')) }}</option>
-                <option v-for="p in productOptions" :key="p.mic" :value="p.mic">{{ t(p.cn, p.mic, p.vn, p.ru) }}</option>
+                <option v-for="p in productOptions" :key="p.id" :value="p.id">{{ t(p.cn, p.mic, p.vn, p.ru) }}</option>
               </select>
             </div>
             <div class="form-group">
@@ -89,6 +89,7 @@
 import { reactive, ref, onMounted } from 'vue'
 import emailjs from '@emailjs/browser'
 import { useLang } from '@/composables/useLang'
+import { productSeries } from '@/data/products'
 
 const { t, tm } = useLang()
 
@@ -104,28 +105,31 @@ const contactItems = [
   { icon: '📞', labelCn: '电话/WhatsApp', labelMic: 'Phone / WhatsApp', labelVn: 'Điện thoại / WhatsApp', labelRu: 'Телефон / WhatsApp', valueCn: '+86 139-2915-1908', valueMic: '+86 139-2915-1908', valueVn: '+86 139-2915-1908', href: 'https://wa.me/8613929151908' },
   { icon: '✉️', labelCn: '邮箱', labelMic: 'Email', labelVn: 'Email', labelRu: 'Электронная почта', valueCn: 'caya15@qq.com', valueMic: 'caya15@qq.com', valueVn: 'caya15@qq.com', href: 'mailto:caya15@qq.com' },
   { icon: '✉️', labelCn: '邮箱', labelMic: 'Email', labelVn: 'Email', labelRu: 'Электронная почта', valueCn: 'shangruijx@gmail.com', valueMic: 'shangruijx@gmail.com', valueVn: 'shangruijx@gmail.com', href: 'mailto:shangruijx@gmail.com' },
-  { icon: '📍', labelCn: '工厂地址', labelMic: 'Factory Address', labelVn: 'Địa chỉ nhà máy', labelRu: 'Адрес завода', valueCn: '佛山市顺德区伦教街道新塘工业区世界龙大道6号', valueMic: 'No. 6, Shilong Avenue, Xintang Industrial Zone, Lunjiao Sub-district, Shunde District, Foshan, Guangdong, China', valueVn: 'Số 6, Đại lộ Shilong, Khu công nghiệp Xintang, Phường Lunjiao, Quận Shunde, Thành phố Foshan, Quảng Đông, Trung Quốc', href: '' },
+  { icon: '📍', labelCn: '工厂地址', labelMic: 'Factory Address', labelVn: 'Địa chỉ nhà máy', labelRu: 'Адрес завода', valueCn: '佛山市顺德区伦教街道新塘工业区世龙大道6号', valueMic: 'No. 6, Shilong Avenue, Xintang Industrial Zone, Lunjiao Sub-district, Shunde District, Foshan, Guangdong, China', valueVn: 'Số 6, Đại lộ Shilong, Khu công nghiệp Xintang, Phường Lunjiao, Quận Shunde, Thành phố Foshan, Quảng Đông, Trung Quốc', href: '' },
 ]
 
-const productOptions = [
-  { cn: '冷压机', mic: 'Cold Press', vn: 'Máy ép lạnh', ru: 'Холодный пресс' },
-  { cn: '热压机', mic: 'Hot Press', vn: 'Máy ép nóng', ru: 'Горячий пресс' },
-  { cn: '多片锯', mic: 'Multi-blade Saw', vn: 'Máy cưa đa lưỡi', ru: 'Многопильный станок' },
-  { cn: '四面刨', mic: 'Four-side Planer', vn: 'Máy phay bốn mặt', ru: 'Четырёхсторонний строгальный станок' },
-  { cn: '升降平台', mic: 'Lifting Platform', vn: 'Bục nâng', ru: 'Подъёмный стол' },
-  { cn: '其他', mic: 'Other', vn: 'Khác', ru: 'Прочее' },
-]
+// 下拉选项直接派生自产品系列数据，加新系列自动同步，不会攒出站上没有的脏选项
+const productOptions = productSeries.map(s => ({
+  id: s.id,
+  cn: s.cn,
+  mic: s.mic,
+  vn: s.vn,
+  ru: s.ru,
+}))
 
 const handleSubmit = async () => {
   sending.value = true
   status.value = null
   try {
+    // form.product 存的是系列 id，邮件标题里换成可读名称
+    const chosen = productOptions.find(p => p.id === form.product)
+    const productLabel = chosen ? t(chosen.cn, chosen.mic, chosen.vn, chosen.ru) : ''
     await emailjs.send('service_e5zylo8', 'template_bss3iza', {
       from_name: form.name,
       from_email: form.email,
-      subject: form.product ? `Product Inquiry: ${form.product}` : 'General Inquiry',
+      subject: productLabel ? `Product Inquiry: ${productLabel}` : 'General Inquiry',
       message: form.message,
-    }, 'DiimmdKWVXVktDpPb')
+    }, 'DiimmdKWVXVktDpKb')
     status.value = { type: 'success', msg: t('✅ 询盘已发送！我们将在24小时内回复。', '✅ Inquiry sent! We will reply within 24 hours.', t('✅ 询盘已发送！我们将在24小时内回复。', '✅ Inquiry sent! We will reply within 24 hours.', '✅ Yêu cầu đã được gửi! Chúng tôi sẽ phản hồi trong vòng 24 giờ.', '✅ Запрос отправлен! Мы ответим в течение 24 часов.')) }
     form.name = ''; form.email = ''; form.product = ''; form.message = ''
   } catch {

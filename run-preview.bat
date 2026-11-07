@@ -1,3 +1,3 @@
 @echo off
-cd /d D:\Qclaw\gdshangrui
+cd /d "%~dp0"
 npm run preview
