@@ -10,7 +10,7 @@
 
     <section class="section">
       <div class="container">
-        <div class="cases-grid">
+        <div v-if="cases.length" class="cases-grid">
           <router-link v-for="c in cases" :key="c.id" :to="`/${lang}/blog/` + c.slug" class="card case-card">
             <div class="case-img" :style="{ background: c.color }">
               <span class="case-region">{{ c.region }}</span>
@@ -22,6 +22,13 @@
               <p>{{ t(c.descCn, c.descMic, c.descMic, c.descRu) }}</p>
             </div>
           </router-link>
+        </div>
+
+        <!-- 空状态：没有文章时给个说明，别留一片空白 -->
+        <div v-else class="cases-empty">
+          <h3>{{ t('暂无文章', 'No articles yet', t('暂无文章', 'No articles yet', 'Chưa có bài viết', 'Пока нет статей'), t('暂无文章', 'No articles yet', 'Chưa có bài viết', 'Пока нет статей')) }}</h3>
+          <p>{{ t('我们正在准备行业资讯与案例，敬请期待。', 'We are preparing industry insights and case studies. Stay tuned.', t('我们正在准备行业资讯与案例，敬请期待。', 'We are preparing industry insights and case studies. Stay tuned.', 'Chúng tôi đang chuẩn bị thông tin ngành và tài liệu hồ sơ. Hãy đón chờ!', 'Мы готовим отраслевые материалы и кейсы. Следите за обновлениями!'), t('我们正在准备行业资讯与案例，敬请期待。', 'We are preparing industry insights and case studies. Stay tuned.', 'Chúng tôi đang chuẩn bị thông tin ngành và tài liệu hồ sơ. Hãy đón chờ!', 'Мы готовим отраслевые материалы и кейсы. Следите за обновлениями!')) }}</p>
+          <router-link :to="`/${lang}/contact`" class="btn btn-primary">{{ t('联系我们', 'Contact Us', t('联系我们', 'Contact Us', 'Liên hệ với chúng tôi', 'Свяжитесь с нами'), t('联系我们', 'Contact Us', 'Liên hệ với chúng tôi', 'Свяжитесь с нами')) }}</router-link>
         </div>
       </div>
     </section>
@@ -41,14 +48,26 @@
 import { useLang } from '@/composables/useLang'
 const { t, tm, lang } = useLang()
 
-const cases = [
-  { id: 1, slug: 'vietnam-furniture-factory-cold-press', region: '🇻🇳 Vietnam', icon: '⬛', productCn: '冷压机', productMic: 'Cold Press', titleCn: '越南家具厂冷压生产线', titleMic: 'Vietnam Furniture Factory Cold Press Line', descCn: '为越南某大型家具制造商提供10台冷压机，用于板材压合生产线，显著提升产能。', descMic: 'Supplied 10 cold press machines to a large Vietnamese furniture manufacturer, significantly improving production capacity.', color: 'linear-gradient(135deg, #1a2744, #1a6fd4)' },
-  { id: 2, slug: 'saudi-arabia-door-manufacturer-hot-press', region: '🇸🇦 Saudi Arabia', icon: '🔶', productCn: '热压机', productMic: 'Hot Press', titleCn: '沙特木门生产商热压设备', titleMic: 'Saudi Arabia Door Manufacturer Hot Press', descCn: '为沙特木门生产商定制热压机组，满足当地高温环境下的稳定生产需求。', descMic: 'Custom hot press units for a Saudi door manufacturer, meeting stable production needs in high-temperature environments.', color: 'linear-gradient(135deg, #7b3f00, #c8a84b)' },
-  { id: 3, slug: 'nigeria-timber-processing-multi-blade-saw', region: '🇳🇬 Nigeria', icon: '⚙️', productCn: '多片锯', productMic: 'Multi-blade Saw', titleCn: '尼日利亚木材加工厂', titleMic: 'Nigeria Timber Processing Factory', descCn: '向尼日利亚木材加工厂出口多片锯设备，帮助客户实现高效开料生产。', descMic: 'Exported multi-blade saw equipment to a Nigerian timber processing factory for efficient cutting production.', color: 'linear-gradient(135deg, #1a4a2e, #2d9e5f)' },
-  { id: 4, slug: 'pakistan-flooring-four-side-planer', region: '🇵🇰 Pakistan', icon: '📐', productCn: '四面刨', productMic: 'Four-side Planer', titleCn: '巴基斯坦地板生产线', titleMic: 'Pakistan Flooring Production Line', descCn: '为巴基斯坦地板制造商提供四面刨生产线，产品精度达到国际标准。', descMic: 'Provided four-side planer production line for a Pakistani flooring manufacturer meeting international standards.', color: 'linear-gradient(135deg, #3d1a6b, #8b5cf6)' },
-  { id: 5, slug: 'malaysia-panel-factory-lifting-system', region: '🇲🇾 Malaysia', icon: '🔧', productCn: '升降平台', productMic: 'Lifting Platform', titleCn: '马来西亚板材工厂升降系统', titleMic: 'Malaysia Panel Factory Lifting System', descCn: '为马来西亚板材工厂配套升降平台系统，优化生产线物料流转效率。', descMic: 'Supplied lifting platform systems for a Malaysian panel factory to optimize material flow efficiency.', color: 'linear-gradient(135deg, #4a2000, #c87941)' },
-  { id: 6, slug: 'indonesia-plywood-factory-cold-press', region: '🇮🇩 Indonesia', icon: '⬛', productCn: '冷压机', productMic: 'Cold Press', titleCn: '印尼胶合板厂整线设备', titleMic: 'Indonesia Plywood Factory Full Line', descCn: '为印尼胶合板工厂提供整线冷压设备，实现年产能大幅提升。', descMic: 'Full cold press line for an Indonesian plywood factory, achieving significant annual capacity increase.', color: 'linear-gradient(135deg, #1a2744, #2d6fd4)' },
-]
+// 案例文章数据。
+// 说明：此处原本硬编码了 6 篇"案例"（越南家具厂、沙特木门等），内容为编造，
+// 已按主人要求清空 —— 工业站案例是信任生意，没有真实客户素材就不放。
+// 后续拿到真实素材（客户名/国家/项目背景/效果/反馈）后，
+// 按 src/data/articles.ts 的 Article 结构逐条补进来。
+const cases: {
+  id: number
+  slug: string
+  region: string
+  icon: string
+  productCn: string
+  productMic: string
+  titleCn: string
+  titleMic: string
+  titleRu?: string
+  descCn: string
+  descMic: string
+  descRu?: string
+  color: string
+}[] = []
 </script>
 
 <style lang="scss" scoped>
@@ -79,6 +98,13 @@ const cases = [
   gap: $s-lg;
   @media (max-width: $bp-lg) { grid-template-columns: repeat(2, 1fr); }
   @media (max-width: $bp-sm) { grid-template-columns: 1fr; }
+}
+
+.cases-empty {
+  text-align: center;
+  padding: $s-3xl 0;
+  h3 { margin-bottom: $s-sm; }
+  p { color: $c-text-secondary; margin-bottom: $s-lg; }
 }
 
 .case-card {

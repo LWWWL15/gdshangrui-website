@@ -1,5 +1,16 @@
 ﻿<template>
   <div class="case-detail-page">
+    <!-- 文章不存在（数据已清空或链接过期）-->
+    <section v-if="!caseData" class="page-hero">
+      <div class="container">
+        <span class="tag">{{ t('博客', 'Blog', tm('blogDetail.blogTag', 'Blog')) }}</span>
+        <h1>{{ t('文章不存在', 'Article not found', tm('blogDetail.notFound', 'Article not found')) }}</h1>
+        <p>{{ t('该文章已下线或链接有误。', 'This article is no longer available or the link is incorrect.', tm('blogDetail.notFoundDesc', 'This article is no longer available or the link is incorrect.')) }}</p>
+        <router-link :to="`/${lang}/blog`" class="btn btn-primary" style="margin-top:24px; display:inline-block;">{{ t('返回博客', 'Back to Blog', tm('blogDetail.backToBlog', 'Back to Blog')) }}</router-link>
+      </div>
+    </section>
+
+    <template v-else>
     <section class="page-hero">
       <div class="container">
         <span class="tag">{{ t('博客', 'Blog', tm('blogDetail.blogTag', 'Blog')) }}</span>
@@ -182,6 +193,7 @@
         </div>
       </div>
     </section>
+    </template>
 
   </div>
 </template>
@@ -195,154 +207,9 @@ const { t, tm, lang } = useTranslations()
 const route = useRoute()
 const caseSlug = computed(() => route.params.slug as string)
 
-const allCases = [
-  {
-    id: 1, slug: 'vietnam-furniture-factory-cold-press', region: 'Vietnam', icon: '\u2B25', productCn: '冷压机', productMic: 'Cold Press',
-    titleCn: '越南家具厂冷压生产线', titleMic: 'Vietnam Furniture Factory Cold Press Line',
-    descCn: '为越南某大型家具制造商提供10台冷压机，用于板材压合生产线，显著提升产能。',
-    descMic: 'Supplied 10 cold press machines to a large Vietnamese furniture manufacturer, significantly improving production capacity.',
-    contentCn: '越南某大型家具制造商由于原有生产线设备老旧，生产效率低下，急需升级设备以满足不断增长的订单需求。在经过多方比较后，他们选择了我们的冷压机设备。',
-    contentMic: 'A large Vietnamese furniture manufacturer needed to upgrade their equipment due to aging production lines and low efficiency. After comparing multiple suppliers, they chose our cold press machines.',
-    solutionCn: '我们提供了10台高性能冷压机，配备先进的液压系统和精密控制模块，能够实现板材的均匀压合。同时，我们的技术团队赴现场进行了设备安装调试和操作培训。',
-    solutionMic: 'We supplied 10 high-performance cold press machines with advanced hydraulic systems and precision control modules. Our technical team also conducted on-site installation, debugging, and operator training.',
-    resultsCn: '设备投产后，客户的生产效率提升了40%，产品次品率下降了60%。客户对我们的设备质量和服务表示非常满意。',
-    resultsMic: 'After the machines were put into operation, customer production efficiency increased by 40% and defect rate decreased by 60%. The customer was very satisfied with our equipment quality and service.',
-    feedbackCn: '上锐的设备质量非常好，服务也很专业。设备投入使用后，我们的产能大幅提升，真的帮了我们大忙。',
-    feedbackMic: 'Shang Rui\'s equipment quality is excellent and their service is very professional. After the machines were put into operation, our production capacity increased significantly.',
-    titleRu: 'Линия холодного прессования для вьетнамской мебельной фабрики',
-    descRu: 'Поставлены 10 холодных прессов для крупного вьетнамского производителя мебели, что значительно увеличило производственные мощности.',
-    contentRu: 'Крупный вьетнамский производитель мебели столкнулся с необходимостью модернизации оборудования из-за устаревших производственных линий и низкой эффективности. После сравнения нескольких поставщиков был сделан выбор в пользу наших холодных прессов.',
-    solutionRu: 'Мы поставили 10 высокопроизводительных холодных прессов с современной гидравлической системой и прецизионными модулями управления для равномерного прессования плит. Наша техническая команда также провела монтаж, пусконаладку и обучение операторов на месте.',
-    resultsRu: 'После ввода оборудования в эксплуатацию эффективность производства заказчика выросла на 40%, а процент брака снизился на 60%. Заказчик остался очень доволен качеством оборудования и сервисом.',
-    feedbackRu: 'Оборудование Shang Rui отличается превосходным качеством, а сервис — высоким профессионализмом. После запуска машин наши производственные мощности значительно выросли.',
-    customerNameRu: 'Вьетнамский производитель мебели',
-    regionRu: 'Вьетнам',
-    customerName: '越南某家具制造商', date: '2024-03', productId: 'cold-press',
-    color: 'linear-gradient(135deg, #1a2744, #1a6fd4)'
-  },
-  {
-    id: 2, slug: 'saudi-arabia-door-manufacturer-hot-press', region: 'Saudi Arabia', icon: '\uD83C\uDD76', productCn: '热压机', productMic: 'Hot Press',
-    titleCn: '沙特木门生产商热压设备', titleMic: 'Saudi Arabia Door Manufacturer Hot Press',
-    descCn: '为沙特木门生产商定制热压机组，满足当地高温环境下的稳定生产需求。',
-    descMic: 'Custom hot press units for a Saudi door manufacturer, meeting stable production needs in high-temperature environments.',
-    contentCn: '沙特阿拉伯一家大型木门生产商在高温环境下面临设备稳定性挑战。传统热压机在高温条件下性能下降严重，无法满足生产需求。',
-    contentMic: 'A major door manufacturer in Saudi Arabia faced equipment stability challenges in high-temperature conditions. Traditional hot press machines experienced severe performance degradation in hot climates.',
-    solutionCn: '我们专门为中东地区的高温环境设计了定制化热压机组，采用特殊的散热系统和耐高温材料，确保设备在50°C以上环境温度下仍能稳定运行。',
-    solutionMic: 'We designed custom hot press units specifically for the Middle East high-temperature environment, using special cooling systems and heat-resistant materials to ensure stable operation even above 50°C.',
-    resultsCn: '设备在沙特当地高温环境下运行稳定，帮助客户实现了全年不间断生产，产能提升了35%。',
-    resultsMic: 'The equipment operates stably in Saudi Arabia\'s high-temperature environment, helping the customer achieve uninterrupted production year-round with a 35% increase in capacity.',
-    feedbackCn: '在如此高温的环境下，设备还能保持稳定运行，上锐的技术实力令人钦佩。',
-    feedbackMic: 'The equipment maintains stable operation in such high temperatures. We are impressed with Shang Rui\'s technical capabilities.',
-    titleRu: 'Термопрессовое оборудование для саудовского производителя дверей',
-    descRu: 'Изготовлены термопрессовые установки для саудовского производителя дверей с учётом стабильной работы в условиях высоких температур.',
-    contentRu: 'Крупный производитель дверей в Саудовской Аравии столкнулся с проблемами стабильности оборудования в условиях высоких температур. Традиционные термопрессы значительно теряли производительность в жарком климате.',
-    solutionRu: 'Мы разработали термопрессовые установки специально для среды с высокими температурами на Ближнем Востоке, используя специальные системы охлаждения и термостойкие материалы, обеспечивающие стабильную работу при температуре окружающей среды выше 50°C.',
-    resultsRu: 'Оборудование стабильно работает в условиях высоких температур Саудовской Аравии, помогая заказчику обеспечить круглогодичное непрерывное производство с ростом мощности на 35%.',
-    feedbackRu: 'В условиях такой высокой температуры оборудование сохраняет стабильную работу — технические возможности Shang Rui впечатляют.',
-    customerNameRu: 'Саудовский производитель дверей',
-    regionRu: 'Саудовская Аравия',
-    customerName: '沙特某木门生产商', date: '2024-05', productId: 'hot-press',
-    color: 'linear-gradient(135deg, #7b3f00, #c8a84b)'
-  },
-  {
-    id: 3, slug: 'nigeria-timber-processing-multi-blade-saw', region: 'Nigeria', icon: '\u2699', productCn: '多片锯', productMic: 'Multi-blade Saw',
-    titleCn: '尼日利亚木材加工厂', titleMic: 'Nigeria Timber Processing Factory',
-    descCn: '向尼日利亚木材加工厂出口多片锯设备，帮助客户实现高效开料生产。',
-    descMic: 'Exported multi-blade saw equipment to a Nigerian timber processing factory for efficient cutting production.',
-    contentCn: '尼日利亚一家木材加工厂希望提升原木开料效率，传统的单片锯设备效率低下，无法满足市场需求。',
-    contentMic: 'A Nigerian timber processing factory wanted to improve log cutting efficiency. Traditional single-blade saw equipment was too inefficient to meet market demand.',
-    solutionCn: '我们提供了高效多片锯设备，可同时进行多片板材切割，大大提升了开料效率。同时设备配备了自动送料系统，降低了人工成本。',
-    solutionMic: 'We supplied high-efficiency multi-blade saw equipment that can cut multiple panels simultaneously, greatly improving cutting efficiency. The equipment also features an automatic feeding system to reduce labor costs.',
-    resultsCn: '客户的生产效率提升了200%，人工成本降低了50%，投资回报周期仅为8个月。',
-    resultsMic: 'Customer production efficiency increased by 200% and labor costs decreased by 50%, with a payback period of only 8 months.',
-    feedbackCn: '设备运行稳定，效率远超预期。上锐的售后服务也很及时，非常推荐。',
-    feedbackMic: 'The equipment runs stably and efficiency far exceeds expectations. Shang Rui\'s after-sales service is also very prompt. Highly recommended.',
-    titleRu: 'Нигерийский деревообрабатывающий завод',
-    descRu: 'Экспортировано многопильное оборудование на нигерийский деревообрабатывающий завод для эффективного раскроя.',
-    contentRu: 'Нигерийский деревообрабатывающий завод стремился повысить эффективность раскроя брёвен. Традиционное однопильное оборудование было слишком неэффективным для удовлетворения рыночного спроса.',
-    solutionRu: 'Мы поставили высокоэффективное многопильное оборудование, позволяющее одновременно резать несколько плит, что значительно повысило производительность раскроя. Оборудование также оснащено автоматической системой подачи для снижения затрат на рабочую силу.',
-    resultsRu: 'Эффективность производства заказчика выросла на 200%, затраты на рабочую силу снизились на 50%, а срок окупаемости инвестиций составил всего 8 месяцев.',
-    feedbackRu: 'Оборудование работает стабильно, а эффективность значительно превосходит ожидания. Послепродажное обслуживание Shang Rui также очень оперативное. Настоятельно рекомендуем.',
-    customerNameRu: 'Нигерийский деревообрабатывающий завод',
-    regionRu: 'Нигерия',
-    customerName: '尼日利亚某木材加工厂', date: '2023-11', productId: 'multi-blade-saw',
-    color: 'linear-gradient(135deg, #1a4a2e, #2d9e5f)'
-  },
-  {
-    id: 4, slug: 'pakistan-flooring-four-side-planer', region: 'Pakistan', icon: '\uD83D\uDCC0', productCn: '四面刨', productMic: 'Four-side Planer',
-    titleCn: '巴基斯坦地板生产线', titleMic: 'Pakistan Flooring Production Line',
-    descCn: '为巴基斯坦地板制造商提供四面刨生产线，产品精度达到国际标准。',
-    descMic: 'Provided four-side planer production line for a Pakistani flooring manufacturer meeting international standards.',
-    contentCn: '巴基斯坦一家地板制造商需要提升产品精度，以满足出口欧美市场的严格质量要求。',
-    contentMic: 'A Pakistani flooring manufacturer needed to improve product accuracy to meet strict quality requirements for export to European and American markets.',
-    solutionCn: '我们提供了高精度四面刨生产线，加工精度达到±0.05mm，完全满足国际标准。同时配备了在线质量检测系统。',
-    solutionMic: 'We supplied a high-precision four-side planer production line with processing accuracy of ±0.05mm, fully meeting international standards. An online quality inspection system was also installed.',
-    resultsCn: '产品精度大幅提升，成功通过了欧美市场的质量认证，出口订单增加了60%。',
-    resultsMic: 'Product accuracy significantly improved, successfully passing quality certification for European and American markets, with export orders increasing by 60%.',
-    feedbackCn: '产品精度完全达到国际标准，帮助我们打开了欧美市场。',
-    feedbackMic: 'Product accuracy fully meets international standards, helping us penetrate European and American markets.',
-    titleRu: 'Линия по производству напольных покрытий в Пакистане',
-    descRu: 'Линия четырёхстороннего строгания поставлена пакистанскому производителю напольных покрытий и соответствует международным стандартам точности.',
-    contentRu: 'Пакистанский производитель напольных покрытий нуждался в повышении точности продукции для соответствия строгим требованиям качества при экспорте на рынки Европы и США.',
-    solutionRu: 'Мы поставили высокоточную линию четырёхстороннего строгания с точностью обработки ±0,05 мм, полностью соответствующую международным стандартам. Также была установлена система онлайн-контроля качества.',
-    resultsRu: 'Точность продукции значительно повысилась, успешно пройдена сертификация для европейского и американского рынков, экспортные заказы выросли на 60%.',
-    feedbackRu: 'Точность продукции полностью соответствует международным стандартам, что помогло нам выйти на рынки Европы и США.',
-    customerNameRu: 'Пакистанский производитель напольных покрытий',
-    regionRu: 'Пакистан',
-    customerName: '巴基斯坦某地板制造商', date: '2024-01', productId: 'four-side-planer',
-    color: 'linear-gradient(135deg, #3d1a6b, #8b5cf6)'
-  },
-  {
-    id: 5, slug: 'malaysia-panel-factory-lifting-system', region: 'Malaysia', icon: '\uD83D\uDD27', productCn: '升降平台', productMic: 'Lifting Platform',
-    titleCn: '马来西亚板材工厂升降系统', titleMic: 'Malaysia Panel Factory Lifting System',
-    descCn: '为马来西亚板材工厂配套升降平台系统，优化生产线物料流转效率。',
-    descMic: 'Supplied lifting platform systems for a Malaysian panel factory to optimize material flow efficiency.',
-    contentCn: '马来西亚一家大型板材工厂在生产过程中需要频繁转运重型板材，人工搬运效率低且存在安全隐患。',
-    contentMic: 'A large Malaysian panel factory needed to frequently transport heavy panels during production. Manual handling was inefficient and posed safety hazards.',
-    solutionCn: '我们提供了一系列液压升降平台，与生产线无缝对接，实现了板材的自动化转运，大幅提升了物料流转效率。',
-    solutionMic: 'We supplied a series of hydraulic lifting platforms that seamlessly integrated with the production line, achieving automated panel transport and greatly improving material flow efficiency.',
-    resultsCn: '物料转运效率提升了180%，工伤事故率下降了90%，客户非常满意。',
-    resultsMic: 'Material handling efficiency increased by 180% and workplace injury rate decreased by 90%. The customer was very satisfied.',
-    feedbackCn: '升降系统运行稳定，大大减少了人工搬运的压力，安全性也提高了。',
-    feedbackMic: 'The lifting system runs stably, greatly reducing the strain of manual handling and improving safety.',
-    titleRu: 'Подъёмная система для малайзийского панельного завода',
-    descRu: 'Подъёмные платформы поставлены малайзийскому панельному заводу для оптимизации материального потока на производственной линии.',
-    contentRu: 'Крупному малайзийскому панельному заводу требовалось часто перемещать тяжёлые плиты в ходе производства. Ручная обработка была неэффективной и представляла угрозу безопасности.',
-    solutionRu: 'Мы поставили серию гидравлических подъёмных платформ, бесшовно интегрированных с производственной линией, обеспечив автоматизированное перемещение плит и значительно повысив эффективность материального потока.',
-    resultsRu: 'Эффективность перемещения материалов выросла на 180%, уровень производственного травматизма снизился на 90%, заказчик остался очень доволен.',
-    feedbackRu: 'Подъёмная система работает стабильно, значительно снижая нагрузку при ручном перемещении и повышая безопасность.',
-    customerNameRu: 'Малайзийский панельный завод',
-    regionRu: 'Малайзия',
-    customerName: '马来西亚某板材工厂', date: '2023-09', productId: 'lifting-platform',
-    color: 'linear-gradient(135deg, #4a2000, #c87941)'
-  },
-  {
-    id: 6, slug: 'indonesia-plywood-factory-cold-press', region: 'Indonesia', icon: '\u2B25', productCn: '冷压机', productMic: 'Cold Press',
-    titleCn: '印尼胶合板厂整线设备', titleMic: 'Indonesia Plywood Factory Full Line',
-    descCn: '为印尼胶合板工厂提供整线冷压设备，实现年产能大幅提升。',
-    descMic: 'Full cold press line for an Indonesian plywood factory, achieving significant annual capacity increase.',
-    contentCn: '印尼一家胶合板工厂计划扩建生产线，需要整套冷压设备来提升年产能。',
-    contentMic: 'An Indonesian plywood factory planned to expand its production line and needed a complete set of cold press equipment to increase annual capacity.',
-    solutionCn: '我们提供了完整的冷压生产线，包括多台大型冷压机、预压机和自动化控制系统，实现了从压合到出料的全自动化。',
-    solutionMic: 'We supplied a complete cold press production line including multiple large cold presses, pre-presses, and automated control systems, achieving fully automated pressing and output.',
-    resultsCn: '整线投产后，年产能从原来的30万立方米提升到60万立方米，实现了产能翻倍。',
-    resultsMic: 'After the full line was put into operation, annual capacity increased from 300,000 cubic meters to 600,000 cubic meters, doubling production capacity.',
-    feedbackCn: '整线设备运行良好，自动化程度高，帮我们实现了产能翻倍的目标。',
-    feedbackMic: 'The full line equipment runs well with high automation, helping us achieve the goal of doubling capacity.',
-    titleRu: 'Комплектная линия для индонезийского фанерного завода',
-    descRu: 'Полная линия холодного прессования поставлена индонезийскому фанерному заводу, что позволило значительно увеличить годовую мощность.',
-    contentRu: 'Индонезийский фанерный завод планировал расширить производственную линию и нуждался в комплекте холодного прессования для увеличения годовой мощности.',
-    solutionRu: 'Мы поставили полную линию холодного прессования, включающую несколько крупных холодных прессов, подпрессовщики и системы автоматического управления, обеспечив полную автоматизацию от прессования до выдачи.',
-    resultsRu: 'После ввода линии в эксплуатацию годовая мощность увеличилась с 300 000 до 600 000 кубометров, что означает удвоение объёмов производства.',
-    feedbackRu: 'Оборудование линии работает хорошо, уровень автоматизации высокий, что помогло нам достичь цели удвоения мощности.',
-    customerNameRu: 'Индонезийский фанерный завод',
-    regionRu: 'Индонезия',
-    customerName: '印尼某胶合板工厂', date: '2024-02', productId: 'cold-press',
-    color: 'linear-gradient(135deg, #1a2744, #2d6fd4)'
-  },
-]
+const allCases: any[] = []
 
-const caseData = computed(() => allCases.find(c => c.slug === caseSlug.value) || allCases[0])
+const caseData = computed(() => allCases.find(c => c.slug === caseSlug.value) || null)
 
 // Previous / Next navigation
 const currentIndex = computed(() => allCases.findIndex(c => c.slug === caseSlug.value))

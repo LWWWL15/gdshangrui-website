@@ -22,7 +22,7 @@
             </div>
             <div class="series-info">
               <h3>{{ t(series.cn, series.mic, series.vn, series.ru) }}</h3>
-              <p class="series-desc">{{ t(series.descCn, series.descMic,  series.descVn,  series.descVn) }}</p>
+              <p class="series-desc">{{ t(series.descCn, series.descMic,  series.descVn,  series.descRu) }}</p>
               <div class="series-models">
                 <span class="model-count">{{ series.models.length }} {{ t('个型号', 'Models',  t('个型号', 'Models', 'mẫu', 'моделей'),  t('个型号', 'Models', 'mẫu', 'моделей')) }}</span>
               </div>

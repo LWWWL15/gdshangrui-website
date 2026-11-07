@@ -1,2 +1,2 @@
-Set-Location -Path "D:\Qclaw\gdshangrui"
+Set-Location -Path $PSScriptRoot
 npm run preview

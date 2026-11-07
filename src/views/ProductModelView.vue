@@ -24,7 +24,7 @@
           <span class="separator">/</span>
           <router-link :to="`/${lang}/products/${seriesId}`">{{ t(series?.cn, series?.mic,  series?.vn,  series?.ru) }}</router-link>
           <span class="separator">/</span>
-          <span class="current">{{ t(model?.model, model?.mic,  model?.vn,  model?.ru) }}</span>
+          <span class="current">{{ model?.model }}</span>
         </nav>
         <h1>{{ model?.model?.replace(/立铣$/, '') }}</h1>
         <p v-if="model?.cn || model?.mic" class="model-title">{{ t(model?.cn, model?.mic,  model?.vn,  model?.ru) }}</p>
@@ -39,7 +39,7 @@
             <div class="product-image" :style="{ background: series?.color }">
               <span v-if="!currentImage" class="placeholder-icon">{{ series?.icon }}</span>
               <template v-else>
-                <img :src="currentImage" :alt="model?.model" />
+                <img :src="currentImage" :alt="altFor(currentImage, model?.model || '')" />
                 <!-- 左右箭头 -->
                 <template v-if="images.length > 1">
                   <button class="img-nav-btn img-prev" @click="prevImage" aria-label="Previous image">&lt;</button>
@@ -56,7 +56,7 @@
                 :class="{ active: idx === imageIndex }"
                 @click="imageIndex = idx"
               >
-                <img :src="img" :alt="`Thumbnail ${idx + 1}`" loading="lazy" />
+                <img :src="img" :alt="altFor(img, `${model?.model || ''} - ${idx + 1}`)" loading="lazy" />
               </button>
             </div>
           </div>
@@ -111,9 +111,25 @@
               <h2>{{ t('产品特点', 'Features', 'Tính năng', 'Особенности') }}</h2>
               <ul class="features-list">
                 <li v-for="(feature, idx) in model.features" :key="idx">
-                  {{ t(feature.cn, feature.mic,  feature.vn,  feature.vn ?? feature.ru) }}
+                  {{ t(feature.cn, feature.mic,  feature.vn,  feature.ru) }}
                 </li>
               </ul>
+            </div>
+
+            <!-- SEO 内容包里的产品描述（各语言独立撰写） -->
+            <div v-if="seoPack?.description" class="seo-description">
+              <p>{{ seoPack.description }}</p>
+            </div>
+
+            <!-- FAQ（内容包里的问答，同时输出 FAQPage 结构化数据） -->
+            <div v-if="seoPack?.faq && seoPack.faq.length > 0" class="faq-section">
+              <h2>{{ t('常见问题', 'FAQ', 'Câu hỏi thường gặp', 'Часто задаваемые вопросы') }}</h2>
+              <dl class="faq-list">
+                <div v-for="(item, idx) in seoPack.faq" :key="idx" class="faq-item">
+                  <dt>{{ item.q }}</dt>
+                  <dd>{{ item.a }}</dd>
+                </div>
+              </dl>
             </div>
 
             <!-- 询价按钮 -->
@@ -155,6 +171,7 @@ import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useLang } from '@/composables/useLang'
 import { getSeriesById, getModelById } from '@/data/products'
+import { getSeoPack, getAltText } from '@/data/seo'
 
 const { t, lang } = useLang()
 const isZh = computed(() => lang.value === 'cn')
@@ -169,6 +186,15 @@ const images = computed(() => model.value?.images || [])
 const currentImage = computed(() => images.value[imageIndex.value] || null)
 const imageIndex = ref(0)
 watch(modelId, () => { imageIndex.value = 0 })
+
+// SEO 内容包（当前型号 + 当前语言）
+const seoPack = computed(() => getSeoPack(model.value?.id, lang.value))
+
+// 图片 alt：优先用内容包里写好的描述性 alt，没有就用型号名
+const altFor = (src: string | undefined, fallback: string) => {
+  const a = getAltText(seoPack.value, src)
+  return a || fallback
+}
 
 const prevImage = () => {
   if (imageIndex.value > 0) imageIndex.value--
@@ -205,8 +231,19 @@ const heroBackground = computed(() => {
 // BreadcrumbList Schema
 const breadcrumbSchema = computed(() => {
   if (!series.value || !model.value) return null
-  const langPrefix = isZh.value ? '/cn' : '/mic'
+  const langPrefix = `/${lang.value}`
   const origin = typeof window !== 'undefined' ? window.location.origin : 'https://gdshangrui.com'
+  const crumbNames: Record<string, string> = {
+    cn: { home: '首页', products: '产品' },
+    mic: { home: 'Home', products: 'Products' },
+    vn: { home: 'Trang chủ', products: 'Sản phẩm' },
+    ru: { home: 'Главная', products: 'Продукция' },
+  }
+  const names = crumbNames[lang.value] ?? crumbNames.mic
+  const seriesName = lang.value === 'cn' ? series.value.cn
+    : lang.value === 'vn' ? (series.value.vn || series.value.mic)
+    : lang.value === 'ru' ? (series.value.ru || series.value.mic)
+    : series.value.mic
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -214,19 +251,19 @@ const breadcrumbSchema = computed(() => {
       {
         '@type': 'ListItem',
         position: 1,
-        name: isZh.value ? '首页' : 'Home',
+        name: names.home,
         item: `${origin}${langPrefix}/`,
       },
       {
         '@type': 'ListItem',
         position: 2,
-        name: isZh.value ? '产品' : 'Products',
+        name: names.products,
         item: `${origin}${langPrefix}/products`,
       },
       {
         '@type': 'ListItem',
         position: 3,
-        name: isZh.value ? series.value.cn : series.value.mic,
+        name: seriesName,
         item: `${origin}${langPrefix}/products/${seriesId.value}`,
       },
       {
@@ -246,14 +283,26 @@ const productSchema = computed(() => {
   const specs: Record<string, string> = {}
   if (model.value.specs) {
     model.value.specs.forEach(spec => {
-      specs[isZh.value ? spec.keyCn : spec.keyMic] = isZh.value ? spec.valueCn : spec.valueMic
+      const key = lang.value === 'cn' ? spec.keyCn
+        : lang.value === 'vn' ? (spec.keyVn || spec.keyMic)
+        : lang.value === 'ru' ? (spec.keyRu || spec.keyMic)
+        : spec.keyMic
+      const value = lang.value === 'cn' ? spec.valueCn
+        : lang.value === 'vn' ? (spec.valueVn || spec.valueMic)
+        : lang.value === 'ru' ? (spec.valueRu || spec.valueMic)
+        : spec.valueMic
+      specs[key] = value
     })
   }
+  const description = lang.value === 'cn' ? series.value.descCn
+    : lang.value === 'vn' ? (series.value.descVn || series.value.descMic)
+    : lang.value === 'ru' ? (series.value.descRu || series.value.descMic)
+    : series.value.descMic
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: model.value.model,
-    description: isZh.value ? series.value.descCn : series.value.descMic,
+    description,
     image: images.value[0] || undefined,
     brand: {
       '@type': 'Brand',
@@ -270,10 +319,32 @@ const productSchema = computed(() => {
 })
 
 import { useHead } from '@unhead/vue'
+
+// FAQPage 结构化数据（内容包里写了 FAQ 才有）
+const faqSchema = computed(() => {
+  const pack = seoPack.value
+  if (!pack?.faq || pack.faq.length === 0) return null
+  const origin = typeof window !== 'undefined' ? window.location.origin : 'https://gdshangrui.com'
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: pack.faq.map(item => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+    ...(origin ? { url: origin + (typeof window !== 'undefined' ? window.location.pathname : '') } : {}),
+  }
+})
+
 useHead({
   script: [
     ...(breadcrumbSchema.value ? [{ type: 'application/ld+json', children: JSON.stringify(breadcrumbSchema.value) }] : []),
     ...(productSchema.value ? [{ type: 'application/ld+json', children: JSON.stringify(productSchema.value) }] : []),
+    ...(faqSchema.value ? [{ type: 'application/ld+json', children: JSON.stringify(faqSchema.value) }] : []),
   ],
 })
 
@@ -297,13 +368,19 @@ const copyLink = async () => {
   }
 }
 
-// 复制产品参数（中英文自适应）
+// 复制产品参数（按当前语言自适应）
 const specsCopied = ref(false)
 const copySpecs = async () => {
   if (!model.value?.specs) return
   const lines = model.value.specs.map(spec => {
-    const key = isZh.value ? spec.keyCn : spec.keyMic
-    const value = isZh.value ? spec.valueCn : spec.valueMic
+    const key = lang.value === 'cn' ? spec.keyCn
+      : lang.value === 'vn' ? (spec.keyVn || spec.keyMic)
+      : lang.value === 'ru' ? (spec.keyRu || spec.keyMic)
+      : spec.keyMic
+    const value = lang.value === 'cn' ? spec.valueCn
+      : lang.value === 'vn' ? (spec.valueVn || spec.valueMic)
+      : lang.value === 'ru' ? (spec.valueRu || spec.valueMic)
+      : spec.valueMic
     return `${key}: ${value}`
   })
   const text = lines.join('\n')
