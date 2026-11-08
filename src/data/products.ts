@@ -79,9 +79,9 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ép nóng',
         ru: 'Горячий пресс',
         images: [
-          '/热压机/热压机_MH3848X120T_20260205_绿白/热压机_MH3848X120T_20260205_绿白_up(2)_001.webp',
-          '/热压机/热压机_MH3848X120T_20260205_绿白/热压机_MH3848X120T_20260205_绿白_up (2)_001.webp',
-          '/热压机/热压机_MH3848X120T_20260205_绿白/热压机_MH3848X120T_20260205_绿白_up (3)_001.webp',
+          '/hot-press/hot-press_MH3848X120T_20260205_green-white/hot-press_MH3848X120T_20260205_green-white_up(2)_001.webp',
+          '/hot-press/hot-press_MH3848X120T_20260205_green-white/hot-press_MH3848X120T_20260205_green-white_up (2)_001.webp',
+          '/hot-press/hot-press_MH3848X120T_20260205_green-white/hot-press_MH3848X120T_20260205_green-white_up (3)_001.webp',
         ],
         specs: [
           { keyCn: '产品描述', keyMic: 'Description', keyVn: 'Mô tả sản phẩm', valueCn: '三面4层热压拼板机', valueMic: 'Three-sided 4-layer hot press splicing machine', valueVn: 'Máy ghép gỗ ép nóng 4 tầng 3 mặt', valueRu: 'Трёхсторонний 4-этажный горячий пресс для сращивания', keyRu: 'Описание продукции' },
@@ -101,9 +101,9 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ép nóng',
         ru: 'Горячий пресс',
         images: [
-          '/热压机/热压机_MH3848x120T_20260428_黑黄白/热压机_MH3848x120T_20260428_黑黄白 (3)_up_001.webp',
-          '/热压机/热压机_MH3848x120T_20260428_黑黄白/热压机_MH3848x120T_20260428_黑黄白 (1)_up_001.webp',
-          '/热压机/热压机_MH3848x120T_20260428_黑黄白/热压机_MH3848x120T_20260428_黑黄白 (7)_up_001.webp',
+          '/hot-press/hot-press_MH3848x120T_20260428_black-yellow-white/hot-press_MH3848x120T_20260428_untranslated-3_up_001.webp',
+          '/hot-press/hot-press_MH3848x120T_20260428_black-yellow-white/hot-press_MH3848x120T_20260428_untranslated-1_up_001.webp',
+          '/hot-press/hot-press_MH3848x120T_20260428_black-yellow-white/hot-press_MH3848x120T_20260428_untranslated-7_up_001.webp',
         ],
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '2500×1300mm', valueMic: '2500×1300mm', valueRu: '2500 × 1300 мм', keyRu: 'Размер стола' },
@@ -125,7 +125,7 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ép nóng',
         ru: 'Горячий пресс',
         images: [
-          '/热压机/热压机_MH3848x120T_20240810_红蓝白/热压机_MH3848x120T_20240810_红蓝白_up_001.webp'
+          '/hot-press/hot-press_MH3848x120T_20240810_red-blue-white/hot-press_MH3848x120T_20240810_red-blue-white_up_001.webp'
         ],
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '3000×1300mm', valueMic: '3000×1300mm', valueRu: '3000 × 1300 мм', keyRu: 'Размер стола' },
@@ -145,8 +145,8 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ép nóng',
         ru: 'Горячий пресс',
         images: [
-          '/热压机/热压机_MH3848x160T_20260618_黑黄白/热压机_MH3848x160T_20260618_黑黄白_up (1)_001.webp',
-          '/热压机/热压机_MH3848x160T_20260618_黑黄白/热压机_MH3848x160T_20260618_黑黄白_up (4)_001.webp',
+          '/hot-press/hot-press_MH3848x160T_20260618_black-yellow-white/hot-press_MH3848x160T_20260618_black-yellow-white_up (1)_001.webp',
+          '/hot-press/hot-press_MH3848x160T_20260618_black-yellow-white/hot-press_MH3848x160T_20260618_black-yellow-white_up (4)_001.webp',
         ],
         specs: [
           { keyCn: '热压板规格', keyMic: 'Platen Size', keyVn: 'Kích thước tấm ép', valueCn: '3000×1500×42mm', valueMic: '3000×1500×42mm', valueVn: '3000×1500×42mm', valueRu: '3000 × 1500 × 42 мм', keyRu: 'Размер пресс-плиты' },
@@ -175,9 +175,9 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ép nóng',
         ru: 'Горячий пресс',
         images: [
-          '/热压机/热压机_MH3848x160T_20261008_蓝白/热压机_MH3848x160T_20261008_蓝白_up (1)_001.webp',
-          '/热压机/热压机_MH3848x160T_20261008_蓝白/热压机_MH3848x160T_20261008_蓝白_up (2)_001.webp',
-          '/热压机/热压机_MH3848x160T_20261008_蓝白/热压机_MH3848x160T_20261008_蓝白_up(3)_001.webp'
+          '/hot-press/hot-press_MH3848x160T_20261008_blue-white/hot-press_MH3848x160T_20261008_blue-white_up (1)_001.webp',
+          '/hot-press/hot-press_MH3848x160T_20261008_blue-white/hot-press_MH3848x160T_20261008_blue-white_up (2)_001.webp',
+          '/hot-press/hot-press_MH3848x160T_20261008_blue-white/hot-press_MH3848x160T_20261008_blue-white_up(3)_001.webp'
         ],
         specs: [
           { keyCn: '层数', keyMic: 'Number of Layers', keyVn: 'Số tầng', keyRu: 'Количество слоёв', valueCn: '5层', valueMic: '5 Layers', valueVn: '5 tầng', valueRu: '5 слоёв' },
@@ -212,11 +212,11 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ép lạnh',
         ru: 'Холодный пресс',
         images: [
-          '/冷压机/冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_1_up_001.webp',
-          '/冷压机/冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_1_up_002.webp',
-          '/冷压机/冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_2_up_001.webp',
-          '/冷压机/冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_2_up_002.webp',
-          '/冷压机/冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_3_up_001.webp',
+          '/cold-press/cold-press_MH3248x50T_20260207_yellow-white/cold-press_MH3248x50T_20260207_yellow-white_1_up_001.webp',
+          '/cold-press/cold-press_MH3248x50T_20260207_yellow-white/cold-press_MH3248x50T_20260207_yellow-white_1_up_002.webp',
+          '/cold-press/cold-press_MH3248x50T_20260207_yellow-white/cold-press_MH3248x50T_20260207_yellow-white_2_up_001.webp',
+          '/cold-press/cold-press_MH3248x50T_20260207_yellow-white/cold-press_MH3248x50T_20260207_yellow-white_2_up_002.webp',
+          '/cold-press/cold-press_MH3248x50T_20260207_yellow-white/cold-press_MH3248x50T_20260207_yellow-white_3_up_001.webp',
         ],
         specs: [
           { keyCn: '工作台尺寸', keyMic: 'Table Size', keyVn: 'Kích thước bàn làm việc', valueCn: '2500x1300mm', valueMic: '2500x1300mm', valueRu: '2500 × 1300 мм', keyRu: 'Размер рабочего стола' },
@@ -246,8 +246,8 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ép lạnh',
         ru: 'Холодный пресс',
         images: [
-          '/冷压机/冷压机_MH3248x200T_20251020_黄白/冷压机_MH3248x200T_20251020_黄白_1_up_001.webp',
-          '/冷压机/冷压机_MH3248x200T_20251020_黄白/冷压机_MH3248x200T_20251020_黄白_2_up_001.webp',
+          '/cold-press/cold-press_MH3248x200T_20251020_yellow-white/cold-press_MH3248x200T_20251020_yellow-white_1_up_001.webp',
+          '/cold-press/cold-press_MH3248x200T_20251020_yellow-white/cold-press_MH3248x200T_20251020_yellow-white_2_up_001.webp',
         ],
         specs: [
           { keyCn: '工作台尺寸', keyMic: 'Table Size', keyVn: 'Kích thước bàn làm việc', valueCn: '4200×1250mm', valueMic: '4200×1250mm', valueRu: '4200 × 1250 мм', keyRu: 'Размер рабочего стола' },
@@ -267,9 +267,9 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ép lạnh',
         ru: 'Холодный пресс',
         images: [
-          '/冷压机/冷压机_MH3248x100T_20260425_黑黄白/冷压机_MH3248x100T_20260425_黑黄白 _up(4)_001.webp',
-          '/冷压机/冷压机_MH3248x100T_20260425_黑黄白/冷压机_MH3248x100T_20260425_黑黄白 _up(5)_001.webp',
-          '/冷压机/冷压机_MH3248x100T_20260425_黑黄白/冷压机_MH3248x100T_20260425_黑黄白_up (3)_001.webp',
+          '/cold-press/cold-press_MH3248x100T_20260425_black-yellow-white/cold-press_MH3248x100T_20260425_black-yellow-white_up(4)_001.webp',
+          '/cold-press/cold-press_MH3248x100T_20260425_black-yellow-white/cold-press_MH3248x100T_20260425_black-yellow-white_up(5)_001.webp',
+          '/cold-press/cold-press_MH3248x100T_20260425_black-yellow-white/cold-press_MH3248x100T_20260425_black-yellow-white_up (3)_001.webp',
         ],
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '3200×1600mm', valueMic: '3200×1600mm', valueRu: '3200 × 1600 мм', keyRu: 'Размер стола' },
@@ -289,9 +289,9 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ép lạnh',
         ru: 'Холодный пресс',
         images: [
-          '/冷压机/冷压机_MH3248x100T_20260509_黄白/冷压机_MH3248x100T_20260509_黄白 (1)_up_001.webp',
-          '/冷压机/冷压机_MH3248x100T_20260509_黄白/冷压机_MH3248x100T_20260509_黄白 (3)_up_001.webp',
-          '/冷压机/冷压机_MH3248x100T_20260509_黄白/冷压机_MH3248x100T_20260509_黄白 (4)_up_001.webp',
+          '/cold-press/cold-press_MH3248x100T_20260509_yellow-white/cold-press_MH3248x100T_20260509_yellow-white (1)_up_001.webp',
+          '/cold-press/cold-press_MH3248x100T_20260509_yellow-white/cold-press_MH3248x100T_20260509_yellow-white (3)_up_001.webp',
+          '/cold-press/cold-press_MH3248x100T_20260509_yellow-white/cold-press_MH3248x100T_20260509_yellow-white (4)_up_001.webp',
         ],
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '4000×2200mm', valueMic: '4000×2200mm', valueRu: '4000 × 2200 мм', keyRu: 'Размер стола' },
@@ -311,8 +311,8 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ép lạnh',
         ru: 'Холодный пресс',
         images: [
-          '/冷压机/冷压机_MH3248x30T_20260429_黄绿白/冷压机_MH3248x30T_20260429_黄绿白_1_up_001.webp',
-          '/冷压机/冷压机_MH3248x30T_20260429_黄绿白/冷压机_MH3248x30T_20260429_黄绿白_2_up_001.webp',
+          '/cold-press/cold-press_MH3248x30T_20260429_yellow-green-white/cold-press_MH3248x30T_20260429_yellow-green-white_1_up_001.webp',
+          '/cold-press/cold-press_MH3248x30T_20260429_yellow-green-white/cold-press_MH3248x30T_20260429_yellow-green-white_2_up_001.webp',
         ],
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '400×160mm×2', valueMic: '400×160mm×2', valueRu: '400 × 160 мм × 2', keyRu: 'Размер стола' },
@@ -331,10 +331,10 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ép lạnh',
         ru: 'Холодный пресс',
         images: [
-          '/冷压机/冷压机_MH3248x50T_20260604_黄白/冷压机_MH3248x50T_20260604_黄白 (4)_up_001.webp',
-          '/冷压机/冷压机_MH3248x50T_20260604_黄白/冷压机_MH3248x50T_20260604_黄白 (2)_up_001.webp',
-          '/冷压机/冷压机_MH3248x50T_20260604_黄白/冷压机_MH3248x50T_20260604_黄白 (1)_up_001.webp',
-          '/冷压机/冷压机_MH3248x50T_20260604_黄白/冷压机_MH3248x50T_20260604_黄白 (6)_up_001.webp',
+          '/cold-press/cold-press_MH3248x50T_20260604_yellow-white/cold-press_MH3248x50T_20260604_yellow-white (4)_up_001.webp',
+          '/cold-press/cold-press_MH3248x50T_20260604_yellow-white/cold-press_MH3248x50T_20260604_yellow-white (2)_up_001.webp',
+          '/cold-press/cold-press_MH3248x50T_20260604_yellow-white/cold-press_MH3248x50T_20260604_yellow-white (1)_up_001.webp',
+          '/cold-press/cold-press_MH3248x50T_20260604_yellow-white/cold-press_MH3248x50T_20260604_yellow-white (6)_up_001.webp',
         ],
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '5000×2500mm', valueMic: '5000×2500mm', valueRu: '5000 × 2500 мм', keyRu: 'Размер стола' },
@@ -357,9 +357,9 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ép lạnh',
         ru: 'Холодный пресс',
         images: [
-          '/冷压机/冷压机_MH3248x50T_20260414_黄白/冷压机_MH3248x50T_20260414_黄白 (1)_up_001.webp',
-          '/冷压机/冷压机_MH3248x50T_20260414_黄白/冷压机_MH3248x50T_20260414_黄白 (1)_up_002.webp',
-          '/冷压机/冷压机_MH3248x50T_20260414_黄白/冷压机_MH3248x50T_20260414_黄白 (1)_up_003.webp',
+          '/cold-press/cold-press_MH3248x50T_20260414_yellow-white/cold-press_MH3248x50T_20260414_yellow-white (1)_up_001.webp',
+          '/cold-press/cold-press_MH3248x50T_20260414_yellow-white/cold-press_MH3248x50T_20260414_yellow-white (1)_up_002.webp',
+          '/cold-press/cold-press_MH3248x50T_20260414_yellow-white/cold-press_MH3248x50T_20260414_yellow-white (1)_up_003.webp',
         ],
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '3000×1300mm', valueMic: '3000×1300mm', valueRu: '3000 × 1300 мм', keyRu: 'Размер стола' },
@@ -378,9 +378,9 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ép lạnh',
         ru: 'Холодный пресс',
         images: [
-          '/冷压机/冷压机_MH3248x150Tx3_20190123_黄白/冷压机_MH3248x150Tx3_20190123_黄白_up(2)_001.webp',
-          '/冷压机/冷压机_MH3248x150Tx3_20190123_黄白/冷压机_MH3248x150Tx3_20190123_黄白_up(1)_001.webp',
-          '/冷压机/冷压机_MH3248x150Tx3_20190123_黄白/冷压机_MH3248x150Tx3_20190123_黄白_up(1)_002.webp',
+          '/cold-press/cold-press_MH3248x150Tx3_20190123_yellow-white/cold-press_MH3248x150Tx3_20190123_yellow-white_up(2)_001.webp',
+          '/cold-press/cold-press_MH3248x150Tx3_20190123_yellow-white/cold-press_MH3248x150Tx3_20190123_yellow-white_up(1)_001.webp',
+          '/cold-press/cold-press_MH3248x150Tx3_20190123_yellow-white/cold-press_MH3248x150Tx3_20190123_yellow-white_up(1)_002.webp',
         ],
         specs: [
           { keyCn: '每段台面尺寸', keyMic: 'Table Size per Section', keyVn: 'Kích thước bàn mỗi đoạn', valueCn: '1250×1500mm', valueMic: '1250×1500mm', valueVn: '1250×1500mm', valueRu: '1250 × 1500 мм', keyRu: 'Размер стола каждой секции' },
@@ -403,8 +403,8 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ép lạnh',
         ru: 'Холодный пресс',
         images: [
-          '/冷压机/冷压机_MH3248x60T_20261013_绿白/冷压机_MH3248x60T_20261013_绿白_up(2)_001.webp',
-          '/冷压机/冷压机_MH3248x60T_20261013_绿白/冷压机_MH3248x60T_20261013_绿白_up(3)_001.webp'
+          '/cold-press/cold-press_MH3248x60T_20261013_green-white/cold-press_MH3248x60T_20261013_green-white_up(2)_001.webp',
+          '/cold-press/cold-press_MH3248x60T_20261013_green-white/cold-press_MH3248x60T_20261013_green-white_up(3)_001.webp'
         ],
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', keyRu: 'Размер стола', valueCn: '1000×800mm', valueMic: '1000×800mm', valueVn: '1000×800mm', valueRu: '1000 × 800 мм' },
@@ -423,8 +423,8 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ép lạnh',
         ru: 'Холодный пресс',
         images: [
-          '/冷压机/冷压机_MH3248x250T_20261028_黄白/冷压机_MH3248x250T_20261028_黄白_up(1)_001.webp',
-          '/冷压机/冷压机_MH3248x250T_20261028_黄白/冷压机_MH3248x250T_20261028_黄白_up(2)_001.webp'
+          '/cold-press/cold-press_MH3248x250T_20261028_yellow-white/cold-press_MH3248x250T_20261028_yellow-white_up(1)_001.webp',
+          '/cold-press/cold-press_MH3248x250T_20261028_yellow-white/cold-press_MH3248x250T_20261028_yellow-white_up(2)_001.webp'
         ],
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', keyRu: 'Размер стола', valueCn: '3000×1250mm', valueMic: '3000×1250mm', valueVn: '3000×1250mm', valueRu: '3000 × 1250 мм' },
@@ -460,7 +460,7 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy cưa đa lưỡi',
         ru: 'Многопильный станок',
         images: [
-          '/多片锯/多片锯_MJ1300-XD5_20240716_蓝白/多片锯_MJ1300-XD5_20240716_蓝白_up_001.webp'
+          '/multi-blade-saw/multi-blade-saw_MJ1300-XD5_20240716_blue-white/multi-blade-saw_MJ1300-XD5_20240716_blue-white_up_001.webp'
         ],
         specs: [
           { keyCn: '防护罩', keyMic: 'Safety Guard', keyVn: 'Vỏ bảo vệ', valueCn: '全封闭式防护罩，带板料防反弹保护装置', valueMic: 'Fully enclosed safety guard with anti-rebound device for sheet materials', valueVn: 'Vỏ bảo vệ kín, có thiết bị bảo vệ chống văng phôi', valueRu: 'Полностью закрытый защитный кожух с устройством защиты от отскока заготовки', keyRu: 'Защитный кожух' },
@@ -491,8 +491,8 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy cưa đa lưỡi',
         ru: 'Многопильный станок',
         images: [
-          '/多片锯/多片锯_MJ1300-XD3_20201109_蓝白/多片锯_MJ1300-XD3_20201109_蓝白_up(1)_001.webp',
-          '/多片锯/多片锯_MJ1300-XD3_20201109_蓝白/多片锯_MJ1300-XD3_20201109_蓝白_up(2)_001.webp'
+          '/multi-blade-saw/multi-blade-saw_MJ1300-XD3_20201109_blue-white/multi-blade-saw_MJ1300-XD3_20201109_blue-white_up(1)_001.webp',
+          '/multi-blade-saw/multi-blade-saw_MJ1300-XD3_20201109_blue-white/multi-blade-saw_MJ1300-XD3_20201109_blue-white_up(2)_001.webp'
         ],
         specs: [
           { keyCn: '整机总功率', keyMic: 'Total Power', keyVn: 'Tổng công suất', keyRu: 'Общая мощность', valueCn: '23.5kW', valueMic: '23.5kW', valueVn: '23.5kW', valueRu: '23,5 кВт' },
@@ -691,7 +691,7 @@ export const productSeries: ProductSeries[] = [
         vn: 'Bục nâng',
         ru: 'Подъёмный стол',
         images: [
-          '/升降平台/升降平台_E1825_20201027_橙色/升降平台_E1825_20201027_橙色 (1)_up_001.webp'
+          '/lifting-platform/lifting-platform_E1825_20201027_orange/lifting-platform_E1825_20201027_orange (1)_up_001.webp'
         ],
         specs: [
           { keyCn: '规格', keyMic: 'Type', keyVn: 'Loại', keyRu: 'Тип', valueCn: 'E型', valueMic: 'Type E', valueVn: 'Loại E', valueRu: 'Тип E' },
@@ -755,11 +755,11 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ghép gỗ',
         ru: 'Пресс для сращивания',
         images: [
-          '/拼板机/拼板机_MH1325_20260608_黄白/拼板机_MH1325_20260608_黄白 (3)_up_001.webp',
-          '/拼板机/拼板机_MH1325_20260608_黄白/拼板机_MH1325_20260608_黄白 (1)_up_002.webp',
-          '/拼板机/拼板机_MH1325_20260608_黄白/拼板机_MH1325_20260608_黄白 (1)_up_001.webp',
-          '/拼板机/拼板机_MH1325_20260608_黄白/拼板机_MH1325_20260608_黄白 (2)_up_001.webp',
-          '/拼板机/拼板机_MH1325_20260608_黄白/拼板机_MH1325_20260608_黄白 (2)_up_002.webp'
+          '/splicing-machine/splicing_MH1325_20260608_yellow-white/splicing_MH1325_20260608_yellow-white (3)_up_001.webp',
+          '/splicing-machine/splicing_MH1325_20260608_yellow-white/splicing_MH1325_20260608_yellow-white (1)_up_002.webp',
+          '/splicing-machine/splicing_MH1325_20260608_yellow-white/splicing_MH1325_20260608_yellow-white (1)_up_001.webp',
+          '/splicing-machine/splicing_MH1325_20260608_yellow-white/splicing_MH1325_20260608_yellow-white (2)_up_001.webp',
+          '/splicing-machine/splicing_MH1325_20260608_yellow-white/splicing_MH1325_20260608_yellow-white (2)_up_002.webp'
         ],
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '3200×1300mm', valueMic: '3200×1300mm', valueRu: '3200 × 1300 мм', keyRu: 'Размер стола' },
@@ -780,8 +780,8 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ghép gỗ',
         ru: 'Пресс для сращивания',
         images: [
-          '/拼板机/拼板机_MH1325_20260610_黄白/拼板机_MH1325_20260610_黄白 (1)_up_001.webp',
-          '/拼板机/拼板机_MH1325_20260610_黄白/拼板机_MH1325_20260610_黄白 (2)_up_001.webp'
+          '/splicing-machine/splicing_MH1325_20260610_yellow-white/splicing_MH1325_20260610_yellow-white (1)_up_001.webp',
+          '/splicing-machine/splicing_MH1325_20260610_yellow-white/splicing_MH1325_20260610_yellow-white (2)_up_001.webp'
         ],
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '2500×1300mm', valueMic: '2500×1300mm', valueRu: '2500 × 1300 мм', keyRu: 'Размер стола' },
@@ -817,7 +817,7 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy ghép khung cửa',
         ru: 'Станок для сборки дверных коробок',
         images: [
-          '/门框组合机/门框组合机_MH2210_20260325_蓝白/门框组合机_MH2210_20260325_蓝白_up_001.webp'
+          '/door-frame-machine/door-frame_MH2210_20260325_blue-white/door-frame_MH2210_20260325_blue-white_up_001.webp'
         ],
         specs: [
           { keyCn: '最大组合尺寸', keyMic: 'Max. Combination Size', keyVn: 'Kích thước ghép tối đa', valueCn: '1220×2440mm', valueMic: '1220×2440mm', valueRu: '1220 × 2440 мм', keyRu: 'Максимальный размер заготовки' },
@@ -853,7 +853,7 @@ export const productSeries: ProductSeries[] = [
         vn: 'Bạc dẫn hướng xi-lanh',
         ru: 'Запчасти',
         images: [
-          '/零件/油缸导套_小油缸50导套_20260507_金属色/油缸导套_小油缸50导套_20260507_金属色_up_001.webp'
+          '/parts/oil-cylinder-guide-sleeve_small-cylinder-50_20260507_metallic/oil-cylinder-guide-sleeve_small-cylinder-50_20260507_metallic_up_001.webp'
         ],
         specs: [],
         features: []
@@ -866,7 +866,7 @@ export const productSeries: ProductSeries[] = [
         vn: 'Xích',
         ru: 'Запчасти',
         images: [
-          '/零件/链条_带胶板_20260508_金属白/链条_带胶板_20260508_金属白 (1)_up_001.webp'
+          '/parts/chain_with-rubber-pad_20260508_metallic-white/chain_with-rubber-pad_20260508_metallic-white (1)_up_001.webp'
         ],
         specs: [
           { keyCn: '产品名称', keyMic: 'Product Name', keyVn: 'Tên sản phẩm', valueCn: '链条', valueMic: 'Chain', valueVn: 'Xích', valueRu: 'Цепь', keyRu: 'Наименование изделия' },
@@ -899,8 +899,8 @@ export const productSeries: ProductSeries[] = [
         vn: "Máy làm mộng",
         ru: 'Прочее',
         images: [
-          "/母榫机/母榫机_MJ105M_20260328_蓝白/母榫机_MJ105M_20260328_蓝白_1_up_001.webp",
-          "/母榫机/母榫机_MJ105M_20260328_蓝白/母榫机_MJ105M_20260328_蓝白_4_up_001.webp"
+          "/mortise-machine/mortise_MJ105M_20260328_blue-white/mortise_MJ105M_20260328_blue-white_1_up_001.webp",
+          "/mortise-machine/mortise_MJ105M_20260328_blue-white/mortise_MJ105M_20260328_blue-white_4_up_001.webp"
         ],
         specs: [
           { keyCn: "台面尺寸", keyMic: "Table Size", valueCn: "800×1000mm", valueMic: "800×1000mm" },
@@ -922,9 +922,9 @@ export const productSeries: ProductSeries[] = [
         mic: "Vertical Milling Machine",
         vn: "Máy phay đứng",
         images: [
-          "/立式铣床/立式铣床_MX5115立铣_20260429_蓝白/立式铣床_MX5115立铣_20260429_蓝白 (12)_up_001.webp",
-          "/立式铣床/立式铣床_MX5115立铣_20260429_蓝白/立式铣床_MX5115立铣_20260429_蓝白 (13)_up_001.webp",
-          "/立式铣床/立式铣床_MX5115立铣_20260429_蓝白/立式铣床_MX5115立铣_20260429_蓝白 (30)_up_001.webp"
+          "/vertical-milling/vertical-milling_MX5115vertical-milling_20260429_blue-white/vertical-milling_MX5115vertical-milling_20260429_blue-white (12)_up_001.webp",
+          "/vertical-milling/vertical-milling_MX5115vertical-milling_20260429_blue-white/vertical-milling_MX5115vertical-milling_20260429_blue-white (13)_up_001.webp",
+          "/vertical-milling/vertical-milling_MX5115vertical-milling_20260429_blue-white/vertical-milling_MX5115vertical-milling_20260429_blue-white (30)_up_001.webp"
         ],
         specs: [
           { keyCn: "工作台尺寸", keyMic: "Table Size", valueCn: "640×580mm", valueMic: "640×580mm" },
@@ -946,7 +946,7 @@ export const productSeries: ProductSeries[] = [
         mic: "Single Blade Saw",
         vn: "Máy cưa đơn",
         images: [
-          "/其他/其他_单片锯_MJ153_20250516_灰白/单片锯_MJ153_20250516_灰白_up_001.webp"
+          "/other/other_single-blade-saw_MJ153_20250516_grey-white/single-blade-saw_MJ153_20250516_grey-white_up_001.webp"
         ],
         specs: [
           { keyCn: "锯片直径", keyMic: "Blade Diameter", valueCn: "305mm", valueMic: "305mm" },
@@ -972,10 +972,10 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy mài lưỡi cưa',
         ru: 'Станок для заточки пил',
         images: [
-          '/其他/磨齿机_LDX022_20261015_钢铁灰/磨齿机_LDX022_20261015_钢铁灰 _up(2)_001.webp',
-          '/其他/磨齿机_LDX022_20261015_钢铁灰/磨齿机_LDX022_20261015_钢铁灰_up(1)_001.webp',
-          '/其他/磨齿机_LDX022_20261015_钢铁灰/磨齿机_LDX022_20261015_钢铁灰_up(2)_001.webp',
-          '/其他/磨齿机_LDX022_20261015_钢铁灰/磨齿机_LDX022_20261015_钢铁灰_up_001.webp'
+          '/other/saw-blade-sharpener_LDX022_20261015_steel-grey/saw-blade-sharpener_LDX022_20261015_steel-grey_up(2)_001.webp',
+          '/other/saw-blade-sharpener_LDX022_20261015_steel-grey/saw-blade-sharpener_LDX022_20261015_steel-grey_up(1)_001.webp',
+          '/other/saw-blade-sharpener_LDX022_20261015_steel-grey/saw-blade-sharpener_LDX022_20261015_steel-grey_up(2)_001.webp',
+          '/other/saw-blade-sharpener_LDX022_20261015_steel-grey/saw-blade-sharpener_LDX022_20261015_steel-grey_up_001.webp'
         ],
         specs: [
           { keyCn: '加工锯条厚度', keyMic: 'Blade Thickness', keyVn: 'Độ dày lưỡi cưa', valueCn: '0.6~3mm', valueMic: '0.6–3 mm', valueVn: '0,6–3 mm', valueRu: '0,6–3 мм', keyRu: 'Толщина полотна' },
@@ -1000,8 +1000,8 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy tiện gỗ',
         ru: 'Токарный станок по дереву',
         images: [
-          '/其他/车床_MC3026_20210707_绿白/车床_MC3026_20210707_绿白_up(1)_001.webp',
-          '/其他/车床_MC3026_20210707_绿白/车床_MC3026_20210707_绿白_up(2)_001.webp'
+          '/other/wood-lathe_MC3026_20210707_green-white/wood-lathe_MC3026_20210707_green-white_up(1)_001.webp',
+          '/other/wood-lathe_MC3026_20210707_green-white/wood-lathe_MC3026_20210707_green-white_up(2)_001.webp'
         ],
         specs: [
           { keyCn: '导轨', keyMic: 'Guide Rail', keyVn: 'Ray dẫn hướng', valueCn: '铸件轨道', valueMic: 'Cast Iron Rail', valueVn: 'Ray đúc', valueRu: 'Чугунная направляющая', keyRu: 'Направляющая' },
@@ -1025,8 +1025,8 @@ export const productSeries: ProductSeries[] = [
         vn: 'Máy cưa tạo tenon',
         ru: 'Станок для нарезки шипов',
         images: [
-          '/其他/出榫机_MD2108B_20250214_蓝白/出榫机_MD2108B_20250214_蓝白_up(1)_001.webp',
-          '/其他/出榫机_MD2108B_20250214_蓝白/出榫机_MD2108B_20250214_蓝白_up(2)_001.webp'
+          '/other/tenon-cutting_MD2108B_20250214_blue-white/tenon-cutting_MD2108B_20250214_blue-white_up(1)_001.webp',
+          '/other/tenon-cutting_MD2108B_20250214_blue-white/tenon-cutting_MD2108B_20250214_blue-white_up(2)_001.webp'
         ],
         specs: [
           { keyCn: '结构形式', keyMic: 'Structure', keyVn: 'Cấu trúc', valueCn: '单轨重型', valueMic: 'Single Rail Heavy Duty', valueVn: 'Rail đơn kiểu nặng', valueRu: 'Однорельсовый тяжёлый тип', keyRu: 'Конструкция' },

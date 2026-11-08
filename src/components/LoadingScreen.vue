@@ -2,7 +2,7 @@
   <Transition name="loading-fade">
     <div v-if="visible" class="loading-screen">
       <div class="loading-content">
-        <img src="/商标2-white.png" alt="SHANG RUI" class="loading-logo" />
+        <img src="/logo-white.png" alt="SHANG RUI" class="loading-logo" />
         <span class="loading-brand">SHANG RUI</span>
         <div class="loading-spinner">
           <div class="spinner-ring"></div>
