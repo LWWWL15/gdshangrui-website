@@ -1,4 +1,3 @@
-import { useHead } from '@unhead/vue'
 <template>
   <div class="gallery-view">
     <!-- Page header -->
@@ -28,7 +27,6 @@ import { useHead } from '@unhead/vue'
             />
             <div v-if="img.loaded" class="photo-overlay">
               <span class="photo-date">{{ img.date }}</span>
-              <span class="photo-machine">{{ img.machine }}</span>
             </div>
           </div>
         </div>
@@ -51,14 +49,23 @@ import { useLang } from '@/composables/useLang'
 const { t } = useLang()
 
 // ===== Config =====
+// 图库清单：public/delivery/images.json（已随仓库提交，线上 /delivery/images.json 返回 200）
+// 历史上这里写的是 /gallery-manifest.json —— 该文件在仓库里从来不存在，线上永远 404，
+// 导致图库页一张图都加载不出来。清单实际在 /delivery/ 下，与图片同目录。
+const MANIFEST_URL = '/delivery/images.json'
+const IMAGE_BASE = '/delivery/'
 const PAGE_SIZE = 48
-// Filename parser: 2026-01-15_MH3848X120T_xxx.jpg
-//   group 1: YYYY-MM-DD
-//   group 2: machine name (e.g. MH3848X120T or MH3248x50T)
-const FILENAME_RE = /^(\d{4}-\d{2}-\d{2})_(.+?)(?:[_-].*)?\.(?:jpe?g|png|webp)$/i
+// 清单里的文件名是原厂相机导出的原名，两种常见形态：
+//   IMG20240320093124.webp      → IMG + YYYYMMDDHHMMSS
+//   mmexport1785197483446.webp  → mmexport + 毫秒时间戳
+// 另有 3d39b8a5....webp 这类哈希名，既无日期也无机型。
+// 注意：文件名里没有机型信息，所以 alt 只能是「出货实拍 + 日期」这种通用描述，
+// 绝不能从文件名反推机型（会变成编造参数）。
+const IMG_TIMESTAMP_RE = /^IMG(\d{4})(\d{2})(\d{2})(\d{2})?(\d{2})?(\d{2})?/
+const MMEXPORT_RE = /^mmexport(\d{13})/
 
 // ===== State =====
-// allImages: { src, alt, date, machine, loaded }[]
+// allImages: { src, alt, date, loaded }[]
 const allImages = ref([])
 const visibleCount = ref(PAGE_SIZE)
 const loadedCount = ref(0)
@@ -66,20 +73,38 @@ const loading = ref(false)
 const gridEl = ref<HTMLElement | null>(null)
 
 // Pre-parse the image manifest
+// 清单是一个扁平数组：["IMG20240320093124.webp", ...]
+function parseShotDate(file: string): string {
+  const img = file.match(IMG_TIMESTAMP_RE)
+  if (img) {
+    const [, y, mo, d] = img
+    return `${y}-${mo}-${d}`
+  }
+  const mm = file.match(MMEXPORT_RE)
+  if (mm) {
+    const ms = Number(mm[1])
+    const dt = new Date(ms)
+    if (!Number.isNaN(dt.getTime())) {
+      const p = (n: number) => String(n).padStart(2, '0')
+      return `${dt.getFullYear()}-${p(dt.getMonth() + 1)}-${p(dt.getDate())}`
+    }
+  }
+  return ''
+}
+
 async function loadManifest() {
   try {
-    const r = await fetch('/gallery-manifest.json', { cache: 'no-store' })
-    if (!r.ok) throw new Error('manifest not found')
-    const data: { files: string[] } = await r.json()
-    allImages.value = data.files.map((rel) => {
-      const m = rel.match(FILENAME_RE)
-      const date = m ? m[1] : ''
-      const machine = m ? m[2] : ''
+    const r = await fetch(MANIFEST_URL, { cache: 'no-store' })
+    if (!r.ok) throw new Error('manifest HTTP ' + r.status)
+    const files: string[] = await r.json()
+    if (!Array.isArray(files)) throw new Error('unexpected manifest shape')
+    allImages.value = files.map((file) => {
+      const date = parseShotDate(file)
       return {
-        src: '/' + rel.replace(/^\/+/, ''),
-        alt: machine ? `${machine} - ${date}` : rel,
+        src: IMAGE_BASE + encodeURIComponent(file),
+        // 文件名里没有机型信息 → alt 只能是通用描述，不能反推机型
+        alt: date ? `${date} ${t('出货实拍', 'delivery photo', 'ảnh xuất hàng', 'фото отгрузки')}` : t('出货实拍', 'delivery photo', 'ảnh xuất hàng', 'фото отгрузки'),
         date,
-        machine,
         loaded: false,
       }
     })
@@ -164,14 +189,15 @@ onUnmounted(() => {
   observer?.disconnect()
 })
 
-// SEO meta
-const route = (window).useRoute && window.useRoute() || null
-useHead?.({
-  title: t('出货现场', 'Delivery in Action', t('出货現場', 'Delivery in Action', 'Hình ảnh xuất hàng', 'Фото отгрузок'), t('出货現場', 'Delivery in Action', 'Hình ảnh xuất hàng', 'Фото отгрузок')),
-  meta: [
-    { name: 'description', content: t('出货现场', 'Delivery in Action', t('出货现场', 'Delivery in Action', 'Hình ảnh xuất hàng', 'Фото отгрузок'), t('出货现场', 'Delivery in Action', 'Hình ảnh xuất hàng', 'Фото отгрузок')) },
-  ],
-})
+// SEO meta 说明：
+// 本组件不再单独 useHead —— Title/Description/canonical/hreflang/og 全部由
+// LangLayout 统一管理（pageTitleMap / pageDescMap 里已有 '/gallery' 的四语条目）。
+// 之前这里有一段 useHead，但它前面一行是 `(window).useRoute && ...`：
+//   - SSR（Node 环境）里 window 未定义 → 抛 ReferenceError → 整个组件 setup 失败
+//     → 预渲染出的 /gallery 四语页只剩页头页脚，正文、h1、图片全都没有
+//   - 就算那行不抛错，这段 useHead 也会覆盖 LangLayout 生成的 title/description，
+//     把「出货现场 | 上锐机械」压成「出货现场」，属于改动 TDH
+// 所以这里整段删除：既修好 SSR 崩溃，又保证 Title/Description 与线上逐字节一致。
 
 </script>
 
