@@ -8,12 +8,15 @@
           <p class="error-desc">
             {{ t('抱歉，您访问的页面不存在或已被移除。', 'Sorry, the page you are looking for does not exist or has been removed.', t('抱歉，您访问的页面不存在或已被移除。', 'Sorry, the page you are looking for does not exist or has been removed.', 'Xin lỗi, trang bạn truy cập không tồn tại hoặc đã bị xóa.', 'К сожалению, запрашиваемая страница не существует или была удалена.')) }}
           </p>
-          <p class="countdown-text">
-            {{ t(`将在 ${countdown} 秒后自动返回首页...`, `Redirecting to home in ${countdown} seconds...`,  `Sẽ tự động chuyển về trang chủ sau ${countdown} giây...`,  `Sẽ tự động chuyển về trang chủ sau ${countdown} giây...`) }}
+          <p class="error-desc">
+            {{ t('您可以返回首页，或浏览我们的产品系列：热压机、冷压机、多片锯、拼板机。', 'You can return to the home page, or browse our product series: hot press, cold press, multi-blade saw and splicing machine.', t('您可以返回首页，或浏览我们的产品系列：热压机、冷压机、多片锯、拼板机。', 'You can return to the home page, or browse our product series: hot press, cold press, multi-blade saw and splicing machine.', 'Bạn có thể trở về trang chủ hoặc xem các dòng sản phẩm: máy ép nóng, máy ép lạnh, máy cưa đa lưỡi, máy ghép ván.', 'Вы можете вернуться на главную или посмотреть серии продукции: горячий пресс, холодный пресс, многопильный станок, линия сращивания.')) }}
           </p>
           <div class="error-actions">
             <router-link :to="'/' + lang + '/'" class="btn btn-primary btn-lg">
               {{ t('返回首页', 'Back to Home',  t('返回首页', 'Back to Home', 'Về trang chủ', 'Вернуться на главную'),  t('返回首页', 'Back to Home', 'Về trang chủ', 'Вернуться на главную')) }}
+            </router-link>
+            <router-link :to="'/' + lang + '/products'" class="btn btn-outline btn-lg">
+              {{ t('浏览产品', 'Browse Products',  t('浏览产品', 'Browse Products', 'Xem sản phẩm', 'Смотреть продукцию'),  t('浏览产品', 'Browse Products', 'Xem sản phẩm', 'Смотреть продукцию')) }}
             </router-link>
             <router-link :to="'/' + lang + '/contact'" class="btn btn-outline btn-lg">
               {{ t('联系我们', 'Contact Us',  t('联系我们', 'Contact Us', 'Liên hệ', 'Связаться с нами'),  t('联系我们', 'Contact Us', 'Liên hệ', 'Связаться с нами')) }}
@@ -26,26 +29,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
-import { useRouter } from 'vue-router'
+import { useHead } from '@unhead/vue'
 import { useLang } from '@/composables/useLang'
 const { t, tm, lang } = useLang()
-const router = useRouter()
 
-const countdown = ref(5)
-let timer: ReturnType<typeof setInterval> | null = null
-
-onMounted(() => {
-  timer = setInterval(() => {
-    countdown.value--
-    if (countdown.value <= 0) {
-      router.push('/' + lang.value + '/')
-    }
-  }, 1000)
-})
-
-onUnmounted(() => {
-  if (timer) clearInterval(timer)
+// 404 页必须 noindex：这是 Google 判定「不存在」页面的标准做法。
+// 之前这页没有 noindex，且会 5 秒后自动跳首页 —— 两者都会让 Google
+// 把 404 当成「重复首页」或「重定向页」处理，浪费抓取预算。
+useHead({
+  meta: [{ name: 'robots', content: 'noindex, follow' }],
 })
 </script>
 
@@ -105,17 +97,12 @@ h1 {
   }
 }
 
-.countdown-text {
-  font-size: $fs-sm;
-  color: $c-text-muted;
-  margin-bottom: $s-2xl;
-}
-
 .error-actions {
   display: flex;
   gap: $s-md;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: $s-xl;
 }
 
 .btn-outline {

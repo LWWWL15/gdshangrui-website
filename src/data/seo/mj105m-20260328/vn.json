@@ -1,36 +1,44 @@
 {
   "market": "vn",
   "language": "Tiếng Việt",
-  "languageCode": "vi",
+  "languageCode": "vn",
   "productId": "mj105m-20260328",
   "productSeries": "other",
-  "productSeriesName": "Máy khác",
-  "seoTitle": "Máy đục mộng MH105M - Bàn 800×1000mm rãnh 800mm | Shang Rui Vietnam",
-  "metaDesc": "Máy đục mộng MH105M, bàn 800×1000mm, rãnh dài 800mm, rộng 25mm. Điều chỉnh mộng đuôi én 10-200mm. Motor 3kW trước và sau. Phù hợp làm mộng gỗ chính xác cao.",
+  "productSeriesName": "Máy đào rãnh",
+  "seoTitle": "Máy đào rãnh MJ105M - bàn 800×1000mm, 25mm | Shang Rui",
+  "metaDesc": "Máy đào rãnh MJ105M, Table Size 800×1000mm, Groove Width 25mm. Dùng khoan rãnh cho gỗ tự nhiên, kết hợp dao phay tạo chốt vuông hoặc chốt tròn, là thiết bị ph.",
   "keywords": [
-    "máy đục mộng",
-    "máy làm mộng gỗ",
-    "máy mộng đuôi én",
-    "shangrui máy đục mộng"
+    "mj105m",
+    "máy đào rãnh",
+    "máy khoan rãnh gỗ",
+    "máy đục rãnh",
+    "máy làm rãnh chốt",
+    "máy đào lỗ gỗ",
+    "Máy đào rãnh giá rẻ",
+    "Shang Rui Máy đào rãnh"
   ],
-  "description": "Máy đục mộng MH105M (Mortise Machine) là thiết bị chuyên dụng để làm các loại mộng (mortise) và rãnh trên gỗ với độ chính xác cao. Bàn làm việc 800×1000mm với rãnh dài 800mm và rộng 25mm. Có thể điều chỉnh rãnh mộng đuôi én từ 10mm đến 200mm. Hệ thống gồm motor 3kW phía trước (có đầu kẹp lưỡi cưa) và motor 3kW phía sau (có trục đặc biệt cho dao phay). Điều chỉnh motor bằng vitme me để di chuyển lên xuống và ra trước sau. Phù hợp cho các xưởng mộc chuyên nghiệp cần làm mộng chính xác.",
+  "description": "Máy đào rãnh MJ105M, Table Size 800×1000mm, Groove Width 25mm. Dùng khoan rãnh cho gỗ tự nhiên, kết hợp dao phay tạo chốt vuông hoặc chốt tròn, là thiết bị ph.",
   "faq": [
     {
-      "q": "Có thể làm rãnh kích thước bao nhiêu?",
-      "a": "Rãnh có chiều rộng cố định 25mm và chiều dài 800mm. Rãnh mộng đuôi én có thể điều chỉnh từ 10mm đến 200mm."
+      "q": "Máy đào rãnh MJ105M dùng để làm gì?",
+      "a": "Máy đào rãnh MJ105M dùng trong dây chuyền sản xuất gỗ tự nhiên và ván, kết hợp với máy ép lạnh, máy ghép ván và máy cưa nhiều lưỡi."
     },
     {
-      "q": "Có thể lắp thiết bị đẩy tự động không?",
-      "a": "Có, máy có thể lắp thêm thiết bị đẩy tự động để tăng năng suất khi sản xuất số lượng lớn."
+      "q": "Thông số chính là gì?",
+      "a": "Thông số chính: xem bảng thông số kỹ thuật. Đầy đủ kỹ thuật có trên trang sản phẩm, chúng tôi xác nhận cấu hình theo vật liệu và công suất của bạn."
     },
     {
-      "q": "Có thể dùng cho gỗ cứng không?",
-      "a": "Có, với motor 3kW và hệ thống trục chính chắc chắn, máy phù hợp với hầu hết các loại gỗ công nghiệp và một số loại gỗ cứng."
+      "q": "Có chế tạo theo bản vẽ riêng không?",
+      "a": "Có. Với tư cách nhà sản xuất, chúng tôi chế tạo máy theo bản vẽ, mẫu mẫu hoặc yêu cầu kỹ thuật, gồm điện áp, khả năng ghép băng tải và mức độ tự động hóa."
+    },
+    {
+      "q": "Bảo hành và hậu mãi thế nào?",
+      "a": "Bảo hành 12 tháng cho toàn máy, phụ tùng luôn sẵn có, kèm hỗ trợ kỹ thuật khi lắp đặt, chạy thử và đào tạo vận hành."
     }
   ],
   "altTexts": {
-    "母榫机_母榫机_MJ105M_20260328_蓝白/母榫机_MJ105M_20260328_蓝白_1_up_001.webp": "Máy đục mộng MH105M màu xanh trắng góc 1",
-    "母榫机_母榫机_MJ105M_20260328_蓝白/母榫机_MJ105M_20260328_蓝白_4_up_001.webp": "Máy đục mộng MH105M màu xanh trắng góc 4"
+    "/母榫机/母榫机_MJ105M_20260328_蓝白/母榫机_MJ105M_20260328_蓝白_1_up_001.webp": "Máy đào rãnh, màu xanh dương trắng, mặt trước, toàn bộ máy",
+    "/母榫机/母榫机_MJ105M_20260328_蓝白/母榫机_MJ105M_20260328_蓝白_4_up_001.webp": "Máy đào rãnh, màu xanh dương trắng, mặt bên, toàn bộ máy"
   },
-  "urlSlug": "may-duc-mong-mj105m"
+  "urlSlug": "may-moc"
 }

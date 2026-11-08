@@ -1,45 +1,47 @@
 {
   "market": "vn",
   "language": "Tiếng Việt",
-  "languageCode": "vi",
+  "languageCode": "vn",
   "productId": "mh3248-50t-20260207",
   "productSeries": "cold-press",
   "productSeriesName": "Máy ép lạnh",
-  "seoTitle": "Máy ép lạnh MH3248x50T - Bàn 2500×1300mm 50 tấn | Shang Rui Vietnam",
-  "metaDesc": "Máy ép lạnh MH3248x50T, bàn 2500×1300mm, hành trình 1300mm, tải trọng 1000KG. Hệ thống 2 xy lanh D125/90mm, công suất 4KW. Phù hợp ép ván, cửa gỗ. Giao hàng nhanh.",
+  "seoTitle": "Máy ép lạnh MH3248x50T - bàn 2500x1300mm, hành trình 1300mm | Shang Rui",
+  "metaDesc": "Máy ép lạnh MH3248x50T, Table Size 2500x1300mm, Stroke Height 1300mm. Dùng ép lạnh ván ép, tấm gỗ và ván composite với lực ép đều ổn định, hạn chế nứt và biến.",
   "keywords": [
-    "máy ép lạnh gỗ",
-    "máy ép lạnh 50 tấn",
-    "máy ép lạnh bàn 2500",
-    "máy ép lạnh Trung Quốc",
-    "shangrui máy ép lạnh",
-    "máy ép lạnh nhập khẩu"
+    "mh3248x50t",
+    "máy ép lạnh",
+    "máy ép nguội thủy lực",
+    "máy ép ván ép",
+    "máy ép nhiều lớp",
+    "máy ép lạnh plywood",
+    "Máy ép lạnh giá rẻ",
+    "Shang Rui Máy ép lạnh"
   ],
-  "description": "Máy ép lạnh MH3248x50T là thiết bị ép lạnh công nghiệp với bàn làm việc 2500×1300mm và hành trình nén 1300mm. Máy được trang bị hệ thống 2 xy lanh D125/90mm cho áp suất đều và ổn định. Công suất 4KW với điện áp 380V 60HZ 3PH. Tải trọng tối đa 1000KG. Thiết kế bàn dưới có 3 hàng xy lanh nâng với các con lăn, giúp đặt và lấy sản phẩm dễ dàng. Phù hợp cho các doanh nghiệp sản xuất đồ gỗ, cửa gỗ, ván ép tại Việt Nam.",
+  "description": "Máy ép lạnh MH3248x50T, Table Size 2500x1300mm, Stroke Height 1300mm. Dùng ép lạnh ván ép, tấm gỗ và ván composite với lực ép đều ổn định, hạn chế nứt và biến.",
   "faq": [
     {
-      "q": "Máy ép lạnh có thể ép những loại sản phẩm nào?",
-      "a": "Máy phù hợp ép các loại ván gỗ, tấm MDF, ván ghép, cửa gỗ và các sản phẩm gỗ composite cần ép lạnh định hình."
+      "q": "Lực ép tối đa của Máy ép lạnh MH3248x50T là bao nhiêu?",
+      "a": "Lực ép tối đa là theo cấu hình, ép đều và giữ ổn định, đáp ứng yêu cầu ép ván ép và tấm gỗ."
     },
     {
-      "q": "Tải trọng tối đa của máy là bao nhiêu?",
-      "a": "Tải trọng tối đa của máy là 1000KG, với hành trình nén 1300mm và công suất 50 tấn."
+      "q": "Kích thước mặt bàn ép tối đa là bao nhiêu?",
+      "a": "Mặt bàn làm việc có kích thước theo yêu cầu, ván ép tiêu chuẩn đặt vừa không cần cắt; có thể chế tạo theo kích thước riêng."
     },
     {
-      "q": "Điện áp sử dụng là bao nhiêu?",
-      "a": "Máy sử dụng điện áp 380V 60HZ 3PH, chuẩn điện công nghiệp phổ biến tại Việt Nam."
+      "q": "Máy dùng điện áp bao nhiêu, lắp đặt ra sao?",
+      "a": "Máy thiết kế cho nguồn 380V/415V ba pha công nghiệp, cần chừa chỗ đặt bộ thủy lực và không gian bảo trì, chúng tôi hỗ trợ lắp đặt và đào tạo vận hành."
     },
     {
-      "q": "Có bảo hành không?",
-      "a": "Có, bảo hành 12 tháng và hỗ trợ kỹ thuật trọn đời. Phụ tùng luôn có sẵn."
+      "q": "Có phụ tùng và hậu mãi không?",
+      "a": "Có. Phụ tùng luôn sẵn có, kỹ sư hỗ trợ lắp đặt, chạy thử và đào tạo vận hành, cũng tư vấn thông số ép theo năng suất của bạn."
     }
   ],
   "altTexts": {
-    "冷压机_冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_1_up_001.webp": "Máy ép lạnh MH3248x50T màu vàng trắng góc 1",
-    "冷压机_冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_1_up_002.webp": "Máy ép lạnh MH3248x50T màu vàng trắng góc 1 hình 2",
-    "冷压机_冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_2_up_001.webp": "Máy ép lạnh MH3248x50T màu vàng trắng góc 2",
-    "冷压机_冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_2_up_002.webp": "Máy ép lạnh MH3248x50T màu vàng trắng góc 2 hình 2",
-    "冷压机_冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_3_up_001.webp": "Máy ép lạnh MH3248x50T màu vàng trắng góc 3"
+    "/冷压机/冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_1_up_001.webp": "Máy ép lạnh, màu vàng trắng, mặt trước, toàn bộ máy",
+    "/冷压机/冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_1_up_002.webp": "Máy ép lạnh, màu vàng trắng, mặt bên, toàn bộ máy",
+    "/冷压机/冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_2_up_001.webp": "Máy ép lạnh, màu vàng trắng, mặt bên, toàn bộ máy",
+    "/冷压机/冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_2_up_002.webp": "Máy ép lạnh, màu vàng trắng, mặt bên, toàn bộ máy",
+    "/冷压机/冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_3_up_001.webp": "Máy ép lạnh, màu vàng trắng, mặt sau, toàn bộ máy"
   },
-  "urlSlug": "may-ep-lanh-mh3248x50t"
+  "urlSlug": "may-ep-lanh"
 }

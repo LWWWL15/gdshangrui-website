@@ -1,41 +1,43 @@
 {
   "market": "vn",
   "language": "Tiếng Việt",
-  "languageCode": "vi",
+  "languageCode": "vn",
   "productId": "mh3848x120t-20240810",
   "productSeries": "hot-press",
   "productSeriesName": "Máy ép nóng",
-  "seoTitle": "Máy ép nóng MH3848x120T 2 lớp - Bàn 3000×1300mm | Shang Rui Vietnam",
-  "metaDesc": "Máy ép nóng MH3848x120T 2 lớp, bàn 3000×1300mm, khoảng cách mở 150mm, nhiệt độ tối đa 120°C. Thiết kế ép từ dưới lên phù hợp sản xuất ván dày. Đạt chuẩn CE.",
+  "seoTitle": "Máy ép nóng MH3848x120T - bàn 3000×1300mm, hành trình 150mm | Shang Rui",
+  "metaDesc": "Máy ép nóng MH3848x120T, Table Size 3000×1300mm, Opening Distance 150mm. Dùng ép nhiệt ván ép, ván sàn, MDF và giấy melamine, phù hợp sản xuất ván ép phủ, ván.",
   "keywords": [
-    "máy ép nóng 2 lớp",
-    "máy ép nóng bàn 3000",
-    "máy ép nóng 150mm",
-    "máy ép nóng từ dưới lên",
-    "shangrui máy ép nóng",
-    "máy ép nóng CE"
+    "mh3848x120t",
+    "máy ép nóng",
+    "máy ép ván",
+    "máy ép melamine",
+    "máy ép nhiều lớp",
+    "máy ép MDF",
+    "Máy ép nóng giá rẻ",
+    "Shang Rui Máy ép nóng"
   ],
-  "description": "Máy ép nóng MH3848x120T phiên bản 2 lớp với bàn làm việc rộng 3000×1300mm, khoảng cách mở lớn 150mm và nhiệt độ tối đa 120°C. Thiết kế ép từ dưới lên (bottom-up pressing) giúp đặt và lấy sản phẩm dễ dàng, phù hợp với các tấm ván dày. Máy được trang bị hệ thống sưởi hiệu quả cao, đảm bảo nhiệt phân bổ đều trên toàn bộ bề mặt ép. Phù hợp cho nhà máy sản xuất ván ép xuất khẩu đòi hỏi chất lượng cao.",
+  "description": "Máy ép nóng MH3848x120T, Table Size 3000×1300mm, Opening Distance 150mm. Dùng ép nhiệt ván ép, ván sàn, MDF và giấy melamine, phù hợp sản xuất ván ép phủ, ván.",
   "faq": [
     {
-      "q": "Máy có khoảng cách mở bao nhiêu?",
-      "a": "Khoảng cách mở của máy là 150mm, lớn hơn các phiên bản tiêu chuẩn, phù hợp ép các tấm ván dày."
+      "q": "Máy ép nóng MH3848x120T ép được tấm cỡ nào?",
+      "a": "Kích thước mặt ép là theo yêu cầu, phù hợp các khổ 4x8 ft, 5x8 ft phổ biến, số lớp và kích thước chế tạo theo dây chuyền của bạn."
     },
     {
-      "q": "Nhiệt độ tối đa là bao nhiêu?",
-      "a": "Nhiệt độ tối đa của máy là 120°C, phù hợp với hầu hết các loại keo ép ván trên thị trường."
+      "q": "Nhiệt độ và lực ép là bao nhiêu?",
+      "a": "Nhiệt độ nung điều chỉnh được, lực ép tối đa theo cấu hình, đáp ứng ép phủ cho ván ép, MDF và giấy melamine."
     },
     {
-      "q": "Có phù hợp cho sản xuất quy mô lớn không?",
-      "a": "Có, với bàn 3000×1300mm và 2 lớp ép, máy phù hợp cho các nhà máy có quy mô sản xuất vừa và lớn."
+      "q": "Ván ép ra có phẳng không?",
+      "a": "Ống nung được bố trí hai bên và phân bố đều, kết hợp mặt ép cứng và phẳng, bảo đảm nhiệt và áp lực đồng đều, nhờ đó keo bám ổn định không phồng rộp."
     },
     {
-      "q": "Máy có đạt chuẩn xuất khẩu không?",
-      "a": "Có, sản phẩm đạt chứng nhận CE và ISO9001, đảm bảo tiêu chuẩn xuất khẩu quốc tế."
+      "q": "Có thể chế tạo theo vật liệu của tôi không?",
+      "a": "Có. Chúng tôi tính toán số lớp, kích thước mặt ép, lực ép và bộ thủy lực đi kèm theo khổ ván và công suất cần thiết, đồng thời có thể cung cấp trọn dây chuyền."
     }
   ],
   "altTexts": {
-    "热压机_热压机_MH3848x120T_20240810_红蓝白/热压机_MH3848x120T_20240810_红蓝白_up_001.webp": "Máy ép nóng MH3848x120T màu đỏ xanh trắng"
+    "/热压机/热压机_MH3848x120T_20240810_红蓝白/热压机_MH3848x120T_20240810_红蓝白_up_001.webp": "Máy ép nóng, màu đỏ xanh trắng, mặt trước, toàn bộ máy"
   },
-  "urlSlug": "may-ep-nong-mh3848x120t-2lop"
+  "urlSlug": "may-ep-nong"
 }

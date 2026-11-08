@@ -8,7 +8,7 @@
     <div class="container header-inner">
       <!-- Mobile Logo -->
       <a class="mobile-logo" @click="handleBrandClick">
-        <img src="/商标2-white.png" alt="" class="mobile-logo-img" />
+        <img src="/logo-white.png" :alt="t('上锐机械标志', 'Shang Rui Machinery logo', t('上锐机械标志', 'Shang Rui Machinery logo', 'Logo Shang Rui Machinery', 'Логотип Shang Rui Machinery'))" class="mobile-logo-img" />
         <span>SHANG RUI</span>
       </a>
 
@@ -16,7 +16,7 @@
       <div class="header-brand">
         <!-- Logo -->
         <a @click="handleBrandClick" class="logo">
-          <img src="/商标2-white.png" alt="" class="logo-img" />
+          <img src="/logo-white.png" :alt="t('上锐机械标志', 'Shang Rui Machinery logo', t('上锐机械标志', 'Shang Rui Machinery logo', 'Logo Shang Rui Machinery', 'Логотип Shang Rui Machinery'))" class="logo-img" />
           <span class="logo-text">SHANG RUI</span>
         </a>
 

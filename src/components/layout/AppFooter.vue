@@ -74,6 +74,9 @@ const navItems = computed(() => {
     { cn: '产品展示', mic: 'Products', vn: 'Sản phẩm', ru: 'Продукция', path: `${prefix}/products` },
     { cn: '博客', mic: 'Blog', vn: 'Tin tức', ru: 'Блог', path: `${prefix}/blog` },
     { cn: '联系我们', mic: 'Contact', vn: 'Liên hệ', ru: 'Контакты', path: `${prefix}/contact` },
+    { cn: '资质认证', mic: 'Certifications', vn: 'Chứng nhận', ru: 'Сертификация', path: `${prefix}/certification` },
+    { cn: '隐私政策', mic: 'Privacy', vn: 'Bảo mật', ru: 'Конфиденциальность', path: `${prefix}/privacy` },
+    { cn: '服务条款', mic: 'Terms', vn: 'Điều khoản', ru: 'Условия', path: `${prefix}/terms` },
   ]
 })
 </script>

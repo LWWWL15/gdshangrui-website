@@ -19,6 +19,9 @@ export const routes: RouteRecordRaw[] = [
       { path: 'tools/ground-pressure-calculator', component: () => import('@/views/GroundPressureCalculator.vue') },
       { path: '404', component: () => import('@/views/NotFoundView.vue') },
       { path: 'gallery', component: () => import('@/views/GalleryView.vue') },
+      { path: 'certification', component: () => import('@/views/CertificationView.vue') },
+      { path: 'privacy', component: () => import('@/views/PrivacyView.vue') },
+      { path: 'terms', component: () => import('@/views/TermsView.vue') },
     ]
   },
   {

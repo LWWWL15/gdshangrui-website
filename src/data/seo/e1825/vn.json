@@ -1,0 +1,43 @@
+{
+  "market": "vn",
+  "language": "Tiếng Việt",
+  "languageCode": "vn",
+  "productId": "e1825",
+  "productSeries": "lifting-platform",
+  "productSeriesName": "Bàn nâng thủy lực",
+  "seoTitle": "Bàn nâng thủy lực E1825 - Type E, tải 3T | Shang Rui",
+  "metaDesc": "Bàn nâng thủy lực E1825, Type Type E, Load Capacity 3T. Dùng nâng hạ ván trong dây chuyền sản xuất, kết hợp máy đẩy ván, máy ép lạnh và máy cưa để tạo dây chu.",
+  "keywords": [
+    "e1825",
+    "bàn nâng thủy lực",
+    "bàn nâng ván",
+    "bàn nâng tải",
+    "bàn nâng gỗ",
+    "bàn nâng thủy lực công nghiệp",
+    "Bàn nâng thủy lực giá rẻ",
+    "Shang Rui Bàn nâng thủy lực"
+  ],
+  "description": "Bàn nâng thủy lực E1825, Type Type E, Load Capacity 3T. Dùng nâng hạ ván trong dây chuyền sản xuất, kết hợp máy đẩy ván, máy ép lạnh và máy cưa để tạo dây chu.",
+  "faq": [
+    {
+      "q": "Bàn nâng thủy lực E1825 chịu tải bao nhiêu?",
+      "a": "Tải trọng định mức là theo yêu cầu, đáp ứng vận chuyển tấm ván và xếp kho trong xưởng gỗ."
+    },
+    {
+      "q": "Chiều cao nâng và kích thước mặt bàn là bao nhiêu?",
+      "a": "Chiều cao nâng theo yêu cầu, kích thước mặt bàn theo yêu cầu, điều chỉnh được để bằng tầm làm việc của máy cưa hoặc băng tải trong dây chuyền."
+    },
+    {
+      "q": "Điều khiển bằng cách nào?",
+      "a": "Có bàn đạp, nút bấm và điều khiển PLC, kèm công tắc giới hạn hành trình và bảo vệ quá tải trong cấu hình tiêu chuẩn."
+    },
+    {
+      "q": "Có kết nối được với băng tải không?",
+      "a": "Có. Mặt bàn chọn con lăn hoặc xích, nối liền với thiết bị trước và sau trong dây chuyền để vận chuyển tấm liên tục."
+    }
+  ],
+  "altTexts": {
+    "/升降平台/升降平台_E1825_20201027_橙色/升降平台_E1825_20201027_橙色 (1)_up_001.webp": "Bàn nâng thủy lực, màu cam, mặt trước, toàn bộ máy"
+  },
+  "urlSlug": "ban-nang-thuy-luc"
+}

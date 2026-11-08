@@ -32,7 +32,11 @@ const isLangMounted = ref(false)
 
 // Hardcode site URL to avoid SSR window undefined issues
 const SITE_URL = 'https://gdshangrui.com'
-const canonicalUrl = computed(() => `${SITE_URL}${route.fullPath}`)
+// canonical 统一去掉尾斜杠：/cn/ 与 /cn 只能有一个自指，否则是 canonical 冲突
+const canonicalUrl = computed(() => {
+  const p = route.fullPath.replace(/\/+$/, '')
+  return `${SITE_URL}${p || '/'}`
+})
 
 // Page-specific titles (static pages only; product model pages are generated dynamically below)
 const pageTitleMap: Record<string, { cn: string; mic: string; vn: string; ru: string }> = {
@@ -77,6 +81,49 @@ const pageTitleMap: Record<string, { cn: string; mic: string; vn: string; ru: st
     mic: 'Delivery in Action | Shang Rui Machinery',
     vn: 'Hình ảnh xuất hàng | Shang Rui Machinery',
     ru: 'Фото отгрузок | Shang Rui Machinery',
+  },
+  // 以下路径原来缺失，会 fallback 到首页标题，导致 TDH 重复
+  '/products/series': {
+    cn: '全部产品系列 | 热压机、冷压机、多片锯、拼板机 | 上锐机械',
+    mic: 'All Product Series | Hot Press, Cold Press, Multi-blade Saw, Splicing | Shang Rui',
+    vn: 'Tất cả dòng sản phẩm | Máy ép nóng, ép lạnh, cưa đa lưỡi, ghép ván | Shang Rui',
+    ru: 'Все серии продукции | Горячий пресс, Холодный пресс, Многопильный станок | Shang Rui',
+  },
+  '/tools/pressure-calculator': {
+    cn: '热压机压力计算器 | 上锐机械',
+    mic: 'Hot Press Pressure Calculator | Shang Rui',
+    vn: 'Máy tính lực ép máy ép nóng | Shang Rui',
+    ru: 'Калькулятор давления горячего пресса | Shang Rui',
+  },
+  '/tools/ground-pressure-calculator': {
+    cn: '冷压机地面承重计算器 | 上锐机械',
+    mic: 'Cold Press Ground Pressure Calculator | Shang Rui',
+    vn: 'Máy tính tải nền máy ép lạnh | Shang Rui',
+    ru: 'Калькулятор нагрузки на пол холодного пресса | Shang Rui',
+  },
+  '/certification': {
+    cn: 'CE 认证与 ISO 9001 质量管理体系 | 上锐机械',
+    mic: 'CE Certification & ISO 9001 Quality Management | Shang Rui',
+    vn: 'Chứng nhận CE và ISO 9001 | Shang Rui',
+    ru: 'Сертификация CE и ISO 9001 | Shang Rui',
+  },
+  '/privacy': {
+    cn: '隐私政策 | 上锐机械',
+    mic: 'Privacy Policy | Shang Rui Machinery',
+    vn: 'Chính sách bảo mật | Shang Rui',
+    ru: 'Политика конфиденциальности | Shang Rui',
+  },
+  '/terms': {
+    cn: '服务条款 | 上锐机械',
+    mic: 'Terms of Service | Shang Rui Machinery',
+    vn: 'Điều khoản dịch vụ | Shang Rui',
+    ru: 'Условия использования | Shang Rui',
+  },
+  '/404': {
+    cn: '页面未找到 | 上锐机械',
+    mic: 'Page Not Found | Shang Rui Machinery',
+    vn: 'Không tìm thấy trang | Shang Rui',
+    ru: 'Страница не найдена | Shang Rui',
   },
 }
 
@@ -123,6 +170,49 @@ const pageDescMap: Record<string, { cn: string; mic: string; vn: string; ru: str
     mic: 'Shang Rui Machinery delivery gallery: real shots of every equipment shipment. Packing, logistics, customer sign-off.',
     vn: 'Thư viện ảnh xuất hàng Shang Rui: ghi lại khoảnh khắc giao hàng thực tế. Đóng gói, vận chuyển, khách hàng ký nhận.',
     ru: 'Фотогалерея отгрузок Shang Rui Machinery: реальные кадры каждой поставки. Упаковка, логистика, приёмка клиентом.',
+  },
+  // 以下路径原来缺失，description 会 fallback 到首页描述
+  '/products/series': {
+    cn: '上锐机械全部产品系列：热压机、冷压机、板式多片锯、拼板机、升降平台、门框组合机及备件，一站配套板式家具整线。',
+    mic: 'Shang Rui Machinery full range: hot press, cold press, multi-blade saw, splicing machine, lifting platform, door frame assembly machine and spare parts for panel furniture lines.',
+    vn: 'Đầy đủ dòng máy Shang Rui: máy ép nóng, ép lạnh, cưa đa lưỡi, ghép ván, bàn nâng, ráp khung cửa và phụ tùng cho dây chuyền gỗ tấm.',
+    ru: 'Полный ряд оборудования Shang Rui: горячие и холодные прессы, многопильные станки, линии сращивания, подъёмные столы, станки сборки дверных коробок и запасные части.',
+  },
+  '/tools/pressure-calculator': {
+    cn: '热压机选型计算器：按板材幅面、层数与工艺要求估算所需压合力与电机功率，快速确定热压机规格。',
+    mic: 'Hot press sizing calculator: estimate required press force and motor power from panel size, layer count and process, to pick the right hot press model.',
+    vn: 'Máy tính chọn máy ép nóng: ước tính lực ép và công suất động cơ theo khổ ván, số lớp và yêu cầu công nghệ.',
+    ru: 'Калькулятор подбора горячего пресса: расчёт усилия прессования и мощности привода по формату плиты, числу слоёв и технологии.',
+  },
+  '/tools/ground-pressure-calculator': {
+    cn: '冷压机地面承重计算器：按压机重量、台面尺寸与地基条件估算所需地面承载力，避免安装后地面开裂。',
+    mic: 'Cold press floor load calculator: estimate required floor bearing capacity from machine weight, platen size and ground condition to avoid cracking after installation.',
+    vn: 'Máy tính tải nền máy ép lạnh: ước tính sức chịu của nền theo trọng lượng máy, kích thước bàn và điều kiện nền để tránh nứt nền sau lắp đặt.',
+    ru: 'Калькулятор нагрузки на пол для холодного пресса: расчёт требуемой несущей способности пола по массе пресса, размеру плиты и состоянию основания.',
+  },
+  '/certification': {
+    cn: '上锐机械持有 CE 认证与 ISO 9001:2015 质量管理体系认证证书，证书编号、认证机构与覆盖产品系列公开可查，热压机、冷压机、板式多片锯等六大系列在列。',
+    mic: 'Shang Rui Machinery holds CE certification and ISO 9001:2015 quality management certification. Certificate numbers, issuing bodies and the covered product series — hot press, cold press, multi-blade saw, splicing machine, door frame assembly and hydraulic lifting platform — are published for verification.',
+    vn: 'Shang Rui Machinery có chứng nhận CE và hệ thống quản lý chất lượng ISO 9001:2015. Số chứng nhận, cơ quan cấp và các dòng sản phẩm được chứng nhận — máy ép nóng, ép lạnh, cưa đa lưỡi, ghép ván, ráp khung cửa, bàn nâng — đều công khai để tra cứu.',
+    ru: 'Shang Rui Machinery имеет сертификаты CE и системы менеджмента качества ISO 9001:2015. Номера сертификатов, выдавшие органы и охваченные серии — горячий пресс, холодный пресс, многопильный станок, пресс для сращивания, станок сборки дверных коробок и гидравлический подъёмный стол — опубликованы для проверки.',
+  },
+  '/privacy': {
+    cn: '上锐机械隐私政策：说明我们收集哪些信息（询盘表单、访问日志）、如何使用、保留多久，以及您在GDPR与个人信息保护法下的查询、更正、删除与复制权利。',
+    mic: 'Shang Rui Machinery privacy policy: what we collect (inquiry forms, server logs), how we use and retain it, and your rights to access, correct, delete or copy your data under GDPR and local data protection laws.',
+    vn: 'Chính sách bảo mật của Shang Rui: chúng tôi thu thập gì (biểu mẫu tư vấn, nhật ký máy chủ), sử dụng và lưu giữ ra sao, cùng quyền truy cập, sửa, xóa hoặc sao chép dữ liệu của bạn theo GDPR và luật bảo vệ dữ liệu địa phương.',
+    ru: 'Политика конфиденциальности Shang Rui: что мы собираем (формы запросов, журналы сервера), как используем и храним, и ваши права на доступ, исправление, удаление или копирование данных согласно GDPR и местным законам о защите данных.',
+  },
+  '/terms': {
+    cn: '上锐机械服务条款：报价与订单效力、付款方式、交货与验收、质保范围（整机12个月、液压18个月）、知识产权、责任限制与适用法律。',
+    mic: 'Shang Rui Machinery terms of service: quotation and order validity, payment terms, delivery and acceptance, warranty scope (12 months on the machine, 18 months on hydraulics), intellectual property, liability limits and governing law.',
+    vn: 'Điều khoản dịch vụ của Shang Rui: hiệu lực báo giá và đơn hàng, phương thức thanh toán, giao hàng và nghiệm thu, phạm vi bảo hành (12 tháng máy, 18 tháng thủy lực), quyền sở hữu trí tuệ, giới hạn trách nhiệm và luật áp dụng.',
+    ru: 'Условия использования Shang Rui: действительность предложений и заказов, способы оплаты, поставка и приёмка, объём гарантии (12 месяцев на машину, 18 на гидравлику), интеллектуальная собственность, ограничение ответственности и применимое право.',
+  },
+  '/404': {
+    cn: '您访问的页面不存在或已移动。请返回首页，或通过产品分类查找热压机、冷压机、多片锯等设备。',
+    mic: 'The page you requested does not exist or has moved. Return to the homepage, or browse our product categories for hot press, cold press and multi-blade saw.',
+    vn: 'Trang bạn truy cập không tồn tại hoặc đã chuyển. Quay lại trang chủ, hoặc xem các danh mục máy ép nóng, ép lạnh, cưa đa lưỡi.',
+    ru: 'Запрашиваемая страница не существует или была перемещена. Вернитесь на главную или посмотрите категории: горячие прессы, холодные прессы, многопильные станки.',
   },
 }
 
@@ -227,6 +317,12 @@ function buildProductSeriesDesc(routeLang: 'cn' | 'mic' | 'vn' | 'ru', series: a
 // Route path helper: strip leading /:lang segment and trailing slash
 function getStrippedPath(): string {
   return route.path.replace(/^\/(cn|mic|vn|ru)/, '').replace(/\/$/, '') || '/'
+}
+
+// 语言根（/cn、/mic…）的 URL 后缀：根路径用空串，避免出现 /cn/ 与 /cn 两种写法
+function getLangSuffix(): string {
+  const s = getStrippedPath()
+  return s === '/' ? '' : s
 }
 
 // Route-level language: use route.params.lang directly (not lang.value)
@@ -497,40 +593,40 @@ useHead(() => {
       { name: 'twitter:image', content: ogImage.value },
     ],
     link: [
-      // canonical: self-referencing for root / and language roots /zh/ /en/
-      { rel: 'canonical', href: isRoot || stripped === '/' ? canonicalUrl.value : canonicalUrl.value },
-      // hreflang for root /: point to /zh/ and /en/ to help Google understand language versions
+      // canonical: self-referencing，统一不带尾斜杠（/cn 而非 /cn/）
+      { rel: 'canonical', href: canonicalUrl.value },
+      // hreflang 四语互指，格式与 canonical / sitemap 完全一致
       ...(isRoot ? [
-        { rel: 'alternate', hreflang: 'zh-CN', href: `${SITE_URL}/cn/` },
-        { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/mic/` },
-        { rel: 'alternate', hreflang: 'vi', href: `${SITE_URL}/vn/` },
-        { rel: 'alternate', hreflang: 'ru', href: `${SITE_URL}/ru/` },
-        { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}/mic/` },
+        { rel: 'alternate', hreflang: 'zh-CN', href: `${SITE_URL}/cn` },
+        { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/mic` },
+        { rel: 'alternate', hreflang: 'vi', href: `${SITE_URL}/vn` },
+        { rel: 'alternate', hreflang: 'ru', href: `${SITE_URL}/ru` },
+        { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}/mic` },
       ] : [
         {
           rel: 'alternate',
           hreflang: 'zh-CN',
-          href: `${SITE_URL}/cn${getStrippedPath() || '/'}`,
+          href: `${SITE_URL}/cn${getLangSuffix()}`,
         },
         {
           rel: 'alternate',
           hreflang: 'en',
-          href: `${SITE_URL}/mic${getStrippedPath() || '/'}`,
+          href: `${SITE_URL}/mic${getLangSuffix()}`,
         },
         {
           rel: 'alternate',
           hreflang: 'vi',
-          href: `${SITE_URL}/vn${getStrippedPath() || '/'}`,
+          href: `${SITE_URL}/vn${getLangSuffix()}`,
         },
         {
           rel: 'alternate',
           hreflang: 'ru',
-          href: `${SITE_URL}/ru${getStrippedPath() || '/'}`,
+          href: `${SITE_URL}/ru${getLangSuffix()}`,
         },
         {
           rel: 'alternate',
           hreflang: 'x-default',
-          href: `${SITE_URL}/mic${getStrippedPath() || '/'}`,
+          href: `${SITE_URL}/mic${getLangSuffix()}`,
         },
       ]),
     ],

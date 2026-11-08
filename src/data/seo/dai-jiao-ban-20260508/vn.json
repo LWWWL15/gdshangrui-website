@@ -1,35 +1,43 @@
 {
   "market": "vn",
   "language": "Tiếng Việt",
-  "languageCode": "vi",
+  "languageCode": "vn",
   "productId": "dai-jiao-ban-20260508",
   "productSeries": "parts",
-  "productSeriesName": "Phụ tùng",
-  "seoTitle": "Dây curoa có đệm cao su - Phụ tùng máy gỗ 56 đốt | Shang Rui Vietnam",
-  "metaDesc": "Dây curoa có đệm cao su (dây belt có đệm), 56 đốt, màu trắng kim loại. Phụ tùng thay thế chính hãng cho máy cưa và máy ép. Chất lượng cao, giá tốt.",
+  "productSeriesName": "Xích vận chuyển có tấm đệm",
+  "seoTitle": "Xích vận chuyển có tấm đệm | Shang Rui",
+  "metaDesc": "Xích vận chuyển có tấm đệm, Bộ phận thay thế đúng kích thước gốc cho hệ thống thủy lực và vận chuyển, lắp trực tiếp không cần gia công thêm.Luôn có sẵn phụ tùng",
   "keywords": [
-    "dây curoa đệm cao su",
-    "phụ tùng máy gỗ",
-    "dây belt 56 đốt",
-    "shangrui phụ tùng"
+    "56",
+    "xích vận chuyển",
+    "xích máy ép",
+    "xích có tấm đệm",
+    "xích băng tải gỗ",
+    "phụ tùng máy mộc",
+    "Xích vận chuyển có tấm đệm giá rẻ",
+    "Shang Rui Xích vận chuyển có tấm đệm"
   ],
-  "description": "Dây curoa có đệm cao su (Chain with Rubber Pad) là phụ tùng thay thế dùng trong các máy cưa đa lưỡi và máy cưa công nghiệp. Sản phẩm gồm 56 đốt với lớp đệm cao su giữa các đốt giúp giảm chấn động và tăng độ bền. Màu trắng kim loại, dễ nhận biết và lắp đặt. Đây là phụ tùng tiêu hao cần thay thế định kỳ trong quá trình vận hành máy.",
+  "description": "Xích vận chuyển có tấm đệm, Bộ phận thay thế đúng kích thước gốc cho hệ thống thủy lực và vận chuyển, lắp trực tiếp không cần gia công thêm.Luôn có sẵn phụ tùng",
   "faq": [
     {
-      "q": "Phù hợp với máy nào?",
-      "a": "Phù hợp với các loại máy cưa đa lưỡi và máy cưa công nghiệp sử dụng hệ thống dây curoa có đệm."
+      "q": "Phụ tùng này có lắp được vào máy của tôi không?",
+      "a": "Sản phẩm chế tạo theo đúng kích thước dòng máy gốc. Gửi model máy và mã phụ tùng, chúng tôi xác nhận tương thích trước khi giao."
     },
     {
-      "q": "56 đốt nghĩa là gì?",
-      "a": "56 đốt là số lượng mắt xích trong dây curoa, tương ứng với chiều dài và kích thước phù hợp cho các model máy tiêu chuẩn."
+      "q": "Máy đã mua lâu năm còn mua được phụ tùng không?",
+      "a": "Phần lớn là có. Chúng tôi giữ kho phụ tùng thông dụng cho các máy đã cung cấp và có thể chế tạo lại theo bản vẽ hoặc mẫu thực tế."
     },
     {
-      "q": "Lớp đệm cao su có tác dụng gì?",
-      "a": "Lớp đệm cao su giữa các đốt giúp giảm chấn động khi vận hành, tăng tuổi thọ của dây và giảm tiếng ồn."
+      "q": "Có thể mua trọn bộ phụ tùng không?",
+      "a": "Có. Chúng tôi lập danh mục phụ tùng đề xuất cho từng model máy, luôn có sẵn các vị trí quan trọng để không xảy ra dừng máy."
+    },
+    {
+      "q": "Số lượng đặt hàng tối thiểu là bao nhiêu?",
+      "a": "Đặt một chiếc để thử, các đơn hàng lặp lại được áp dụng giá số lượng."
     }
   ],
   "altTexts": {
-    "零件_链条_带胶板_20260508_金属白/链条_带胶板_20260508_金属白 (1)_up_001.webp": "Dây curoa có đệm cao su 56 đốt màu trắng kim loại"
+    "/零件/链条_带胶板_20260508_金属白/链条_带胶板_20260508_金属白 (1)_up_001.webp": "Xích vận chuyển có tấm đệm, màu trắng kim loại, mặt trước, toàn bộ máy"
   },
-  "urlSlug": "day-curoa-dem-cao-su"
+  "urlSlug": "phu-tung-may"
 }

@@ -1,35 +1,43 @@
 {
   "market": "vn",
   "language": "Tiếng Việt",
-  "languageCode": "vi",
+  "languageCode": "vn",
   "productId": "mh2210-20260325",
   "productSeries": "door-frame-machine",
-  "productSeriesName": "Máy ghép khung cửa",
-  "seoTitle": "Máy ghép khung cửa MH2210 - Kích thước 1220×2440mm | Shang Rui Vietnam",
-  "metaDesc": "Máy ghép khung cửa MH2210, kích thước tối đa 1220×2440mm. 4 xy lanh phía trước, 3 xy lanh bên, động cơ 2.2kW. Thiết kế 2 mặt, có giá đỡ vật liệu. Phù hợp xưởng cửa gỗ.",
+  "productSeriesName": "Máy ráp khung cửa",
+  "seoTitle": "Máy ráp khung cửa MH2210 - 2.2kW | Shang Rui",
+  "metaDesc": "Máy ráp khung cửa MH2210, Max. Combination Size 1220×2440mm, Hydraulic Motor Power 2.2kW. Dùng ráp và ép khung cửa gỗ, cửa tủ, khung cửa sổ và khung đồ gỗ, xy.",
   "keywords": [
+    "mh2210",
+    "máy ráp khung cửa",
+    "máy ráp khung gỗ",
+    "máy lắp khung cửa",
     "máy ghép khung cửa",
-    "máy làm khung cửa gỗ",
-    "máy ghép cửa 2 mặt",
-    "shangrui máy khung cửa"
+    "máy ráp khung gỗ tự nhiên",
+    "Máy ráp khung cửa giá rẻ",
+    "Shang Rui Máy ráp khung cửa"
   ],
-  "description": "Máy ghép khung cửa MH2210 là thiết bị chuyên dụng để lắp ráp và ép khung cửa gỗ với độ chính xác cao. Kích thước tối đa sản phẩm 1220×2440mm. Hệ thống gồm 4 xy lanh phía trước và 3 xy lanh bên, tổng cộng 7 xy lanh cho lực ép đều từ nhiều phía. Motor thủy lực 2.2kW. Thiết kế 2 mặt (double-sided) cho phép ép đồng thời cả 2 mặt của khung cửa. Có giá đỡ vật liệu đi kèm. Trọng lượng khoảng 2000kg. Phù hợp cho các xưởng sản xuất cửa gỗ.",
+  "description": "Máy ráp khung cửa MH2210, Max. Combination Size 1220×2440mm, Hydraulic Motor Power 2.2kW. Dùng ráp và ép khung cửa gỗ, cửa tủ, khung cửa sổ và khung đồ gỗ, xy.",
   "faq": [
     {
-      "q": "Có thể ép khung cửa kích thước bao nhiêu?",
-      "a": "Máy có thể ép khung cửa với kích thước tối đa 1220×2440mm, phù hợp với hầu hết các loại cửa tiêu chuẩn."
+      "q": "Máy ráp khung cửa MH2210 ráp được khung cỡ bao nhiêu?",
+      "a": "Kích thước ráp lớn nhất là theo yêu cầu, phù hợp khung cửa gỗ, cửa tủ và khung cửa sổ tiêu chuẩn."
     },
     {
-      "q": "Thiết kế 2 mặt là gì?",
-      "a": "Thiết kế 2 mặt có nghĩa là máy có thể ép đồng thời từ cả 2 phía (trước và sau) của khung cửa, đảm bảo độ vuông góc và kích thước chính xác."
+      "q": "Ép một mặt hay hai mặt?",
+      "a": "Ép hai mặt: nhiều xylô ép phía trước và nhiều xylô ép bên, một chu kỳ hoàn thành ép khung sau khi quét keo."
     },
     {
-      "q": "Có phù hợp cho xưởng nhỏ không?",
-      "a": "Với trọng lượng 2000kg và kích thước phù hợp, máy có thể lắp đặt trong các xưởng có diện tích vừa."
+      "q": "Có cần thêm máy quét keo không?",
+      "a": "Khung ép đi kèm máy, thao tác quét keo và ép được thực hiện trên cùng một thiết bị, tiết kiệm mặt bằng sản xuất."
+    },
+    {
+      "q": "Có chứng nhận CE không?",
+      "a": "Có, cung cấp chứng nhận CE kèm lắp đặt và đào tạo nhân viên."
     }
   ],
   "altTexts": {
-    "门框组合机_门框组合机_MH2210_20260325_蓝白/门框组合机_MH2210_20260325_蓝白_up_001.webp": "Máy ghép khung cửa MH2210 màu xanh trắng"
+    "/门框组合机/门框组合机_MH2210_20260325_蓝白/门框组合机_MH2210_20260325_蓝白_up_001.webp": "Máy ráp khung cửa, màu xanh dương trắng, mặt trước, toàn bộ máy"
   },
-  "urlSlug": "may-ghep-khung-cua-mh2210"
+  "urlSlug": "may-rap-khung-cua"
 }
