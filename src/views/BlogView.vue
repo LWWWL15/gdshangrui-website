@@ -38,7 +38,7 @@
       <div class="container" style="text-align:center;">
         <h2 style="color:white; margin-bottom:16px;">{{ t('成为我们的合作伙伴', 'Become Our Partner',  t('成为我们的合作伙伴', 'Become Our Partner', 'Trở thành đối tác của chúng tôi', 'Станьте нашим партнёром'),  t('成为我们的合作伙伴', 'Become Our Partner', 'Trở thành đối tác của chúng tôi', 'Станьте нашим партнёром')) }}</h2>
         <p style="color:rgba(255,255,255,0.6); margin-bottom:32px; font-size:18px;">{{ t('联系我们，获取专属解决方案', 'Contact us for a customized solution',  t('联系我们，获取专属解决方案', 'Contact us for a customized solution', 'Liên hệ với chúng tôi để có giải pháp riêng', 'Свяжитесь с нами для индивидуального решения'),  t('联系我们，获取专属解决方案', 'Contact us for a customized solution', 'Liên hệ với chúng tôi để có giải pháp riêng', 'Свяжитесь с нами для индивидуального решения')) }}</p>
-        <router-link to="/contact" class="btn btn-primary btn-lg">{{ t('立即联系', 'Contact Now',  t('立即联系', 'Contact Now', 'Liên hệ ngay', 'Связаться сейчас'),  t('立即联系', 'Contact Now', 'Liên hệ ngay', 'Связаться сейчас')) }}</router-link>
+        <router-link :to="`/${lang}/contact`" class="btn btn-primary btn-lg">{{ t('立即联系', 'Contact Now',  t('立即联系', 'Contact Now', 'Liên hệ ngay', 'Связаться сейчас'),  t('立即联系', 'Contact Now', 'Liên hệ ngay', 'Связаться сейчас')) }}</router-link>
       </div>
     </section>
   </div>
