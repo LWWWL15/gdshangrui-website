@@ -129,7 +129,7 @@
 
           <div class="sidebar-card">
             <h4>{{ t('相关产品', 'Related Products', tm('blogDetail.relatedProducts', 'Related Products')) }}</h4>
-            <router-link :to="`/${lang}/products/` + caseData.productId" class="sidebar-product-link">
+            <router-link :to="caseData.productSeries ? (caseData.productSeries === caseData.productId ? `/${lang}/products/${caseData.productSeries}` : `/${lang}/products/${caseData.productSeries}/${caseData.productId}`) : `/${lang}/products/${caseData.productId}`" class="sidebar-product-link">
               <span>{{ t(caseData.productCn, caseData.productMic, caseData.productMic, caseData.productMic) }}</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </router-link>

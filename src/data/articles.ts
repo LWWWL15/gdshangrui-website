@@ -40,6 +40,7 @@ export interface BlogArticle {
   customerNameRu: string
   date: string
   productId: string
+  productSeries?: string
   color: string
 }
 
@@ -80,6 +81,7 @@ export const blogArticles: BlogArticle[] = [
     customerNameRu: 'Foshan Shunde Shangrui Machinery Co., Ltd.',
     date: '2025-02',
     productId: 'hot-press',
+    productSeries: 'hot-press',
     color: 'linear-gradient(135deg, #1a2744, #1a6fd4)',
   },
   {
@@ -119,6 +121,7 @@ export const blogArticles: BlogArticle[] = [
     customerNameRu: 'Foshan Shunde Shangrui Machinery Co., Ltd.',
     date: '2025-03',
     productId: 'mh3248-50t-20260207',
+    productSeries: 'cold-press',
     color: 'linear-gradient(135deg, #0d3b2e, #1a936f)',
   },
   {
@@ -158,6 +161,7 @@ export const blogArticles: BlogArticle[] = [
     customerNameRu: 'Foshan Shunde Shangrui Machinery Co., Ltd.',
     date: '2025-03',
     productId: 'mh3848x120t-20260205',
+    productSeries: 'hot-press',
     color: 'linear-gradient(135deg, #4a1a1a, #d4691a)',
   },
   {
@@ -197,6 +201,7 @@ export const blogArticles: BlogArticle[] = [
     customerNameRu: 'Foshan Shunde Shangrui Machinery Co., Ltd.',
     date: '2025-04',
     productId: 'hot-press',
+    productSeries: 'hot-press',
     color: 'linear-gradient(135deg, #2d1b4e, #7b3fd4)',
   },
   {
@@ -236,6 +241,7 @@ export const blogArticles: BlogArticle[] = [
     customerNameRu: 'Foshan Shunde Shangrui Machinery Co., Ltd.',
     date: '2025-04',
     productId: 'mj1300-xd5-20240716',
+    productSeries: 'multi-blade-saw',
     color: 'linear-gradient(135deg, #1a2744, #38b6d4)',
   },
   {
@@ -275,6 +281,7 @@ export const blogArticles: BlogArticle[] = [
     customerNameRu: 'Foshan Shunde Shangrui Machinery Co., Ltd.',
     date: '2025-08',
     productId: 'cold-press',
+    productSeries: 'cold-press',
     color: 'linear-gradient(135deg, #1a3a4a, #4ac3d4)',
   },
 ]
