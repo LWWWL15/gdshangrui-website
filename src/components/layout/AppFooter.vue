@@ -10,15 +10,18 @@
           <img src="/SHANGRUIJX.png" alt="Shangrui Logo" class="brand-logo desktop-only" />
         </div>
 
-        <!-- Nav -->
-        <div class="footer-col">
-          <h4>{{ t('导航', 'Navigation',  'Điều hướng',  'Навигация') }}</h4>
-          <router-link v-for="item in navItems" :key="item.path" :to="item.path">{{ item.vn ? (item.ru ? t(item.cn, item.mic, item.vn, item.ru) : t(item.cn, item.mic, item.vn)) : item.mic }}</router-link>
+        <!-- Nav：无标题，链接拆两列降高度 -->
+        <div class="footer-nav">
+          <div class="footer-col nav-col">
+            <router-link v-for="item in navCol1" :key="item.path" :to="item.path">{{ item.vn ? (item.ru ? t(item.cn, item.mic, item.vn, item.ru) : t(item.cn, item.mic, item.vn)) : item.mic }}</router-link>
+          </div>
+          <div class="footer-col nav-col">
+            <router-link v-for="item in navCol2" :key="item.path" :to="item.path">{{ item.vn ? (item.ru ? t(item.cn, item.mic, item.vn, item.ru) : t(item.cn, item.mic, item.vn)) : item.mic }}</router-link>
+          </div>
         </div>
 
         <!-- Contact -->
-        <div class="footer-col">
-          <h4>{{ t('联系我们', 'Contact',  'Liên hệ',  'Контакты') }}</h4>
+        <div class="footer-col contact-col">
           <a href="tel:+8613929151908">+86 139-2915-1908</a>
           <a href="mailto:caya15@qq.com">caya15@qq.com</a>
           <a href="https://wa.me/8613929151908" target="_blank">WhatsApp</a>
@@ -81,6 +84,8 @@ const navItems = computed(() => {
     { cn: '服务条款', mic: 'Terms', vn: 'Điều khoản', ru: 'Условия', path: `${prefix}/terms` },
   ]
 })
+const navCol1 = computed(() => navItems.value.slice(0, 5))
+const navCol2 = computed(() => navItems.value.slice(5))
 </script>
 
 <style lang="scss" scoped>
@@ -90,7 +95,7 @@ const navItems = computed(() => {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1.5fr;
+  grid-template-columns: 2fr 1.6fr 1.5fr;
   gap: $s-3xl;
 
   @media (max-width: $bp-lg) { grid-template-columns: 1fr 1fr; gap: $s-2xl; }
@@ -143,6 +148,15 @@ const navItems = computed(() => {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+// 导航两列（无标题）
+.footer-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $s-lg;
+
+  .nav-col a { display: block; }
 }
 
 .footer-col {

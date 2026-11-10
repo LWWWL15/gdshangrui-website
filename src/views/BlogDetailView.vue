@@ -38,13 +38,13 @@
           <!-- Article Body -->
           <div class="article-body" id="article-body">
             <h2 id="project-background">{{ t('项目背景', 'Project Background', tm('blogDetail.projectBackground', 'Project Background')) }}</h2>
-            <p>{{ t(caseData.contentCn, caseData.contentMic, caseData.contentMic, caseData.contentRu) }}</p>
+            <p v-html="linkify(t(caseData.contentCn, caseData.contentMic, caseData.contentMic, caseData.contentRu))"></p>
 
             <h2 id="solution">{{ t('解决方案', 'Solution', tm('blogDetail.solution', 'Solution'), tm('blogDetail.solution', 'Solution')) }}</h2>
-            <p>{{ t(caseData.solutionCn, caseData.solutionMic, caseData.solutionMic, caseData.solutionRu) }}</p>
+            <p v-html="linkify(t(caseData.solutionCn, caseData.solutionMic, caseData.solutionMic, caseData.solutionRu))"></p>
 
             <h2 id="results">{{ t('实施结果', 'Results', tm('blogDetail.results', 'Results'), tm('blogDetail.results', 'Results')) }}</h2>
-            <p>{{ t(caseData.resultsCn, caseData.resultsMic, caseData.resultsMic, caseData.resultsRu) }}</p>
+            <p v-html="linkify(t(caseData.resultsCn, caseData.resultsMic, caseData.resultsMic, caseData.resultsRu))"></p>
 
             <h2 id="customer-feedback">{{ t('客户反馈', 'Customer Feedback', tm('blogDetail.customerFeedback', 'Customer Feedback'), tm('blogDetail.customerFeedback', 'Customer Feedback')) }}</h2>
             <blockquote class="article-quote">
@@ -177,7 +177,7 @@
     <!-- Recommended Articles -->
     <section class="section recommended-section">
       <div class="container">
-        <h2 class="section-title">{{ t('推荐文章', 'Recommended Articles', tm('blogDetail.recommended', 'Recommended Articles')) }}</h2>
+        <h2 class="section-title">{{ t('相关文章', 'Related Articles', tm('blogDetail.recommended', 'Recommended Articles')) }}</h2>
         <div class="recommended-grid">
           <router-link v-for="c in recommendedCases" :key="c.id" :to="`/${lang}/blog/` + c.slug" class="card case-card">
             <div class="case-img" :style="{ background: c.color }">
@@ -227,10 +227,52 @@ const currentIndex = computed(() => allCases.findIndex(c => c.slug === caseSlug.
 const prevCase = computed(() => currentIndex.value > 0 ? allCases[currentIndex.value - 1] : null)
 const nextCase = computed(() => currentIndex.value < allCases.length - 1 ? allCases[currentIndex.value + 1] : null)
 
-// Recommended articles (excluding current)
-const recommendedCases = computed(() =>
-  allCases.filter(c => c.slug !== caseSlug.value).slice(0, 3)
-)
+// ===== A. 正文自动内链（维基百科式：正文提到站内产品就链过去）=====
+// 关键词 → 站内链接映射。只链真实存在的产品页，一篇文章内每个关键词只链第一次出现。
+import { productSeries } from '@/data/products'
+const linkTargets: { kw: string[]; path: string }[] = []
+for (const series of productSeries) {
+  if (series.id === 'parts') continue
+  // 系列页链接（系列名 + 该系列型号的共名前缀，如 MH3248x50T → MH3248）
+  const kws = [series.cn, series.mic, series.vn, series.ru].filter(Boolean) as string[]
+  linkTargets.push({ kw: kws, path: `/products/${series.id}` })
+  // 型号页链接（系列页下第一台）
+  const first = series.models[0]
+  if (first) {
+    const model = first.model.replace(/\s/g, '')
+    linkTargets.push({ kw: [model], path: `/products/${series.id}/${first.id}` })
+    // 型号共名前缀（字母开头+数字段，如 MH3248x50T → MH3248）：链到型号页
+    const m = model.match(/^([A-Za-z]+\d{3,4})/)
+    if (m && m[1] !== model) linkTargets.push({ kw: [m[1]], path: `/products/${series.id}/${first.id}` })
+  }
+}
+function linkify(text: string): string {
+  let out = text
+  const used = new Set<string>()
+  for (const { kw, path } of linkTargets) {
+    for (const k of kw) {
+      if (!k || k.length < 3 || used.has(k)) continue
+      const esc = k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+      const re = new RegExp(`(?<![\\w>])(${esc})(?![\\w<])`)
+      if (re.test(out)) {
+        out = out.replace(re, `<a href="/${lang.value}${path}" class="inline-link">$1</a>`)
+        used.add(k)
+        break // 这组关键词链过一个就停，避免同一目标重复链
+      }
+    }
+  }
+  return out
+}
+
+// Recommended articles：同产品的优先，不足再按最新补齐，排除当前文章
+const recommendedCases = computed(() => {
+  if (!caseData.value) return []
+  const cur = caseData.value
+  const others = allCases.filter(c => c.slug !== cur.slug)
+  const same = others.filter(c => c.productId === cur.productId)
+  const rest = others.filter(c => c.productId !== cur.productId)
+  return [...same, ...rest].slice(0, 3)
+})
 
 // Inquiry form
 const sending = ref(false)
@@ -334,6 +376,18 @@ async function handleInquiry() {
     line-height: 1.8;
     font-size: $fs-base;
     margin-bottom: $s-md;
+  }
+
+  :deep(.inline-link) {
+    color: $c-accent;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba($c-accent, 0.5);
+    transition: border-color $t-fast, color $t-fast;
+
+    &:hover {
+      color: darken($c-accent, 10%);
+      border-bottom-color: $c-accent;
+    }
   }
 }
 

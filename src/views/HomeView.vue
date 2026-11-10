@@ -10,6 +10,9 @@
           <router-link :to="`/${lang}/contact`" class="btn btn-primary btn-lg">
             {{ t('获得报价', 'GET QUOTE', 'ĐƯỢC BÁO GIÁ', 'ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ') }}
           </router-link>
+          <router-link :to="`/${lang}/products`" class="btn btn-primary btn-lg">
+            {{ t('查看产品', 'VIEW PRODUCTS', 'XEM SẢN PHẨM', 'СМОТРЕТЬ ПРОДУКЦИЮ') }}
+          </router-link>
         </div>
       </div>
     </section>
@@ -44,8 +47,8 @@
         <h2 class="section-title">{{ t('畅销产品', 'Best Sellers', t('畅销产品', 'Best Sellers', 'Sản phẩm bán chạy', 'Бестселлеры'), t('畅销产品', 'Best Sellers', 'Sản phẩm bán chạy', 'Бестселлеры')) }}</h2>
         <div class="bestsellers-wrapper">
           <button class="scroll-btn scroll-left" @click="scrollLeft" aria-label="Scroll left">‹</button>
-          <div class="bestsellers-scroll" ref="scrollContainer">
-            <router-link v-for="p in bestSellers" :key="p.id" :to="`/${getRouteLang()}/products/` + p.id" class="bestseller-card">
+          <div class="bestsellers-scroll" ref="scrollContainer" @mouseenter="pauseAuto" @mouseleave="resumeAuto" @touchstart="pauseAuto" @touchend="resumeAuto">
+            <router-link v-for="(p, i) in loopCards" :key="p.id + '-' + i" :to="`/${getRouteLang()}/products/` + p.id" class="bestseller-card" :tabindex="i >= bestSellers.length ? -1 : 0" :aria-hidden="i >= bestSellers.length">
               <div class="bestseller-image">
                 <img v-if="p.image" :src="p.image" :alt="p.model" class="bestseller-img" loading="lazy" />
                 <span v-else class="image-icon">{{ p.icon }}</span>
@@ -57,6 +60,16 @@
             </router-link>
           </div>
           <button class="scroll-btn scroll-right" @click="scrollRight" aria-label="Scroll right">›</button>
+        </div>
+        <div class="bestsellers-dots">
+          <button
+            v-for="(p, i) in bestSellers"
+            :key="'dot-' + p.id"
+            class="dot"
+            :class="{ active: activeIndex === i }"
+            :aria-label="`Go to slide ${i + 1}`"
+            @click="goToSlide(i)"
+          ></button>
         </div>
       </div>
     </section>
@@ -166,7 +179,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted, onBeforeUnmount } from 'vue'
 import { useRoute } from 'vue-router'
 import { useLang } from '@/composables/useLang'
 import { productSeries, getAllModels } from '@/data/products'
@@ -191,6 +204,53 @@ const scrollLeft = () => {
 const scrollRight = () => {
   if (scrollContainer.value) scrollContainer.value.scrollBy({ left: 320, behavior: 'smooth' })
 }
+
+// 自动轮播：每隔几秒向左跳一张卡片，无缝循环（列表复制一份）
+let autoTimer: number | null = null
+const pauseAuto = () => { if (autoTimer !== null) { window.clearInterval(autoTimer); autoTimer = null } }
+const resumeAuto = () => { if (autoTimer === null) startAuto() }
+const startAuto = () => {
+  autoTimer = window.setInterval(() => {
+    const el = scrollContainer.value
+    if (!el || !bestSellers.value.length) return
+    const card = el.querySelector('.bestseller-card') as HTMLElement | null
+    if (!card) return
+    const stepW = card.offsetWidth + 24 // 卡片宽 + gap
+    // 平滑滚一张；滚进复制的第二份时瞬间无声回退一份宽度（视觉无变化，继续向右无缝）
+    const target = el.scrollLeft + stepW
+    const half = stepW * bestSellers.value.length
+    if (target >= half + stepW) {
+      el.scrollLeft -= half
+      el.scrollTo({ left: el.scrollLeft + stepW, behavior: 'smooth' })
+    } else {
+      el.scrollTo({ left: target, behavior: 'smooth' })
+    }
+  }, 3000)
+}
+onMounted(() => startAuto())
+onBeforeUnmount(() => pauseAuto())
+
+// 圆点指示：activeIndex = 当前最左边完整可见的卡片序号；点圆点跳到对应卡片
+const activeIndex = ref(0)
+const goToSlide = (i: number) => {
+  const el = scrollContainer.value
+  if (!el) return
+  const card = el.querySelector('.bestseller-card') as HTMLElement | null
+  if (!card) return
+  el.scrollTo({ left: i * (card.offsetWidth + 24), behavior: 'smooth' })
+}
+const updateDots = () => {
+  const el = scrollContainer.value
+  if (!el || !bestSellers.value.length) return
+  const card = el.querySelector('.bestseller-card') as HTMLElement | null
+  if (!card) return
+  const stepW = card.offsetWidth + 24
+  const idx = Math.round(el.scrollLeft / stepW) % bestSellers.value.length
+  activeIndex.value = idx
+}
+onMounted(() => { scrollContainer.value?.addEventListener('scroll', updateDots, { passive: true }) })
+onBeforeUnmount(() => { scrollContainer.value?.removeEventListener('scroll', updateDots) })
+const loopCards = computed(() => [...bestSellers.value, ...bestSellers.value, ...bestSellers.value])
 
 // Best Sellers: 取所有型号产品
 const bestSellers = computed(() => {
@@ -492,6 +552,30 @@ const values = [
   @media (max-width: $bp-sm) {
     margin-bottom: $s-sm;
     font-size: $fs-xl;
+  }
+}
+
+.bestsellers-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: $s-md;
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background: #cccccc; // 未激活：灰
+    transition: background $t-fast, transform $t-fast;
+
+    &:hover { transform: scale(1.2); }
+    &.active {
+      background: #000000; // 激活（最左第一张）：黑
+      transform: scale(1.2);
+    }
   }
 }
 

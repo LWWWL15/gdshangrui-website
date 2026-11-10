@@ -5,7 +5,6 @@
       <div class="container">
         <h1>{{ t('出货现场', 'Delivery in Action', t('出货現場', 'Delivery in Action', 'Hình ảnh xuất hàng', 'Фото отгрузок'), t('出货現場', 'Delivery in Action', 'Hình ảnh xuất hàng', 'Фото отгрузок')) }}</h1>
         <p class="gallery-subtitle">{{ t('记录每一台设备的交付瞬间', 'Capturing every equipment delivery moment', t('记录每一台设备的交付瞬间', 'Capturing every equipment delivery moment', 'Lưu lại mỗi khoảnh khắc giao hàng thiết bị', 'Фиксируем каждый момент поставки оборудования'), t('记录每一台设备的交付瞬间', 'Capturing every equipment delivery moment', 'Lưu lại mỗi khoảnh khắc giao hàng thiết bị', 'Фиксируем каждый момент поставки оборудования')) }}</p>
-        <p v-if="loadedCount > 0" class="gallery-count">{{ t('已加载 :count 张，共 :total 张', 'Loaded :count of :total photos', t('已加载 :count 张，共 :total 张', 'Loaded :count of :total photos', 'Đã tải :count trên :total ảnh', 'Загружено :count из :total фото'), t('已加载 :count 张，共 :total 张', 'Loaded :count of :total photos', 'Đã tải :count trên :total ảnh', 'Загружено :count из :total фото')).replace(':count', String(loadedCount)).replace(':total', String(totalCount)) }}</p>
       </div>
     </section>
 
@@ -220,12 +219,8 @@ onUnmounted(() => {
   }
   .gallery-subtitle {
     font-size: $fs-lg;
-    color: rgba(255, 255, 255, 0.75);
+    color: #000000; // 浅色背景上改为黑色，保证可读
     margin-bottom: $s-sm;
-  }
-  .gallery-count {
-    font-size: $fs-sm;
-    color: rgba(255, 255, 255, 0.55);
   }
 }
 
@@ -243,12 +238,13 @@ onUnmounted(() => {
 
 // CSS columns: pure CSS masonry (no JS lib)
 .masonry-grid {
-  column-count: 4;
-  column-gap: $s-md;
+  column-count: 7;
+  column-gap: $s-sm;
 
-  @media (max-width: $bp-md) { column-count: 3; }
-  @media (max-width: $bp-sm) { column-count: 2; }
-  @media (max-width: 480px)  { column-count: 1; }
+  @media (max-width: $bp-lg) { column-count: 6; }
+  @media (max-width: $bp-md) { column-count: 5; }
+  @media (max-width: $bp-sm) { column-count: 3; }
+  @media (max-width: 480px)  { column-count: 2; }
 }
 
 .masonry-item {
