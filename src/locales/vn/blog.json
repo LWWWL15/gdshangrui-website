@@ -35,5 +35,8 @@
   "youtube": "YouTube",
   "contactNow": "Liên hệ ngay",
   "recommended": "Bài viết đề xuất",
-  "inquirySent": "✅ Yêu cầu đã được gửi! Chúng tôi sẽ phản hồi trong vòng 24 giờ."
+  "inquirySent": "✅ Yêu cầu đã được gửi! Chúng tôi sẽ phản hồi trong vòng 24 giờ.",
+  "notFound": "Bài viết không tồn tại",
+  "notFoundDesc": "Bài viết đã bị gỡ hoặc liên kết không chính xác.",
+  "backToBlog": "Quay lại blog"
 }

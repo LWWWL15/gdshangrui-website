@@ -35,5 +35,8 @@
   "youtube": "YouTube",
   "contactNow": "立即联系",
   "recommended": "推荐文章",
-  "inquirySent": "✅ 询盘已发送！我们将在24小时内回复。"
+  "inquirySent": "✅ 询盘已发送！我们将在24小时内回复。",
+  "notFound": "文章不存在",
+  "notFoundDesc": "该文章已下线或链接有误。",
+  "backToBlog": "返回博客"
 }

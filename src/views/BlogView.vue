@@ -48,26 +48,9 @@
 import { useLang } from '@/composables/useLang'
 const { t, tm, lang } = useLang()
 
-// 案例文章数据。
-// 说明：此处原本硬编码了 6 篇"案例"（越南家具厂、沙特木门等），内容为编造，
-// 已按主人要求清空 —— 工业站案例是信任生意，没有真实客户素材就不放。
-// 后续拿到真实素材（客户名/国家/项目背景/效果/反馈）后，
-// 按 src/data/articles.ts 的 Article 结构逐条补进来。
-const cases: {
-  id: number
-  slug: string
-  region: string
-  icon: string
-  productCn: string
-  productMic: string
-  titleCn: string
-  titleMic: string
-  titleRu?: string
-  descCn: string
-  descMic: string
-  descRu?: string
-  color: string
-}[] = []
+// 案例文章数据：从 src/data/articles.ts 读取（内容来自主人提供的真实素材，不编造）。
+import { blogArticles } from '@/data/articles'
+const cases = blogArticles
 </script>
 
 <style lang="scss" scoped>

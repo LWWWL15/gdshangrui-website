@@ -35,5 +35,8 @@
   "youtube": "YouTube",
   "contactNow": "Contact Now",
   "recommended": "Recommended Articles",
-  "inquirySent": "✅ Inquiry sent! We will reply within 24 hours."
+  "inquirySent": "✅ Inquiry sent! We will reply within 24 hours.",
+  "notFound": "Article not found",
+  "notFoundDesc": "This article is no longer available or the link is incorrect.",
+  "backToBlog": "Back to Blog"
 }

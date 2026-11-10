@@ -4,6 +4,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { writeFileSync, mkdirSync, readFileSync, existsSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { productSeries } from './src/data/products'
+import { blogArticles } from './src/data/articles'
 
 // 站点域名配置（用于 sitemap）
 const hostname = 'https://gdshangrui.com'
@@ -204,7 +205,12 @@ export default defineConfig({
         }
       }
 
-      return [...new Set([...filtered, ...productConcretePaths])]
+      // 博客文章详情页的混凝土路径（/:lang/blog/:slug）
+      const blogConcretePaths = blogArticles.flatMap(a =>
+        ['cn', 'mic', 'vn', 'ru'].map(l => `/${l}/blog/${a.slug}`)
+      )
+
+      return [...new Set([...filtered, ...productConcretePaths, ...blogConcretePaths])]
     },
   },
   resolve: {

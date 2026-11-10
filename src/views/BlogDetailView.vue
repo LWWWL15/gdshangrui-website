@@ -207,7 +207,18 @@ const { t, tm, lang } = useTranslations()
 const route = useRoute()
 const caseSlug = computed(() => route.params.slug as string)
 
-const allCases: any[] = []
+// Route-level language（避免 SSR 时 composable 时序问题）
+function getRouteLang(): 'cn' | 'mic' | 'vn' | 'ru' {
+  const l = route.params.lang as string
+  if (l === 'cn') return 'cn'
+  if (l === 'vn') return 'vn'
+  if (l === 'ru') return 'ru'
+  return 'mic'
+}
+
+// 文章数据：从 src/data/articles.ts 读取（内容来自主人提供的真实素材，不编造）
+import { blogArticles } from '@/data/articles'
+const allCases = blogArticles
 
 const caseData = computed(() => allCases.find(c => c.slug === caseSlug.value) || null)
 
