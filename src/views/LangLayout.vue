@@ -695,8 +695,9 @@ const extraSchemas = computed<Record<string, unknown>[]>(() => {
         identifier: c.identifier,
         issuedBy: c.issuedBy,
         standards: c.standards,
-        scope: c.scope ? pickLang(routeLang, c.scope.cn, c.scope.mic, c.scope.vn, c.scope.ru) : undefined,
-        covers: c.covers ? pickLang(routeLang, c.covers.cn, c.covers.mic, c.covers.vn, c.covers.ru) : undefined,
+        // scope / covers 传四语对象，由 certificationPageSchemas 按当前语言取
+        scope: c.scope,
+        covers: c.covers,
       })),
     })
   }

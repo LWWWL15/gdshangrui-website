@@ -260,12 +260,18 @@ export function certificationPageSchemas(
     organizationName: string
     pageName: string
     certificates: {
+      /** 证书名称，如 ISO 9001:2015 */
       name: string
+      /** 证书编号 */
       identifier: string
+      /** 认证机构 */
       issuedBy: string
+      /** 适用标准 / 认证标准（语言无关，证书上原文） */
       standards?: string
-      scope?: string
-      covers?: string
+      /** 认证范围（四语，ISO 用） */
+      scope?: { cn: string; mic: string; vn: string; ru: string }
+      /** 认证覆盖的产品（四语，CE 用） */
+      covers?: { cn: string; mic: string; vn: string; ru: string }
     }[]
   }
 ): Record<string, unknown>[] {
@@ -295,19 +301,26 @@ export function certificationPageSchemas(
       areaServed: 'Worldwide',
       availableLanguage: ['Chinese', 'English', 'Vietnamese', 'Russian'],
     },
-    hasCredential: opts.certificates.map(c => ({
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'certification',
-      name: c.name,
-      identifier: c.identifier,
-      recognizedBy: {
-        '@type': 'Organization',
-        name: c.issuedBy,
-      },
-      ...(c.standards ? { description: c.standards } : {}),
-      ...(c.scope ? { about: c.scope } : {}),
-      ...(c.covers ? { description: c.covers } : {}),
-    })),
+    hasCredential: opts.certificates.map(c => {
+      const descParts: string[] = []
+      if (c.standards) descParts.push(c.standards)
+      if (c.scope) descParts.push(pick(lang, c.scope.cn, c.scope.mic, c.scope.vn, c.scope.ru))
+      const covers = c.covers
+        ? pick(lang, c.covers.cn, c.covers.mic, c.covers.vn, c.covers.ru)
+        : ''
+      return {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'certification',
+        name: c.name,
+        identifier: c.identifier,
+        recognizedBy: {
+          '@type': 'Organization',
+          name: c.issuedBy,
+        },
+        description: descParts.join(' · '),
+        ...(covers ? { about: { '@type': 'Thing', name: covers } } : {}),
+      }
+    }),
   })
 
   out.push(twoLevelBreadcrumb(lang, url, opts.pageName))
