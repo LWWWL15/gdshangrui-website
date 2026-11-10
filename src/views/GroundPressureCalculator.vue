@@ -68,6 +68,19 @@
           {{ t('公式：重量 (kg) ÷ [长 (mm) × 宽 (mm) ÷ 1,000,000] = 压强 (kg/m²)', 'Formula: Weight (kg) ÷ [Length (mm) × Width (mm) ÷ 1,000,000] = Pressure (kg/m²)', t('公式：重量 (kg) ÷ [长 (mm) × 宽 (mm) ÷ 1,000,000] = 压强 (kg/m²)', 'Formula: Weight (kg) ÷ [Length (mm) × Width (mm) ÷ 1,000,000] = Pressure (kg/m²)', 'Công thức: Trọng lượng (kg) ÷ [Dài (mm) × Rộng (mm) ÷ 1.000.000] = Áp suất (kg/m²)', 'Формула: Масса (кг) ÷ [Длина (мм) × Ширина (мм) ÷ 1 000 000] = Давление (кг/м²)')) }}
         </div>
       </section>
+
+      <!-- FAQ（内容与 JSON-LD 的 FAQPage 共用同一份数据，见 src/data/tools.ts） -->
+      <section class="faq-section">
+        <div class="container">
+          <h2 class="faq-title">{{ t('常见问题', 'FAQ', 'Câu hỏi thường gặp', 'Частые вопросы') }}</h2>
+          <dl class="faq-list">
+            <div v-for="(item, idx) in faq" :key="idx" class="faq-item">
+              <dt>{{ item.q }}</dt>
+              <dd>{{ item.a }}</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -75,8 +88,13 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useLang } from '@/composables/useLang'
+import { groundPressureCalculatorFaq, faqFor } from '@/data/tools'
 
-const { t, tm } = useLang()
+const { t, tm, lang } = useLang()
+
+// FAQ 内容与 LangLayout 里生成的 FAQPage JSON-LD 共用同一份数据，
+// 保证「页面上看得见的问答」和「结构化数据里的问答」逐字一致（Google 政策要求）。
+const faq = computed(() => faqFor(groundPressureCalculatorFaq, lang.value))
 
 const length = ref<number | null>(null)   // mm
 const width = ref<number | null>(null)    // mm
@@ -214,4 +232,46 @@ function formatPressure(val: number): string {
   border-top: 1px solid $c-border;
   line-height: 1.6;
 }
+// ---- FAQ（结构化数据 FAQPage 的可见对应内容）----
+.faq-section {
+  margin-bottom: $s-xl;
+
+  .faq-title {
+    font-size: $fs-xl;
+    font-weight: $fw-bold;
+    color: $c-text-primary;
+    margin-bottom: $s-lg;
+  }
+
+  .faq-list {
+    margin: 0;
+    background: #ffffff;
+    border-radius: $r-xl;
+    padding: $s-xl;
+    box-shadow: $shadow-md;
+  }
+
+  .faq-item {
+    padding: $s-md 0;
+    border-bottom: 1px solid $c-border;
+
+    &:first-child { border-top: 1px solid $c-border; }
+    &:last-child { border-bottom: none; }
+
+    dt {
+      font-size: $fs-base;
+      font-weight: $fw-semibold;
+      color: $c-text-primary;
+      margin-bottom: $s-xs;
+    }
+
+    dd {
+      margin: 0;
+      font-size: $fs-sm;
+      color: $c-text-secondary;
+      line-height: 1.7;
+    }
+  }
+}
+
 </style>

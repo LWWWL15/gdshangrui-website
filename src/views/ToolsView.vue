@@ -9,15 +9,15 @@
     </section>
     <div class="container">
       <div class="tools-grid">
-        <router-link :to="`/${lang}/tools/ground-pressure-calculator`" class="tool-card">
-          <span class="tool-icon">⚖️</span>
-          <h3>{{ t('地面承重计算器', 'Ground Pressure Calculator',  t('地面承重计算器', 'Ground Pressure Calculator', 'Máy tính áp suất mặt đất', 'Калькулятор давления на грунт'),  t('地面承重计算器', 'Ground Pressure Calculator', 'Máy tính áp suất mặt đất', 'Калькулятор давления на грунт')) }}</h3>
-          <p>{{ t('根据产品尺寸与重量，计算对地面的压强', 'Calculate ground pressure based on product dimensions and weight',  t('根据产品尺寸与重量，计算对地面的压强', 'Calculate ground pressure based on product dimensions and weight', 'Tính áp suất mặt đất dựa trên kích thước và trọng lượng sản phẩm', 'Расчёт удельного давления на основание по габаритам и массе изделия'),  t('根据产品尺寸与重量，计算对地面的压强', 'Calculate ground pressure based on product dimensions and weight', 'Tính áp suất mặt đất dựa trên kích thước và trọng lượng sản phẩm', 'Расчёт удельного давления на основание по габаритам и массе изделия')) }}</p>
-        </router-link>
-        <router-link :to="`/${lang}/tools/pressure-calculator`" class="tool-card">
-          <span class="tool-icon">🔧</span>
-          <h3>{{ t('压力换算表', 'Pressure Calculator',  t('压力换算表', 'Pressure Calculator', 'Bảng chuyển đổi áp suất', 'Таблица перевода давления'),  t('压力换算表', 'Pressure Calculator', 'Bảng chuyển đổi áp suất', 'Таблица перевода давления')) }}</h3>
-          <p>{{ t('根据油缸规格与数量，自动换算工作压力', 'Calculate total working pressure based on cylinder specs',  t('根据油缸规格与数量，自动换算工作压力', 'Calculate total working pressure based on cylinder specs', 'Tự động chuyển đổi áp suất làm việc dựa trên thông số và số lượng xi-lanh', 'Автоматический расчёт рабочего давления по характеристикам и количеству цилиндров'),  t('根据油缸规格与数量，自动换算工作压力', 'Calculate total working pressure based on cylinder specs', 'Tự động chuyển đổi áp suất làm việc dựa trên thông số và số lượng xi-lanh', 'Автоматический расчёт рабочего давления по характеристикам и количеству цилиндров')) }}</p>
+        <router-link
+          v-for="tool in toolItems"
+          :key="tool.path"
+          :to="`/${lang}${tool.path}`"
+          class="tool-card"
+        >
+          <span class="tool-icon">{{ tool.icon }}</span>
+          <h3>{{ toolName(tool, lang) }}</h3>
+          <p>{{ toolDesc(tool, lang) }}</p>
         </router-link>
       </div>
     </div>
@@ -26,6 +26,7 @@
 
 <script setup lang="ts">
 import { useLang } from '@/composables/useLang'
+import { toolItems, toolName, toolDesc } from '@/data/tools'
 const { t, tm, lang } = useLang()
 </script>
 

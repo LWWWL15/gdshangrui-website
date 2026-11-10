@@ -15,8 +15,26 @@ import AppHeader from '@/components/layout/AppHeader.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
 import LoadingScreen from '@/components/LoadingScreen.vue'
 import { useLang } from '@/composables/useLang'
-import { getSeriesById, getModelById } from '@/data/products'
+import { getSeriesById, getModelById, productSeries } from '@/data/products'
 import { getSeoPack } from '@/data/seo'
+import {
+  toolItems,
+  toolName,
+  toolDesc,
+  pressureCalculatorFaq,
+  groundPressureCalculatorFaq,
+  faqFor,
+} from '@/data/tools'
+import { certificates, certificateHolder } from '@/data/certifications'
+import {
+  seriesPageSchemas,
+  seriesIndexPageSchemas,
+  calculatorPageSchemas,
+  certificationPageSchemas,
+  webPageSchemas,
+  toolListPageSchemas,
+  pick as pickLang,
+} from '@/data/schema'
 
 const route = useRoute()
 const router = useRouter()
@@ -564,6 +582,168 @@ const jsonLdSchema = computed(() => {
   return null
 })
 
+// ============================================
+// 补齐其余页型的 JSON-LD（2026-11-10 第 7 轮）
+// ============================================
+//
+// ⚠️ 本段只产出 script 标签里的结构化数据。
+//    Title / Description / H1 / keywords 一律不动 —— 那是上面 currentTitle /
+//    currentDesc / currentKeywords 的职责，观察期（11-08 ~ 11-22）冻结。
+//
+// 覆盖的页型（其余页型见 jsonLdSchema）：
+//   /products/series          → CollectionPage + ItemList + BreadcrumbList
+//   /products/:seriesId       → CollectionPage + ItemList + BreadcrumbList
+//   /tools                    → CollectionPage + ItemList + BreadcrumbList
+//   /tools/pressure-calculator→ WebApplication + FAQPage + BreadcrumbList
+//   /tools/ground-pressure-…  → WebApplication + FAQPage + BreadcrumbList
+//   /certification            → Organization(含证书凭据) + BreadcrumbList
+//   /privacy /terms           → WebPage + BreadcrumbList
+//   /gallery                  → WebPage + BreadcrumbList
+//
+// 不覆盖的页型及原因：
+//   /blog   → 带 noindex, follow，不进索引，加 schema 无意义
+//   /404    → 同上（noindex）
+const extraSchemas = computed<Record<string, unknown>[]>(() => {
+  const path = getStrippedPath()
+  const routeLang = getRouteLang()
+  const url = canonicalUrl.value
+  const lp = '/' + routeLang
+
+  // ---- 产品系列页 ----
+  // /products/series 是「全部系列」总览，/products/:seriesId 是单个系列
+  if (path === '/products/series') {
+    return seriesIndexPageSchemas(routeLang, url, {
+      name: pickLang(routeLang, '主要产品系列', 'Our Product Lines', 'Dòng sản phẩm chính', 'Основные серии продукции'),
+      description: pickLang(
+        routeLang,
+        '上锐机械全部产品系列：热压机、冷压机、板式多片锯、拼板机、升降平台、门框组合机及备件，一站配套板式家具整线。',
+        'Shang Rui Machinery full range: hot press, cold press, multi-blade saw, splicing machine, lifting platform, door frame assembly machine and spare parts for panel furniture lines.',
+        'Đầy đủ dòng máy Shang Rui: máy ép nóng, ép lạnh, cưa đa lưỡi, ghép ván, bàn nâng, ráp khung cửa và phụ tùng cho dây chuyền gỗ tấm.',
+        'Полный ряд оборудования Shang Rui: горячие и холодные прессы, многопильные станки, линии сращивания, подъёмные столы, станки сборки дверных коробок и запасные части.'
+      ),
+      series: productSeries.map(s => ({
+        id: s.id,
+        name: pickLang(routeLang, s.cn, s.mic, s.vn, s.ru),
+        description: pickLang(routeLang, s.descCn, s.descMic, s.descVn, s.descRu),
+      })),
+    })
+  }
+
+  // 单个系列页（不含型号页 —— 型号页的 schema 在 ProductModelView 里）
+  if (route.params.seriesId && !route.params.modelId && path.startsWith('/products/')) {
+    const series = getSeriesById(route.params.seriesId as string)
+    if (series) {
+      return seriesPageSchemas(routeLang, url, series)
+    }
+  }
+
+  // ---- 工具列表页 ----
+  if (path === '/tools') {
+    return toolListPageSchemas(routeLang, url, {
+      name: pickLang(routeLang, '实用工具集', 'Collection of useful tools', 'Bộ công cụ hữ ích', 'Набор полезных инструментов'),
+      description: pickLang(
+        routeLang,
+        '上锐机械在线工具：压力计算器等实用工具',
+        'Shang Rui Machinery online tools: pressure calculator and other useful tools.',
+        'Công cụ trực tuyến của Shang Rui: máy tính áp suất và các công cụ hữu ích khác.',
+        'Онлайн-инструменты Shang Rui Machinery: калькулятор давления и другие полезные утилиты.'
+      ),
+      tools: toolItems.map(t => ({
+        name: toolName(t, routeLang),
+        description: toolDesc(t, routeLang),
+        path: t.path,
+      })),
+    })
+  }
+
+  // ---- 计算器子页 ----
+  if (path === '/tools/pressure-calculator') {
+    return calculatorPageSchemas(routeLang, url, {
+      name: pickLang(routeLang, '压力换算表', 'Pressure Calculator', 'Bảng chuyển đổi áp suất', 'Таблица перевода давления'),
+      description: pickLang(
+        routeLang,
+        '热压机选型计算器：按板材幅面、层数与工艺要求估算所需压合力与电机功率，快速确定热压机规格。',
+        'Hot press sizing calculator: estimate required press force and motor power from panel size, layer count and process, to pick the right hot press model.',
+        'Máy tính chọn máy ép nóng: ước tính lực ép và công suất động cơ theo khổ ván, số lớp và yêu cầu công nghệ.',
+        'Калькулятор подбора горячего пресса: расчёт усилия прессования и мощности привода по формату плиты, числу слоёв и технологии.'
+      ),
+      faq: faqFor(pressureCalculatorFaq, routeLang),
+    })
+  }
+
+  if (path === '/tools/ground-pressure-calculator') {
+    return calculatorPageSchemas(routeLang, url, {
+      name: pickLang(routeLang, '地面承重计算器', 'Ground Pressure Calculator', 'Máy tính áp suất mặt đất', 'Калькулятор давления на грунт'),
+      description: pickLang(
+        routeLang,
+        '冷压机地面承重计算器：按压机重量、台面尺寸与地基条件估算所需地面承载力，避免安装后地面开裂。',
+        'Cold press floor load calculator: estimate required floor bearing capacity from machine weight, platen size and ground condition to avoid cracking after installation.',
+        'Máy tính tải nền máy ép lạnh: ước tính sức chịu của nền theo trọng lượng máy, kích thước bàn và điều kiện nền để tránh nứt nền sau lắp đặt.',
+        'Калькулятор нагрузки на пол для холодного пресса: расчёт требуемой несущей способности пола по массе пресса, размеру плиты и состоянию основания.'
+      ),
+      faq: faqFor(groundPressureCalculatorFaq, routeLang),
+    })
+  }
+
+  // ---- 认证页 ----
+  if (path === '/certification') {
+    return certificationPageSchemas(routeLang, url, {
+      organizationName: pickLang(routeLang, certificateHolder.cn, certificateHolder.mic, certificateHolder.vn, certificateHolder.ru),
+      pageName: pickLang(routeLang, 'CE 认证与 ISO 9001 质量管理体系', 'CE Certification & ISO 9001 Quality Management', 'Chứng nhận CE và ISO 9001', 'Сертификация CE и ISO 9001'),
+      certificates: certificates.map(c => ({
+        name: c.name,
+        identifier: c.identifier,
+        issuedBy: c.issuedBy,
+        standards: c.standards,
+        scope: c.scope ? pickLang(routeLang, c.scope.cn, c.scope.mic, c.scope.vn, c.scope.ru) : undefined,
+        covers: c.covers ? pickLang(routeLang, c.covers.cn, c.covers.mic, c.covers.vn, c.covers.ru) : undefined,
+      })),
+    })
+  }
+
+  // ---- 法务页 ----
+  if (path === '/privacy' || path === '/terms') {
+    const isPrivacy = path === '/privacy'
+    return webPageSchemas(routeLang, url, {
+      name: isPrivacy
+        ? pickLang(routeLang, '隐私政策', 'Privacy Policy', 'Chính sách bảo mật', 'Политика конфиденциальности')
+        : pickLang(routeLang, '服务条款', 'Terms of Service', 'Điều khoản dịch vụ', 'Условия использования'),
+      description: isPrivacy
+        ? pickLang(
+            routeLang,
+            '上锐机械隐私政策：说明我们收集哪些信息（询盘表单、访问日志）、如何使用、保留多久，以及您在GDPR与个人信息保护法下的查询、更正、删除与复制权利。',
+            'Shang Rui Machinery privacy policy: what we collect (inquiry forms, server logs), how we use and retain it, and your rights to access, correct, delete or copy your data under GDPR and local data protection laws.',
+            'Chính sách bảo mật của Shang Rui: chúng tôi thu thập gì (biểu mẫu tư vấn, nhật ký máy chủ), sử dụng và lưu giữ ra sao, cùng quyền truy cập, sửa, xóa hoặc sao chép dữ liệu của bạn theo GDPR và luật bảo vệ dữ liệu địa phương.',
+            'Политика конфиденциальности Shang Rui: что мы собираем (формы запросов, журналы сервера), как используем и храним, и ваши права на доступ, исправление, удаление или копирование данных согласно GDPR и местным законам о защите данных.'
+          )
+        : pickLang(
+            routeLang,
+            '上锐机械服务条款：报价与订单效力、付款方式、交货与验收、质保范围（整机12个月、液压18个月）、知识产权、责任限制与适用法律。',
+            'Shang Rui Machinery terms of service: quotation and order validity, payment terms, delivery and acceptance, warranty scope (12 months on the machine, 18 months on hydraulics), intellectual property, liability limits and governing law.',
+            'Điều khoản dịch vụ của Shang Rui: hiệu lực báo giá và đơn hàng, phương thức thanh toán, giao hàng và nghiệm thu, phạm vi bảo hành (12 tháng máy, 18 tháng thủy lực), quyền sở hữu trí tuệ, giới hạn trách nhiệm và luật áp dụng.',
+            'Условия использования Shang Rui: действительность предложений и заказов, способы оплаты, поставка и приёмка, объём гарантии (12 месяцев на машину, 18 на гидравлику), интеллектуальная собственность, ограничение ответственности и применимое право.'
+          ),
+    })
+  }
+
+  // ---- 图库页 ----
+  if (path === '/gallery') {
+    return webPageSchemas(routeLang, url, {
+      name: pickLang(routeLang, '出货现场', 'Delivery in Action', 'Hình ảnh xuất hàng', 'Фото отгрузок'),
+      description: pickLang(
+        routeLang,
+        '上锐机械出货现场实拍：每一台设备的交付瞬间记录。见证产品打包、物流运输、客户签收。',
+        'Shang Rui Machinery delivery gallery: real shots of every equipment shipment. Packing, logistics, customer sign-off.',
+        'Thư viện ảnh xuất hàng Shang Rui: ghi lại khoảnh khắc giao hàng thực tế. Đóng gói, vận chuyển, khách hàng ký nhận.',
+        'Фотогалерея отгрузок Shang Rui Machinery: реальные кадры каждой поставки. Упаковка, логистика, приёмка клиентом.'
+      ),
+    })
+  }
+
+  void lp
+  return []
+})
+
   // Also set html lang attribute via useHead htmlAttrs (works during SSR)
   // Use route.params.lang directly to bypass useLang() composable timing issues
   const htmlLang = computed(() => {
@@ -630,9 +810,16 @@ useHead(() => {
         },
       ]),
     ],
-    script: jsonLdSchema.value
-      ? [{ type: 'application/ld+json', children: JSON.stringify(jsonLdSchema.value) }]
-      : [],
+    script: [
+      ...(jsonLdSchema.value
+        ? [{ type: 'application/ld+json', children: JSON.stringify(jsonLdSchema.value) }]
+        : []),
+      // 其余页型的结构化数据（2026-11-10 第 7 轮补齐）
+      ...extraSchemas.value.map(s => ({
+        type: 'application/ld+json',
+        children: JSON.stringify(s),
+      })),
+    ],
   }
   return headConfig
 })
