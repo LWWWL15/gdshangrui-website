@@ -754,7 +754,11 @@ const extraSchemas = computed<Record<string, unknown>[]>(() => {
 
 useHead(() => {
   const stripped = getStrippedPath()
-  const isNoIndex = stripped === '/blog'
+  // 博客栏目（列表页 + 详情页 /blog/:slug）整体 noindex：
+  // 列表页是栏目入口，详情页虽已补真实文章，但标题仍沿用首页兜底 title，
+  // 若被收录会造成 24 个详情页与首页抢同一个标题（TDH 重复）→ 观察期基线被污染。
+  // 是否放开收录由主人决定（11-22 后）。robots meta 不在 TDH 冻结范围内。
+  const isNoIndex = stripped === '/blog' || stripped.startsWith('/blog/')
   const isRoot = stripped === '/' && route.path === '/'
   const headConfig: any = {
     htmlAttrs: { lang: htmlLang.value },
