@@ -18,7 +18,7 @@
             </div>
             <div class="case-body">
               <span class="tag">{{ t(c.productCn, c.productMic) }}</span>
-              <h3>{{ t(c.titleCn, c.titleMic, c.titleMic, c.titleRu) }}</h3>
+              <h3>{{ t(c.titleCn, c.titleMic, c.titleVn || c.titleMic, c.titleRu) }}</h3>
               <p>{{ t(c.descCn, c.descMic, c.descMic, c.descRu) }}</p>
             </div>
           </router-link>

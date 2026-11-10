@@ -38,5 +38,20 @@
   "inquirySent": "✅ Запрос отправлен! Мы ответим в течение 24 часов.",
   "notFound": "Статья не найдена",
   "notFoundDesc": "Эта статья больше недоступна или ссылка неверна.",
-  "backToBlog": "Вернуться в блог"
+  "backToBlog": "Вернуться в блог",
+  "blogDetail": {
+    "blogTag": "Блог",
+    "notFound": "Статья не найдена",
+    "notFoundDesc": "Эта статья больше недоступна или ссылка неверна.",
+    "backToBlog": "Вернуться в блог",
+    "projectBackground": "Предыстория проекта",
+    "solution": "Решение",
+    "results": "Результаты",
+    "customerFeedback": "Отзыв клиента",
+    "tableOfContents": "Содержание",
+    "tocBackground": "Предыстория проекта",
+    "tocSolution": "Решение",
+    "tocResults": "Результаты",
+    "tocFeedback": "Отзыв клиента"
+  }
 }

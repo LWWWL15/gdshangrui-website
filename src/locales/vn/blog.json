@@ -38,5 +38,20 @@
   "inquirySent": "✅ Yêu cầu đã được gửi! Chúng tôi sẽ phản hồi trong vòng 24 giờ.",
   "notFound": "Bài viết không tồn tại",
   "notFoundDesc": "Bài viết đã bị gỡ hoặc liên kết không chính xác.",
-  "backToBlog": "Quay lại blog"
+  "backToBlog": "Quay lại blog",
+  "blogDetail": {
+    "blogTag": "Blog",
+    "notFound": "Bài viết không tồn tại",
+    "notFoundDesc": "Bài viết đã bị gỡ hoặc liên kết không chính xác.",
+    "backToBlog": "Quay lại blog",
+    "projectBackground": "Bối cảnh dự án",
+    "solution": "Giải pháp",
+    "results": "Kết quả thực hiện",
+    "customerFeedback": "Phản hồi khách hàng",
+    "tableOfContents": "Mục lục",
+    "tocBackground": "Bối cảnh dự án",
+    "tocSolution": "Giải pháp",
+    "tocResults": "Kết quả thực hiện",
+    "tocFeedback": "Phản hồi khách hàng"
+  }
 }

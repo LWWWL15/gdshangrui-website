@@ -14,8 +14,8 @@
     <section class="page-hero">
       <div class="container">
         <span class="tag">{{ t('博客', 'Blog', tm('blogDetail.blogTag', 'Blog')) }}</span>
-        <h1>{{ t(caseData.titleCn, caseData.titleMic, caseData.titleMic, caseData.titleRu) }}</h1>
-        <p>{{ t(caseData.descCn, caseData.descMic, caseData.descMic, caseData.descRu) }}</p>
+        <h1>{{ t(caseData.titleCn, caseData.titleMic, caseData.titleVn || caseData.titleMic, caseData.titleRu) }}</h1>
+        <p>{{ t(caseData.descCn, caseData.descMic, caseData.descVn || caseData.descMic, caseData.descRu) }}</p>
       </div>
     </section>
 
@@ -38,17 +38,17 @@
           <!-- Article Body -->
           <div class="article-body" id="article-body">
             <h2 id="project-background">{{ t('项目背景', 'Project Background', tm('blogDetail.projectBackground', 'Project Background')) }}</h2>
-            <p v-html="linkify(t(caseData.contentCn, caseData.contentMic, caseData.contentMic, caseData.contentRu))"></p>
+            <p v-html="linkify(t(caseData.contentCn, caseData.contentMic, caseData.contentVn || caseData.contentMic, caseData.contentRu))"></p>
 
             <h2 id="solution">{{ t('解决方案', 'Solution', tm('blogDetail.solution', 'Solution'), tm('blogDetail.solution', 'Solution')) }}</h2>
-            <p v-html="linkify(t(caseData.solutionCn, caseData.solutionMic, caseData.solutionMic, caseData.solutionRu))"></p>
+            <p v-html="linkify(t(caseData.solutionCn, caseData.solutionMic, caseData.solutionVn || caseData.solutionMic, caseData.solutionRu))"></p>
 
             <h2 id="results">{{ t('实施结果', 'Results', tm('blogDetail.results', 'Results'), tm('blogDetail.results', 'Results')) }}</h2>
-            <p v-html="linkify(t(caseData.resultsCn, caseData.resultsMic, caseData.resultsMic, caseData.resultsRu))"></p>
+            <p v-html="linkify(t(caseData.resultsCn, caseData.resultsMic, caseData.resultsVn || caseData.resultsMic, caseData.resultsRu))"></p>
 
             <h2 id="customer-feedback">{{ t('客户反馈', 'Customer Feedback', tm('blogDetail.customerFeedback', 'Customer Feedback'), tm('blogDetail.customerFeedback', 'Customer Feedback')) }}</h2>
             <blockquote class="article-quote">
-              <p>"{{ t(caseData.feedbackCn, caseData.feedbackMic, caseData.feedbackMic, caseData.feedbackRu) }}"</p>
+              <p>"{{ t(caseData.feedbackCn, caseData.feedbackMic, caseData.feedbackVn || caseData.feedbackMic, caseData.feedbackRu) }}"</p>
               <cite>— {{ getRouteLang() === 'ru' ? caseData.customerNameRu : caseData.customerName }}</cite>
             </blockquote>
           </div>

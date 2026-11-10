@@ -38,5 +38,20 @@
   "inquirySent": "✅ Inquiry sent! We will reply within 24 hours.",
   "notFound": "Article not found",
   "notFoundDesc": "This article is no longer available or the link is incorrect.",
-  "backToBlog": "Back to Blog"
+  "backToBlog": "Back to Blog",
+  "blogDetail": {
+    "blogTag": "Blog",
+    "notFound": "Article not found",
+    "notFoundDesc": "This article is no longer available or the link is incorrect.",
+    "backToBlog": "Back to Blog",
+    "projectBackground": "Project Background",
+    "solution": "Solution",
+    "results": "Results",
+    "customerFeedback": "Customer Feedback",
+    "tableOfContents": "Table of Contents",
+    "tocBackground": "Project Background",
+    "tocSolution": "Solution",
+    "tocResults": "Results",
+    "tocFeedback": "Customer Feedback"
+  }
 }

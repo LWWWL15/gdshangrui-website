@@ -225,7 +225,7 @@ const startAuto = () => {
     } else {
       el.scrollTo({ left: target, behavior: 'smooth' })
     }
-  }, 3000)
+  }, 1500)
 }
 onMounted(() => startAuto())
 onBeforeUnmount(() => pauseAuto())
