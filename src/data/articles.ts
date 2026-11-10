@@ -9,9 +9,17 @@ export interface BlogArticle {
   slug: string
   region: string
   regionRu: string
+  /** 越南语地区标签（2026-11-11 补：mic/vn/ru 页原本都显示中文「🇨🇳 广东佛山」） */
+  regionVn?: string
+  /** 英语地区标签 */
+  regionMic?: string
   icon: string
   productCn: string
   productMic: string
+  /** 越南语产品标签（2026-11-11 补：vn/ru 页原本都显示英文） */
+  productVn?: string
+  /** 俄语产品标签 */
+  productRu?: string
   titleCn: string
   titleMic: string
   titleRu?: string
@@ -50,9 +58,13 @@ export const blogArticles: BlogArticle[] = [
     slug: 'shangrui-company-introduction-000001',
     region: '🇨🇳 广东佛山',
     regionRu: 'Фошань, Гуандун, Китай',
+    regionMic: '🇨🇳 Foshan, Guangdong, China',
+    regionVn: '🇨🇳 Phật Sơn, Quảng Đông, Trung Quốc',
     icon: '🏭',
     productCn: '公司介绍',
     productMic: 'Company Profile',
+    productVn: 'Giới thiệu công ty',
+    productRu: 'О компании',
     titleCn: '上锐机械公司介绍：扎根顺德伦教的木工机械制造企业',
     titleMic: 'About Shangrui Machinery: Woodworking Equipment Manufacturer in Lunjiao, Shunde',
     titleRu: 'О компании Shangrui Machinery: производитель деревообрабатывающего оборудования в Лунцзяо, Шунде',
@@ -90,21 +102,25 @@ export const blogArticles: BlogArticle[] = [
     slug: 'mh3248-cold-press-solution-000002',
     region: '🇨🇳 广东佛山',
     regionRu: 'Фошань, Гуандун, Китай',
+    regionMic: '🇨🇳 Foshan, Guangdong, China',
+    regionVn: '🇨🇳 Phật Sơn, Quảng Đông, Trung Quốc',
     icon: '🔶',
     productCn: '冷压机',
     productMic: 'Cold Press',
+    productVn: 'Máy ép lạnh',
+    productRu: 'Холодный пресс',
     titleCn: 'MH3248系列液压冷压机：家具制造的高效解决方案',
     titleMic: 'MH3248 Hydraulic Cold Press: An Efficient Solution for Furniture Manufacturing',
     titleRu: 'Гидравлический холодный пресс MH3248: эффективное решение для производства мебели',
     titleVn: 'Máy ép lạnh thủy lực MH3248: giải pháp hiệu quả cho sản xuất nội thất',
     descCn: 'MH3248系列液压冷压机：压力波动≤0.5MPa，成品合格率超99%，支持非标定制，最快5天交付。',
     descMic: 'MH3248 hydraulic cold press series: pressure fluctuation ≤0.5MPa, over 99% pass rate, non-standard customization available, delivery as fast as 5 days.',
-    descRu: 'Серия гидравлических холодных прессов MH3248: колебание давления ≤0,5 МПа, выход годной продукции более 99%, нестандартная customization, поставка от 5 дней.',
+    descRu: 'Серия гидравлических холодных прессов MH3248: колебание давления ≤0,5 МПа, выход годной продукции более 99%, нестандартная настройка по заказу, поставка от 5 дней.',
     descVn: 'Dòng máy ép lạnh thủy lực MH3248: biến động áp suất ≤0,5MPa, tỷ lệ đạt trên 99%, tùy chỉnh không tiêu chuẩn, giao hàng nhanh nhất 5 ngày.',
     contentCn: '在家具制造与板材加工领域，一台性能卓越的冷压机是品质与效率的保障。MH3248系列液压冷压机的标准台面尺寸为3000×1300mm、压力50吨，满足大部分板材加工需求；同时支持非标台面尺寸及压力开距定制（如1000/1300/1500mm开距），适应铝蜂窝板、防火门芯板等异形件或特殊工艺场景。',
     contentMic: 'In furniture manufacturing and panel processing, a high-performance cold press is the guarantee of quality and efficiency. The MH3248 hydraulic cold press series comes with a standard table size of 3000×1300mm and 50 tons of pressure, covering most panel processing needs. Non-standard table sizes and pressure opening distances (e.g. 1000/1300/1500mm) are also available for special applications such as aluminum honeycomb panels and fire door core boards.',
     contentRu: 'В производстве мебели и обработке плит высокопроизводительный холодный пресс — залог качества и эффективности. Серия гидравлических холодных прессов MH3248 имеет стандартный размер стола 3000×1300 мм и усилие 50 тонн, что покрывает большинство задач обработки плит. Доступны нестандартные размеры стола и расстояния раскрытия (например, 1000/1300/1500 мм) для особых применений, таких как алюминиевые сотовые панели и сердечники противопожарных дверей.',
-    contentVn: 'Trong sản xuất nội thất và gia công tấm, một chiếc máy ép lạnh hiệu suất cao là bảo chứng cho chất lượng và hiệu quả. Dòng máy ép lạnh thủy lực MH3248 có kích thước mặt bàn tiêu chuẩn 3000×1300mm, áp lực 50 tấn, đáp ứng hầu hết nhu cầu gia công tấm; đồng thời hỗ trợ tùy chỉnh kích thước mặt bàn và khoảng opening không tiêu chuẩn (ví dụ 1000/1300/1500mm), phù hợp cho tấm tổ ong nhôm, lõi cửa chống cháy và các ứng dụng đặc biệt khác.',
+    contentVn: 'Trong sản xuất nội thất và gia công tấm, một chiếc máy ép lạnh hiệu suất cao là bảo chứng cho chất lượng và hiệu quả. Dòng máy ép lạnh thủy lực MH3248 có kích thước mặt bàn tiêu chuẩn 3000×1300mm, áp lực 50 tấn, đáp ứng hầu hết nhu cầu gia công tấm; đồng thời hỗ trợ tùy chỉnh kích thước mặt bàn và khoảng mở không tiêu chuẩn (ví dụ 1000/1300/1500mm), phù hợp cho tấm tổ ong nhôm, lõi cửa chống cháy và các ứng dụng đặc biệt khác.',
     solutionCn: '智能控制方面，设备配备计时显示器与保压控制表，可根据材料特性预设保压时长；液压自动补压功能将压力波动控制在≤0.5MPa，确保胶合面均匀受力，成品合格率超99%。结构上，台面边缘采用圆弧修边工艺降低磕碰风险，机架采用国标加厚槽钢，抗张力强度达400牛顿/平方毫米；田字形焊接台面使压力分布均匀性提升30%，特别适合木门、家具等高平整度需求场景。设备还配备急停开关、变频调速及电动数字升降功能，支持一人安全作业。',
     solutionMic: 'For intelligent control, the press is equipped with a timer display and pressure-holding controller, allowing preset holding times based on material characteristics. The hydraulic automatic pressure compensation keeps fluctuation within ≤0.5MPa, ensuring even force across the glued surface and a pass rate above 99%. Structurally, rounded table edges reduce bump damage, and the frame uses thickened national-standard channel steel with a tensile strength of 400 N/mm². The grid-welded table improves pressure distribution uniformity by 30%, ideal for wooden doors and furniture requiring high flatness. Emergency stop, variable-frequency speed control and electric digital lifting support safe one-person operation.',
     solutionRu: 'В части интеллектуального управления пресс оснащён дисплеем таймера и контроллером выдержки давления с возможностью предустановки по характеристикам материала. Автоматическая гидравлическая компенсация давления удерживает колебания в пределах ≤0,5 МПа, обеспечивая равномерное усилие на склеиваемой поверхности и выход годных изделий выше 99%. Конструктивно скруглённые кромки стола снижают риск повреждений, а рама изготовлена из утолщенного швеллера госстандарта с пределом прочности 400 Н/мм². Сварочный стол с ячеистой структурой повышает равномерность распределения давления на 30%, что идеально для деревянных дверей и мебели с высокими требованиями к плоскостности. Кнопка аварийной остановки, частотное регулирование и электрический цифровой подъём обеспечивают безопасную работу одного оператора.',
@@ -130,9 +146,13 @@ export const blogArticles: BlogArticle[] = [
     slug: 'mh3848-hot-press-parameters-000003',
     region: '🇨🇳 广东佛山',
     regionRu: 'Фошань, Гуандун, Китай',
+    regionMic: '🇨🇳 Foshan, Guangdong, China',
+    regionVn: '🇨🇳 Phật Sơn, Quảng Đông, Trung Quốc',
     icon: '🔥',
     productCn: '热压机',
     productMic: 'Hot Press',
+    productVn: 'Máy ép nóng',
+    productRu: 'Горячий пресс',
     titleCn: 'MH3848系列热压机：用参数革命终结传统生产痛点',
     titleMic: 'MH3848 Hot Press: Ending Traditional Production Pain Points with a Parameter Revolution',
     titleRu: 'Горячий пресс MH3848: устранение традиционных болевых точек производства за счёт революции параметров',
@@ -170,9 +190,13 @@ export const blogArticles: BlogArticle[] = [
     slug: 'hot-press-line-trends-000004',
     region: '🇨🇳 广东佛山',
     regionRu: 'Фошань, Гуандун, Китай',
+    regionMic: '🇨🇳 Foshan, Guangdong, China',
+    regionVn: '🇨🇳 Phật Sơn, Quảng Đông, Trung Quốc',
     icon: '📈',
     productCn: '热压机',
     productMic: 'Hot Press',
+    productVn: 'Máy ép nóng',
+    productRu: 'Горячий пресс',
     titleCn: '热压机生产线：高端生产新趋势',
     titleMic: 'Hot Press Production Lines: The New Trend in High-End Manufacturing',
     titleRu: 'Линии горячего прессования: новый тренд высококлассного производства',
@@ -210,9 +234,13 @@ export const blogArticles: BlogArticle[] = [
     slug: 'mj1300-multi-blade-saw-000005',
     region: '🇨🇳 广东佛山',
     regionRu: 'Фошань, Гуандун, Китай',
+    regionMic: '🇨🇳 Foshan, Guangdong, China',
+    regionVn: '🇨🇳 Phật Sơn, Quảng Đông, Trung Quốc',
     icon: '⚙️',
     productCn: '多片锯',
     productMic: 'Multi-blade Saw',
+    productVn: 'Máy cưa đa lưỡi',
+    productRu: 'Многопильный станок',
     titleCn: 'MJ1300系列板式多片锯：传统木工机械的痛点破解者',
     titleMic: 'MJ1300 Multi-blade Saw Series: Breaking Through the Pain Points of Traditional Woodworking Machinery',
     titleRu: 'Серия многопильных станков MJ1300: решение болевых точек традиционного деревообрабатывающего оборудования',
@@ -250,9 +278,13 @@ export const blogArticles: BlogArticle[] = [
     slug: 'cold-press-timer-settings-000006',
     region: '🇨🇳 广东佛山',
     regionRu: 'Фошань, Гуандун, Китай',
+    regionMic: '🇨🇳 Foshan, Guangdong, China',
+    regionVn: '🇨🇳 Phật Sơn, Quảng Đông, Trung Quốc',
     icon: '🛠️',
     productCn: '冷压机',
     productMic: 'Cold Press',
+    productVn: 'Máy ép lạnh',
+    productRu: 'Холодный пресс',
     titleCn: '冷压机部件说明：冲压设置表（定时补压）使用指南',
     titleMic: 'Cold Press Component Guide: How to Use the Pressure Timer Settings Panel',
     titleRu: 'Руководство по узлам холодного пресса: как пользоваться панелью таймера давления',

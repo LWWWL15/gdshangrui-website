@@ -13,13 +13,13 @@
         <div v-if="cases.length" class="cases-grid">
           <router-link v-for="c in cases" :key="c.id" :to="`/${lang}/blog/` + c.slug" class="card case-card">
             <div class="case-img" :style="{ background: c.color }">
-              <span class="case-region">{{ c.region }}</span>
+              <span class="case-region">{{ regionOf(c) }}</span>
               <span class="case-icon">{{ c.icon }}</span>
             </div>
             <div class="case-body">
-              <span class="tag">{{ t(c.productCn, c.productMic) }}</span>
+              <span class="tag">{{ productOf(c) }}</span>
               <h3>{{ t(c.titleCn, c.titleMic, c.titleVn || c.titleMic, c.titleRu) }}</h3>
-              <p>{{ t(c.descCn, c.descMic, c.descMic, c.descRu) }}</p>
+              <p>{{ t(c.descCn, c.descMic, c.descVn || c.descMic, c.descRu) }}</p>
             </div>
           </router-link>
         </div>
@@ -51,6 +51,23 @@ const { t, tm, lang } = useLang()
 // 案例文章数据：从 src/data/articles.ts 读取（内容来自主人提供的真实素材，不编造）。
 import { blogArticles } from '@/data/articles'
 const cases = blogArticles
+
+// 地区标签 / 产品标签的四语取值。
+// 之前直接输出 c.region（中文「🇨🇳 广东佛山」）和 t(c.productCn, c.productMic)（无 vn/ru）
+// → mic/vn/ru 页的博客卡片显示中文/英文。2026-11-11 修正。
+function regionOf(c: any): string {
+  if (lang.value === 'cn') return c.region
+  if (lang.value === 'vn') return c.regionVn || c.region
+  if (lang.value === 'ru') return c.regionRu || c.region
+  return c.regionMic || c.region
+}
+
+function productOf(c: any): string {
+  if (lang.value === 'cn') return c.productCn
+  if (lang.value === 'vn') return c.productVn || c.productMic
+  if (lang.value === 'ru') return c.productRu || c.productMic
+  return c.productMic
+}
 </script>
 
 <style lang="scss" scoped>

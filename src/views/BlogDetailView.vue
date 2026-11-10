@@ -25,8 +25,8 @@
         <article class="case-article">
           <!-- Case Header Info -->
           <div class="article-meta">
-            <span class="meta-region">{{ getRouteLang() === 'ru' ? caseData.regionRu : caseData.region }}</span>
-            <span class="meta-product">{{ t('产品', 'Product', tm('blogDetail.product', 'Product'), tm('blogDetail.product', 'Product')) }}: {{ t(caseData.productCn, caseData.productMic, caseData.productMic, caseData.productMic) }}</span>
+            <span class="meta-region">{{ regionOf(caseData) }}</span>
+            <span class="meta-product">{{ t('产品', 'Product', tm('blogDetail.product', 'Product'), tm('blogDetail.product', 'Product')) }}: {{ productOf(caseData) }}</span>
             <span class="meta-date">{{ caseData.date }}</span>
           </div>
 
@@ -49,7 +49,7 @@
             <h2 id="customer-feedback">{{ t('客户反馈', 'Customer Feedback', tm('blogDetail.customerFeedback', 'Customer Feedback'), tm('blogDetail.customerFeedback', 'Customer Feedback')) }}</h2>
             <blockquote class="article-quote">
               <p>"{{ t(caseData.feedbackCn, caseData.feedbackMic, caseData.feedbackVn || caseData.feedbackMic, caseData.feedbackRu) }}"</p>
-              <cite>— {{ getRouteLang() === 'ru' ? caseData.customerNameRu : caseData.customerName }}</cite>
+              <cite>— {{ customerOf(caseData) }}</cite>
             </blockquote>
           </div>
 
@@ -79,7 +79,7 @@
             </div>
             <div class="form-group">
               <label>{{ t('感兴趣的产品', 'Product of Interest', tm('blogDetail.productInterest', 'Product of Interest')) }}</label>
-              <input type="text" :value="t(caseData.productCn, caseData.productMic, caseData.productMic, caseData.productMic)" readonly />
+              <input type="text" :value="productOf(caseData)" readonly />
             </div>
             <div class="form-group">
               <label>{{ t('留言', 'Message', tm('blogDetail.message', 'Message')) }} *</label>
@@ -114,11 +114,11 @@
             <div class="sidebar-info">
               <div class="info-item">
                 <span class="info-label">{{ t('国家/地区', 'Country/Region', tm('blogDetail.countryRegion', 'Country/Region')) }}</span>
-                <span class="info-value">{{ caseData.region }}</span>
+                <span class="info-value">{{ regionOf(caseData) }}</span>
               </div>
               <div class="info-item">
                 <span class="info-label">{{ t('产品类型', 'Product Type', tm('blogDetail.productType', 'Product Type')) }}</span>
-                <span class="info-value">{{ t(caseData.productCn, caseData.productMic, caseData.productMic, caseData.productMic) }}</span>
+                <span class="info-value">{{ productOf(caseData) }}</span>
               </div>
               <div class="info-item">
                 <span class="info-label">{{ t('合作时间', 'Date', tm('blogDetail.cooperationDate', 'Date')) }}</span>
@@ -130,7 +130,7 @@
           <div class="sidebar-card">
             <h4>{{ t('相关产品', 'Related Products', tm('blogDetail.relatedProducts', 'Related Products')) }}</h4>
             <router-link :to="caseData.productSeries ? (caseData.productSeries === caseData.productId ? `/${lang}/products/${caseData.productSeries}` : `/${lang}/products/${caseData.productSeries}/${caseData.productId}`) : `/${lang}/products/${caseData.productId}`" class="sidebar-product-link">
-              <span>{{ t(caseData.productCn, caseData.productMic, caseData.productMic, caseData.productMic) }}</span>
+              <span>{{ productOf(caseData) }}</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </router-link>
           </div>
@@ -181,13 +181,13 @@
         <div class="recommended-grid">
           <router-link v-for="c in recommendedCases" :key="c.id" :to="`/${lang}/blog/` + c.slug" class="card case-card">
             <div class="case-img" :style="{ background: c.color }">
-              <span class="case-region">{{ c.region }}</span>
+              <span class="case-region">{{ regionOf(c) }}</span>
               <span class="case-icon">{{ c.icon }}</span>
             </div>
             <div class="case-body">
-              <span class="tag">{{ t(c.productCn, c.productMic, c.productMic, c.productMic) }}</span>
-              <h3>{{ t(c.titleCn, c.titleMic, c.titleMic, c.titleRu) }}</h3>
-              <p>{{ t(c.descCn, c.descMic) }}</p>
+              <span class="tag">{{ productOf(c) }}</span>
+              <h3>{{ t(c.titleCn, c.titleMic, c.titleVn || c.titleMic, c.titleRu) }}</h3>
+              <p>{{ t(c.descCn, c.descMic, c.descVn || c.descMic, c.descRu) }}</p>
             </div>
           </router-link>
         </div>
@@ -219,6 +219,33 @@ function getRouteLang(): 'cn' | 'mic' | 'vn' | 'ru' {
 // 文章数据：从 src/data/articles.ts 读取（内容来自主人提供的真实素材，不编造）
 import { blogArticles } from '@/data/articles'
 const allCases = blogArticles
+
+// 地区标签 / 产品标签的四语取值。
+// 之前：meta-region 只判 ru（mic/vn 显示中文「🇨🇳 广东佛山」），
+//       productCn/productMic 没有 vn/ru 字段（vn/ru 显示英文），
+//       「相关文章」区 title 的 vn 位误填 titleMic、desc 只传 2 参（vn/ru 全英文）。
+// 2026-11-11 统一修正。
+function regionOf(c: any): string {
+  const l = getRouteLang()
+  if (l === 'cn') return c.region
+  if (l === 'vn') return c.regionVn || c.region
+  if (l === 'ru') return c.regionRu || c.region
+  return c.regionMic || c.region
+}
+
+function productOf(c: any): string {
+  const l = getRouteLang()
+  if (l === 'cn') return c.productCn
+  if (l === 'vn') return c.productVn || c.productMic
+  if (l === 'ru') return c.productRu || c.productMic
+  return c.productMic
+}
+
+// 客户署名：cn 用法定中文名，其余语言用英文注册名（站内 CertificationView 口径一致）
+function customerOf(c: any): string {
+  if (getRouteLang() === 'cn') return c.customerName
+  return c.customerNameRu || c.customerName
+}
 
 const caseData = computed(() => allCases.find(c => c.slug === caseSlug.value) || null)
 

@@ -33,7 +33,7 @@
             </div>
             <div class="row">
               <dt>{{ t('联系方式', 'Contact', 'Liên hệ', 'Контакты') }}</dt>
-              <dd><a href="tel:+8613929151908">+86 139-2915-1908</a>（电话 / WhatsApp）</dd>
+              <dd><a href="tel:+8613929151908">+86 139-2915-1908</a> {{ t('（电话 / WhatsApp）', '(Phone / WhatsApp)', '(Điện thoại / WhatsApp)', '(Телефон / WhatsApp)') }}</dd>
             </div>
           </dl>
         </div>
