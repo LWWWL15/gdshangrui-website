@@ -733,7 +733,7 @@ export const productSeries: ProductSeries[] = [
       {
         cn: '选多片锯主要看三个数：最大加工厚度、最少加工长度和锯轴直径。MJ1300 系列加工厚度 5–50mm、最少加工长度 650mm，板式与方木机型都有。锯片数量、上下轴配置和进出料辊台都按您开料的规格来配，保证一次开料就出成品条。',
         mic: 'Choosing a multi-blade saw comes down to three numbers: maximum cutting thickness, minimum workpiece length and arbor diameter. The MJ1300 series cuts 5–50mm thick with a 650mm minimum length, in both panel and square-timber versions. Blade count, upper/lower arbor configuration and infeed/outfeed tables are all configured to your ripping specs, so one pass yields finished strips.',
-        vn: 'Chọn máy cưa đa lưỡi chủ yếu xem ba con số: độ dày gia công lớn nhất, chiều dài gia công nhỏ nhất và đường kính trục. Dòng MJ1300 gia công dày 5–50mm, chiều dài tối thiểu 650mm, có cả phiên bản ván và gỗ vuông. Số lưỡi, cấu hình trục trên/dưới và bàn进出 liệu đều được cấu hình theo quy cách xẻ của anh, một lần cắt là ra dải thành phẩm.',
+        vn: 'Chọn máy cưa đa lưỡi chủ yếu xem ba con số: độ dày gia công lớn nhất, chiều dài gia công nhỏ nhất và đường kính trục. Dòng MJ1300 gia công dày 5–50mm, chiều dài tối thiểu 650mm, có cả phiên bản ván và gỗ vuông. Số lưỡi, cấu hình trục trên/dưới và bàn nạp/xả đều được cấu hình theo quy cách xẻ của anh, một lần cắt là ra dải thành phẩm.',
         ru: 'Выбор многопильного станка сводится к трём числам: максимальная толщина реза, минимальная длина заготовки и диаметр шпинделя. Серия MJ1300 режет толщиной 5–50 мм при минимальной длине 650 мм, в версиях для плит и для бруса. Число пил, конфигурация верхнего/нижнего шпинделей и подающие столы подбираются под ваши задачи, чтобы за один проход получать готовые рейки.'
       }
     ],
@@ -759,7 +759,7 @@ export const productSeries: ProductSeries[] = [
       {
         cn: '进出料辊台辅助送料，长条料连续开料不断流',
         mic: 'Infeed/outfeed roller tables support feeding for continuous ripping of long stock',
-        vn: 'Bàn进出 liệu hỗ trợ đưa gỗ, xẻ liên tục vật liệu dài không gián đoạn',
+        vn: 'Bàn nạp/xả hỗ trợ đưa gỗ, xẻ liên tục vật liệu dài không gián đoạn',
         ru: 'Подающие и приемные рольганги обеспечивают непрерывный роспуск длинных заготовок'
       },
       {
@@ -1184,7 +1184,7 @@ export const productSeries: ProductSeries[] = [
       {
         cn: '拼接平整牢固，接头强度接近整体板材',
         mic: 'Splices are flat and strong, with joint strength close to solid sheet',
-        vn: 'Mối ghép phẳng chắc, độ bền接头 gần bằng ván nguyên tấm',
+        vn: 'Mối ghép phẳng chắc, độ bền mối nối gần bằng ván nguyên tấm',
         ru: 'Стыки ровные и прочные, по крепости близки к цельному листу'
       },
       {
@@ -1769,7 +1769,7 @@ export const productSeries: ProductSeries[] = [
         a: {
           cn: '能。辅助机的价值就在与现役设备对接：推板机对您的升降平台高度、抓板机对您的垛板规格、锯的进出料高度对您现役线。提供现役设备的关键接口尺寸，我们按您的线改接口尺寸出机，不要求推倒重来。',
           mic: 'Yes. The whole value of auxiliaries is interfacing with your existing machines: pusher matched to your lifting platform height, grabber to your pallet specs, saw infeed/outfeed heights to your current line. Give us the key interface dimensions of your existing equipment and we will build the machine to them — no need to start over.',
-          vn: 'Được. Giá trị của máy phụ là ghép nối với thiết bị đang dùng: máy đẩy khớp chiều cao bục nâng của anh, máy gắp theo quy cách chồng ván, chiều cao进出 của cưa khớp dây hiện có. Cung cấp kích thước giao diện then chốt của thiết bị hiện hành, chúng tôi chế máy theo kích thước đó, không cần đập đi làm lại.',
+          vn: 'Được. Giá trị của máy phụ là ghép nối với thiết bị đang dùng: máy đẩy khớp chiều cao bục nâng của anh, máy gắp theo quy cách chồng ván, chiều cao nạp của cưa khớp dây hiện có. Cung cấp kích thước giao diện then chốt của thiết bị hiện hành, chúng tôi chế máy theo kích thước đó, không cần đập đi làm lại.',
           ru: 'Да. Ценность вспомогательных машин именно в стыковке с вашим парком: толкатель подгоняется под высоту вашего подъёмного стола, захват — под ваш формат штабелей, высоты подачи пилы — под действующую линию. Дайте ключевые стыковочные размеры имеющегося оборудования — мы изготовим машину под них, ничего ломать не придётся.'
         }
       },
