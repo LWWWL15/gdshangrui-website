@@ -47,7 +47,7 @@
     <!-- Certifications -->
     <section class="section-gray section-certs">
       <div class="container">
-        <h2 style="margin-bottom: 48px;">{{ t('资质认证', 'Certifications', t('资质认证', 'Certifications', 'Chứng nhận', 'Сертификаты')) }}</h2>
+        <h2 style="margin-bottom: 48px;">{{ t('资质认证', 'Certifications', 'Chứng nhận', 'Сертификаты') }}</h2>
         <div class="cert-grid">
           <div class="cert-card card" v-for="c in certs" :key="c.name">
             <div class="cert-placeholder">{{ c.icon }}</div>
@@ -61,16 +61,16 @@
     <!-- Factory -->
     <section class="section section-factory">
       <div class="container">
-        <h2 style="margin-bottom: 48px;">{{ t('生产基地', 'Production Base', t('生产基地', 'Production Base', 'Cơ sở sản xuất', 'Производственная база')) }}</h2>
+        <h2 style="margin-bottom: 48px;">{{ t('生产基地', 'Production Base', 'Cơ sở sản xuất', 'Производственная база') }}</h2>
         <div class="factory-grid">
           <div class="factory-img-placeholder" :class="{ 'has-img': i === 1 || i === 2 }" v-for="i in 4" :key="i">
-            <img v-if="i === 1" src="/factory-photo-1.webp" :alt="t('工厂照片 1', 'Factory Photo 1', t('工厂照片 1', 'Factory Photo 1', 'Ảnh nhà máy 1', 'Фотография завода 1'))" loading="lazy" />
-            <img v-else-if="i === 2" src="/factory-photo-3.webp" :alt="t('工厂照片 2', 'Factory Photo 2', t('工厂照片 2', 'Factory Photo 2', 'Ảnh nhà máy 2', 'Фотография завода 2'))" loading="lazy" />
-            <img v-else-if="i === 3" src="/factory-photo-2.webp" :alt="t('工厂照片 3', 'Factory Photo 3', t('工厂照片 3', 'Factory Photo 3', 'Ảnh nhà máy 3', 'Фотография завода 3'))" loading="lazy" />
-            <img v-else-if="i === 4" src="/factory-photo-4.webp" :alt="t('工厂照片 4', 'Factory Photo 4', t('工厂照片 4', 'Factory Photo 4', 'Ảnh nhà máy 4', 'Фотография завода 4'))" loading="lazy" />
+            <img v-if="i === 1" src="/factory-photo-1.webp" :alt="t('工厂照片 1', 'Factory Photo 1', 'Ảnh nhà máy 1', 'Фотография завода 1')" loading="lazy" />
+            <img v-else-if="i === 2" src="/factory-photo-3.webp" :alt="t('工厂照片 2', 'Factory Photo 2', 'Ảnh nhà máy 2', 'Фотография завода 2')" loading="lazy" />
+            <img v-else-if="i === 3" src="/factory-photo-2.webp" :alt="t('工厂照片 3', 'Factory Photo 3', 'Ảnh nhà máy 3', 'Фотография завода 3')" loading="lazy" />
+            <img v-else-if="i === 4" src="/factory-photo-4.webp" :alt="t('工厂照片 4', 'Factory Photo 4', 'Ảnh nhà máy 4', 'Фотография завода 4')" loading="lazy" />
             <template v-else>
               <span>🏭</span>
-              <p>{{ t('工厂照片', 'Factory Photo', t('工厂照片', 'Factory Photo', 'Ảnh nhà máy', 'Фотография завода')) }} {{ i }}</p>
+              <p>{{ t('工厂照片', 'Factory Photo', 'Ảnh nhà máy', 'Фотография завода') }} {{ i }}</p>
             </template>
           </div>
         </div>
@@ -80,27 +80,27 @@
     <!-- Location -->
     <section class="section-gray section-contact">
       <div class="container">
-        <h2 style="margin-bottom: 48px;">{{ t('联系我们', 'Contact', t('联系我们', 'Contact Us', 'Liên hệ', 'Связаться с нами')) }}</h2>
+        <h2 style="margin-bottom: 48px;">{{ t('联系我们', 'Contact', 'Liên hệ', 'Связаться с нами') }}</h2>
         <div class="location-card card">
           <div class="location-info">
             <div class="location-item">
               <span class="location-icon">📍</span>
               <div>
-                <h4>{{ t('地址', 'Address', t('地址', 'Address', 'Địa chỉ', 'Адрес')) }}</h4>
-                <a href="https://maps.apple.com/place?address=%E4%B8%AD%E5%9B%BD%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%BD%9B%E5%B1%B1%E5%B8%82%E9%A1%BA%E5%BE%B7%E5%8C%BA%E4%BC%A6%E6%95%99%E8%A1%97%E9%81%93%E6%96%B0%E5%A1%98%E5%B7%A5%E4%B8%9A%E5%8C%BA%E4%B8%96%E9%BE%99%E5%A4%A7%E9%81%936%E5%8F%B7&coordinate=22.869534,113.186873&name=%E4%B8%8A%E9%94%90%E6%9C%A8%E5%B7%A5%E6%9C%BA%E6%A2%B0%E5%8E%82&place-id=H2710I3F926803D8CEB&map=explore" target="_blank" rel="noopener">{{ t('中国广东省佛山市顺德区伦教街道新塘工业区世龙大道6号', 'No.6, Shilong Avenue, Shunde New Town Industrial Zone, Lunqiao Town, Shunde District, Foshan City, Guangdong Province, China', t('中国广东省佛山市顺德区伦教街道新塘工业区世龙大道6号', 'No.6, Shilong Avenue, Shunde New Town Industrial Zone, Lunqiao Town, Shunde District, Foshan City, Guangdong Province, China', 'Số 6, Đại lộ Shilong, Khu công nghiệp Xintang, Phường Lunjiao, Quận Shunde, Thành phố Foshan, Quảng Đông, Trung Quốc', 'Шилун Дадао, д. 6, Промышленная зона Синьтан, посёлок Луньцзяо, район Шуньдэ, город Фошань, провинция Гуандун, Китай')) }}</a>
+                <h4>{{ t('地址', 'Address', 'Địa chỉ', 'Адрес') }}</h4>
+                <a href="https://maps.apple.com/place?address=%E4%B8%AD%E5%9B%BD%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%BD%9B%E5%B1%B1%E5%B8%82%E9%A1%BA%E5%BE%B7%E5%8C%BA%E4%BC%A6%E6%95%99%E8%A1%97%E9%81%93%E6%96%B0%E5%A1%98%E5%B7%A5%E4%B8%9A%E5%8C%BA%E4%B8%96%E9%BE%99%E5%A4%A7%E9%81%936%E5%8F%B7&coordinate=22.869534,113.186873&name=%E4%B8%8A%E9%94%90%E6%9C%A8%E5%B7%A5%E6%9C%BA%E6%A2%B0%E5%8E%82&place-id=H2710I3F926803D8CEB&map=explore" target="_blank" rel="noopener">{{ t('中国广东省佛山市顺德区伦教街道新塘工业区世龙大道6号', 'No.6, Shilong Avenue, Shunde New Town Industrial Zone, Lunqiao Town, Shunde District, Foshan City, Guangdong Province, China', 'Số 6, Đại lộ Shilong, Khu công nghiệp Xintang, Phường Lunjiao, Quận Shunde, Thành phố Foshan, Quảng Đông, Trung Quốc', 'Шилун Дадао, д. 6, Промышленная зона Синьтан, посёлок Луньцзяо, район Шуньдэ, город Фошань, провинция Гуандун, Китай') }}</a>
               </div>
             </div>
             <div class="location-item">
               <span class="location-icon">📞</span>
               <div>
-                <h4>{{ t('电话 / WhatsApp', 'Phone / WhatsApp', t('电话 / WhatsApp', 'Phone / WhatsApp', 'Điện thoại / WhatsApp', 'Телефон / WhatsApp')) }}</h4>
+                <h4>{{ t('电话 / WhatsApp', 'Phone / WhatsApp', 'Điện thoại / WhatsApp', 'Телефон / WhatsApp') }}</h4>
                 <a href="tel:+8613929151908">+86 139-2915-1908</a>
               </div>
             </div>
             <div class="location-item">
               <span class="location-icon">✉️</span>
               <div>
-                <h4>{{ t('邮箱', 'Email', t('邮箱', 'Email', 'Email', 'Электронная почта')) }}</h4>
+                <h4>{{ t('邮箱', 'Email', 'Email', 'Электронная почта') }}</h4>
                 <a href="mailto:caya15@qq.com">caya15@qq.com</a>
               </div>
             </div>

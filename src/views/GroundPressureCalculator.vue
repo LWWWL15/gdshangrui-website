@@ -65,7 +65,7 @@
 
         <!-- Formula note -->
         <div class="formula-note">
-          {{ t('公式：重量 (kg) ÷ [长 (mm) × 宽 (mm) ÷ 1,000,000] = 压强 (kg/m²)', 'Formula: Weight (kg) ÷ [Length (mm) × Width (mm) ÷ 1,000,000] = Pressure (kg/m²)', t('公式：重量 (kg) ÷ [长 (mm) × 宽 (mm) ÷ 1,000,000] = 压强 (kg/m²)', 'Formula: Weight (kg) ÷ [Length (mm) × Width (mm) ÷ 1,000,000] = Pressure (kg/m²)', 'Công thức: Trọng lượng (kg) ÷ [Dài (mm) × Rộng (mm) ÷ 1.000.000] = Áp suất (kg/m²)', 'Формула: Масса (кг) ÷ [Длина (мм) × Ширина (мм) ÷ 1 000 000] = Давление (кг/м²)')) }}
+          {{ t('公式：重量 (kg) ÷ [长 (mm) × 宽 (mm) ÷ 1,000,000] = 压强 (kg/m²)', 'Formula: Weight (kg) ÷ [Length (mm) × Width (mm) ÷ 1,000,000] = Pressure (kg/m²)', 'Công thức: Trọng lượng (kg) ÷ [Dài (mm) × Rộng (mm) ÷ 1.000.000] = Áp suất (kg/m²)', 'Формула: Масса (кг) ÷ [Длина (мм) × Ширина (мм) ÷ 1 000 000] = Давление (кг/м²)') }}
         </div>
       </section>
 

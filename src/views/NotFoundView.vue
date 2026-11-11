@@ -6,10 +6,10 @@
           <div class="error-code">404</div>
           <h1>{{ t('页面未找到', 'Page Not Found',  t('页面未找到', 'Page Not Found', 'Không tìm thấy trang', 'Страница не найдена'),  t('页面未找到', 'Page Not Found', 'Không tìm thấy trang', 'Страница не найдена')) }}</h1>
           <p class="error-desc">
-            {{ t('抱歉，您访问的页面不存在或已被移除。', 'Sorry, the page you are looking for does not exist or has been removed.', t('抱歉，您访问的页面不存在或已被移除。', 'Sorry, the page you are looking for does not exist or has been removed.', 'Xin lỗi, trang bạn truy cập không tồn tại hoặc đã bị xóa.', 'К сожалению, запрашиваемая страница не существует или была удалена.')) }}
+            {{ t('抱歉，您访问的页面不存在或已被移除。', 'Sorry, the page you are looking for does not exist or has been removed.', 'Xin lỗi, trang bạn truy cập không tồn tại hoặc đã bị xóa.', 'К сожалению, запрашиваемая страница не существует или была удалена.') }}
           </p>
           <p class="error-desc">
-            {{ t('您可以返回首页，或浏览我们的产品系列：热压机、冷压机、多片锯、拼板机。', 'You can return to the home page, or browse our product series: hot press, cold press, multi-blade saw and splicing machine.', t('您可以返回首页，或浏览我们的产品系列：热压机、冷压机、多片锯、拼板机。', 'You can return to the home page, or browse our product series: hot press, cold press, multi-blade saw and splicing machine.', 'Bạn có thể trở về trang chủ hoặc xem các dòng sản phẩm: máy ép nóng, máy ép lạnh, máy cưa đa lưỡi, máy ghép ván.', 'Вы можете вернуться на главную или посмотреть серии продукции: горячий пресс, холодный пресс, многопильный станок, линия сращивания.')) }}
+            {{ t('您可以返回首页，或浏览我们的产品系列：热压机、冷压机、多片锯、拼板机。', 'You can return to the home page, or browse our product series: hot press, cold press, multi-blade saw and splicing machine.', 'Bạn có thể trở về trang chủ hoặc xem các dòng sản phẩm: máy ép nóng, máy ép lạnh, máy cưa đa lưỡi, máy ghép ván.', 'Вы можете вернуться на главную или посмотреть серии продукции: горячий пресс, холодный пресс, многопильный станок, линия сращивания.') }}
           </p>
           <div class="error-actions">
             <router-link :to="'/' + lang + '/'" class="btn btn-primary btn-lg">

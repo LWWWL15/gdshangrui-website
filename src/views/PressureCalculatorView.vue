@@ -4,7 +4,7 @@
     <section class="hero">
       <div class="container">
         <h1>{{ t('压力换算表', 'Pressure Calculator',  t('压力换算表', 'Pressure Calculator', 'Bảng chuyển đổi áp suất', 'Таблица перевода давления'),  t('压力换算表', 'Pressure Calculator', 'Bảng chuyển đổi áp suất', 'Таблица перевода давления')) }}</h1>
-        <p class="subtitle">{{ t('用法:已知工件面积和目标压强,可查对应工作台压力;已知压力和工件面积,可查对应压强。', 'Usage: Given workpiece area and target pressure, find the working table pressure; given pressure and workpiece area, find the pressure.', t('用法：已知工件面积和目标压强，可查对应工作台压力；已知压力和工件面积，可查对应压强。', 'Usage: Given workpiece area and target pressure, find the working table pressure; given pressure and workpiece area, find the pressure.', 'Cách dùng: Biết diện tích phôi và áp suất mục tiêu, tra áp lực bàn; biết áp lực và diện tích phôi, tra áp suất.', 'Использование: зная площадь заготовки и целевое удельное давление, найдите рабочее давление стола; зная давление и площадь заготовки, найдите удельное давление.')) }}</p>
+        <p class="subtitle">{{ t('用法:已知工件面积和目标压强,可查对应工作台压力;已知压力和工件面积,可查对应压强。', 'Usage: Given workpiece area and target pressure, find the working table pressure; given pressure and workpiece area, find the pressure.', 'Cách dùng: Biết diện tích phôi và áp suất mục tiêu, tra áp lực bàn; biết áp lực và diện tích phôi, tra áp suất.', 'Использование: зная площадь заготовки и целевое удельное давление, найдите рабочее давление стола; зная давление и площадь заготовки, найдите удельное давление.') }}</p>
       </div>
     </section>
 
