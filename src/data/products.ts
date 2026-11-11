@@ -69,6 +69,142 @@ export const productSeries: ProductSeries[] = [
     descRu: 'Горячее прессование при высокой температуре для производства шпонированных панелей, фанеры и ДВП. Равномерный нагрев и высокая производительность.',
     icon: '🔶',
     color: "url('/hot-press-bg.webp')",
+    intro: [
+      {
+        cn: '热压机是板式贴面线的核心设备，用高温与压力把三聚氰胺浸渍纸、装饰纸或木皮压贴到刨花板、中纤板、胶合板等基材表面。压板内部通导热油或蒸汽均匀加热，板材在层与层之间同时受热受压，一次循环完成一幅或多幅的压贴。',
+        mic: 'A hot press is the core machine of a panel laminating line. It bonds melamine impregnated paper, decorative paper or veneer onto particleboard, MDF or plywood with heat and pressure. The platens are heated evenly by thermal oil or steam, so one or more panels are pressed and heated at the same time in each cycle.',
+        vn: 'Máy ép nóng là thiết bị cốt lõi của dây chuyền dán bề mặt ván. Máy dùng nhiệt độ cao và áp suất để ép giấy ngâm melamine, giấy trang trí hoặc veneer lên bề mặt ván dăm, MDF hay ván ép. Tấm ép được gia nhiệt đồng đều bằng dầu truyền nhiệt hoặc hơi nước, mỗi chu kỳ ép đồng thời một hoặc nhiều tấm.',
+        ru: 'Горячий пресс — ключевая машина линии облицовывания плит. Он приклеивает меламиновую пропитанную бумагу, декоративную бумагу или шпон на ДСП, МДФ или фанеру за счёт температуры и давления. Плиты нагреваются равномерно термомаслом или паром, за один цикл прессуются одна или несколько плит одновременно.'
+      },
+      {
+        cn: '选热压机主要看三件事：热压板尺寸决定能压多大幅面，层数决定一天能压多少张，单位压力决定能不能把胶层压实。MH3848 系列热压板 3000×1500mm，层距 100mm，单层或多层可选，压力与层数都按您的板材幅面和日产量来配。',
+        mic: 'Choosing a hot press comes down to three things: platen size determines the largest panel format you can press, the number of daylight layers determines daily output, and the specific pressure determines whether the glue line is pressed solid. The MH3848 series has 3000×1500mm platens with 100mm openings, available in single or multi-layer, with pressure and layers configured to your panel size and daily output.',
+        vn: 'Chọn máy ép nóng cần quan tâm ba điểm: kích thước tấm ép quyết định khổ ván lớn nhất, số tầng quyết định sản lượng mỗi ngày, áp suất đơn vị quyết định lớp keo có được ép chặt không. Dòng MH3848 có tấm ép 3000×1500mm, khoảng tầng 100mm, chọn một tầng hoặc nhiều tầng, áp suất và số tầng được cấu hình theo khổ ván và sản lượng ngày của anh.',
+        ru: 'Выбор горячего пресса сводится к трём вещам: размер плит определяет максимальный формат плиты, число этажей — суточную производительность, а удельное давление — насколько плотно схватится клеевой шов. Серия MH3848 имеет плиты 3000×1500 мм с шагом этажей 100 мм, в одно- и многоэтажном исполнении; давление и число этажей подбираются под ваш формат плит и суточный выпуск.'
+      }
+    ],
+    highlights: [
+      {
+        cn: '热压板整块加热，板面温差小，贴面色泽均匀不起泡',
+        mic: 'The platen is heated as a whole with a small temperature spread across the surface — even color, no blistering',
+        vn: 'Tấm ép được gia nhiệt đồng khối, chênh lệch nhiệt độ mặt ép nhỏ, màu bề mặt đồng đều không phồng rộp',
+        ru: 'Плита прогревается по всей площади с малым разбросом температуры — равномерный цвет облицовки без пузырей'
+      },
+      {
+        cn: '层数、压力与台面尺寸按产量与板材幅面定制',
+        mic: 'Number of layers, pressing force and platen size customized to your output and panel format',
+        vn: 'Số tầng, áp lực và kích thước tấm ép được tùy chỉnh theo sản lượng và khổ ván',
+        ru: 'Число этажей, усилие прессования и размер плит изготавливаются под ваш выпуск и формат плит'
+      },
+      {
+        cn: '液压系统压力稳定，保压时间可调，胶合强度一致',
+        mic: 'Stable hydraulic pressure with adjustable hold time for consistent bond strength',
+        vn: 'Hệ thống thủy lực áp suất ổn định, thời gian giữ áp điều chỉnh được, độ bền dán đồng đều',
+        ru: 'Гидросистема держит давление стабильно, время выдержки регулируется — прочность склейки одинаковая'
+      },
+      {
+        cn: '可配装卸板机与辊筒线，接入自动化贴面生产线',
+        mic: 'Can be equipped with loading/unloading machines and roller conveyors for automated laminating lines',
+        vn: 'Có thể trang bị máy nạp/xả và băng tải con lăn để kết nối dây chuyền dán bề mặt tự động',
+        ru: 'Возможна комплектация загрузчиком/разгрузчиком и рольгангом для автоматической линии облицовывания'
+      },
+      {
+        cn: '适用于免漆板、生态板、覆膜板与三聚氰胺浸渍纸贴面',
+        mic: 'Suitable for melamine-faced, eco-board, film-faced panels and impregnated paper lamination',
+        vn: 'Phù hợp dán bề mặt ván không sơn, ván sinh thái, ván phủ phim và giấy ngâm melamine',
+        ru: 'Подходит для ламинирования плёнкой, эко-плит, плёнки FEN и меламиновой пропитанной бумаги'
+      }
+    ],
+    selection: [
+      {
+        cn: '基材类型与规格（刨花板/中纤板/胶合板，厚度与幅面）',
+        mic: 'Substrate type and size (particleboard / MDF / plywood, thickness and format)',
+        vn: 'Loại và quy cách ván nền (ván dăm/MDF/ván ép, độ dày và khổ)',
+        ru: 'Тип и размер основы (ДСП / МДФ / фанера, толщина и формат)'
+      },
+      {
+        cn: '贴面材料（三聚氰胺浸渍纸/木皮/覆膜）与日产量要求',
+        mic: 'Facing material (melamine paper / veneer / film) and required daily output',
+        vn: 'Vật liệu dán (giấy melamine/veneer/phim) và sản lượng ngày cần đạt',
+        ru: 'Облицовочный материал (меламиновая бумага / шпон / плёнка) и требуемый суточный выпуск'
+      },
+      {
+        cn: '期望的热压板尺寸与层数',
+        mic: 'Desired platen size and number of layers',
+        vn: 'Kích thước tấm ép và số tầng mong muốn',
+        ru: 'Желаемый размер плит и число этажей'
+      },
+      {
+        cn: '加热方式偏好（导热油/蒸汽/电加热）与供电条件',
+        mic: 'Heating preference (thermal oil / steam / electric) and power supply conditions',
+        vn: 'Phương thức gia nhiệt mong muốn (dầu truyền nhiệt/hơi nước/điện) và điều kiện nguồn điện',
+        ru: 'Предпочтительный способ нагрева (термомасло / пар / электричество) и условия электропитания'
+      },
+      {
+        cn: '是否需要配套装卸板机、辊筒线等整线设备',
+        mic: 'Whether loading/unloading machines, roller conveyors and other line equipment are needed',
+        vn: 'Có cần máy nạp/xả, băng tải con lăn và thiết bị dây chuyền kèm theo không',
+        ru: 'Нужны ли загрузчик/разгрузчик, рольганг и другое оборудование линии'
+      }
+    ],
+    faq: [
+      {
+        q: {
+          cn: '单层和多层热压机怎么选？',
+          mic: 'How do I choose between single-layer and multi-layer hot press?',
+          vn: 'Chọn máy ép nóng một tầng hay nhiều tầng?',
+          ru: 'Как выбрать одноэтажный или многоэтажный горячий пресс?'
+        },
+        a: {
+          cn: '看日产量和板材厚度。幅面大、日产量几千张以内选单层大台面，压贴周期短、板面质量最稳定；产量要求高、板材较薄选多层，一次压十几张，产能翻倍。把您的板材幅面和日产量发给我们，我们给出单层或多层的配置建议和产能测算。',
+          mic: 'It depends on daily output and panel thickness. For large formats and a few thousand panels a day, choose a single-layer press with a large platen — short cycle and the most stable surface quality. For high output and thinner panels, choose multi-layer, pressing a dozen or more sheets at once. Send us your panel format and daily output, and we will recommend single or multi-layer with an output estimate.',
+          vn: 'Tùy vào sản lượng ngày và độ dày ván. Khổ lớn, sản lượng vài nghìn tấm mỗi ngày nên chọn máy một tầng tấm lớn — chu kỳ ngắn, chất lượng bề mặt ổn định nhất. Sản lượng cao, ván mỏng thì chọn nhiều tầng, ép hơn chục tấm một lần. Gửi khổ ván và sản lượng ngày cho chúng tôi, chúng tôi sẽ tư vấn cấu hình và tính công suất.',
+          ru: 'Зависит от суточного выпуска и толщины плит. Для больших форматов и нескольких тысяч плит в день берите одноэтажный пресс с большой плитой — короткий цикл и максимально стабильное качество поверхности. Для высокого выпуска и тонких плит подходит многоэтажный: за раз прессуется десяток и более листов. Пришлите формат плит и суточный выпуск — мы предложим конфигурацию и расчёт производительности.'
+        }
+      },
+      {
+        q: {
+          cn: '可以压哪些板材和贴面材料？',
+          mic: 'What panels and facing materials can it press?',
+          vn: 'Máy có thể ép những loại ván và vật liệu dán nào?',
+          ru: 'Какие плиты и облицовочные материалы можно прессовать?'
+        },
+        a: {
+          cn: '基材上刨花板、中纤板、胶合板都可以压；贴面材料常见的是三聚氰胺浸渍纸，也支持木皮、覆膜板。不同贴面材料的温度曲线和保压时间不同，下单时告诉我们主打的基材与贴面组合，我们把加热与压合参数调到对应的工艺窗口。',
+          mic: 'Particleboard, MDF and plywood all work as substrates. The common facing is melamine impregnated paper; veneer and film facing are also supported. Different facing materials need different temperature curves and hold times — tell us your main substrate and facing combination when ordering, and we will set the heating and pressing parameters to the matching process window.',
+          vn: 'Ván dăm, MDF và ván ép đều dùng làm ván nền được. Vật liệu dán phổ biến là giấy ngâm melamine, ngoài ra hỗ trợ veneer và phim. Mỗi vật liệu cần đường nhiệt và thời gian giữ áp khác nhau — khi đặt hàng cho biết tổ hợp ván nền và vật liệu chính, chúng tôi sẽ chỉnh tham số gia nhiệt và ép theo đúng quy trình.',
+          ru: 'Основой могут быть ДСП, МДФ и фанера. Типовая облицовка — меламиновая пропитанная бумага; также поддерживаются шпон и плёнка. Разные материалы требуют своих температурных кривых и времени выдержки: при заказе укажите основную пару «основа + облицовка», и мы настроим параметры нагрева и прессования под нужный технологический режим.'
+        }
+      },
+      {
+        q: {
+          cn: '压出的板面起泡或不平怎么办？',
+          mic: 'What if the pressed surface blisters or is uneven?',
+          vn: 'Bề mặt ép bị phồng rộp hoặc không phẳng thì xử lý sao?',
+          ru: 'Что делать, если поверхность после прессования пузырится или неровная?'
+        },
+        a: {
+          cn: '起泡多与板面温差和卸压过快有关，不平整多与压力偏低或垫板变形有关。我们的热压板整块加热、板面温差小，液压系统保压稳定。设备到场后我们负责调机，把温度、压力、保压时间按您的板材调到工艺窗口内，交付时以实际压板质量验收。',
+          mic: 'Blistering is usually related to uneven surface temperature or depressurizing too fast; unevenness usually traces to low pressure or warped cauls. Our platens are heated as a whole with a small temperature spread, and the hydraulic system holds pressure steadily. After installation we commission the machine with you, tuning temperature, pressure and hold time to your panel, and acceptance is based on actual pressed panel quality.',
+          vn: 'Phồng rộp thường do chênh nhiệt độ mặt ép hoặc xả áp quá nhanh; bề mặt không phẳng thường do áp suất thấp hoặc tấm đệm biến dạng. Tấm ép của chúng tôi gia nhiệt đồng khối, chênh nhiệt nhỏ, hệ thủy lực giữ áp ổn định. Sau khi lắp đặt chúng tôi hiệu chỉnh nhiệt độ, áp suất, thời gian giữ áp theo ván của anh, nghiệm thu theo chất lượng tấm ép thực tế.',
+          ru: 'Пузыри чаще всего связаны с неравномерной температурой поверхности или слишком быстрым сбросом давления; неровность — с низким давлением или деформацией прокладных плит. Наши плиты греются по всей площади с малым разбросом температур, гидросистема держит давление стабильно. После монтажа мы выполняем пусконаладку: настраиваем температуру, давление и выдержку под вашу плиту, приёмка — по фактическому качеству готовых панелей.'
+        }
+      },
+      {
+        q: {
+          cn: '能接入整条贴面生产线吗？',
+          mic: 'Can it be integrated into a full laminating line?',
+          vn: 'Có thể kết nối vào dây chuyền dán bề mặt hoàn chỉnh không?',
+          ru: 'Можно ли интегрировать его в полную линию облицовывания?'
+        },
+        a: {
+          cn: '可以，这正是我们的强项。热压机前后可配装卸板机、辊筒输送线、升降平台，组成自动贴面线，设备间用联锁信号对接。把您的厂房布局和产量目标发给我们，我们出整线配置方案和设备清单。',
+          mic: 'Yes — complete line solutions are exactly what we do. The hot press can be combined with loading/unloading machines, roller conveyors and lifting platforms into an automated laminating line, with machines interlocked by signals. Send us your plant layout and output target, and we will deliver a line configuration and equipment list.',
+          vn: 'Có, đây chính là thế mạnh của chúng tôi. Máy ép nóng có thể kết hợp máy nạp/xả, băng tải con lăn và bục nâng thành dây chuyền dán tự động, các thiết bị liên động bằng tín hiệu. Gửi mặt bằng xưởng và mục tiêu sản lượng, chúng tôi sẽ đưa phương án cấu hình dây chuyền và danh sách thiết bị.',
+          ru: 'Да — комплектные линии как раз наша сильная сторона. Горячий пресс объединяется с загрузчиком/разгрузчиком, рольгангом и подъёмным столом в автоматическую линию облицовывания с межмашинными блокировками. Пришлите планировку цеха и целевой выпуск — мы подготовим конфигурацию линии и список оборудования.'
+        }
+      }
+    ],
     models: [
 
       {
@@ -203,6 +339,142 @@ export const productSeries: ProductSeries[] = [
     descRu: 'Холодное прессование древесины и панелей с равномерным и стабильным давлением. Простота в эксплуатации, широко применяется в производстве мебели и дверных полотен.',
     icon: '⬛',
     color: "url('/cold-press-bg.webp')",
+    intro: [
+      {
+        cn: '冷压机不加温，靠液压缸的长行程静压力把板材压合定型，适合胶合板、单板、中板以及免漆板、蜂窝板等冷压成型的工序。压合过程缓慢均匀，板材内应力小，不易开裂变形，是厚板覆合与冷固胶工艺的主力设备。',
+        mic: 'A cold press applies no heat. It uses the long-stroke static force of hydraulic cylinders to bond and set panels — suitable for plywood, veneer, core panels, melamine-faced board and honeycomb panels in cold pressing. The slow, even pressing keeps internal stress low, so panels are less likely to crack or warp. It is the main machine for thick-panel laminating and cold-cure gluing.',
+        vn: 'Máy ép lạnh không gia nhiệt, dùng áp lực tĩnh hành trình dài của xi lanh thủy lực để ép và định hình ván, phù hợp ép lạnh ván ép, veneer, ván lõi, ván không sơn và ván tổ ong. Quá trình ép chậm và đồng đều, ứng suất trong ván nhỏ, ít nứt vỡ cong vênh — là thiết bị chủ lực cho ép dán ván dày và keo lạnh.',
+        ru: 'Холодный пресс не нагревается: длинноходовое статическое усилие гидроцилиндров склеивает и фиксирует плиты. Подходит для холодного прессования фанеры, шпона, серединок, ламинированных и сотовых панелей. Медленное равномерное прессование даёт малые внутренние напряжения — плиты меньше трескаются и коробятся. Это основная машина для облицовывания толстых плит и холодного отверждения клея.'
+      },
+      {
+        cn: '选冷压机先定两个数：需要的总压力（吨位）和最大板材幅面。吨位按板材面积乘单位压力算，台面按最大加工幅面留余量。MH3248 系列台面从 2500×1250mm 到 4200×1250mm，吨位 30T 到 250T，压力与台面按您的产品规格定制。',
+        mic: 'Sizing a cold press starts with two numbers: the total force you need (tonnage) and your largest panel format. Tonnage = panel area × required unit pressure; the table is sized to your largest panel with margin. The MH3248 series covers tables from 2500×1250mm to 4200×1250mm and 30T to 250T, with force and table size built to your product specs.',
+        vn: 'Chọn máy ép lạnh trước hết tính hai con số: tổng áp lực cần (tấn) và khổ ván lớn nhất. Tấn = diện tích ván × áp suất đơn vị; mặt bàn chọn theo khổ lớn nhất và chừa dư. Dòng MH3248 có mặt bàn từ 2500×1250mm đến 4200×1250mm, tải 30T đến 250T, áp lực và mặt bàn tùy theo quy cách sản phẩm của anh.',
+        ru: 'Подбор холодного пресса начинается с двух цифр: необходимое суммарное усилие (тоннаж) и максимальный формат плиты. Тоннаж = площадь плиты × требуемое удельное давление; стол выбирается по наибольшей плите с запасом. Серия MH3248 покрывает столы от 2500×1250 мм до 4200×1250 мм и усилия от 30 до 250 т — усилие и стол изготавливаются под вашу продукцию.'
+      }
+    ],
+    highlights: [
+      {
+        cn: '长行程液压缸，一次装夹完成大厚度板材的压合',
+        mic: 'Long-stroke hydraulic cylinders bond thick panels in a single clamping',
+        vn: 'Xi lanh thủy lực hành trình dài, ép ván dày chỉ trong một lần kẹp',
+        ru: 'Длинноходовые гидроцилиндры склеивают толстые пакеты за одну установку'
+      },
+      {
+        cn: '压力均匀稳定，板材内应力小，不易开裂变形',
+        mic: 'Uniform and stable pressure keeps internal stress low — less cracking and warping',
+        vn: 'Áp suất đồng đều ổn định, ứng suất nội tại nhỏ, ván ít nứt cong vênh',
+        ru: 'Равномерное стабильное давление даёт малые внутренние напряжения — меньше трещин и коробления'
+      },
+      {
+        cn: '吨位 30T–250T、台面最大 4200×1250mm，按产品定制',
+        mic: '30T–250T tonnage and tables up to 4200×1250mm, built to your product',
+        vn: 'Tải 30T–250T, mặt bàn tới 4200×1250mm, tùy chỉnh theo sản phẩm',
+        ru: 'Усилие 30–250 т, столы до 4200×1250 мм — изготовление под вашу продукцию'
+      },
+      {
+        cn: '结构简洁，故障率低，日常维护成本低',
+        mic: 'Simple structure, low failure rate and low day-to-day maintenance cost',
+        vn: 'Cấu tạo đơn giản, ít hỏng hóc, chi phí bảo trì hằng ngày thấp',
+        ru: 'Простая конструкция, низкая аварийность и невысокие эксплуатационные расходы'
+      },
+      {
+        cn: '与热压机配套组成「先冷压定型、后热压贴面」的整线工艺',
+        mic: 'Pairs with the hot press in a line: cold press for shaping, hot press for facing',
+        vn: 'Kết hợp máy ép nóng thành dây chuyền «ép lạnh định hình trước, ép nóng dán bề mặt sau»',
+        ru: 'Работает в паре с горячим прессом по схеме «сначала холодная формовка, затем горячее облицовывание»'
+      }
+    ],
+    selection: [
+      {
+        cn: '板材类型与最大幅面（胶合板/中板/免漆板/蜂窝板）',
+        mic: 'Panel type and largest format (plywood / core panels / melamine-faced / honeycomb)',
+        vn: 'Loại ván và khổ lớn nhất (ván ép/ván lõi/ván không sơn/ván tổ ong)',
+        ru: 'Тип плит и максимальный формат (фанера / серединки / ЛДСП / сотовые панели)'
+      },
+      {
+        cn: '需要的总压力（吨位）或单位压力要求',
+        mic: 'Required total force (tonnage) or unit pressure requirement',
+        vn: 'Tổng áp lực cần (tấn) hoặc yêu cầu áp suất đơn vị',
+        ru: 'Необходимое усилие (тоннаж) или удельное давление'
+      },
+      {
+        cn: '板垛最大厚度与单次压合数量',
+        mic: 'Maximum stack thickness and number of panels pressed at once',
+        vn: 'Độ dày chồng ván tối đa và số tấm ép mỗi lần',
+        ru: 'Максимальная толщина пакета и число плит за одно прессование'
+      },
+      {
+        cn: '日产量与冷压保压时间要求',
+        mic: 'Daily output and required cold-press hold time',
+        vn: 'Sản lượng ngày và thời gian giữ ép lạnh yêu cầu',
+        ru: 'Суточный выпуск и требуемое время выдержки'
+      },
+      {
+        cn: '供电条件（电压/相数）与车间布置空间',
+        mic: 'Power supply (voltage / phase) and workshop layout space',
+        vn: 'Nguồn điện (điện áp/số pha) và không gian bố trí xưởng',
+        ru: 'Электропитание (напряжение/фазы) и пространство компоновки цеха'
+      }
+    ],
+    faq: [
+      {
+        q: {
+          cn: '冷压机和热压机到底怎么分工？',
+          mic: 'How do cold press and hot press divide the work?',
+          vn: 'Máy ép lạnh và máy ép nóng phân công thế nào?',
+          ru: 'Как разделяются задачи холодного и горячего пресса?'
+        },
+        a: {
+          cn: '简单说：冷压管「定型」，热压管「贴面」。冷压用冷固胶把厚板、多层板压实定型，内应力小、不伤板；热压用高温把浸渍纸、覆膜快速压贴到基材表面。免漆板、蜂窝板这类怕高温的板材走冷压，贴面装饰工序走热压。两条都做的话，我们按「冷压定型 → 热压贴面」给您排整线。',
+          mic: 'In short: the cold press sets the shape, the hot press does the facing. The cold press bonds and sets thick and multi-layer panels with cold-cure glue — low internal stress, no heat damage. The hot press bonds impregnated paper and film onto the surface fast with heat. Heat-sensitive panels like melamine-faced and honeycomb boards go through the cold press, decorative facing goes through the hot press. If you need both, we lay out the line as cold press first, hot press after.',
+          vn: 'Nói ngắn gọn: ép lạnh lo «định hình», ép nóng lo «dán bề mặt». Ép lạnh dùng keo lạnh ép chặt ván dày, ván nhiều lớp, ứng suất nhỏ không hại ván; ép nóng dùng nhiệt độ cao dán nhanh giấy ngâm, phim lên bề mặt. Ván không sơn, ván tổ ong vốn sợ nhiệt nên đi ép lạnh, công đoạn dán trang trí đi ép nóng. Nếu làm cả hai, chúng tôi sẽ bố trí dây chuyền «ép lạnh trước → ép nóng sau».',
+          ru: 'Коротко: холодный пресс отвечает за формовку, горячий — за облицовку. Холодный склеивает и фиксирует толстые и многослойные пакеты клеем холодного отверждения — малые напряжения, без теплового вреда. Горячий быстро приклеивает пропитанную бумагу и плёнку к поверхности за счёт температуры. Теплочувствительные плиты (ЛДСП, сотовые) идут через холодный пресс, декоративная облицовка — через горячий. Если нужны оба, мы выстроим линию «холодный пресс → горячий пресс».'
+        }
+      },
+      {
+        q: {
+          cn: '吨位怎么算？压我的板需要多大压力？',
+          mic: 'How is tonnage calculated? How much force do my panels need?',
+          vn: 'Tải tính thế nào? Ép ván của tôi cần áp lực bao nhiêu?',
+          ru: 'Как рассчитывается тоннаж? Какое усилие нужно для моих плит?'
+        },
+        a: {
+          cn: '总压力 = 板材受压面积 × 单位压力。常见板材冷压单位压力在 0.5–1.0 MPa 之间，板材越厚、层数越多取越高值。把您的板材幅面和厚度发给我们，我们直接算出吨位并推荐对应机型，不用您自己套公式。',
+          mic: 'Total force = pressed panel area × unit pressure. For common panels, cold pressing runs 0.5–1.0 MPa unit pressure; thicker panels and more layers take the higher end. Send us your panel format and thickness and we will calculate the tonnage and recommend the matching model — no need to work the formula yourself.',
+          vn: 'Tổng áp lực = diện tích chịu ép × áp suất đơn vị. Với ván thông thường, ép lạnh lấy 0,5–1,0 MPa; ván dày hơn, nhiều lớp hơn lấy giá trị cao. Gửi khổ và độ dày ván cho chúng tôi, chúng tôi tính tải và chỉ định máy phù hợp, anh không cần tự công thức.',
+          ru: 'Усилие = площадь прессования × удельное давление. Для типовых плит холодное прессование идёт при 0,5–1,0 МПа; чем толще пакет и больше слоёв, тем ближе к верхней границе. Пришлите формат и толщину плит — мы посчитаем тоннаж и предложим подходящую модель, формула вам не понадобится.'
+        }
+      },
+      {
+        q: {
+          cn: '台面 4200×1250mm 是为多大板材设计的？',
+          mic: 'What panel size is the 4200×1250mm table designed for?',
+          vn: 'Mặt bàn 4200×1250mm thiết kế cho ván cỡ nào?',
+          ru: 'На какой размер плиты рассчитан стол 4200×1250 мм?'
+        },
+        a: {
+          cn: '4200×1250mm 台面主要服务超长幅面与双幅并压：比如 2440mm 长板横放加余量，或两小幅并排一次压合。如果您压的是标准 1220×2440mm 板，2500×1250mm 或 3200×1300mm 台面通常就够。把产品清单发给我们，按最大幅面选台面，不花冤枉钱。',
+          mic: 'The 4200×1250mm table mainly serves extra-long formats and double-up pressing: for example a 2440mm-long panel laid across with margin, or two smaller panels pressed side by side in one go. If you press standard 1220×2440mm panels, a 2500×1250mm or 3200×1300mm table is usually enough. Send us your product list and we will size the table to your largest format — no paying for capacity you don\'t need.',
+          vn: 'Mặt bàn 4200×1250mm chủ yếu phục vụ khổ siêu dài và ép hai tấm song song: ví dụ ván dài 2440mm đặt ngang kèm dư, hoặc hai tấm nhỏ ép cạnh nhau một lần. Nếu ép ván tiêu chuẩn 1220×2440mm, mặt bàn 2500×1250mm hoặc 3200×1300mm thường là đủ. Gửi danh sách sản phẩm, chúng tôi chọn mặt bàn theo khổ lớn nhất, không lãng phí.',
+          ru: 'Стол 4200×1250 мм предназначен для сверхдлинных форматов и двойного прессования: например, плита длиной 2440 мм поперёк с запасом или две малые плиты рядом за один цикл. Для стандартных плит 1220×2440 мм обычно достаточно стола 2500×1250 или 3200×1300 мм. Пришлите список продукции — подберём стол под максимальный формат, без лишних затрат.'
+        }
+      },
+      {
+        q: {
+          cn: '冷压一次能压多少张？保压要多久？',
+          mic: 'How many panels per cycle? How long is the hold time?',
+          vn: 'Mỗi lần ép được bao nhiêu tấm? Giữ ép bao lâu?',
+          ru: 'Сколько плит за цикл? Сколько держать под давлением?'
+        },
+        a: {
+          cn: '一次压合的数量取决于板垛总厚度和开距，开距最大可到 1000mm，能容纳厚垛。保压时间由胶水决定：冷固胶一般 30 分钟到数小时，具体按胶水说明书和车间温度定。告诉我们用哪种胶、日产量多少，我们给出每次压合数量和班产测算。',
+          mic: 'Panels per cycle depends on stack thickness and the daylight opening — up to 1000mm for thick stacks. Hold time is set by the glue: cold-cure adhesives typically run from 30 minutes to several hours, depending on the glue data sheet and shop temperature. Tell us which glue you use and your daily output, and we will estimate panels per cycle and output per shift.',
+          vn: 'Số tấm mỗi lần phụ thuộc tổng độ dày chồng ván và khoảng mở — tối đa 1000mm, chứa được chồng dày. Thời gian giữ ép do keo quyết định: keo lạnh thường từ 30 phút đến vài giờ, tùy hướng dẫn keo và nhiệt độ xưởng. Cho biết loại keo và sản lượng ngày, chúng tôi tính số tấm mỗi lần và sản lượng mỗi ca.',
+          ru: 'Число плит за цикл зависит от толщины пакета и просвета — до 1000 мм для толстых пакетов. Время выдержки определяет клей: клеи холодного отверждения — обычно от 30 минут до нескольких часов, по паспорту клея и температуре цеха. Укажите клей и суточный выпуск — мы рассчитаем плит за цикл и выработку за смену.'
+        }
+      }
+    ],
     models: [
       {
         id: 'mh3248-50t-20260207',
@@ -451,6 +723,142 @@ export const productSeries: ProductSeries[] = [
     descRu: 'Многопильная резка за один проход значительно повышает производительность. Высокая точность реза, подходит для продольной распиловки массива и плитных материалов.',
     icon: '⚙️',
     color: "url('/multi-blade-saw-bg.webp')",
+    intro: [
+      {
+        cn: '多片锯的核心是一根锯轴上装多片锯片，一次进给同时开出多条板条，替代反复装夹的单片锯开料。原木、方木经过它一次走完就是等宽板条，宽度和厚度靠锯片间距与垫套调整，是实木开料和板材纵剖线上提效率的关键工位。',
+        mic: 'The core of a multi-blade saw is multiple blades mounted on one arbor: one feed cuts several strips at once, replacing the repeated clamping of a single-blade saw. Logs and squares come out as equal-width strips in a single pass; strip width and thickness are set by blade spacing and spacers. It is the key station for solid-wood breakdown and panel ripping lines.',
+        vn: 'Cốt lõi của máy cưa đa lưỡi là gắn nhiều lưỡi trên một trục, một lần cấp cắt ra nhiều dải ván cùng lúc, thay thế cách kẹp đi kẹp lại của cưa đơn. Gỗ tròn, gỗ vuông đi qua một lần là ra các dải bằng nhau, chiều rộng và dày chỉnh bằng khoảng lưỡi và vòng đệm — là trạm then chốt nâng hiệu suất cho đường xẻ gỗ tròn và rọc ván.',
+        ru: 'Суть многопильного станка — несколько пил на одном шпинделе: за одну подачу нарезается несколько реек сразу, вместо многократных переустановок однопильного станка. Бревно или брус за один проход превращаются в рейки равной ширины; ширина и толщина задаются межпильными втулками. Это ключевой пост для раскроя массива и продольного роспуска плит.'
+      },
+      {
+        cn: '选多片锯主要看三个数：最大加工厚度、最少加工长度和锯轴直径。MJ1300 系列加工厚度 5–50mm、最少加工长度 650mm，板式与方木机型都有。锯片数量、上下轴配置和进出料辊台都按您开料的规格来配，保证一次开料就出成品条。',
+        mic: 'Choosing a multi-blade saw comes down to three numbers: maximum cutting thickness, minimum workpiece length and arbor diameter. The MJ1300 series cuts 5–50mm thick with a 650mm minimum length, in both panel and square-timber versions. Blade count, upper/lower arbor configuration and infeed/outfeed tables are all configured to your ripping specs, so one pass yields finished strips.',
+        vn: 'Chọn máy cưa đa lưỡi chủ yếu xem ba con số: độ dày gia công lớn nhất, chiều dài gia công nhỏ nhất và đường kính trục. Dòng MJ1300 gia công dày 5–50mm, chiều dài tối thiểu 650mm, có cả phiên bản ván và gỗ vuông. Số lưỡi, cấu hình trục trên/dưới và bàn进出 liệu đều được cấu hình theo quy cách xẻ của anh, một lần cắt là ra dải thành phẩm.',
+        ru: 'Выбор многопильного станка сводится к трём числам: максимальная толщина реза, минимальная длина заготовки и диаметр шпинделя. Серия MJ1300 режет толщиной 5–50 мм при минимальной длине 650 мм, в версиях для плит и для бруса. Число пил, конфигурация верхнего/нижнего шпинделей и подающие столы подбираются под ваши задачи, чтобы за один проход получать готовые рейки.'
+      }
+    ],
+    highlights: [
+      {
+        cn: '一次进给开出多条等宽板条，效率是单片锯的数倍',
+        mic: 'One feed cuts multiple equal-width strips — several times faster than a single-blade saw',
+        vn: 'Một lần cấp cắt nhiều dải bằng nhau, hiệu suất gấp nhiều lần cưa đơn',
+        ru: 'Одна подача нарезает несколько реек равной ширины — в разы быстрее однопильного станка'
+      },
+      {
+        cn: '加工厚度 5–50mm，板式与方木机型齐全',
+        mic: 'Cutting thickness 5–50mm, with panel and square-timber models available',
+        vn: 'Độ dày gia công 5–50mm, đủ phiên bản ván và gỗ vuông',
+        ru: 'Толщина реза 5–50 мм, модели для плит и бруса'
+      },
+      {
+        cn: '锯轴刚性好，锯片定位精准，切面光滑少跑锯',
+        mic: 'Rigid arbor and precise blade positioning for smooth cuts with minimal wander',
+        vn: 'Trục cưa cứng vững, định vị lưỡi chính xác, mặt cắt nhẵn, ít lệch đường',
+        ru: 'Жёсткий шпиндель и точная установка пил — чистый рез с минимальным уводом'
+      },
+      {
+        cn: '进出料辊台辅助送料，长条料连续开料不断流',
+        mic: 'Infeed/outfeed roller tables support feeding for continuous ripping of long stock',
+        vn: 'Bàn进出 liệu hỗ trợ đưa gỗ, xẻ liên tục vật liệu dài không gián đoạn',
+        ru: 'Подающие и приемные рольганги обеспечивают непрерывный роспуск длинных заготовок'
+      },
+      {
+        cn: '与上下料台组成开料工位，接入整线自动供料',
+        mic: 'Forms a breakdown station with loading tables and links into automated line feeding',
+        vn: 'Kết hợp bàn nạp/xả thành trạm xẻ liệu, kết nối cấp liệu tự động của dây chuyền',
+        ru: 'Образует пост раскроя с загрузочными столами и встраивается в автоматическую подачу линии'
+      }
+    ],
+    selection: [
+      {
+        cn: '开料对象（原木/方木/板材）与规格范围',
+        mic: 'What you rip (logs / squares / panels) and the size range',
+        vn: 'Đối tượng xẻ (gỗ tròn/gỗ vuông/ván) và phạm vi quy cách',
+        ru: 'Что распиливаете (бревно / брус / плиты) и диапазон размеров'
+      },
+      {
+        cn: '成品板条的宽度与厚度要求',
+        mic: 'Required strip width and thickness',
+        vn: 'Yêu cầu chiều rộng và độ dày dải thành phẩm',
+        ru: 'Требуемые ширина и толщина реек'
+      },
+      {
+        cn: '每日开料量与班次安排',
+        mic: 'Daily ripping volume and shift arrangement',
+        vn: 'Sản lượng xẻ mỗi ngày và bố trí ca làm việc',
+        ru: 'Суточный объём роспуска и сменность'
+      },
+      {
+        cn: '锯片数量与直径偏好（或有现成锯片库存）',
+        mic: 'Blade count and diameter preference (or existing blade stock)',
+        vn: 'Số lưỡi và đường kính mong muốn (hoặc tồn kho lưỡi sẵn có)',
+        ru: 'Число и диаметр пил (или имеющийся запас пил)'
+      },
+      {
+        cn: '供电条件与除尘配套情况',
+        mic: 'Power supply and dust extraction setup',
+        vn: 'Nguồn điện và tình trạng thiết bị hút bụi',
+        ru: 'Электропитание и аспирационная система'
+      }
+    ],
+    faq: [
+      {
+        q: {
+          cn: '多片锯一次能开几条？宽度怎么调？',
+          mic: 'How many strips per pass? How is width adjusted?',
+          vn: 'Một lần cắt được mấy dải? Chỉnh độ rộng thế nào?',
+          ru: 'Сколько реек за проход? Как регулируется ширина?'
+        },
+        a: {
+          cn: '条数取决于锯轴长度和锯片直径，装几片就开几条，常见的从 4 片到 10 片以上。每条宽度由相邻锯片之间的垫套厚度决定，换垫套就能改宽度组合。告诉我们成品的宽度清单，我们配好锯片组合和垫套，到场就能按您的规格开料。',
+          mic: 'Strip count depends on arbor length and blade diameter — as many strips as blades fitted, commonly 4 to 10 or more. Each strip width is set by the spacer thickness between adjacent blades; changing spacers changes the width combination. Send us your finished-strip width list and we will configure the blade set and spacers so the machine rips to your spec on day one.',
+          vn: 'Số dải phụ thuộc chiều dài trục và đường kính lưỡi — gắn bao nhiêu lưỡi cắt bấy nhiêu dải, thường từ 4 đến 10 lưỡi trở lên. Độ rộng mỗi dải do độ dày vòng đệm giữa hai lưỡi quyết định, đổi đệm là đổi tổ hợp độ rộng. Gửi danh sách độ rộng thành phẩm, chúng tôi sẽ cấu hình bộ lưỡi và vòng đệm, máy về là xẻ đúng quy cách ngay.',
+          ru: 'Число реек зависит от длины шпинделя и диаметра пил — сколько пил установлено, столько и режется; обычно от 4 до 10 и более. Ширина каждой рейки задаётся толщиной проставочных втулок между пилами: меняете втулки — меняется набор ширин. Пришлите список ширин готовых реек, мы скомплектуем набор пил и втулок, чтобы станок сразу работал под ваши размеры.'
+        }
+      },
+      {
+        q: {
+          cn: '板式多片锯和圆木多片锯有什么区别？',
+          mic: 'What is the difference between a panel multi-blade saw and a log multi-blade saw?',
+          vn: 'Máy cưa đa lưỡi dạng ván và dạng gỗ tròn khác nhau thế nào?',
+          ru: 'В чём разница между многопильным станком для плит и для бревна?'
+        },
+        a: {
+          cn: '板式多片锯加工的是已经锯好的板材或方料，任务是纵剖开条，追求精度和切面光洁度；圆木多片锯带上下轴或导向装置，直接加工原木圆料，先把圆料铣出基准面再开条。两个机型我都做，按您上游来料是板材还是原木选型，也可以两台配成「先圆后板」的组合。',
+          mic: 'A panel multi-blade saw processes boards and squares that are already sawn — its job is ripping with precision and clean cut faces. A log multi-blade saw has upper/lower arbors or guides to process round logs directly, milling a reference face before ripping. We make both: choose by whether your upstream material is sawn stock or logs, or pair the two as a log-first, panel-after setup.',
+          vn: 'Máy đa lưỡi dạng ván gia công ván và gỗ vuông đã xẻ sẵn, nhiệm vụ là rọc dọc với độ chính xác và mặt cắt mịn; máy dạng gỗ tròn có trục trên/dưới hoặc cụm định vị để gia công trực tiếp gỗ tròn, phay mặt chuẩn trước khi xẻ. Cả hai loại chúng tôi đều làm, chọn theo nguyên liệu đầu vào của anh là ván hay gỗ tròn, hoặc ghép hai máy thành tổ hợp «gỗ tròn trước, ván sau».',
+          ru: 'Многопильный станок для плит обрабатывает уже распиленные доски и брус — его задача роспуск с высокой точностью и чистым резом. Станок для бревна оснащается верхним/нижним шпинделем или направляющими и работает с круглым лесом напрямую, фрезеруя базовую поверхность перед роспуском. Мы делаем оба типа: выбор зависит от того, что поступает с предыдущей операции — доска или бревно; возможна и связка «сначала кругляк, затем плиты».'
+        }
+      },
+      {
+        q: {
+          cn: '锯片消耗大不大？多久换一次？',
+          mic: 'How much do blades wear? How often do they need changing?',
+          vn: 'Mòn lưỡi nhiều không? Bao lâu thay một lần?',
+          ru: 'Сильно изнашиваются пилы? Как часто их менять?'
+        },
+        a: {
+          cn: '锯片寿命与材质硬度和含砂量关系最大。正常实木开料，硬质合金锯片修磨周期通常在几十到上百小时；砂石多的桉木等会明显缩短。建议备两套锯片轮换修磨，我们随机配套合金锯片，也提供常用规格的备件供应，修磨周期和耗材计划会在交付资料里给您。',
+          mic: 'Blade life depends mostly on material hardness and grit content. For normal solid-wood ripping, carbide-tipped blades typically run tens to over a hundred hours between re-sharpenings; gritty species like eucalyptus shorten that noticeably. We recommend keeping two blade sets in rotation. Machines come with carbide blades fitted, we supply common spare specs, and the sharpening cycle and consumables plan are included in the handover documentation.',
+          vn: 'Tuổi thọ lưỡi chủ yếu phụ thuộc độ cứng vật liệu và hàm lượng cát. Xẻ gỗ tròn bình thường, lưỡi hợp kim cứng thường mài lại sau vài chục đến hơn trăm giờ; các loại gỗ nhiều cát như bạch đàn sẽ rút ngắn đáng kể. Nên chuẩn bị hai bộ lưỡi xoay vòng mài. Máy giao kèm lưỡi hợp kim, chúng tôi cũng cung cấp lưỡi các quy cách thông dụng, chu kỳ mài và kế hoạch vật tư sẽ có trong hồ sơ bàn giao.',
+          ru: 'Ресурс пил зависит прежде всего от твёрдости материала и содержания песка. При обычном роспуске массива твердосплавные пилы работают от десятков до ста с лишним часов между переточками; песочистые породы вроде эвкалипта заметно сокращают ресурс. Рекомендуем держать два комплекта пил для ротации. Станок поставляется с твердосплавными пилами, мы также поставляем ходовые типоразмеры, а график переточек и план расходников включены в документацию при передаче.'
+        }
+      },
+      {
+        q: {
+          cn: '能和上下料设备组成自动开料线吗？',
+          mic: 'Can it form an automatic ripping line with loading equipment?',
+          vn: 'Có thể kết hợp thiết bị nạp/xả thành đường xẻ tự động không?',
+          ru: 'Можно ли собрать автоматическую линию раскроя с загрузочным оборудованием?'
+        },
+        a: {
+          cn: '可以。多片锯前后配升降进料台、出料辊台，再接分等输送，就是一条连续开料线；需要的话还能和修边锯、横截锯联线。把您的来料形式和场地尺寸发给我们，我们出开料工位的布局图和配置清单。',
+          mic: 'Yes. Pair the saw with a lifting infeed table and outfeed roller table, then add sorting conveyors, and you have a continuous ripping line; it can also link to edge-trimming and crosscut saws. Send us your incoming material form and floor dimensions, and we will deliver a layout drawing and configuration list for the ripping station.',
+          vn: 'Có. Ghép máy với bàn nạp nâng hạ, bàn xả con lăn rồi thêm băng phân loại là thành đường xẻ liên tục; cần thì còn nối với máy xẻ cạnh, máy cắt ngang. Gửi hình thức nguyên liệu và kích thước mặt bằng, chúng tôi sẽ xuất bản vẽ bố trí trạm xẻ và danh sách cấu hình.',
+          ru: 'Да. Дополните станок подъёмным подающим столом и приемным рольгангом, добавьте сортировочные транспортеры — получится непрерывная линия роспуска; при необходимости она связывается с ребро-обрезными и торцовочными станками. Пришлите форму входного материала и размеры участка — мы подготовим планировку поста раскроя и список комплектации.'
+        }
+      }
+    ],
     models: [
       {
         id: 'mj1300-xd5-20240716',
@@ -746,6 +1154,142 @@ export const productSeries: ProductSeries[] = [
     descRu: 'Высокоэффективное оборудование для сращивания деревянных заготовок: прочное и ровное соединение.',
     icon: '📐',
     color: "url('/splicing-machine-bg.webp')",
+    intro: [
+      {
+        cn: '拼板机解决的是旋切中板和木皮「长短不齐、宽窄不一」的问题。设备自动完成检测、齐边、涂胶、拼接、定尺剪切和码垛，把零散短料拼成整张大板，直接替代人工铺板。对做生态板、胶合板中板的工厂来说，这道工序决定了出板率和人工成本。',
+        mic: 'The splicing machine solves the problem of rotary-cut core panels and veneer coming in uneven lengths and widths. It automatically detects, edge-trims, glues, splices, cuts to length and stacks, turning loose short strips into full-size sheets — directly replacing manual laying. For factories making eco-boards and plywood cores, this process decides both yield and labor cost.',
+        vn: 'Máy ghép ván giải quyết vấn đề ván lõi và veneer quay «dài ngắn không đều, rộng hẹp khác nhau». Thiết bị tự động hoàn thành phát hiện, cắt bi, phủ keo, ghép nối, cắt định tầm và xếp chồng, ghép các mảnh ngắn rời thành cả tấm hoàn chỉnh, thay trực tiếp việc rải tay. Với nhà máy làm ván sinh thái, ván lõi plywood, công đoạn này quyết định tỷ lệ xuất tấm và chi phí nhân công.',
+        ru: 'Пресс для сращивания решает проблему лущёных серединок и шпона «разной длины и ширины». Оборудование автоматически выполняет контроль, обрезку кромки, нанесение клея, сращивание, торцовку по размеру и укладку в штабель, превращая россыпь коротких кусков в полноценный лист — полностью заменяя ручную раскладку. Для фабрик, выпускающих эко-плиты и середины фанеры, этот передел определяет и выход годного, и затраты на труд.'
+      },
+      {
+        cn: '选拼板机看两个指标：能拼的厚度范围和整张幅面。MH1325 台面 3200×1300mm、工作行程 400mm，中板、木皮、生态板芯层都能拼，拼接宽度与厚度范围按您的料单定制，薄至零点几毫米的木皮也有对应机型。',
+        mic: 'Two specs decide the choice: the thickness range it can splice and the full-sheet format. The MH1325 has a 3200×1300mm table with a 400mm working stroke, splicing core panels, veneer and eco-board cores; splice width and thickness range are customized to your material list, with dedicated models for veneer down to a fraction of a millimeter.',
+        vn: 'Chọn máy ghép ván xem hai chỉ số: phạm vi độ dày ghép được và khổ cả tấm. MH1325 có mặt bàn 3200×1300mm, hành trình làm việc 400mm, ghép được ván lõi, veneer, lõi ván sinh thái; chiều rộng ghép và phạm vi độ dày tùy theo danh mục nguyên liệu, với veneer mỏng dưới một milimet cũng có máy tương ứng.',
+        ru: 'Выбор определяют два показателя: диапазон толщин сращивания и формат целого листа. MH1325 имеет стол 3200×1300 мм с рабочим ходом 400 мм — сращивает середины, шпон и заполнение эко-плит; ширина сращивания и диапазон толщин изготавливаются под ваш сортамент, а для шпона толщиной в доли миллиметра есть отдельные модели.'
+      }
+    ],
+    highlights: [
+      {
+        cn: '自动检测、齐边、涂胶、拼接、剪切、码垛一条龙，替代人工铺板',
+        mic: 'Automatic detecting, trimming, gluing, splicing, cutting and stacking in one flow — replacing manual laying',
+        vn: 'Tự động phát hiện, cắt bi, phủ keo, ghép, cắt, xếp chồng một trạm, thay thế rải tay',
+        ru: 'Автоматический контроль, обрезка, нанесение клея, сращивание, торцовка и штабелирование в одном потоке — вместо ручной раскладки'
+      },
+      {
+        cn: '长短不齐的短料也能拼成整张，出板率显著提升',
+        mic: 'Uneven short strips are spliced into full sheets, markedly improving yield',
+        vn: 'Mảnh ngắn dài ngắn không đều cũng ghép thành cả tấm, tỷ lệ xuất tấm tăng rõ rệt',
+        ru: 'Даже неровные короткие куски сращиваются в полный лист — заметно выше выход годного'
+      },
+      {
+        cn: '拼接平整牢固，接头强度接近整体板材',
+        mic: 'Splices are flat and strong, with joint strength close to solid sheet',
+        vn: 'Mối ghép phẳng chắc, độ bền接头 gần bằng ván nguyên tấm',
+        ru: 'Стыки ровные и прочные, по крепости близки к цельному листу'
+      },
+      {
+        cn: '中板、木皮、生态板芯层通吃，厚度范围按料单定制',
+        mic: 'Handles core panels, veneer and eco-board cores; thickness range customized to your list',
+        vn: 'Xử lý được ván lõi, veneer, lõi ván sinh thái, phạm vi độ dày tùy danh mục nguyên liệu',
+        ru: 'Работает с серединами, шпоном и заполнением эко-плит; диапазон толщин под ваш сортамент'
+      },
+      {
+        cn: '拼接速度可调，与烘干、砂光线联机构成芯层制备段',
+        mic: 'Adjustable splicing speed; links with drying and sanding lines into a core-preparation section',
+        vn: 'Tốc độ ghép điều chỉnh được, liên động với sấy, chà bóng thành đoạn chế bị lõi',
+        ru: 'Регулируемая скорость сращивания; связывается с сушкой и шлифовкой в участок подготовки середины'
+      }
+    ],
+    selection: [
+      {
+        cn: '拼接对象（中板/木皮/生态板芯层）与厚度范围',
+        mic: 'What you splice (core panels / veneer / eco-board cores) and thickness range',
+        vn: 'Đối tượng ghép (ván lõi/veneer/lõi ván sinh thái) và phạm vi độ dày',
+        ru: 'Что сращиваете (середины / шпон / заполнение эко-плит) и диапазон толщин'
+      },
+      {
+        cn: '来料尺寸（长短宽窄范围）与整张目标幅面',
+        mic: 'Incoming material sizes (length and width range) and target full-sheet format',
+        vn: 'Kích thước nguyên liệu (phạm vi dài rộng) và khổ cả tấm mục tiêu',
+        ru: 'Размеры входного материала (диапазон длин и ширин) и целевой формат листа'
+      },
+      {
+        cn: '日产整张数量与拼接速度要求',
+        mic: 'Daily full-sheet output and required splicing speed',
+        vn: 'Số tấm hoàn chỉnh mỗi ngày và tốc độ ghép yêu cầu',
+        ru: 'Суточный выпуск листов и требуемая скорость сращивания'
+      },
+      {
+        cn: '用胶类型（脲胶/白乳胶等）与涂胶量要求',
+        mic: 'Glue type (urea / PVA etc.) and glue spread requirement',
+        vn: 'Loại keo (keo urê/keo sữa trắng...) và lượng phủ keo yêu cầu',
+        ru: 'Тип клея (карбамидный / ПВА и др.) и требуемый расход'
+      },
+      {
+        cn: '是否需要配烘干线、码垛方向与场地布局',
+        mic: 'Whether a drying line is needed, stacking direction and site layout',
+        vn: 'Có cần dây chuyền sấy, hướng xếp chồng và bố trí mặt bằng',
+        ru: 'Нужна ли линия сушки, направление штабелирования и планировка участка'
+      }
+    ],
+    faq: [
+      {
+        q: {
+          cn: '多短的料能拼？最薄能拼多薄的木皮？',
+          mic: 'How short can the pieces be? How thin a veneer can it splice?',
+          vn: 'Mảnh ngắn cỡ nào ghép được? Veneer mỏng nhất ghép được bao nhiêu?',
+          ru: 'Какие короткие куски можно сращивать? Какой тонкий шпон доступен?'
+        },
+        a: {
+          cn: '常见来料短到几十厘米都能自动进料拼接，具体下限跟宽度有关——又短又窄的碎料建议先分级。木皮最薄能处理零点几毫米的规格，但太薄的木皮对张紧与输送要求高，我们按您的木皮厚度范围配对应机型，别用厚料机型凑合跑薄皮。',
+          mic: 'Incoming pieces as short as a few tens of centimeters feed and splice automatically; the exact lower limit depends on width — very short and narrow scraps should be sorted first. Veneer down to a fraction of a millimeter can be handled, but very thin veneer demands more from tensioning and conveying, so we match the model to your veneer thickness range rather than running thin skins on a thick-panel machine.',
+          vn: 'Nguyên liệu ngắn vài chục xen-ti-mét cũng cấp và ghép tự động; giới hạn cụ thể phụ thuộc chiều rộng — mảnh vụn vừa ngắn vừa hẹp nên phân loại trước. Veneer mỏng tới dưới một milimet xử lý được, nhưng veneer quá mỏng đòi hỏi cao về căng và truyền tải, chúng tôi sẽ chọn máy theo phạm vi độ dày veneer của anh, không dùng máy hàng dày chạy vỏ mỏng.',
+          ru: 'Куски длиной до нескольких десятков сантиметров подаются и сращиваются автоматически; точный нижний предел зависит от ширины — совсем короткую и узкую мелочь лучше предварительно рассортировать. Шпон толщиной в доли миллиметра обрабатывается, но очень тонкий шпон предъявляет повышенные требования к натяжению и транспортировке, поэтому модель подбирается под ваш диапазон толщин шпона, а не «толстолистовая машина на тонком шпоне».'
+        }
+      },
+      {
+        q: {
+          cn: '拼出来的板接头明显吗？影响后续贴面吗？',
+          mic: 'Are the joints visible? Do they affect later facing?',
+          vn: 'Mối ghép có rõ ràng không? Có ảnh hưởng đến dán bề mặt sau này không?',
+          ru: 'Видны ли стыки? Влияют ли они на последующее облицовывание?'
+        },
+        a: {
+          cn: '齐边切面平直、涂胶均匀、拼接压力稳定，接头处板面基本齐平；过砂光后表面一致性接近整芯板。后续贴三聚氰胺纸或木皮不受影响——接头平整度是出厂验收项，到场调试时我们按您的贴面工艺做试拼验证。',
+          mic: 'With straight trim cuts, even gluing and stable splice pressure, the surface at the joint is essentially flush; after sanding the surface uniformity approaches a solid core sheet. Later melamine or veneer facing is not affected — joint flatness is an acceptance item at delivery, and during commissioning we run trial splices against your facing process.',
+          vn: 'Mặt cắt bi phẳng, phủ keo đều, áp lực ghép ổn định, mặt ván tại mối ghép gần như phẳng hoàn toàn; sau chà bóng độ đồng nhất gần bằng ván lõi nguyên. Việc dán giấy melamine hoặc veneer sau đó không bị ảnh hưởng — độ phẳng mối ghép là hạng mục nghiệm thu khi giao, khi hiệu chỉnh máy chúng tôi ghép thử theo đúng quy trình dán bề mặt của anh.',
+          ru: 'При ровной обрезке, равномерном нанесении клея и стабильном давлении сращивания поверхность в стыке практически заподлицо; после шлифовки однородность близка к цельной середине. Последующая облицовка меламином или шпоном не страдает — плоскостность стыков является пунктом приёмо-сдаточных испытаний, при пусконаладке мы делаем пробные сращивания под ваш процесс облицовки.'
+        }
+      },
+      {
+        q: {
+          cn: '和人工铺板比，一年能省多少人工？',
+          mic: 'Compared with manual laying, how much labor can it save in a year?',
+          vn: 'So với rải tay, một năm tiết kiệm được bao nhiêu nhân công?',
+          ru: 'По сравнению с ручной раскладкой, сколько труда можно сэкономить за год?'
+        },
+        a: {
+          cn: '人工铺板一条芯层线通常要 4-6 人，拼接机一条线 1-2 人看机即可，速度还更稳定。以两班制算，一年省下的人工通常在数万元级；出板率提升带来的原料节约要看您来料的碎料比例。把日产和现在铺板人数发给我们，我们给您算一份具体的对比账。',
+          mic: 'A manual core-laying line typically takes 4-6 workers; a splicing line needs only 1-2 operators watching the machine, and at a steadier pace. On a two-shift basis, annual labor savings are usually in the tens of thousands of RMB; the material savings from higher yield depend on your scrap ratio. Send us your daily output and current laying headcount, and we will work out a concrete comparison.',
+          vn: 'Đường lõi rải tay thường cần 4-6 người, còn đường ghép máy chỉ cần 1-2 người trông máy, tốc độ còn ổn định hơn. Tính theo hai ca, nhân công tiết kiệm mỗi năm thường ở mức vài chục nghìn nhân dân tệ; phần tiết kiệm nguyên liệu nhờ tỷ lệ xuất tấm tăng phụ thuộc tỷ lệ mảnh vụn của anh. Gửi sản lượng ngày và số người rải hiện tại, chúng tôi tính cho anh một bản so sánh cụ thể.',
+          ru: 'Ручная раскладка середины обычно требует 4–6 рабочих; на линии сращивания достаточно 1–2 операторов, и темп стабильнее. При двухсменной работе экономия труда за год обычно измеряется десятками тысяч юаней; экономия материала за счёт роста выхода зависит от доли у вас мелочи. Пришлите суточный выпуск и нынешнюю численность раскладчиков — мы посчитаем конкретное сравнение.'
+        }
+      },
+      {
+        q: {
+          cn: '能和烘干、热压工序联起来吗？',
+          mic: 'Can it link with drying and hot pressing?',
+          vn: 'Có thể liên kết với sấy và ép nóng không?',
+          ru: 'Можно ли связать с сушкой и горячим прессованием?'
+        },
+        a: {
+          cn: '可以，这正是芯层制备段的标准组合：拼板机出整张 → 干燥/晾晒 → 热压成板。拼接速度可调，与烘干线的节拍匹配后整段连续跑。告诉我们的整线产能目标，我们把拼板机选型和节拍一起排进方案。',
+          mic: 'Yes — this is the standard core-preparation combination: splicer outputs full sheets, then drying/air curing, then hot pressing into board. Splicing speed is adjustable to match the drying line\'s rhythm, and the whole section runs continuously. Give us your line capacity target and we will size the splicer and pace the whole layout together.',
+          vn: 'Có, đây là tổ hợp chuẩn của đoạn chế bị lõi: máy ghép xuất cả tấm → sấy/phơi → ép nóng thành ván. Tốc độ ghép điều chỉnh được để khớp nhịp dây sấy, cả đoạn chạy liên tục. Cho chúng tôi mục tiêu công suất dây chuyền, chúng tôi sẽ chọn máy ghép và sắp nhịp luôn trong phương án.',
+          ru: 'Да — это стандартная связка участка подготовки середины: сращиватель выдаёт листы → сушка/выдержка → горячее прессование в плиту. Скорость сращивания регулируется под такт линии сушки, и весь участок работает непрерывно. Назовите целевую производительность линии — мы подберём сращиватель и расставим такт в общем плане.'
+        }
+      }
+    ],
     models: [
       {
         id: 'mh1325-20260608',
@@ -808,6 +1352,142 @@ export const productSeries: ProductSeries[] = [
     descRu: 'Профессиональное оборудование для производства дверных коробок: эффективная сборка и высокая точность.',
     icon: '🚪',
     color: "url('/door-frame-bg.webp')",
+    intro: [
+      {
+        cn: '门框组合机把木门、橱柜门、家具框架的组装压合做成一个工位。前后与侧向油缸同时加压，一次循环完成涂胶后的压紧定型，90 度角接头受力均匀，不空不裂。相比人工锤打楔紧，组合机的成品角度准、批量一致性好。',
+        mic: 'The door frame assembly machine turns the assembly and pressing of door leaves, cabinet doors and furniture frames into a single station. Front, rear and side cylinders press simultaneously, clamping and setting the glued joints in one cycle, so 90-degree corners are evenly loaded — no gaps, no cracks. Compared with manual mallet-and-wedge assembly, the machine delivers accurate angles and consistent batch quality.',
+        vn: 'Máy ghép khung cửa biến việc lắp ráp và ép khung cửa gỗ, cửa tủ, khung nội thất thành một trạm duy nhất. Các xi lanh trước, sau và bên ép đồng thời, trong một chu kỳ hoàn thành kẹp chặt và định hình sau khi dán keo, mối góc 90 độ chịu lực đều, không hở không nứt. So với lắp thủ công bằng búa và nêm, máy cho góc chính xác và chất lượng đồng đều giữa các lô.',
+        ru: 'Станок для сборки дверных коробок превращает сборку и прессование дверных полотен, фасадов и мебельных рамок в единый пост. Передние, задние и боковые гидроцилиндры сжимают одновременно — за один цикл проклеенные соединения фиксируются, прямые углы нагружаются равномерно, без щелей и трещин. По сравнению с ручной сборкой на клиньях станок даёт точные углы и стабильное качество партии.'
+      },
+      {
+        cn: '选门框组合机看最大组合尺寸：MH2210 最大可组 1220×2440mm，标准门扇整门一次组装。框架偏大或做衣柜整框的话，把您最大的框件尺寸告诉我们，按上限选型，避免大件装不下。',
+        mic: 'Sizing a door frame machine comes down to maximum assembly size: the MH2210 assembles frames up to 1220×2440mm — a standard door leaf in one go. For oversized frames or full wardrobe frames, send us your largest frame dimensions and we will size the machine to the upper limit so big frames always fit.',
+        vn: 'Chọn máy ghép khung cửa dựa vào kích thước ghép tối đa: MH2210 ghép được tới 1220×2440mm, cửa tiêu chuẩn ghép trọn trong một lần. Khung cỡ lớn hoặc cả khổ tủ, hãy cho chúng tôi kích thước khung lớn nhất, chọn máy theo giới hạn trên để khung to không bị thiếu chỗ.',
+        ru: 'Выбор станка определяется максимальным размером сборки: MH2210 собирает коробки до 1220×2440 мм — стандартное дверное полотно целиком за один раз. Для негабаритных рамок или полных корпусных рам пришлите размер наибольшей рамы — подберём станок с запасом, чтобы крупные рамы гарантированно помещались.'
+      }
+    ],
+    highlights: [
+      {
+        cn: '前后与侧向油缸同时加压，一次循环完成压紧定型',
+        mic: 'Front, rear and side cylinders press simultaneously — clamping and setting in one cycle',
+        vn: 'Xi lanh trước, sau và bên ép đồng thời, một chu kỳ hoàn thành kẹp chặt định hình',
+        ru: 'Передние, задние и боковые цилиндры сжимают одновременно — фиксация за один цикл'
+      },
+      {
+        cn: '最大组合尺寸 1220×2440mm，标准门扇一次组装',
+        mic: 'Maximum assembly size 1220×2440mm — a standard door leaf assembled in one pass',
+        vn: 'Kích thước ghép tối đa 1220×2440mm, cửa tiêu chuẩn ghép một lần',
+        ru: 'Максимальный размер сборки 1220×2440 мм — стандартное полотно за одну установку'
+      },
+      {
+        cn: '90 度角受力均匀，接头不空不裂，角度批量一致',
+        mic: 'Evenly loaded 90-degree corners — no gaps, no cracks, consistent angles across batches',
+        vn: 'Góc 90 độ chịu lực đều, mối nối không hở không nứt, góc đồng đều giữa các lô',
+        ru: 'Прямые углы нагружены равномерно — без щелей и трещин, углы стабильны от партии к партии'
+      },
+      {
+        cn: '工位化作业，一人上料一人下料即可成组',
+        mic: 'Station-based operation — one loader and one unloader can run the group',
+        vn: 'Vận hành theo trạm, một người nạp một người xả là đủ chạy tổ',
+        ru: 'Работа по постам: один на загрузку, один на выгрузку — и комплект собирается'
+      },
+      {
+        cn: '适用于木门、橱柜门、实木门窗与家具框架多种框件',
+        mic: 'Handles door leaves, cabinet doors, solid-wood windows/doors and furniture frames',
+        vn: 'Phù hợp cửa gỗ, cửa tủ, cửa sổ cửa gỗ nguyên khối và khung nội thất',
+        ru: 'Подходит для дверных полотен, фасадов, столярных окон/дверей и мебельных рам'
+      }
+    ],
+    selection: [
+      {
+        cn: '框件类型（木门/橱柜门/窗框/家具框）与最大外形尺寸',
+        mic: 'Frame type (door leaf / cabinet door / window frame / furniture frame) and largest dimensions',
+        vn: 'Loại khung (cửa gỗ/cửa tủ/khung cửa sổ/khung nội thất) và kích thước lớn nhất',
+        ru: 'Тип рамок (полотна / фасады / оконные рамы / мебельные рамы) и максимальные размеры'
+      },
+      {
+        cn: '框件厚度与杆件截面尺寸',
+        mic: 'Frame thickness and member cross-section sizes',
+        vn: 'Độ dày khung và tiết diện thanh liệu',
+        ru: 'Толщина рамок и сечение брусков'
+      },
+      {
+        cn: '日产框件数量与组装节拍',
+        mic: 'Daily frame output and assembly cycle time',
+        vn: 'Sản lượng khung mỗi ngày và nhịp lắp ráp',
+        ru: 'Суточный выпуск рамок и такт сборки'
+      },
+      {
+        cn: '用胶方式（手动涂胶/配套涂胶机）',
+        mic: 'Gluing method (manual / with a glue applicator)',
+        vn: 'Cách dán keo (thủ công/kèm máy phủ keo)',
+        ru: 'Способ нанесения клея (ручной / с аппликатором)'
+      },
+      {
+        cn: '是否需要转台或双工位交替作业',
+        mic: 'Whether a turntable or twin-station alternating operation is needed',
+        vn: 'Có cần bàn xoay hoặc hai trạm xen kẽ không',
+        ru: 'Нужен ли поворотный стол или двухпостная поочередная работа'
+      }
+    ],
+    faq: [
+      {
+        q: {
+          cn: '一次能组几个框？',
+          mic: 'How many frames per cycle?',
+          vn: 'Một lần ghép được mấy khung?',
+          ru: 'Сколько рамок за один цикл?'
+        },
+        a: {
+          cn: '常规做法一次一框，压得实、角度最准；做小框件（如柜门、抽屉框）时台面上可以并排多件同时压，数量按框件外形排布。把您最常见的框件尺寸清单发来，我们算单循环产量和班产。',
+          mic: 'The standard practice is one frame per cycle for maximum clamping force and the most accurate angles; for small frames (cabinet doors, drawer frames), several can be laid side by side and pressed together, with the count set by frame size. Send us your most common frame size list and we will calculate output per cycle and per shift.',
+          vn: 'Cách chuẩn là mỗi lần một khung để ép chắc và góc chuẩn nhất nhất; với khung nhỏ (cửa tủ, khung ngăn kéo) có thể đặt nhiều cái cạnh nhau ép cùng lúc, số lượng theo kích thước khung. Gửi danh sách kích thước khung phổ biến nhất, chúng tôi tính sản lượng mỗi chu kỳ và mỗi ca.',
+          ru: 'Стандартная практика — одна рамка за цикл: так достигается максимальное усилие и самые точные углы. Для малых рамок (фасады, ящики) несколько штук раскладываются рядом и прессуются одновременно; количество зависит от размера рамок. Пришлите список ходовых размеров — посчитаем выпуск за цикл и за смену.'
+        }
+      },
+      {
+        q: {
+          cn: '异形框或者斜角框能压吗？',
+          mic: 'Can it press irregular or angled frames?',
+          vn: 'Khung dị dạng hoặc góc xiên có ép được không?',
+          ru: 'Можно ли прессовать фигурные или скошенные рамки?'
+        },
+        a: {
+          cn: '标准机型压 90 度矩形框。斜角框（如 45 度拼角的相框、门套线）可以通过更换定位靠模实现；完全异形的曲面框不适合机型压合，建议改用分段夹具。把您的框件图纸发给我们，我们判断能不能压、怎么压。',
+          mic: 'The standard machine presses 90-degree rectangular frames. Angled frames (45-degree miter frames, architrave moldings) can be handled by swapping the positioning fixture; fully irregular curved frames are not suited to machine pressing and are better done with segmented clamps. Send us your frame drawings and we will judge whether and how it can be pressed.',
+          vn: 'Máy tiêu chuẩn ép khung chữ nhật 90 độ. Khung góc xiên (khung ảnh ghép 45 độ, đường bao cửa) có thể làm được bằng cách thay khu định vị; khung cong hoàn toàn dị dạng không phù hợp ép bằng máy, nên dùng kẹp chia đoạn. Gửi bản vẽ khung cho chúng tôi, chúng tôi đánh giá có ép được không và ép thế nào.',
+          ru: 'Стандартный станок прессует прямоугольные рамки 90 градусов. Рамки со скосом (45-градусные багетные, наличники) делаются заменой базирующей оснастки; полностью фигурные криволинейные рамки для станочного прессования не годятся — лучше сегментные струбцины. Пришлите чертежи ваших рамок — мы оценим, можно ли их прессовать и как.'
+        }
+      },
+      {
+        q: {
+          cn: '组装前涂胶是手动还是配套设备？',
+          mic: 'Is gluing done manually or with matching equipment?',
+          vn: 'Việc dán keo trước khi lắp là thủ công hay kèm thiết bị?',
+          ru: 'Нанесение клея перед сборкой — вручную или с оборудованием?'
+        },
+        a: {
+          cn: '小批量可以手动涂胶后上机压合；批量稳定的话建议配涂胶机，涂胶量均匀、接头强度也更一致。我们把涂胶环节编进工位布局，需要的话连涂胶机一起配。',
+          mic: 'For small batches, glue manually then press; for steady batches we recommend adding a glue applicator — more even glue spread and more consistent joint strength. We build the gluing step into the station layout and can supply the applicator together with the machine.',
+          vn: 'Lô nhỏ có thể dán keo thủ công rồi đưa lên máy ép; chạy lô ổn định nên kèm máy phủ keo, lượng keo đều và độ bền mối nối cũng đồng đều hơn. Chúng tôi đưa công đoạn dán keo vào bố trí trạm, cần thì kèm máy phủ keo luôn.',
+          ru: 'Для малых партий можно наносить клей вручную и затем прессовать; при стабильных партиях рекомендуем аппликатор — расход клея равномернее и прочность соединений стабильнее. Мы встроим операцию склейки в компоновку поста и при необходимости поставим аппликатор вместе со станком.'
+        }
+      },
+      {
+        q: {
+          cn: '和整条门扇生产线怎么衔接？',
+          mic: 'How does it connect to a full door production line?',
+          vn: 'Nó kết nối thế nào với dây chuyền sản xuất cửa hoàn chỉnh?',
+          ru: 'Как он стыкуется с полной линией производства дверей?'
+        },
+        a: {
+          cn: '典型流程是：开料 → 铣型/开槽 → 涂胶 → 门框组合机压合 → 定型陈放 → 砂光 → 贴面或油漆。组合机前面接涂胶工位，后面接陈放架与砂光段。我们要做整线的话，会把组合机的节拍和前后工位一起排，保证不堵工序。',
+          mic: 'The typical flow: ripping → profiling/grooving → gluing → door frame assembly press → curing rest → sanding → facing or painting. The assembly machine takes the gluing station before it and the curing racks and sanding section after it. When we plan a full line, we pace the assembly machine together with upstream and downstream stations so nothing bottlenecks.',
+          vn: 'Quy trình điển hình: xẻ liệu → phay rãnh → dán keo → máy ghép khung ép → tĩnh chờ định hình → chà bóng → dán bề mặt hoặc sơn. Máy ghép khung nhận trạm dán keo phía trước, kệ tĩnh chờ và đoạn chà bóng phía sau. Nếu làm trọn dây chuyền, chúng tôi sẽ sắp nhịp máy ghép cùng các trạm trước sau, tránh nghẽn công đoạn.',
+          ru: 'Типовая цепочка: раскрой → профилирование/фрезеровка → нанесение клея → пресс сборки коробок → технологическая выдержка → шлифовка → облицовка или окраска. Перед станком — пост склейки, после — стеллажи выдержки и участок шлифовки. Планируя полную линию, мы согласуем такт сборочного пресса с соседними постами, чтобы нигде не было затора.'
+        }
+      }
+    ],
     models: [
       {
         id: 'mh2210-20260325',
@@ -844,6 +1524,122 @@ export const productSeries: ProductSeries[] = [
     descRu: 'Различные механические детали и комплектующие, высококачественные оригинальные запчасти.',
     icon: '🔩',
     color: "url('/parts-bg.webp')",
+    intro: [
+      {
+        cn: '设备用久了，易损件和备件的供应速度直接决定停机时间。我们供应自家全系列设备的原厂零件：油缸密封件、导轨滑块、锯片垫套、输送辊、电气元件与专用小件。零件按机型编码，报机型和零件名即可快速匹配。',
+        mic: 'When a machine ages, how fast you get wear parts and spares directly decides downtime. We supply original parts for our full machine range: cylinder seals, guide rails and sliders, saw spacers, conveyor rollers, electrical components and dedicated small parts. Parts are coded by machine model — just quote the model and part name for a fast match.',
+        vn: 'Máy dùng lâu, tốc độ cung cấp vật tư hao mòn và phụ tùng quyết định trực tiếp thời gian dừng máy. Chúng tôi cung cấp phụ tùng chính hãng cho toàn bộ dòng máy: gioăng xi lanh, ray trượt, vòng đệm lưỡi cưa, con lăn băng tải, linh kiện điện và các chi tiết nhỏ chuyên dụng. Phụ tùng mã hóa theo model máy, chỉ cần báo model và tên chi tiết là khớp nhanh.',
+        ru: 'Когда станок стареет, скорость поставки изнашиваемых деталей и запчастей напрямую определяет простой. Мы поставляем оригинальные детали ко всему парку нашего оборудования: уплотнения цилиндров, направляющие и каретки, распорные втулки пил, рольганги, электрику и специализированную мелочёвку. Запчасти закодированы по модели станка — для быстрого подбора достаточно назвать модель и наименование детали.'
+      },
+      {
+        cn: '订零件前建议先做一轮易损件盘点：油缸密封件的更换周期、输送辊磨损情况、电气元件的老化程度。一次性把常备件订齐，比停机后等件划算得多。不确定零件名的话，拍设备铭牌和零件照片发给我们，我们帮您对号。',
+        mic: 'Before ordering parts, it pays to run an audit of wear items: the replacement cycle of cylinder seals, the wear state of conveyor rollers, the aging of electrical components. Ordering common spares in one batch is far cheaper than waiting for parts after a breakdown. If you are unsure of a part name, photograph the machine nameplate and the part and send them over — we will match it for you.',
+        vn: 'Trước khi đặt phụ tùng nên rà soát một vòng vật tư hao mòn: chu kỳ thay gioăng xi lanh, mức mòn con lăn, mức độ lão hóa linh kiện điện. Đặt đủ vật tư thường dùng một lần luôn rẻ hơn chờ phụ tùng khi máy dừng. Không rõ tên chi tiết thì chụp tem máy và ảnh chi tiết gửi chúng tôi, chúng tôi giúp đối chiếu.',
+        ru: 'Перед заказом запчастей стоит провести ревизию изнашиваемых позиций: цикл замены уплотнений цилиндров, износ рольгангов, старение электрики. Закупить ходовые запчасти одной партией куда выгоднее, чем ждать деталь после поломки. Если не уверены в названии детали — сфотографируйте шильдик станка и саму деталь и пришлите нам, мы поможем с подбором.'
+      }
+    ],
+    highlights: [
+      {
+        cn: '原厂零件，按机型编码，匹配不返工',
+        mic: 'Original parts coded by machine model — right first time',
+        vn: 'Phụ tùng chính hãng, mã hóa theo model, khớp đúng không phải làm lại',
+        ru: 'Оригинальные запчасти с кодировкой по модели — подбор с первого раза'
+      },
+      {
+        cn: '覆盖油压、机械、电气三大类易损件',
+        mic: 'Covers hydraulic, mechanical and electrical wear parts',
+        vn: 'Bao phủ ba nhóm vật tư hao mòn: thủy lực, cơ khí, điện',
+        ru: 'Охватывает изнашиваемые детали трёх групп: гидравлика, механика, электрика'
+      },
+      {
+        cn: '常用件有备货，急件可加急发运',
+        mic: 'Common parts in stock; urgent items can be expedited',
+        vn: 'Vật tư thông dụng có sẵn kho, hàng gấp có thể xuất khẩn',
+        ru: 'Ходовые позиции на складе, срочные отправляются вне очереди'
+      },
+      {
+        cn: '大修与换件支持远程指导',
+        mic: 'Remote guidance available for overhauls and part replacement',
+        vn: 'Hỗ trợ hướng dẫn từ xa cho đại tu và thay phụ tùng',
+        ru: 'Дистанционное сопровождение капремонта и замены деталей'
+      },
+      {
+        cn: '老机型零件持续供应，不因停产断件',
+        mic: 'Parts for older models keep being supplied — no cutoff after model retirement',
+        vn: 'Phụ tùng máy đời cũ vẫn cung cấp liên tục, không gián đoạn khi ngừng model',
+        ru: 'Запчасти для снятых с производства моделей продолжают поставляться — обрыва нет'
+      }
+    ],
+    selection: [
+      {
+        cn: '设备机型（铭牌型号）与出厂年份',
+        mic: 'Machine model (nameplate) and year of manufacture',
+        vn: 'Model máy (tem nhãn) và năm sản xuất',
+        ru: 'Модель станка (шильдик) и год выпуска'
+      },
+      {
+        cn: '所需零件名称或照片，能提供损坏件实物更佳',
+        mic: 'Part name or photo; the failed part itself is even better',
+        vn: 'Tên hoặc ảnh phụ tùng, có sẵn chi tiết hỏng càng tốt',
+        ru: 'Название или фото детали; лучше всего — сама изношенная деталь'
+      },
+      {
+        cn: '零件数量与期望交期',
+        mic: 'Quantity and expected delivery time',
+        vn: 'Số lượng và thời gian giao mong muốn',
+        ru: 'Количество и желаемый срок поставки'
+      },
+      {
+        cn: '是否需要随件提供更换指导或工装',
+        mic: 'Whether replacement guidance or tooling is needed with the parts',
+        vn: 'Có cần kèm hướng dẫn thay thế hoặc dụng cụ chuyên dụng không',
+        ru: 'Нужны ли с деталями инструкция по замене или оснастка'
+      }
+    ],
+    faq: [
+      {
+        q: {
+          cn: '不是从你们厂买的机器，零件能配吗？',
+          mic: 'I bought my machine elsewhere — can you match parts for it?',
+          vn: 'Máy không phải mua từ nhà máy anh, có thể khớp phụ tùng không?',
+          ru: 'Станок куплен не у вас — можно ли подобрать к нему детали?'
+        },
+        a: {
+          cn: '通用件（密封件、轴承、输送辊、常规电气件）大概率能配，专用件要看结构。提供铭牌照片和零件实物照片，我们先判断能不能配再报价，配不了也会说明原因。',
+          mic: 'Generic parts (seals, bearings, conveyor rollers, common electricals) can usually be matched; dedicated parts depend on the structure. Send the nameplate photo and part photos — we will confirm feasibility before quoting, and if we cannot match it, we will say so and why.',
+          vn: 'Phụ tùng thông dụng (gioăng, vòng bi, con lăn, linh kiện điện thông thường) phần lớn khớp được, chi tiết chuyên dụng tùy kết cấu. Gửi ảnh tem nhãn và ảnh phụ tùng, chúng tôi xác nhận khớp được rồi mới báo giá; không khớp được sẽ nói rõ lý do.',
+          ru: 'Унифицированные детали (уплотнения, подшипники, ролики, распространённая электрика) обычно подобрать можно; специализированные — зависит от конструкции. Пришлите фото шильдика и фото детали — мы сначала подтвердим возможность подбора, потом выставим счёт; если нельзя — объясним почему.'
+        }
+      },
+      {
+        q: {
+          cn: '零件多久能到？',
+          mic: 'How fast do parts arrive?',
+          vn: 'Phụ tùng bao lâu thì tới?',
+          ru: 'Как быстро приходят запчасти?'
+        },
+        a: {
+          cn: '常用件有备货，确认订单后 2-3 天内发运；需要加工的专用件按件评估，一般 7-15 天。海运用空运还是海运由您定，急停机件建议空运。下订单时告诉我们目的地和时限，我们给准确的发运计划。',
+          mic: 'Stocked common parts ship within 2-3 days of order confirmation; machined dedicated parts are assessed per item, typically 7-15 days. Air or sea freight is your call — for a breakdown, we recommend air. Tell us the destination and deadline when ordering and we will give you a concrete shipping plan.',
+          vn: 'Vật tư thông dụng có kho, 2-3 ngày sau khi xác nhận đơn là xuất hàng; chi tiết phải gia công đánh giá theo từng loại, thường 7-15 ngày. Gửi hàng bằng đường bay hay đường biển do anh quyết, máy đang dừng gấp thì khuyên gửi đường bay. Khi đặt đơn cho biết điểm đến và thời hạn, chúng tôi sẽ có kế hoạch xuất hàng cụ thể.',
+          ru: 'Ходовые позиции со склада отгружаются в течение 2–3 дней после подтверждения заказа; детали под обработку оцениваются поштучно, обычно 7–15 дней. Авиа или море — на ваше решение; при простое станка рекомендуем авиа. При заказе укажите пункт назначения и срок — мы дадим конкретный план отгрузки.'
+        }
+      },
+      {
+        q: {
+          cn: '能不能给我列一份易损件备件清单？',
+          mic: 'Can you give me a recommended wear-parts spare list?',
+          vn: 'Có thể cho tôi một danh sách vật tư hao mòn nên dự phòng không?',
+          ru: 'Можно получить рекомендуемый список изнашиваемых запчастей?'
+        },
+        a: {
+          cn: '可以。按您的机型和使用强度，我们出一份年度备件清单：油缸密封件一套、易磨导条、输送辊若干、常用电气件（接触器、接近开关、继电器）。报机型和年产量，清单按实际工况给，不做通用模板。',
+          mic: 'Yes. Based on your machine model and duty intensity, we produce an annual spare list: one set of cylinder seals, wear-prone guide strips, several conveyor rollers, and common electricals (contactors, proximity switches, relays). Quote the model and annual output — the list is built to your actual duty, not a generic template.',
+          vn: 'Được. Theo model máy và cường độ sử dụng của anh, chúng tôi xuất danh sách dự phòng năm: một bộ gioăng xi lanh, thanh dẫn dễ mòn, vài con lăn băng tải, linh kiện điện thông dụng (contactor, công tắc tiệm cận, rơ le). Báo model và sản lượng năm, danh sách lập theo thực tế vận hành, không dùng mẫu chung.',
+          ru: 'Да. По вашей модели и интенсивности эксплуатации мы подготовим годовой список запчастей: комплект уплотнений цилиндров, изнашиваемые направляющие планки, несколько роликов, распространённая электрика (контакторы, датчики приближения, реле). Назовите модель и годовой выпуск — список составим под фактический режим работы, без шаблона.'
+        }
+      }
+    ],
     models: [
       {
         id: 'xiao-you-gang-50-dao-tao-20260507',
@@ -890,6 +1686,108 @@ export const productSeries: ProductSeries[] = [
     descRu: 'Дополнительное деревообрабатывающее оборудование для удовлетворения ваших разнообразных потребностей.',
     icon: '📦',
     color: "url('/other-bg.webp')",
+    intro: [
+      {
+        cn: '一个完整的板式或实木车间，除了热压、冷压、开料、拼板这些主工序，还需要推板机、抓板机、圆盘锯、四边锯等辅助设备把工位串起来。这个分类收录这些「配角」设备——单看不起眼，配齐了整条线的自动化程度就上一个台阶。',
+        mic: 'A complete panel or solid-wood shop needs more than the main processes of pressing, breakdown and splicing — auxiliary machines like pushers, panel grabbers, circular saws and four-side saws are what link the stations together. This category collects those supporting machines: unremarkable on their own, but completing them lifts the whole line\'s automation a level.',
+        vn: 'Một xưởng ván hay gỗ tròn hoàn chỉnh, ngoài các công đoạn chính như ép nóng, ép lạnh, xẻ liệu, ghép ván, còn cần các thiết bị hỗ trợ như máy đẩy, máy gắp ván, cưa đĩa, cưa bốn cạnh để nối các trạm lại. Danh mục này gom các máy «vai phụ» ấy — nhìn riêng thì bình thường, nhưng đủ bộ thì mức tự động hóa cả dây chuyền nâng lên một bậc.',
+        ru: 'Полноценный цех плитных или массивных изделий требует не только главных переделов — прессования, раскроя, сращивания, — но и вспомогательных машин: толкателей, захватов, дисковых и четырёхсторонних пил, которые связывают посты в единую цепочку. Эта категория собирает такие «машины второго плана»: по отдельности они незаметны, но в комплекте поднимают автоматизацию всей линии на ступень.'
+      },
+      {
+        cn: '这里每一台设备都按「它解决哪个工位的问题」来选型：推板机解决逐张分离上料，抓板机解决大板搬运，圆盘锯和四边锯解决截断与修边。不确定您的线缺哪一环，把工艺流程图或车间平面图发给我们，我们帮您把缺口找出来。',
+        mic: 'Every machine here is chosen by the station problem it solves: pushers for sheet-by-sheet infeed separation, panel grabbers for moving large panels, circular and four-side saws for cutoff and edge trimming. If you are not sure which link your line is missing, send us the process flow or a workshop floor plan and we will find the gaps.',
+        vn: 'Mỗi máy ở đây được chọn theo «vấn đề trạm nào nó giải quyết»: máy đẩy giải quyết tách từng tấm cấp liệu, máy gắp ván giải quyết bốc ván lớn, cưa đĩa và cưa bốn cạnh giải quyết cắt ngang và xẻ bi. Chưa rõ dây chuyền của anh thiếu khâu nào, gửi sơ đồ quy trình hoặc mặt bằng xưởng, chúng tôi giúp anh tìm ra khoảng trống.',
+        ru: 'Каждая машина здесь подбирается по тому, какую задачу поста она решает: толкатель — поштучное разделение при подаче, захват — перемещение больших плит, дисковая и четырёхсторонняя пила — торцовку и обрезку кромки. Если не уверены, какого звена не хватает вашей линии, пришлите технологическую схему или план цеха — мы найдём пробелы.'
+      }
+    ],
+    highlights: [
+      {
+        cn: '补齐主设备之间的搬运与截断环节，工位无缝衔接',
+        mic: 'Fills the handling and cutoff gaps between main machines, so stations connect seamlessly',
+        vn: 'Lấp khoảng trống vận chuyển và cắt ngang giữa các máy chính, các trạm nối liền mạch',
+        ru: 'Закрывает пробелы транспортировки и торцовки между основными станками — посты стыкуются без разрывов'
+      },
+      {
+        cn: '与主设备共用联锁信号，整线一个节拍跑',
+        mic: 'Shares interlock signals with the main machines — the whole line runs on one rhythm',
+        vn: 'Dùng chung tín hiệu liên động với máy chính, cả dây chuyền chạy một nhịp',
+        ru: 'Общие сигналы блокировки с основными станками — вся линия работает в одном такте'
+      },
+      {
+        cn: '推板机、抓板机、圆盘锯、四边锯按车间布局组合选配',
+        mic: 'Pushers, grabbers, circular and four-side saws selected to your shop layout',
+        vn: 'Máy đẩy, máy gắp, cưa đĩa, cưa bốn cạnh được chọn theo bố trí xưởng',
+        ru: 'Толкатели, захваты, дисковые и четырёхсторонние пилы подбираются под планировку цеха'
+      },
+      {
+        cn: '结构经过整线配套验证，装机即与上下游对齐',
+        mic: 'Designs proven in complete-line projects — aligned with upstream and downstream on day one',
+        vn: 'Cấu tạo đã qua kiểm chứng trong dự án dây chuyền trọn, lắp là khớp trước sau',
+        ru: 'Конструкции проверены в комплектных проектах линий — сразу состыкованы с соседним оборудованием'
+      },
+      {
+        cn: '单机可买，整线配套优先排产',
+        mic: 'Buy as single machines; complete-line orders get priority scheduling',
+        vn: 'Mua lẻ máy đơn được, đặt cả dây chuyền được ưu tiên xếp sản xuất',
+        ru: 'Можно купить по одной машине; комплектные заказы линии — в приоритете производства'
+      }
+    ],
+    selection: [
+      {
+        cn: '车间现有设备清单与工艺流程',
+        mic: 'Current equipment list and process flow',
+        vn: 'Danh sách thiết bị hiện có của xưởng và quy trình công nghệ',
+        ru: 'Список имеющегося оборудования и технологическая схема'
+      },
+      {
+        cn: '需要补位的环节（上料/搬运/截断/修边）',
+        mic: 'Which links need filling (feeding / handling / cutoff / edge trimming)',
+        vn: 'Khâu cần bổ sung (cấp liệu/vận chuyển/cắt ngang/xẻ bi)',
+        ru: 'Какие звенья нужно закрыть (подача / транспортировка / торцовка / обрезка)'
+      },
+      {
+        cn: '板材规格与单班吞吐量',
+        mic: 'Panel specs and throughput per shift',
+        vn: 'Quy cách ván và năng lực xử lý mỗi ca',
+        ru: 'Размеры плит и пропускная способность за смену'
+      },
+      {
+        cn: '车间平面尺寸与设备摆放约束',
+        mic: 'Workshop floor dimensions and machine placement constraints',
+        vn: 'Kích thước mặt bằng xưởng và ràng buộc vị trí đặt máy',
+        ru: 'Размеры цеха и ограничения на размещение оборудования'
+      }
+    ],
+    faq: [
+      {
+        q: {
+          cn: '我已有主设备，只买一两台辅助机能配得上吗？',
+          mic: 'I already have the main machines — will one or two auxiliaries still fit?',
+          vn: 'Tôi đã có máy chính, mua một hai máy phụ liệu có khớp được không?',
+          ru: 'Основные станки уже есть — впишутся ли одна-две вспомогательные машины?'
+        },
+        a: {
+          cn: '能。辅助机的价值就在与现役设备对接：推板机对您的升降平台高度、抓板机对您的垛板规格、锯的进出料高度对您现役线。提供现役设备的关键接口尺寸，我们按您的线改接口尺寸出机，不要求推倒重来。',
+          mic: 'Yes. The whole value of auxiliaries is interfacing with your existing machines: pusher matched to your lifting platform height, grabber to your pallet specs, saw infeed/outfeed heights to your current line. Give us the key interface dimensions of your existing equipment and we will build the machine to them — no need to start over.',
+          vn: 'Được. Giá trị của máy phụ là ghép nối với thiết bị đang dùng: máy đẩy khớp chiều cao bục nâng của anh, máy gắp theo quy cách chồng ván, chiều cao进出 của cưa khớp dây hiện có. Cung cấp kích thước giao diện then chốt của thiết bị hiện hành, chúng tôi chế máy theo kích thước đó, không cần đập đi làm lại.',
+          ru: 'Да. Ценность вспомогательных машин именно в стыковке с вашим парком: толкатель подгоняется под высоту вашего подъёмного стола, захват — под ваш формат штабелей, высоты подачи пилы — под действующую линию. Дайте ключевые стыковочные размеры имеющегося оборудования — мы изготовим машину под них, ничего ломать не придётся.'
+        }
+      },
+      {
+        q: {
+          cn: '这些辅助机有型号参数页吗？',
+          mic: 'Do these auxiliaries have spec pages?',
+          vn: 'Các máy phụ này có trang thông số riêng không?',
+          ru: 'У этих вспомогательных машин есть страницы с характеристиками?'
+        },
+        a: {
+          cn: '推板机、抓板机等常用机型有独立型号页，规格参数公开；少数按订单定制的机型参数依项目而变，页面列出的是基准配置。在型号页找不到的设备，直接在联系页说明需求，我们按工况出配置。',
+          mic: 'Common models like pushers and grabbers have their own model pages with published specs; a few project-customized machines vary by order, and pages show the baseline configuration. For anything without a model page, describe your need on the contact page and we will configure it to your duty.',
+          vn: 'Các máy thông dụng như máy đẩy, máy gắp có trang model riêng với thông số công khai; một ít máy tùy biến theo đơn hàng thì thông số thay đổi theo dự án, trang web nêu cấu hình cơ bản. Máy nào không có trang model, anh cứ nêu nhu cầu ở trang liên hệ, chúng tôi cấu hình theo điều kiện vận hành.',
+          ru: 'У ходовых моделей — толкателей, захватов — есть собственные страницы с опубликованными характеристиками; у части машин, дорабатываемых под заказ, параметры меняются от проекта к проекту, на страницах указана базовая комплектация. Для машин без страницы модели опишите потребность на странице контактов — мы составим комплектацию под ваш режим.'
+        }
+      }
+    ],
     models: [
       {
         id: "mj105m-20260328",
