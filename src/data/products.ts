@@ -897,15 +897,15 @@ export const productSeries: ProductSeries[] = [
         cn: "母榫机",
         mic: "Mortise Machine",
         vn: "Máy làm mộng",
-        ru: 'Прочее',
+        ru: "Долбёжный станок",
         images: [
           "/mortise-machine/mortise_MJ105M_20260328_blue-white/mortise_MJ105M_20260328_blue-white_1_up_001.webp",
           "/mortise-machine/mortise_MJ105M_20260328_blue-white/mortise_MJ105M_20260328_blue-white_4_up_001.webp"
         ],
         specs: [
-          { keyCn: "台面尺寸", keyMic: "Table Size", valueCn: "800×1000mm", valueMic: "800×1000mm" },
-          { keyCn: "槽宽", keyMic: "Groove Width", valueCn: "25mm", valueMic: "25mm" },
-          { keyCn: "槽长", keyMic: "Groove Length", valueCn: "800mm", valueMic: "800mm" },
+          { keyCn: "台面尺寸", keyMic: "Table Size",  keyVn: 'Kích thước mặt bàn', keyRu: 'Размер стола', valueCn: "800×1000mm", valueMic: "800×1000mm" },
+          { keyCn: "槽宽", keyMic: "Groove Width",  keyRu: 'Ширина паза', valueCn: "25mm", valueMic: "25mm" },
+          { keyCn: "槽长", keyMic: "Groove Length",  keyRu: 'Длина паза', valueCn: "800mm", valueMic: "800mm" },
           { keyCn: "燕尾槽调节范围", keyMic: "Dovetail Groove Adjustment Range", valueCn: "10mm-200mm", valueMic: "10mm-200mm" },
           { keyCn: "前拖把电机", keyMic: "Front Drag Motor", valueCn: "3kW方电机，带锯片夹，电机横置", valueMic: "3kW square motor with saw blade clamp, motor mounted horizontally" },
           { keyCn: "后拖把电机", keyMic: "Rear Drag Motor", valueCn: "3kW电机，配高速皮带及可装镂刀的主轴", valueMic: "3kW motor with high-speed belt and spindle for router bits" },
@@ -921,21 +921,22 @@ export const productSeries: ProductSeries[] = [
         cn: "立式铣床",
         mic: "Vertical Milling Machine",
         vn: "Máy phay đứng",
+        ru: "Фрезерный станок",
         images: [
           "/vertical-milling/vertical-milling_MX5115vertical-milling_20260429_blue-white/vertical-milling_MX5115vertical-milling_20260429_blue-white (12)_up_001.webp",
           "/vertical-milling/vertical-milling_MX5115vertical-milling_20260429_blue-white/vertical-milling_MX5115vertical-milling_20260429_blue-white (13)_up_001.webp",
           "/vertical-milling/vertical-milling_MX5115vertical-milling_20260429_blue-white/vertical-milling_MX5115vertical-milling_20260429_blue-white (30)_up_001.webp"
         ],
         specs: [
-          { keyCn: "工作台尺寸", keyMic: "Table Size", valueCn: "640×580mm", valueMic: "640×580mm" },
-          { keyCn: "工作台升降行程", keyMic: "Table Lifting Stroke", valueCn: "100mm", valueMic: "100mm" },
-          { keyCn: "工作台倾斜角度", keyMic: "Table Tilting Angle", valueCn: "45°", valueMic: "45°" },
+          { keyCn: "工作台尺寸", keyMic: "Table Size",  keyVn: 'Kích thước bàn làm việc', keyRu: 'Размер рабочего стола', valueCn: "640×580mm", valueMic: "640×580mm" },
+          { keyCn: "工作台升降行程", keyMic: "Table Lifting Stroke",  keyRu: 'Ход подъёма стола', valueCn: "100mm", valueMic: "100mm" },
+          { keyCn: "工作台倾斜角度", keyMic: "Table Tilting Angle",  keyRu: 'Угол наклона стола', valueCn: "45°", valueMic: "45°" },
           { keyCn: "最大铣削厚度", keyMic: "Max Milling Thickness", valueCn: "50mm", valueMic: "50mm" },
           { keyCn: "刀夹直径", keyMic: "Tool Holder Diameter", valueCn: "12.7mm", valueMic: "12.7mm" },
-          { keyCn: "主轴转速", keyMic: "Spindle Speed", valueCn: "18000r/min", valueMic: "18000r/min" },
+          { keyCn: "主轴转速", keyMic: "Spindle Speed",  keyVn: 'Tốc độ trục chính', keyRu: 'Частота вращения шпинделя', valueCn: "18000r/min", valueMic: "18000r/min" },
           { keyCn: "安装功率", keyMic: "Installed Power", valueCn: "3kW", valueMic: "3kW" },
-          { keyCn: "外形尺寸", keyMic: "Overall Dimensions", valueCn: "1000×600×900mm", valueMic: "1000×600×900mm" },
-          { keyCn: "重量", keyMic: "Weight", valueCn: "约170kg", valueMic: "Approx. 170kg" }
+          { keyCn: "外形尺寸", keyMic: "Overall Dimensions",  keyVn: 'Kích thước tổng thể', keyRu: 'Габаритные размеры', valueCn: "1000×600×900mm", valueMic: "1000×600×900mm" },
+          { keyCn: "重量", keyMic: "Weight",  keyVn: 'Trọng lượng', keyRu: 'Масса', valueCn: "约170kg", valueMic: "Approx. 170kg" }
         ],
         features: []
       },
@@ -945,22 +946,23 @@ export const productSeries: ProductSeries[] = [
         cn: "单片锯",
         mic: "Single Blade Saw",
         vn: "Máy cưa đơn",
+        ru: "Однопильный станок",
         images: [
           "/other/other_single-blade-saw_MJ153_20250516_grey-white/single-blade-saw_MJ153_20250516_grey-white_up_001.webp"
         ],
         specs: [
-          { keyCn: "锯片直径", keyMic: "Blade Diameter", valueCn: "305mm", valueMic: "305mm" },
-          { keyCn: "最大加工厚度", keyMic: "Max Processing Thickness", valueCn: "85mm", valueMic: "85mm" },
-          { keyCn: "锯切宽度", keyMic: "Cutting Width", valueCn: "360mm", valueMic: "360mm" },
-          { keyCn: "主轴转速", keyMic: "Spindle Speed", valueCn: "3700r/min", valueMic: "3700r/min" },
-          { keyCn: "主轴直径", keyMic: "Spindle Diameter", valueCn: "25.4mm", valueMic: "25.4mm" },
-          { keyCn: "送料速度", keyMic: "Feeding Speed", valueCn: "12-32m/min", valueMic: "12-32m/min" },
-          { keyCn: "送料电机功率", keyMic: "Feeding Motor Power", valueCn: "0.75kW", valueMic: "0.75kW" },
-          { keyCn: "主电机功率", keyMic: "Main Motor Power", valueCn: "7.5kW", valueMic: "7.5kW" },
-          { keyCn: "总功率", keyMic: "Total Power", valueCn: "8.25kW", valueMic: "8.25kW" },
-          { keyCn: "工作台尺寸", keyMic: "Table Size", valueCn: "1500×950mm", valueMic: "1500×950mm" },
-          { keyCn: "外形尺寸", keyMic: "Overall Dimensions", valueCn: "1600×1050×1500mm", valueMic: "1600×1050×1500mm" },
-          { keyCn: "重量", keyMic: "Weight", valueCn: "约750kg", valueMic: "Approx. 750kg" }
+          { keyCn: "锯片直径", keyMic: "Blade Diameter",  keyRu: 'Диаметр пилы', valueCn: "305mm", valueMic: "305mm" },
+          { keyCn: "最大加工厚度", keyMic: "Max Processing Thickness",  keyRu: 'Максимальная толщина обработки', valueCn: "85mm", valueMic: "85mm" },
+          { keyCn: "锯切宽度", keyMic: "Cutting Width",  keyRu: 'Ширина реза', valueCn: "360mm", valueMic: "360mm" },
+          { keyCn: "主轴转速", keyMic: "Spindle Speed",  keyVn: 'Tốc độ trục chính', keyRu: 'Частота вращения шпинделя', valueCn: "3700r/min", valueMic: "3700r/min" },
+          { keyCn: "主轴直径", keyMic: "Spindle Diameter",  keyVn: 'Đường kính trục chính', keyRu: 'Диаметр шпинделя', valueCn: "25.4mm", valueMic: "25.4mm" },
+          { keyCn: "送料速度", keyMic: "Feeding Speed",  keyVn: 'Tốc độ cấp liệu', keyRu: 'Скорость подачи', valueCn: "12-32m/min", valueMic: "12-32m/min" },
+          { keyCn: "送料电机功率", keyMic: "Feeding Motor Power",  keyVn: 'Công suất động cơ cấp liệu', keyRu: 'Мощность двигателя подачи', valueCn: "0.75kW", valueMic: "0.75kW" },
+          { keyCn: "主电机功率", keyMic: "Main Motor Power",  keyVn: 'Công suất động cơ chính', keyRu: 'Мощность главного двигателя', valueCn: "7.5kW", valueMic: "7.5kW" },
+          { keyCn: "总功率", keyMic: "Total Power",  keyVn: 'Tổng công suất', keyRu: 'Общая мощность', valueCn: "8.25kW", valueMic: "8.25kW" },
+          { keyCn: "工作台尺寸", keyMic: "Table Size",  keyVn: 'Kích thước bàn làm việc', keyRu: 'Размер рабочего стола', valueCn: "1500×950mm", valueMic: "1500×950mm" },
+          { keyCn: "外形尺寸", keyMic: "Overall Dimensions",  keyVn: 'Kích thước tổng thể', keyRu: 'Габаритные размеры', valueCn: "1600×1050×1500mm", valueMic: "1600×1050×1500mm" },
+          { keyCn: "重量", keyMic: "Weight",  keyVn: 'Trọng lượng', keyRu: 'Масса', valueCn: "约750kg", valueMic: "Approx. 750kg" }
         ],
         features: []
       },
