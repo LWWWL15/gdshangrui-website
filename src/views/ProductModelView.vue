@@ -298,12 +298,20 @@ const productSchema = computed(() => {
     : lang.value === 'vn' ? (series.value.descVn || series.value.descMic)
     : lang.value === 'ru' ? (series.value.descRu || series.value.descMic)
     : series.value.descMic
+  // 图片必须是绝对 URL —— schema.org 的 image 字段只接受绝对地址，
+  // 相对路径（/xxx.webp）Google 取不到，商品富媒体结果就废了。
+  const rawImage = images.value[0]
+  const image = rawImage
+    ? (rawImage.startsWith('http') ? rawImage : `${origin}${rawImage.startsWith('/') ? '' : '/'}${rawImage}`)
+    : undefined
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: model.value.model,
     description,
-    image: images.value[0] || undefined,
+    ...(image ? { image } : {}),
+    // 指向本页 —— 没有 url 的 Product 实体无法与页面关联
+    url: `${origin}/${lang.value}/products/${seriesId.value}/${modelId.value}`,
     brand: {
       '@type': 'Brand',
       name: 'SHANGRUIJX',
@@ -325,6 +333,11 @@ const faqSchema = computed(() => {
   const pack = seoPack.value
   if (!pack?.faq || pack.faq.length === 0) return null
   const origin = typeof window !== 'undefined' ? window.location.origin : 'https://gdshangrui.com'
+  // url 必须指向本页（FAQ 所在页）。SSR 时 window 未定义，不能用 location.pathname，
+  // 否则会退化成根域 —— 用路由参数拼，与面包屑末级保持一致。
+  const pageUrl = typeof window !== 'undefined'
+    ? `${window.location.origin}${window.location.pathname}`
+    : `${origin}/${lang.value}/products/${seriesId.value}/${modelId.value}`
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -336,7 +349,7 @@ const faqSchema = computed(() => {
         text: item.a,
       },
     })),
-    ...(origin ? { url: origin + (typeof window !== 'undefined' ? window.location.pathname : '') } : {}),
+    url: pageUrl,
   }
 })
 

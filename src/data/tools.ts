@@ -123,7 +123,7 @@ export const pressureCalculatorFaq: FaqEntry[] = [
     q: {
       cn: '「最大总压力」是按什么算的？',
       mic: 'How is the maximum total force calculated?',
-      vn: '「Lực tối đa» được tính như thế nào?',
+      vn: '«Lực tối đa» được tính như thế nào?',
       ru: 'Как рассчитывается максимальное суммарное усилие?',
     },
     a: {
