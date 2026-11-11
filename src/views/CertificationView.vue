@@ -50,7 +50,7 @@
             <dl class="cert-table">
               <div class="row">
                 <dt>{{ t('证书编号', 'Certificate No.', 'Số chứng nhận', 'Номер сертификата') }}</dt>
-                <dd>21002Q118085R0M</dd>
+                <dd>25024Q10808R0S</dd>
               </div>
               <div class="row">
                 <dt>{{ t('认证标准', 'Standard', 'Tiêu chuẩn', 'Стандарт') }}</dt>
@@ -62,12 +62,12 @@
               </div>
               <div class="row">
                 <dt>{{ t('认证机构', 'Certification Body', 'Cơ quan chứng nhận', 'Сертифицирующий орган') }}</dt>
-                <dd>中讯认证促进中心（Beijing Zhongxuan Certification & Promotion Center）</dd>
+                <dd>{{ t(certificates[0].issuedBy.cn, certificates[0].issuedBy.mic, certificates[0].issuedBy.vn, certificates[0].issuedBy.ru) }}</dd>
               </div>
             </dl>
           </div>
           <div class="cert-image">
-            <img src="/cert-iso9001.jpg" :alt="t('上锐机械 ISO 9001 质量管理体系认证证书', 'Shang Rui Machinery ISO 9001 quality management system certificate', 'Chứng nhận hệ thống quản lý chất lượng ISO 9001 của Shang Rui Machinery', 'Сертификат системы менеджмента качества ISO 9001 Shang Rui Machinery')" loading="lazy" />
+            <img :src="isoCertImage" :alt="t('上锐机械 ISO 9001 质量管理体系认证证书', 'Shang Rui Machinery ISO 9001 quality management system certificate', 'Chứng nhận hệ thống quản lý chất lượng ISO 9001 của Shang Rui Machinery', 'Сертификат системы менеджмента качества ISO 9001 Shang Rui Machinery')" loading="lazy" />
           </div>
         </div>
       </div>
@@ -101,7 +101,7 @@
             <p class="cert-note">{{ t('如需证书原件用于清关或投标，请通过上方联系方式索取，我们将提供扫描件与原件核验。', 'If you need the original certificates for customs clearance or tendering, contact us above — we will provide scans and originals for verification.', 'Nếu cần bản gốc chứng nhận để làm thủ tục hải quan hoặc đấu thầu, vui lòng liên hệ — chúng tôi sẽ cung cấp bản scan và bản gốc để kiểm chứng.', 'Если вам нужны оригиналы сертификатов для таможенного оформления или участия в тендере, свяжитесь с нами — мы предоставим сканы и оригиналы для проверки.') }}</p>
           </div>
           <div class="cert-image">
-            <img src="/cert-ce.jpg" :alt="t('上锐机械 CE 认证证书', 'Shang Rui Machinery CE certificate', 'Chứng nhận CE của Shang Rui Machinery', 'Сертификаты CE Shang Rui Machinery')" loading="lazy" />
+            <img :src="ceCertImage" :alt="t('上锐机械 CE 认证证书', 'Shang Rui Machinery CE certificate', 'Chứng nhận CE của Shang Rui Machinery', 'Сертификаты CE Shang Rui Machinery')" loading="lazy" />
           </div>
         </div>
       </div>
@@ -127,8 +127,15 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useLang } from '@/composables/useLang'
-const { t } = useLang()
+import { certificates } from '@/data/certifications'
+const { t, lang } = useLang()
+
+// 证书图片：中文站给中文正本，其余语言给英文正本（同一张证书、同一编号，
+// 只是证书自带的两种语言版本）。路径单一数据源在 data/certifications.ts。
+const isoCertImage = computed(() => certificates[0].image[lang.value])
+const ceCertImage = computed(() => certificates[1].image[lang.value])
 
 // CE 证书上明确列出的产品系列（不是全部产品都有 CE）
 const certifiedSeries = [

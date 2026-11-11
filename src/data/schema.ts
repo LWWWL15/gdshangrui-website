@@ -264,8 +264,8 @@ export function certificationPageSchemas(
       name: string
       /** 证书编号 */
       identifier: string
-      /** 认证机构 */
-      issuedBy: string
+      /** 认证机构（四语：cn 用证书上的中文名，其余语言用英文名） */
+      issuedBy: { cn: string; mic: string; vn: string; ru: string }
       /** 适用标准 / 认证标准（语言无关，证书上原文） */
       standards?: string
       /** 认证范围（四语，ISO 用） */
@@ -315,7 +315,7 @@ export function certificationPageSchemas(
         identifier: c.identifier,
         recognizedBy: {
           '@type': 'Organization',
-          name: c.issuedBy,
+          name: pick(lang, c.issuedBy.cn, c.issuedBy.mic, c.issuedBy.vn, c.issuedBy.ru),
         },
         description: descParts.join(' · '),
         ...(covers ? { about: { '@type': 'Thing', name: covers } } : {}),

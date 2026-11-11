@@ -6,22 +6,38 @@
 //
 // ⚠️ 数据来源：CE 证书与 ISO 证书实物上的编号/机构/标准，未做任何演绎。
 //    认证产品范围以 CE 证书上明确列出的为准（不是全部产品都有 CE）。
+//
+// 2026-11-12 第 14 轮修正（证书实物核对后）：
+//   ① ISO 证书号 21002Q118085R0M → 25024Q10808R0S
+//      实物证据：证书图片「证书注册号：25024Q10808R0S」（中英文版一致），
+//      英文版写 Certificate Registration No: 25024Q10808R0S；
+//      颁证 2024-05-09 / 有效期至 2027-05-08。
+//      外部佐证：启信宝工商公示「质量管理体系认证(ISO9001) 25024Q10808R0S 有效 2024-05-09~2027-05-08」。
+//   ② ISO 认证机构 中讯认证促进中心 → 中球联合国际认证（北京）有限公司
+//      实物证据：证书底部「中球联合国际认证（北京）有限公司」+ 英文
+//      ZhongQiu United International Certification (Beijing) Co., Ltd.。
+//   ③ 证书图片从「旧站营销横幅」换成「纯证书裁切 + WebP」，
+//      横幅中间那段中文营销文案（含过时主张「成立于2009年」与站内不符的机型
+//      MH3324）在 mic/vn/ru 页面属于「图片内中文」，文字类巡检查不到。
+//   ⚠️ CE 覆盖范围（证书实物只有 热压机/冷压机/板式多片锯 三类，
+//      页面正文与四语 description 写的是 6 类）属 TDH 冻结范围，
+//      11-22 后连同 description 一起改，本轮不动。
 
 export interface CertificateInfo {
   /** 证书名称，如 ISO 9001:2015 */
   name: string
   /** 证书编号 */
   identifier: string
-  /** 认证机构 */
-  issuedBy: string
+  /** 认证机构（法定名，四语；cn 用证书上的中文名，其余语言用证书上的英文名） */
+  issuedBy: { cn: string; mic: string; vn: string; ru: string }
   /** 适用标准 */
   standards?: string
   /** 认证范围（ISO 用，四语） */
   scope?: { cn: string; mic: string; vn: string; ru: string }
   /** 认证覆盖的产品（CE 用，四语） */
   covers?: { cn: string; mic: string; vn: string; ru: string }
-  /** 证书图片路径 */
-  image: string
+  /** 证书图片路径（四语：中文站给中文正本，其余语言给英文正本，同一编号） */
+  image: { cn: string; mic: string; vn: string; ru: string }
   /** 图片 alt（四语） */
   alt: { cn: string; mic: string; vn: string; ru: string }
 }
@@ -29,8 +45,13 @@ export interface CertificateInfo {
 export const certificates: CertificateInfo[] = [
   {
     name: 'ISO 9001:2015',
-    identifier: '21002Q118085R0M',
-    issuedBy: '中讯认证促进中心（Beijing Zhongxuan Certification & Promotion Center）',
+    identifier: '25024Q10808R0S',
+    issuedBy: {
+      cn: '中球联合国际认证（北京）有限公司',
+      mic: 'ZhongQiu United International Certification (Beijing) Co., Ltd.',
+      vn: 'ZhongQiu United International Certification (Beijing) Co., Ltd.',
+      ru: 'ZhongQiu United International Certification (Beijing) Co., Ltd.',
+    },
     standards: 'GB/T19001-2016 idt ISO 9001:2015',
     scope: {
       cn: '非标机械设备制造',
@@ -38,7 +59,12 @@ export const certificates: CertificateInfo[] = [
       vn: 'Sản xuất thiết bị máy móc không tiêu chuẩn',
       ru: 'Производство нестандартного машиностроительного оборудования',
     },
-    image: '/cert-iso9001.jpg',
+    image: {
+      cn: '/cert-iso9001-cn.webp',
+      mic: '/cert-iso9001-en.webp',
+      vn: '/cert-iso9001-en.webp',
+      ru: '/cert-iso9001-en.webp',
+    },
     alt: {
       cn: '上锐机械 ISO 9001 质量管理体系认证证书',
       mic: 'Shang Rui Machinery ISO 9001 quality management system certificate',
@@ -49,7 +75,12 @@ export const certificates: CertificateInfo[] = [
   {
     name: 'CE',
     identifier: 'CE2020101806 / CE2020101807 / CE20210607045',
-    issuedBy: 'STS Inspection & Certification Limited（UK）',
+    issuedBy: {
+      cn: 'STS Inspection & Certification Limited（UK）',
+      mic: 'STS Inspection & Certification Limited（UK）',
+      vn: 'STS Inspection & Certification Limited（UK）',
+      ru: 'STS Inspection & Certification Limited（UK）',
+    },
     standards: 'EN 1217:2000+A1:2009、EN 1259:2009+A1:2014、EN 12369:2010+A1:2014',
     covers: {
       cn: '胶合板多层热压机、胶合板多层冷压机、板式多片锯、拼板机、门框组合机、液压升降平台',
@@ -57,7 +88,12 @@ export const certificates: CertificateInfo[] = [
       vn: 'Máy ép nóng nhiều lớp cho ván ép, máy ép lạnh nhiều lớp cho ván ép, máy cưa đa lưỡi, máy ghép ván, máy ráp khung cửa, bàn nâng thủy lực',
       ru: 'Многослойные горячие прессы для фанеры, многослойные холодные прессы для фанеры, многопильные станки, прессы для сращивания, станки сборки дверных коробок, гидравлические подъёмные столы',
     },
-    image: '/cert-ce.jpg',
+    image: {
+      cn: '/cert-ce.webp',
+      mic: '/cert-ce.webp',
+      vn: '/cert-ce.webp',
+      ru: '/cert-ce.webp',
+    },
     alt: {
       cn: '上锐机械 CE 认证证书',
       mic: 'Shang Rui Machinery CE certificate',

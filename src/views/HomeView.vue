@@ -22,12 +22,12 @@
       <div class="container">
         <div class="certificates-grid">
           <div class="cert-card">
-            <img src="/cert-ce.jpg" alt="CE Certificate" class="cert-img" loading="lazy" />
-            <div class="cert-label" @click="lightboxImg = '/cert-ce.jpg'">{{ t('CE认证', 'CE Certification', 'Chứng nhận CE', 'Сертификат CE') }}</div>
+            <img :src="ceThumbImage" alt="CE Certificate" class="cert-img" loading="lazy" />
+            <div class="cert-label" @click="lightboxImg = ceCertImage">{{ t('CE认证', 'CE Certification', 'Chứng nhận CE', 'Сертификат CE') }}</div>
           </div>
           <div class="cert-card">
-            <img src="/cert-iso9001.jpg" alt="ISO9001 Certificate" class="cert-img" loading="lazy" />
-            <div class="cert-label" @click="lightboxImg = '/cert-iso9001.jpg'">{{ t('ISO9001', 'ISO9001', 'ISO9001', 'ISO9001') }}</div>
+            <img :src="isoCertImage" alt="ISO9001 Certificate" class="cert-img" loading="lazy" />
+            <div class="cert-label" @click="lightboxImg = isoCertImage">{{ t('ISO9001', 'ISO9001', 'ISO9001', 'ISO9001') }}</div>
           </div>
         </div>
       </div>
@@ -183,9 +183,16 @@ import { computed, ref, onMounted, onBeforeUnmount } from 'vue'
 import { useRoute } from 'vue-router'
 import { useLang } from '@/composables/useLang'
 import { productSeries, getAllModels } from '@/data/products'
+import { certificates } from '@/data/certifications'
 import DeliveryBanner from '@/components/DeliveryBanner.vue'
 const { t, tm, lang } = useLang()
 const route = useRoute()
+
+// 证书图：中文站给中文正本，其余语言给英文正本（同一张证书、同一编号）。
+// 首页用小图，点开灯箱看完整图。路径单一数据源在 data/certifications.ts。
+const isoCertImage = computed(() => certificates[0].image[lang.value])
+const ceCertImage = computed(() => certificates[1].image[lang.value])
+const ceThumbImage = '/cert-ce-thumb.webp'
 
 // Local helper: derive lang string from route (matches LangLayout's pattern)
 function getRouteLang(): 'cn' | 'mic' | 'vn' | 'ru' {
