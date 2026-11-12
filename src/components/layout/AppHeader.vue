@@ -77,7 +77,7 @@
       </div>
 
       <!-- Mobile hamburger -->
-      <button class="hamburger" @click="mobileOpen = true" aria-label="Menu">
+      <button class="hamburger" @click="mobileOpen = true" :aria-label="t('菜单', 'Menu', 'Menu', 'Меню')">
         <span></span><span></span><span></span>
       </button>
     </div>

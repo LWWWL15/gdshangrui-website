@@ -752,6 +752,20 @@ const extraSchemas = computed<Record<string, unknown>[]>(() => {
     return routeLang === 'cn' ? 'zh-CN' : routeLang === 'vn' ? 'vi' : routeLang === 'ru' ? 'ru' : 'en'
   })
 
+  // og:locale —— 社交平台（Facebook / LinkedIn）按语言决定把分享推给哪类受众。
+  // 11-12 第15轮补：此前 234 页全部缺失，四语站分享出去没有语言信号。
+  // 取值为 OG 标准 locale 码；og:locale:alternate 列出另外三语。
+  const ogLocales: Record<string, string> = {
+    cn: 'zh_CN',
+    mic: 'en_US',
+    vn: 'vi_VN',
+    ru: 'ru_RU',
+  }
+  const ogLocale = computed(() => ogLocales[getRouteLang()] || 'en_US')
+  const ogLocaleAlternates = computed(() =>
+    ['cn', 'mic', 'vn', 'ru'].filter(l => l !== getRouteLang()).map(l => ogLocales[l])
+  )
+
 useHead(() => {
   const stripped = getStrippedPath()
   // 博客栏目（列表页 + 详情页 /blog/:slug）整体 noindex：
@@ -770,8 +784,18 @@ useHead(() => {
       { property: 'og:title', content: currentTitle.value },
       { property: 'og:description', content: currentDesc.value },
       { property: 'og:image', content: ogImage.value },
+      // 11-12 第15轮补：og:image 实际尺寸 1200×630（已核实 og-image.jpg 像素），
+      // 社交平台据此预留版面，避免分享卡片抖动。
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+      { property: 'og:image:alt', content: 'Shang Rui Machinery' },
       { property: 'og:url', content: canonicalUrl.value },
       { property: 'og:type', content: 'website' },
+      // 11-12 第15轮补：og:site_name 用站内既有品牌名（四语 footer.copyright 一致）
+      { property: 'og:site_name', content: 'Shang Rui Machinery' },
+      // 11-12 第15轮补：og:locale 声明本页语言 + 另外三语，社交平台按语言分发给对应受众
+      { property: 'og:locale', content: ogLocale.value },
+      ...ogLocaleAlternates.value.map(loc => ({ property: 'og:locale:alternate', content: loc })),
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: currentTitle.value },
       { name: 'twitter:description', content: currentDesc.value },

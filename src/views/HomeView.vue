@@ -46,7 +46,7 @@
       <div class="container">
         <h2 class="section-title">{{ t('畅销产品', 'Best Sellers', t('畅销产品', 'Best Sellers', 'Sản phẩm bán chạy', 'Бестселлеры'), t('畅销产品', 'Best Sellers', 'Sản phẩm bán chạy', 'Бестселлеры')) }}</h2>
         <div class="bestsellers-wrapper">
-          <button class="scroll-btn scroll-left" @click="scrollLeft" aria-label="Scroll left">‹</button>
+          <button class="scroll-btn scroll-left" @click="scrollLeft" :aria-label="t('向左滚动', 'Scroll left', 'Cuộn sang trái', 'Прокрутить влево')">‹</button>
           <div class="bestsellers-scroll" ref="scrollContainer" @mouseenter="pauseAuto" @mouseleave="resumeAuto" @touchstart="pauseAuto" @touchend="resumeAuto">
             <router-link v-for="(p, i) in loopCards" :key="p.id + '-' + i" :to="`/${getRouteLang()}/products/` + p.id" class="bestseller-card" :tabindex="i >= bestSellers.length ? -1 : 0" :aria-hidden="i >= bestSellers.length">
               <div class="bestseller-image">
@@ -59,7 +59,7 @@
               </div>
             </router-link>
           </div>
-          <button class="scroll-btn scroll-right" @click="scrollRight" aria-label="Scroll right">›</button>
+          <button class="scroll-btn scroll-right" @click="scrollRight" :aria-label="t('向右滚动', 'Scroll right', 'Cuộn sang phải', 'Прокрутить вправо')">›</button>
         </div>
         <div class="bestsellers-dots">
           <button
@@ -67,7 +67,7 @@
             :key="'dot-' + p.id"
             class="dot"
             :class="{ active: activeIndex === i }"
-            :aria-label="`Go to slide ${i + 1}`"
+            :aria-label="t(`转到第 ${i + 1} 张`, `Go to slide ${i + 1}`, `Đến ảnh ${i + 1}`, `К слайду ${i + 1}`)"
             @click="goToSlide(i)"
           ></button>
         </div>

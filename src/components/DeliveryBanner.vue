@@ -1,6 +1,6 @@
 <template>
   <section class="section-delivery">
-    <div ref="bannerEl" class="delivery-banner" aria-label="delivery gallery">
+    <div ref="bannerEl" class="delivery-banner" :aria-label="t('出货实拍图库', 'Delivery photo gallery', 'Thư viện ảnh xuất hàng', 'Галерея фото отгрузок')">
       <div ref="scrollerEl" class="delivery-scroller"></div>
       <div class="delivery-overlay">
         <h2>{{ t('出货现场实拍', 'Delivery in Action', 'Hình Ảnh Xuất Hàng', 'Фото отгрузок') }}</h2>

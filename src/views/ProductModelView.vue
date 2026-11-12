@@ -3,7 +3,7 @@
     <!-- Marquee Banner -->
     <div
       class="ticker-banner"
-      aria-label="滚动公告"
+      :aria-label="t('滚动公告', 'Announcement ticker', 'Thông báo cuộn', 'Бегущая строка объявлений')"
     >
       <div class="ticker-track">
         <span
@@ -42,8 +42,8 @@
                 <img :src="currentImage" :alt="altFor(currentImage, model?.model || '')" />
                 <!-- 左右箭头 -->
                 <template v-if="images.length > 1">
-                  <button class="img-nav-btn img-prev" @click="prevImage" aria-label="Previous image">&lt;</button>
-                  <button class="img-nav-btn img-next" @click="nextImage" aria-label="Next image">&gt;</button>
+                  <button class="img-nav-btn img-prev" @click="prevImage" :aria-label="t('上一张图片', 'Previous image', 'Ảnh trước', 'Предыдущее изображение')">&lt;</button>
+                  <button class="img-nav-btn img-next" @click="nextImage" :aria-label="t('下一张图片', 'Next image', 'Ảnh tiếp theo', 'Следующее изображение')">&gt;</button>
                 </template>
               </template>
             </div>
@@ -218,6 +218,11 @@ const otherModels = computed(() => {
 })
 
 // WhatsApp 询价文本
+// 11-12 第15轮核查结论：**保持英文，不做四语化**。
+// 理由：这条消息的收件人是工厂（中文方），预填英文对工厂最好读；
+// 改成俄语/越南语反而可能让工厂读不懂 → 是「给买家方便」还是「给工厂方便」的问题，
+// 英文是跨境工厂询盘的行业惯例（跨境询盘通用语言）。
+// 11-12 已核实：站内没有该句的四语既有译法，改四语 = 新造 = 违反「不编造」铁律。
 const whatsappText = computed(() => {
   const modelName = model.value?.model || ''
   const seriesName = series.value?.mic || ''
