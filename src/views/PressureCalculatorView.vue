@@ -29,8 +29,8 @@
       <section class="controls-panel">
         <!-- Cylinder Spec -->
         <div class="control-group">
-          <label>{{ t('油缸规格', 'Cylinder Spec',  t('油缸规格', 'Cylinder Spec', 'Thông số xi-lanh', 'Характеристики цилиндра'),  t('油缸规格', 'Cylinder Spec', 'Thông số xi-lanh', 'Характеристики цилиндра')) }}</label>
-          <select v-model="selectedSpec">
+          <label for="pc-spec">{{ t('油缸规格', 'Cylinder Spec',  t('油缸规格', 'Cylinder Spec', 'Thông số xi-lanh', 'Характеристики цилиндра'),  t('油缸规格', 'Cylinder Spec', 'Thông số xi-lanh', 'Характеристики цилиндра')) }}</label>
+          <select id="pc-spec" name="cylinder_spec" v-model="selectedSpec">
             <option v-for="spec in specs" :key="spec.bore" :value="spec.bore">
               {{ spec.bore }}/{{ spec.rod }} mm
             </option>
@@ -39,32 +39,38 @@
 
         <!-- Cylinder Qty -->
         <div class="control-group">
-          <label>{{ t('油缸数量', 'Cyl. Qty',  t('油缸数量', 'Cyl. Qty', 'Số lượng xi-lanh', 'Кол-во цилиндров'),  t('油缸数量', 'Cyl. Qty', 'Số lượng xi-lanh', 'Кол-во цилиндров')) }}</label>
-          <input type="number" v-model.number="cylinderQty" min="1" max="20" step="1" />
+          <label for="pc-cyl-qty">{{ t('油缸数量', 'Cyl. Qty',  t('油缸数量', 'Cyl. Qty', 'Số lượng xi-lanh', 'Кол-во цилиндров'),  t('油缸数量', 'Cyl. Qty', 'Số lượng xi-lanh', 'Кол-во цилиндров')) }}</label>
+          <input id="pc-cyl-qty" name="cylinder_qty" type="number" v-model.number="cylinderQty" min="1" max="20" step="1" />
         </div>
 
         <!-- Max Total Force Display -->
         <div class="control-group">
-          <label>{{ t('最大总压力', 'MAX Pressure',  t('最大总压力', 'MAX Pressure', 'Áp lực tối đa', 'Макс. давление'),  t('最大总压力', 'MAX Pressure', 'Áp lực tối đa', 'Макс. давление')) }}</label>
-          <div class="max-force-display">≈{{ Math.round(maxForceAtRated) }}T</div>
+          <label for="pc-max-force">{{ t('最大总压力', 'MAX Pressure',  t('最大总压力', 'MAX Pressure', 'Áp lực tối đa', 'Макс. давление'),  t('最大总压力', 'MAX Pressure', 'Áp lực tối đa', 'Макс. давление')) }}</label>
+          <output id="pc-max-force" class="max-force-display">≈{{ Math.round(maxForceAtRated) }}T</output>
         </div>
 
         <!-- Area Center -->
         <div class="control-group range-group">
-          <label>{{ t('工件面积 (m2)', 'Workpiece Area (m2)',  t('工件面积 (m²)', 'Workpiece Area (m²)', 'Diện tích phôi (m²)', 'Площадь заготовки (м²)'),  t('工件面积 (m²)', 'Workpiece Area (m²)', 'Diện tích phôi (m²)', 'Площадь заготовки (м²)')) }}</label>
+          <label for="pc-area-range">{{ t('工件面积 (m2)', 'Workpiece Area (m2)',  t('工件面积 (m²)', 'Workpiece Area (m²)', 'Diện tích phôi (m²)', 'Площадь заготовки (м²)'),  t('工件面积 (m²)', 'Workpiece Area (m²)', 'Diện tích phôi (m²)', 'Площадь заготовки (м²)')) }}</label>
 
           <!-- Dimension inputs -->
           <div class="dimension-inputs">
             <input
+              id="pc-area-length"
+              name="length"
               type="number"
               v-model.number="length"
+              :aria-label="t('长度 (mm)', 'Length (mm)',  t('长度 (mm)', 'Length (mm)', 'Chiều dài (mm)', 'Длина (мм)'),  t('长度 (mm)', 'Length (mm)', 'Chiều dài (mm)', 'Длина (мм)'))"
               :placeholder="t('长度 (mm)', 'Length (mm)',  t('长度 (mm)', 'Length (mm)', 'Chiều dài (mm)', 'Длина (мм)'),  t('长度 (mm)', 'Length (mm)', 'Chiều dài (mm)', 'Длина (мм)'))"
               min="0"
             />
             <span>×</span>
             <input
+              id="pc-area-width"
+              name="width"
               type="number"
               v-model.number="width"
+              :aria-label="t('宽度 (mm)', 'Width (mm)',  t('宽度 (mm)', 'Width (mm)', 'Chiều rộng (mm)', 'Ширина (мм)'),  t('宽度 (mm)', 'Width (mm)', 'Chiều rộng (mm)', 'Ширина (мм)'))"
               :placeholder="t('宽度 (mm)', 'Width (mm)',  t('宽度 (mm)', 'Width (mm)', 'Chiều rộng (mm)', 'Ширина (мм)'),  t('宽度 (mm)', 'Width (mm)', 'Chiều rộng (mm)', 'Ширина (мм)'))"
               min="0"
             />
@@ -74,6 +80,8 @@
           <div class="range-row">
             <span class="range-label">{{ fmtArea(centerArea) }} m2</span>
             <input
+              id="pc-area-range"
+              name="area"
               type="range"
               v-model.number="centerArea"
               @input="onSliderInput"
@@ -87,10 +95,10 @@
 
         <!-- Pressure MPa slider ("查压力" mode) -->
         <div v-if="mode === 'pressure'" class="control-group range-group">
-          <label>{{ t('压强 (MPa)', 'Pressure (MPa)',  t('压强 (MPa)', 'Pressure (MPa)', 'Áp suất (MPa)', 'Давление (МПа)'),  t('压强 (MPa)', 'Pressure (MPa)', 'Áp suất (MPa)', 'Давление (МПа)')) }}</label>
+          <label for="pc-pressure-mpa">{{ t('压强 (MPa)', 'Pressure (MPa)',  t('压强 (MPa)', 'Pressure (MPa)', 'Áp suất (MPa)', 'Давление (МПа)'),  t('压强 (MPa)', 'Pressure (MPa)', 'Áp suất (MPa)', 'Давление (МПа)')) }}</label>
           <div class="range-row">
             <span class="range-label">{{ pressureMPa.toFixed(1) }} MPa</span>
-            <input type="range" v-model.number="pressureMPa" min="0.1" max="2.0" step="0.1" />
+            <input id="pc-pressure-mpa" name="pressure_mpa" type="range" v-model.number="pressureMPa" min="0.1" max="2.0" step="0.1" />
           </div>
           <div class="preset-buttons">
             <button @click="pressureMPa = 0.4" :class="{ active: pressureMPa === 0.4 }">
@@ -107,10 +115,10 @@
 
         <!-- Pressure in tons slider ("查压强" mode) -->
         <div v-if="mode === 'mpa'" class="control-group range-group">
-          <label>{{ t('压力 (T)', 'Pressure (T)',  t('压力 (T)', 'Pressure (T)', 'Áp lực (T)', 'Усилие (т)'),  t('压力 (T)', 'Pressure (T)', 'Áp lực (T)', 'Усилие (т)')) }}</label>
+          <label for="pc-pressure-t">{{ t('压力 (T)', 'Pressure (T)',  t('压力 (T)', 'Pressure (T)', 'Áp lực (T)', 'Усилие (т)'),  t('压力 (T)', 'Pressure (T)', 'Áp lực (T)', 'Усилие (т)')) }}</label>
           <div class="range-row">
             <span class="range-label">{{ pressureTons }} T</span>
-            <input type="range" v-model.number="pressureTons" min="0" max="1000" step="10" />
+            <input id="pc-pressure-t" name="pressure_tons" type="range" v-model.number="pressureTons" min="0" max="1000" step="10" />
           </div>
           <div class="preset-buttons">
             <button @click="pressureTons = 50" :class="{ active: pressureTons === 50 }">

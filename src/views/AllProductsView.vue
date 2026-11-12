@@ -18,14 +18,17 @@
       <div class="container">
         <!-- Search Bar -->
         <div class="search-bar">
-          <select v-model="selectedSeries" class="search-select">
+          <select id="products-series" name="series" v-model="selectedSeries" class="search-select" :aria-label="tm('home.productSeries', '产品系列')">
             <option value="">{{ t('所有系列', 'All Series',  t('所有系列', 'All Series', 'Tất cả dòng', 'Все серии'),  t('所有系列', 'All Series', 'Tất cả dòng', 'Все серии')) }}</option>
             <option v-for="s in seriesList" :key="s.id" :value="s.id">{{ t(s.cn, s.mic, s.vn, s.ru) }}</option>
           </select>
           <input
+            id="products-search"
+            name="keyword"
             v-model="keyword"
             type="text"
             class="search-input"
+            :aria-label="t('输入产品型号或参数搜索', 'Search by model or specs',  t('输入产品型号或参数搜索', 'Search by model or specs', 'Tìm theo mẫu hoặc thông số', 'Поиск по модели или характеристикам'),  t('输入产品型号或参数搜索', 'Search by model or specs', 'Tìm theo mẫu hoặc thông số', 'Поиск по модели или характеристикам'))"
             :placeholder="t('输入产品型号或参数搜索', 'Search by model or specs',  t('输入产品型号或参数搜索', 'Search by model or specs', 'Tìm theo mẫu hoặc thông số', 'Поиск по модели или характеристикам'),  t('输入产品型号或参数搜索', 'Search by model or specs', 'Tìm theo mẫu hoặc thông số', 'Поиск по модели или характеристикам'))"
           />
         </div>

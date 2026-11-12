@@ -14,8 +14,10 @@
         <div class="input-grid">
           <!-- Length -->
           <div class="input-group">
-            <label>{{ t('占地长度 (mm)', 'Length (mm)',  t('占地长度 (mm)', 'Length (mm)', 'Chiều dài (mm)', 'Длина основания (мм)'),  t('占地长度 (mm)', 'Length (mm)', 'Chiều dài (mm)', 'Длина основания (мм)')) }}</label>
+            <label for="gp-length">{{ t('占地长度 (mm)', 'Length (mm)',  t('占地长度 (mm)', 'Length (mm)', 'Chiều dài (mm)', 'Длина основания (мм)'),  t('占地长度 (mm)', 'Length (mm)', 'Chiều dài (mm)', 'Длина основания (мм)')) }}</label>
             <input
+              id="gp-length"
+              name="length"
               type="number"
               v-model.number="length"
               :placeholder="t('例：1200', 'e.g. 1200',  t('长度 (mm)', 'Length (mm)', 'Chiều dài (mm)', 'Длина (мм)'),  t('长度 (mm)', 'Length (mm)', 'Chiều dài (mm)', 'Длина (мм)'))"
@@ -26,8 +28,10 @@
 
           <!-- Width -->
           <div class="input-group">
-            <label>{{ t('占地宽度 (mm)', 'Width (mm)',  t('占地宽度 (mm)', 'Width (mm)', 'Chiều rộng (mm)', 'Ширина основания (мм)'),  t('占地宽度 (mm)', 'Width (mm)', 'Chiều rộng (mm)', 'Ширина основания (мм)')) }}</label>
+            <label for="gp-width">{{ t('占地宽度 (mm)', 'Width (mm)',  t('占地宽度 (mm)', 'Width (mm)', 'Chiều rộng (mm)', 'Ширина основания (мм)'),  t('占地宽度 (mm)', 'Width (mm)', 'Chiều rộng (mm)', 'Ширина основания (мм)')) }}</label>
             <input
+              id="gp-width"
+              name="width"
               type="number"
               v-model.number="width"
               :placeholder="t('例：800', 'e.g. 800',  t('宽度 (mm)', 'Width (mm)', 'Chiều rộng (mm)', 'Ширина (мм)'),  t('宽度 (mm)', 'Width (mm)', 'Chiều rộng (mm)', 'Ширина (мм)'))"
@@ -38,8 +42,10 @@
 
           <!-- Weight -->
           <div class="input-group">
-            <label>{{ t('重量 (kg)', 'Weight (kg)',  t('重量 (kg)', 'Weight (kg)', 'Trọng lượng (kg)', 'Масса (кг)'),  t('重量 (kg)', 'Weight (kg)', 'Trọng lượng (kg)', 'Масса (кг)')) }}</label>
+            <label for="gp-weight">{{ t('重量 (kg)', 'Weight (kg)',  t('重量 (kg)', 'Weight (kg)', 'Trọng lượng (kg)', 'Масса (кг)'),  t('重量 (kg)', 'Weight (kg)', 'Trọng lượng (kg)', 'Масса (кг)')) }}</label>
             <input
+              id="gp-weight"
+              name="weight"
               type="number"
               v-model.number="weight"
               :placeholder="t('例：5000', 'e.g. 5000',  t('例：5000', 'e.g. 5000', 'VD: 5000', 'напр.: 5000'),  t('例：5000', 'e.g. 5000', 'VD: 5000', 'напр.: 5000'))"

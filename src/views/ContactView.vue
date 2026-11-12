@@ -56,23 +56,23 @@
           <form class="contact-form card" @submit.prevent="handleSubmit">
             <h3>{{ t('发送询盘', 'Send Inquiry', 'Gửi yêu cầu', 'Отправить запрос') }}</h3>
             <div class="form-group">
-              <label>{{ t('姓名', 'Name', 'Tên', 'Имя') }} *</label>
-              <input v-model="form.name" type="text" :placeholder="t('您的姓名', 'Your name', 'Tên của bạn', 'Ваше имя')" required />
+              <label for="contact-name">{{ t('姓名', 'Name', 'Tên', 'Имя') }} *</label>
+              <input id="contact-name" name="from_name" autocomplete="name" v-model="form.name" type="text" :placeholder="t('您的姓名', 'Your name', 'Tên của bạn', 'Ваше имя')" required />
             </div>
             <div class="form-group">
-              <label>{{ t('邮箱', 'Email', 'Email', 'Электронная почта') }} *</label>
-              <input v-model="form.email" type="email" placeholder="your@email.com" required />
+              <label for="contact-email">{{ t('邮箱', 'Email', 'Email', 'Электронная почта') }} *</label>
+              <input id="contact-email" name="from_email" autocomplete="email" v-model="form.email" type="email" placeholder="your@email.com" required />
             </div>
             <div class="form-group">
-              <label>{{ t('感兴趣的产品', 'Product of Interest', 'Sản phẩm quan tâm', 'Интересующая продукция') }}</label>
-              <select v-model="form.product">
+              <label for="contact-product">{{ t('感兴趣的产品', 'Product of Interest', 'Sản phẩm quan tâm', 'Интересующая продукция') }}</label>
+              <select id="contact-product" name="product" v-model="form.product">
                 <option value="">{{ t('请选择', 'Please select', 'Vui lòng chọn', 'Пожалуйста, выберите') }}</option>
                 <option v-for="p in productOptions" :key="p.id" :value="p.id">{{ t(p.cn, p.mic, p.vn, p.ru) }}</option>
               </select>
             </div>
             <div class="form-group">
-              <label>{{ t('留言', 'Message', 'Tin nhắn', 'Сообщение') }} *</label>
-              <textarea v-model="form.message" rows="5" :placeholder="t('请描述您的需求...', 'Please describe your requirements...', 'Vui lòng mô tả yêu cầu của bạn...', 'Опишите ваши требования...')" required></textarea>
+              <label for="contact-message">{{ t('留言', 'Message', 'Tin nhắn', 'Сообщение') }} *</label>
+              <textarea id="contact-message" name="message" v-model="form.message" rows="5" :placeholder="t('请描述您的需求...', 'Please describe your requirements...', 'Vui lòng mô tả yêu cầu của bạn...', 'Опишите ваши требования...')" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-lg" style="width:100%;" :disabled="sending">
               {{ sending ? t('发送中...', 'Sending...', 'Đang gửi...', 'Отправка...') : t('发送询盘', 'Send Inquiry', 'Gửi yêu cầu', 'Отправить запрос') }}

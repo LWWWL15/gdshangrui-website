@@ -70,20 +70,20 @@
           <form class="contact-form card" @submit.prevent="handleInquiry">
             <h3>{{ t('发送询盘', 'Send Inquiry', tm('blogDetail.sendInquiry', 'Send Inquiry'), tm('blogDetail.sendInquiry', 'Send Inquiry')) }}</h3>
             <div class="form-group">
-              <label>{{ t('姓名', 'Name', tm('blogDetail.name', 'Name'), tm('blogDetail.name', 'Name')) }} *</label>
-              <input v-model="inquiryForm.name" type="text" :placeholder="t('您的姓名', 'Your name', tm('blogDetail.namePlaceholder', 'Your name'), tm('blogDetail.namePlaceholder', 'Your name'))" required />
+              <label for="blog-inq-name">{{ t('姓名', 'Name', tm('blogDetail.name', 'Name'), tm('blogDetail.name', 'Name')) }} *</label>
+              <input id="blog-inq-name" name="from_name" autocomplete="name" v-model="inquiryForm.name" type="text" :placeholder="t('您的姓名', 'Your name', tm('blogDetail.namePlaceholder', 'Your name'), tm('blogDetail.namePlaceholder', 'Your name'))" required />
             </div>
             <div class="form-group">
-              <label>{{ t('邮箱', 'Email', tm('blogDetail.email', 'Email'), tm('blogDetail.email', 'Email')) }} *</label>
-              <input v-model="inquiryForm.email" type="email" placeholder="your@email.com" required />
+              <label for="blog-inq-email">{{ t('邮箱', 'Email', tm('blogDetail.email', 'Email'), tm('blogDetail.email', 'Email')) }} *</label>
+              <input id="blog-inq-email" name="from_email" autocomplete="email" v-model="inquiryForm.email" type="email" placeholder="your@email.com" required />
             </div>
             <div class="form-group">
-              <label>{{ t('感兴趣的产品', 'Product of Interest', tm('blogDetail.productInterest', 'Product of Interest'), tm('blogDetail.productInterest', 'Product of Interest')) }}</label>
-              <input type="text" :value="productOf(caseData)" readonly />
+              <label for="blog-inq-product">{{ t('感兴趣的产品', 'Product of Interest', tm('blogDetail.productInterest', 'Product of Interest'), tm('blogDetail.productInterest', 'Product of Interest')) }}</label>
+              <input id="blog-inq-product" name="product" type="text" :value="productOf(caseData)" readonly />
             </div>
             <div class="form-group">
-              <label>{{ t('留言', 'Message', tm('blogDetail.message', 'Message'), tm('blogDetail.message', 'Message')) }} *</label>
-              <textarea v-model="inquiryForm.message" rows="5" :placeholder="t('请描述您的需求...', 'Please describe your requirements...', tm('blogDetail.messagePlaceholder', 'Please describe your requirements...'), tm('blogDetail.messagePlaceholder', 'Please describe your requirements...'))" required></textarea>
+              <label for="blog-inq-message">{{ t('留言', 'Message', tm('blogDetail.message', 'Message'), tm('blogDetail.message', 'Message')) }} *</label>
+              <textarea id="blog-inq-message" name="message" v-model="inquiryForm.message" rows="5" :placeholder="t('请描述您的需求...', 'Please describe your requirements...', tm('blogDetail.messagePlaceholder', 'Please describe your requirements...'), tm('blogDetail.messagePlaceholder', 'Please describe your requirements...'))" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-lg" style="width:100%;" :disabled="sending">
               {{ sending ? t('发送中...', 'Sending...', tm('blogDetail.sending', 'Sending...'), tm('blogDetail.sending', 'Sending...')) : t('发送询盘', 'Send Inquiry', tm('blogDetail.sendInquiryBtn', 'Send Inquiry'), tm('blogDetail.sendInquiryBtn', 'Send Inquiry')) }}
@@ -202,6 +202,8 @@
 import { ref, reactive, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useTranslations } from '@/composables/useTranslations'
+import emailjs from '@emailjs/browser'
+import { SITE_URL } from '@/data/schema'
 
 const { t, tm, lang } = useTranslations()
 const route = useRoute()
@@ -245,6 +247,15 @@ function productOf(c: any): string {
 function customerOf(c: any): string {
   if (getRouteLang() === 'cn') return c.customerName
   return c.customerNameRu || c.customerName
+}
+
+// 文章标题的四语取值（与模板 h1 的取法保持一致：vn/ru 缺字段时回落英文）
+function titleOf(c: any): string {
+  const l = getRouteLang()
+  if (l === 'cn') return c.titleCn
+  if (l === 'vn') return c.titleVn || c.titleMic
+  if (l === 'ru') return c.titleRu || c.titleMic
+  return c.titleMic
 }
 
 const caseData = computed(() => allCases.find(c => c.slug === caseSlug.value) || null)
@@ -321,13 +332,41 @@ async function handleInquiry() {
   if (!inquiryForm.name || !inquiryForm.email || !inquiryForm.message) return
   sending.value = true
   inquiryStatus.value = null
-  await new Promise(r => setTimeout(r, 1000))
-  inquiryStatus.value = {
-    type: 'success',
-    msg: t('✅ 询盘已发送！我们将在24小时内回复。', '✅ Inquiry sent! We will reply within 24 hours.', tm('blogDetail.inquirySent', '✅ Inquiry sent! We will reply within 24 hours.'), tm('blogDetail.inquirySent', '✅ Inquiry sent! We will reply within 24 hours.'))
+  try {
+    // 2026-11-13 修：这里原本是「假发送」——
+    // 只 await 了一个 1 秒定时器就显示「✅ 询盘已发送」并清空表单，emailjs 压根没被调用
+    //（本文件连 `import emailjs` 都没有）→ 四语 28 个博客详情页的询盘全部凭空消失。
+    // 现在与联系页共用同一套 EmailJS 服务/模板/公钥（站内既有，不新增任何凭据），
+    // 并在邮件里带上「来自哪篇文章 + 页面 URL + 相关产品」，工厂才知道这条询盘是哪来的。
+    const articleTitle = caseData.value ? titleOf(caseData.value) : ''
+    const productLabel = caseData.value ? productOf(caseData.value) : ''
+    const pageUrl = `${SITE_URL}/${lang.value}/blog/${caseSlug.value}`
+    await emailjs.send('service_e5zylo8', 'template_bss3iza', {
+      from_name: inquiryForm.name,
+      from_email: inquiryForm.email,
+      subject: articleTitle ? `Blog Inquiry: ${articleTitle}` : 'Blog Inquiry',
+      message: [
+        articleTitle ? `Article: ${articleTitle}` : '',
+        `URL: ${pageUrl}`,
+        productLabel ? `Product: ${productLabel}` : '',
+        '',
+        inquiryForm.message,
+      ].filter(Boolean).join('\n'),
+    }, 'DiimmdKWVXVktDpKb')
+    inquiryStatus.value = {
+      type: 'success',
+      msg: t('✅ 询盘已发送！我们将在24小时内回复。', '✅ Inquiry sent! We will reply within 24 hours.', tm('blogDetail.inquirySent', '✅ Inquiry sent! We will reply within 24 hours.'), tm('blogDetail.inquirySent', '✅ Inquiry sent! We will reply within 24 hours.'))
+    }
+    inquiryForm.name = ''; inquiryForm.email = ''; inquiryForm.message = ''
+  } catch {
+    // 失败也要说清楚，并把可直接发邮件的地址给出去（文案与联系页完全一致，站内既有）
+    inquiryStatus.value = {
+      type: 'error',
+      msg: t('❌ 发送失败，请直接发邮件至 caya15@qq.com', '❌ Failed to send. Please email caya15@qq.com directly.', '❌ Gửi thất bại. Vui lòng gửi email trực tiếp đến caya15@qq.com', '❌ Не удалось отправить. Пожалуйста, напишите напрямую на caya15@qq.com')
+    }
+  } finally {
+    sending.value = false
   }
-  inquiryForm.name = ''; inquiryForm.email = ''; inquiryForm.message = ''
-  sending.value = false
 }
 </script>
 
