@@ -43,9 +43,14 @@ function getAllPaths() {
       productPages.push(`/products/${series.id}/${model.id}`)
     }
   }
-  // 博客文章详情页也要进 sitemap（历史 bug：sitemap 一直缺博客详情，收录靠碰运气）
-  const blogPaths: string[] = blogArticles.map(a => `/blog/${a.slug}`)
-  return [...STATIC_PATHS, ...productPages, ...blogPaths]
+  // ⚠️ 博客详情页**故意不进 sitemap**（2026-11-13 第 19 轮改回）：
+  //    博客详情页现在是 noindex（沿用首页兜底 title/desc，等 11-22 观察期结束后
+  //    补齐独立 TDH 再解除 noindex 放开收录）。
+  //    sitemap 里提交 noindex URL = Google 直接报「Submitted URL marked noindex」，
+  //    只会污染主人的 GSC 基线，对收录零帮助（noindex 优先级高于 sitemap）。
+  //    解除 noindex 的那一天，把下面这行加回来即可：
+  //    const blogPaths: string[] = blogArticles.map(a => `/blog/${a.slug}`)
+  return [...STATIC_PATHS, ...productPages]
 }
 
 // 型号 id 里带日期（mh3248-50t-20260207 → 2026-02-07），用它做 lastmod 比"每次构建都填今天"诚实
