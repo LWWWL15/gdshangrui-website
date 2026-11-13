@@ -43,7 +43,9 @@ function getAllPaths() {
       productPages.push(`/products/${series.id}/${model.id}`)
     }
   }
-  return [...STATIC_PATHS, ...productPages]
+  // 博客文章详情页也要进 sitemap（历史 bug：sitemap 一直缺博客详情，收录靠碰运气）
+  const blogPaths: string[] = blogArticles.map(a => `/blog/${a.slug}`)
+  return [...STATIC_PATHS, ...productPages, ...blogPaths]
 }
 
 // 型号 id 里带日期（mh3248-50t-20260207 → 2026-02-07），用它做 lastmod 比"每次构建都填今天"诚实
