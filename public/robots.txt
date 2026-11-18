@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gdshangrui.com/sitemap.xml
+Sitemap: https://gdshangrui.com/cn/sitemap.xml
+Sitemap: https://gdshangrui.com/mic/sitemap.xml
+Sitemap: https://gdshangrui.com/vn/sitemap.xml
+Sitemap: https://gdshangrui.com/ru/sitemap.xml

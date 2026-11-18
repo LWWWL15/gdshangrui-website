@@ -1,0 +1,234 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "blog": "Blog",
+    "tools": "Tools",
+    "contact": "Contact Us"
+  },
+  "cta": {
+    "getQuote": "GET QUOTE",
+    "contact": "Contact Us",
+    "viewProducts": "View Products →"
+  },
+  "footer": {
+    "contact": "Contact Us",
+    "address": "No. 6, Shilong Avenue, Xintang Industrial Zone, Lunjiao Sub-district, Shunde District, Foshan, Guangdong, China",
+    "addressLabel": "Factory Address",
+    "addressLink": "View on Map",
+    "copyright": "Shang Rui Machinery. All rights reserved.",
+    "lang": {
+      "cn": "中文",
+      "en": "EN",
+      "vn": "VN",
+      "ru": "RU"
+    }
+  },
+  "bestSellers": {
+    "title": "Best Sellers"
+  },
+  "certificates": {
+    "title": "Certifications",
+    "ce": "CE Certification",
+    "iso9001": "ISO9001"
+  },
+  "home": {
+    "title": "Your Great Pick!",
+    "subtitle": "ISO9001 | CE Certificate | OEM, ODM",
+    "getQuote": "GET QUOTE",
+    "bestSellers": "Best Sellers",
+    "weCanMeetNeeds": "We can meet these needs because",
+    "since2013": "We established Shang Rui Machinery factory in China in 2013,",
+    "focusing": "consistently focusing on customization, manufacturing and export of woodworking machinery,",
+    "experience": "with team members having 10+ years of experience (some up to 30 years), and export experience to 20+ countries including Vietnam, Saudi Arabia, Indonesia, South Korea, and more.",
+    "contactUs": "Contact Us",
+    "viewProducts": "View Products",
+    "whyChoose": "Why Choose Shang Rui",
+    "productSeries": "Product Series",
+    "viewMore": "View More",
+    "since2013Title": "Since 2013",
+    "since2013P1": "Since 2013, Shang Rui Machinery has consistently focused on customization, manufacturing and export of woodworking machinery.",
+    "since2013P2": "We now have export experience to 20+ countries and serve 1000+ customers worldwide.",
+    "since2013P3": "We manufacture each product under strict quality control, holding CE and ISO-9001 certifications to meet international standards.",
+    "statFounded": "Founded",
+    "statCountries": "Countries",
+    "statCustomers": "Customers",
+    "weSupport": "We Support Your Challenges",
+    "fromConsult": "From product consultation to delivery scheduling, we serve you with proven results.",
+    "since2013Cert": "Since 2013 | ISO9001 | CE",
+    "delivery.galleryAlt.1": "Courier on-site delivery",
+    "delivery.galleryAlt.2": "Warehouse sorting operations",
+    "delivery.galleryAlt.3": "Cold chain transport vehicle",
+    "delivery.galleryAlt.4": "Customer signing for delivery",
+    "delivery.galleryAlt.5": "Packing intact and undamaged",
+    "delivery.galleryAlt.6": "Logistics vehicle departing",
+    "deliveryCta": "Click to see more delivery photos →"
+  },
+  "about": {
+    "tag": "About Shang Rui",
+    "title": "About Shang Rui Machinery",
+    "since2013": "Since 2013, we have consistently focused on customization, manufacturing and export of woodworking machinery",
+    "proven": "Proven Track Record & Trust",
+    "exportDetail": "Founded in 2013, Shang Rui Machinery has consistently focused on customization, manufacturing and export of woodworking machinery. We now have export experience to 20+ countries including Vietnam, Saudi Arabia, Indonesia, South Korea, and serve 1000+ customers worldwide.",
+    "qualityDetail": "We manufacture each product under strict quality control. We hold CE and ISO-9001 certifications, delivering products that comply with international standards.",
+    "founded": "Founded",
+    "exportCountries": "Export Countries",
+    "customers": "Customers",
+    "certifications": "Certifications",
+    "productionBase": "Production Base",
+    "factoryPhoto": "Factory Photo",
+    "factoryPhoto1": "Factory Photo 1",
+    "factoryPhoto2": "Factory Photo 2",
+    "factoryPhoto3": "Factory Photo 3",
+    "factoryPhoto4": "Factory Photo 4",
+    "contactUs": "Contact Us",
+    "address": "Address",
+    "factoryAddress": "No.6, Shilong Avenue, Shunde New Town Industrial Zone, Lunqiao Town, Shunde District, Foshan City, Guangdong Province, China",
+    "phoneWhatsApp": "Phone / WhatsApp",
+    "email": "Email",
+    "certItems": {
+      "iso": "Since 2013 | ISO9001 | CE"
+    }
+  },
+  "contact": {
+    "tag": "Contact Us",
+    "title": "Get In Touch",
+    "subtitle": "Welcome to inquire. We will reply within 24 hours.",
+    "infoTitle": "Contact Info",
+    "infoDesc": "Contact us through the following channels for product quotes and technical support.",
+    "followUs": "Follow Us",
+    "facebookPage": "Facebook Page",
+    "instagramPage": "Instagram Page",
+    "youtubePage": "YouTube Page",
+    "sendInquiry": "Send Inquiry",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "productInterest": "Product of Interest",
+    "selectPlaceholder": "Please select",
+    "message": "Message",
+    "messagePlaceholder": "Please describe your requirements...",
+    "submitInquiry": "Send Inquiry",
+    "sending": "Sending...",
+    "sentSuccess": "✅ Inquiry sent! We will reply within 24 hours.",
+    "sendFailed": "❌ Failed to send. Please email caya15@qq.com directly."
+  },
+  "blog": {
+    "blogTag": "Blog",
+    "blogTitle": "Industry Insights",
+    "blogSubtitle": "Stay updated with Shangrui Machinery news and industry trends",
+    "becomePartner": "Become Our Partner",
+    "contactForSolution": "Contact us for a customized solution",
+    "contactNow": "Contact Now"
+  },
+  "allProducts": {
+    "tag": "Products",
+    "title": "All Products",
+    "subtitle": "Professional woodworking machinery for diverse production needs",
+    "viewSeries": "View Product Series →",
+    "allSeries": "All Series",
+    "searchPlaceholder": "Search by model or specs",
+    "noProducts": "No products found",
+    "loading": "Loading...",
+    "noMore": "No more products"
+  },
+  "products": {
+    "tag": "Products",
+    "title": "Our Product Lines",
+    "subtitle": "Professional woodworking machinery for diverse production needs",
+    "models": "Models",
+    "viewDetails": "View Details →"
+  },
+  "model": {
+    "trialNotice": "All products can provide trial machine videos and photos before delivery. We also support sending samples for trial testing. Please contact us in advance if needed.",
+    "breadcrumbProducts": "Products",
+    "specs": "Technical Specifications",
+    "linkCopied": "Link Copied",
+    "copyLink": "Copy Product Link",
+    "specsCopied": "Specs Copied",
+    "copySpecs": "Copy Product Specs",
+    "specsPending": "Specifications to be updated. Please contact us for details.",
+    "features": "Features",
+    "getQuote": "Get a Quote",
+    "otherModels": "Other Models in This Series"
+  },
+  "seriesPage": {
+    "tag": "Products",
+    "titleSuffix": " Series",
+    "viewAll": "View All",
+    "viewDetails": "View Details →",
+    "noModels": "No models yet"
+  },
+  "tools": {
+    "toolsTag": "Tools",
+    "toolsTitle": "Collection of useful tools",
+    "toolsSubtitle": "Choose the right tool to complete calculations quickly",
+    "groundPressureCalculator": "Ground Pressure Calculator",
+    "groundPressureCalculatorDesc": "Calculate ground pressure based on product dimensions and weight",
+    "pressureCalculator": "Pressure Calculator",
+    "pressureCalculatorDesc": "Calculate total working pressure based on cylinder specs",
+    "pressureCalcTitle": "Pressure Calculator",
+    "pressureCalcSubtitle": "Usage: Given workpiece area and target pressure, find the working table pressure; given pressure and workpiece area, find the pressure.",
+    "findPressure": "Find Pressure",
+    "findMpa": "Find MPa",
+    "cylinderSpec": "Cylinder Spec",
+    "cylinderQty": "Cyl. Qty",
+    "maxPressure": "MAX Pressure",
+    "workpieceArea": "Workpiece Area (m²)",
+    "lengthPlaceholder": "Length (mm)",
+    "widthPlaceholder": "Width (mm)",
+    "displayRange": "Range",
+    "pressureMpa": "Pressure (MPa)",
+    "pressureT": "Pressure (T)",
+    "totalForce": "Total Force (T)",
+    "workpieceAreaM2": "Workpiece Area (m²)",
+    "groundPressureTitle": "Ground Pressure Calculator",
+    "groundPressureSubtitle": "Calculate ground pressure based on product dimensions and weight",
+    "lengthLabel": "Length (mm)",
+    "widthLabel": "Width (mm)",
+    "weightLabel": "Weight (kg)",
+    "weightPlaceholder": "e.g. 5000",
+    "groundPressureResult": "Ground Pressure",
+    "formula": "Formula: Weight (kg) ÷ [Length (mm) × Width (mm) ÷ 1,000,000] = Pressure (kg/m²)"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "message": "Sorry, the page you are looking for does not exist or has been removed.",
+    "backHome": "Back to Home",
+    "contactUs": "Contact Us"
+  },
+  "series": {
+    "hot-press": {
+      "name": "Hot Press"
+    },
+    "cold-press": {
+      "name": "Cold Press"
+    },
+    "multi-blade-saw": {
+      "name": "Multi-blade Saw"
+    },
+    "lifting-platform": {
+      "name": "Lifting Platform"
+    },
+    "splicing-machine": {
+      "name": "Splicing Machine"
+    },
+    "door-frame-machine": {
+      "name": "Door Frame Assembly Machine"
+    },
+    "parts": {
+      "name": "Parts"
+    },
+    "other": {
+      "name": "Other Products"
+    }
+  },
+  "gallery": {
+    "title": "Delivery in Action",
+    "subtitle": "Capturing every equipment delivery moment",
+    "countText": "Loaded :count of :total photos",
+    "loading": "Loading...",
+    "end": "End of gallery"
+  }
+}

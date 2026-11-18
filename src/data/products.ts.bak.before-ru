@@ -1,0 +1,588 @@
+// 产品数据定义
+// 后续可替换为 API 获取
+
+export interface ProductModel {
+  id: string
+  model: string // 型号
+  cn?: string   // 中文名称（可选）
+  mic?: string  // 英文名称（可选）
+  vn?: string   // 越南语名称（可选）
+  image?: string // 单张图片（已废弃，请使用 images）
+  images?: string[] // 多张图片数组
+  specs?: {     // 产品参数（待补充）
+    keyCn: string
+    keyMic: string
+    keyVn?: string   // 越南语参数名（可选，缺省回退 valueMic）
+    valueCn: string
+    valueMic: string
+    valueVn?: string // 越南语参数值（可选，缺省回退 valueMic）
+  }[]
+  features?: {  // 产品特点（待补充）
+    cn: string
+    mic: string
+    vn?: string
+  }[]
+}
+
+export interface ProductSeries {
+  id: string
+  cn: string
+  mic: string
+  vn?: string
+  descCn: string
+  descMic: string
+  descVn?: string
+  icon: string
+  color: string
+  models: ProductModel[]
+}
+
+// 产品系列数据
+export const productSeries: ProductSeries[] = [
+  {
+    id: 'hot-press',
+    cn: '热压机',
+    mic: 'Hot Press',
+    vn: 'Máy ép nóng',
+    descCn: '高温热压，适用于贴面板、胶合板、密度板等产品的生产，加热均匀，效率高。',
+    descMic: 'High-temperature pressing for veneered panels, plywood and MDF production with uniform heating.',
+    descVn: 'Ép nóng ở nhiệt độ cao, phù hợp sản xuất ván dán, ván ép, MDF với hệ thống gia nhiệt đồng đều, hiệu suất cao.',
+    icon: '🔶',
+    color: "url('/hot-press-bg.webp')",
+    models: [
+
+      {
+        id: 'mh3848x120t-20260205',
+        model: 'MH3848X120T',
+        cn: '热压机',
+        mic: 'Hot Press',
+        vn: 'Máy ép nóng',
+        images: [
+          '/热压机/热压机_MH3848X120T_20260205_绿白/热压机_MH3848X120T_20260205_绿白_up(2)_001.webp',
+          '/热压机/热压机_MH3848X120T_20260205_绿白/热压机_MH3848X120T_20260205_绿白_up (2)_001.webp',
+          '/热压机/热压机_MH3848X120T_20260205_绿白/热压机_MH3848X120T_20260205_绿白_up (3)_001.webp',
+        ],
+        specs: [
+          { keyCn: '产品描述', keyMic: 'Description', keyVn: 'Mô tả sản phẩm', valueCn: '三面4层热压拼板机', valueMic: 'Three-sided 4-layer hot press splicing machine', valueVn: 'Máy ghép gỗ ép nóng 4 tầng 3 mặt' },
+          { keyCn: '开距', keyMic: 'Opening Distance', keyVn: 'Hành trình mở', valueCn: '100mm', valueMic: '100mm' },
+          { keyCn: '发热管功率', keyMic: 'Heating Tube Power', keyVn: 'Công suất ống nhiệt', valueCn: '72kW', valueMic: '72kW' },
+          { keyCn: '热油泵功率', keyMic: 'Hot Oil Pump Power', keyVn: 'Công suất bơm dầu nóng', valueCn: '2.2kW', valueMic: '2.2kW' },
+          { keyCn: '油缸', keyMic: 'Hydraulic Cylinders', keyVn: 'Xi-lanh thủy lực', valueCn: 'φ100×4PCS', valueMic: 'φ100×4PCS' },
+          { keyCn: '压板尺寸', keyMic: 'Press Plate Size', keyVn: 'Kích thước tấm ép', valueCn: '1370×1200×40mm', valueMic: '1370×1200×40mm' },
+        ],
+        features: []
+      },
+      {
+        id: 'mh3848x120t-20260428',
+        model: 'MH3848X120T',
+        cn: '热压机',
+        mic: 'Hot Press',
+        vn: 'Máy ép nóng',
+        images: [
+          '/热压机/热压机_MH3848x120T_20260428_黑黄白/热压机_MH3848x120T_20260428_黑黄白 (3)_up_001.webp',
+          '/热压机/热压机_MH3848x120T_20260428_黑黄白/热压机_MH3848x120T_20260428_黑黄白 (1)_up_001.webp',
+          '/热压机/热压机_MH3848x120T_20260428_黑黄白/热压机_MH3848x120T_20260428_黑黄白 (7)_up_001.webp',
+        ],
+        specs: [
+          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '2500×1300mm', valueMic: '2500×1300mm' },
+          { keyCn: '开距', keyMic: 'Opening Distance', keyVn: 'Hành trình mở', valueCn: '100mm', valueMic: '100mm' },
+          { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '120T', valueMic: '120T' },
+          { keyCn: '规格', keyMic: 'Specification', keyVn: 'Thông số kỹ thuật', valueCn: '3层', valueMic: '3 Layers', valueVn: '3 tầng' },
+          { keyCn: '缸数', keyMic: 'Cylinder Quantity', keyVn: 'Số xi-lanh', valueCn: '8支φ90', valueMic: '8 Cylinders φ90', valueVn: '8 cái φ90' },
+          { keyCn: '液压电机', keyMic: 'Hydraulic Motor', keyVn: 'Động cơ thủy lực', valueCn: '5.5kW', valueMic: '5.5kW' },
+          { keyCn: '热油泵', keyMic: 'Hot Oil Pump', keyVn: 'Bơm dầu nóng', valueCn: '1.5kW', valueMic: '1.5kW' },
+          { keyCn: '发热管', keyMic: 'Heating Tubes', keyVn: 'Ống nhiệt', valueCn: '48kW', valueMic: '48kW' },
+        ],
+        features: []
+      },
+      {
+        id: 'mh3848x120t-20240810',
+        model: 'MH3848x120T',
+        cn: '热压机',
+        mic: 'Hot Press',
+        vn: 'Máy ép nóng',
+        images: [
+          '/热压机/热压机_MH3848x120T_20240810_红蓝白/热压机_MH3848x120T_20240810_红蓝白_up_001.webp'
+        ],
+        specs: [
+          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '3000×1300mm', valueMic: '3000×1300mm' },
+          { keyCn: '开距', keyMic: 'Opening Distance', keyVn: 'Hành trình mở', valueCn: '150mm', valueMic: '150mm' },
+          { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '120T', valueMic: '120T' },
+          { keyCn: '最高温度', keyMic: 'Max Temperature', keyVn: 'Nhiệt độ tối đa', valueCn: '120°C', valueMic: '120°C' },
+          { keyCn: '层数', keyMic: 'Layers', keyVn: 'Số tầng', valueCn: '2层', valueMic: '2 Layers', valueVn: '2 tầng' },
+          { keyCn: '压向', keyMic: 'Pressing Direction', keyVn: 'Hướng ép', valueCn: '下往上压', valueMic: 'Bottom-up pressing', valueVn: 'Ép từ dưới lên' }
+        ],
+        features: []
+      },
+    ]
+  },
+  {
+    id: 'cold-press',
+    cn: '冷压机',
+    mic: 'Cold Press',
+    vn: 'Máy ép lạnh',
+    descCn: '适用于木材、板材的冷压成型，压力均匀稳定，操作简便，广泛用于家具、门板等生产。',
+    descMic: 'For cold pressing wood and panels with uniform and stable pressure. Widely used in furniture and door panel production.',
+    descVn: 'Dùng để ép lạnh gỗ và ván với áp suất đồng đều và ổn định. Được sử dụng rộng rãi trong sản xuất nội thất và cửa.',
+    icon: '⬛',
+    color: "url('/cold-press-bg.webp')",
+    models: [
+      {
+        id: 'mh3248-50t-20260207',
+        model: 'MH3248x50T',
+        cn: '冷压机',
+        mic: 'Cold Press',
+        vn: 'Máy ép lạnh',
+        images: [
+          '/冷压机/冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_1_up_001.webp',
+          '/冷压机/冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_1_up_002.webp',
+          '/冷压机/冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_2_up_001.webp',
+          '/冷压机/冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_2_up_002.webp',
+          '/冷压机/冷压机_MH3248x50T_20260207_黄白/冷压机_MH3248x50T_20260207_黄白_3_up_001.webp',
+        ],
+        specs: [
+          { keyCn: '工作台尺寸', keyMic: 'Table Size', keyVn: 'Kích thước bàn làm việc', valueCn: '2500x1300mm', valueMic: '2500x1300mm' },
+          { keyCn: '行程高度', keyMic: 'Stroke Height', keyVn: 'Chiều cao hành trình', valueCn: '1300mm', valueMic: '1300mm' },
+          { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '50T', valueMic: '50T' },
+          { keyCn: '油缸直径及数量', keyMic: 'Cylinder Diameter & Qty', keyVn: 'Đường kính và số lượng xi-lanh', valueCn: 'D125/90mm x 2PCS', valueMic: 'D125/90mm x 2PCS' },
+          { keyCn: '液压电机功率', keyMic: 'Hydraulic Motor Power', keyVn: 'Công suất động cơ thủy lực', valueCn: '4KW', valueMic: '4KW' },
+          { keyCn: '电压', keyMic: 'Voltage', keyVn: 'Điện áp', valueCn: '380V 60HZ 3PH', valueMic: '380V 60HZ 3PH' },
+          { keyCn: '下工作台', keyMic: 'Lower Table', keyVn: 'Bàn làm việc dưới', valueCn: '三排气缸升降滚轮', valueMic: 'Triple-row cylinder lifting rollers', valueVn: 'Con lăn nâng hạ bằng xi-lanh ba hàng' },
+          { keyCn: '载重', keyMic: 'Load Capacity', keyVn: 'Tải trọng', valueCn: '1000KG', valueMic: '1000KG' },
+          { keyCn: '台面每边气缸数量', keyMic: 'Cylinders Per Side', keyVn: 'Số xi-lanh mỗi cạnh bàn', valueCn: '3条', valueMic: '3 pcs', valueVn: '3 thanh' },
+          { keyCn: '气缸内径', keyMic: 'Cylinder Bore', keyVn: 'Đường kính trong xi-lanh', valueCn: '100mm', valueMic: '100mm' },
+          { keyCn: '气缸行程', keyMic: 'Cylinder Stroke', keyVn: 'Hành trình xi-lanh', valueCn: '20mm', valueMic: '20mm' },
+          { keyCn: '滚轮升起最高', keyMic: 'Max Roller Lift', keyVn: 'Chiều cao nâng tối đa con lăn', valueCn: '15mm', valueMic: '15mm' },
+          { keyCn: '滚轮直径', keyMic: 'Roller Diameter', keyVn: 'Đường kính con lăn', valueCn: '50mm', valueMic: '50mm' },
+          { keyCn: '滚轮长度', keyMic: 'Roller Length', keyVn: 'Chiều dài con lăn', valueCn: '90mm', valueMic: '90mm' },
+          { keyCn: '滚轮中心间距', keyMic: 'Roller Center Distance', keyVn: 'Khoảng cách tâm con lăn', valueCn: '150mm', valueMic: '150mm' },
+          { keyCn: '每排滚轮数量', keyMic: 'Rollers Per Row', keyVn: 'Số con lăn mỗi hàng', valueCn: '10个', valueMic: '10 pcs', valueVn: '10 cái' },
+        ],
+        features: []
+      },
+      {
+        id: 'mh3248x200t-20251020',
+        model: 'MH3248x200T',
+        cn: '冷压机',
+        mic: 'Cold Press',
+        vn: 'Máy ép lạnh',
+        images: [
+          '/冷压机/冷压机_MH3248x200T_20251020_黄白/冷压机_MH3248x200T_20251020_黄白_1_up_001.webp',
+          '/冷压机/冷压机_MH3248x200T_20251020_黄白/冷压机_MH3248x200T_20251020_黄白_2_up_001.webp',
+        ],
+        specs: [
+          { keyCn: '工作台尺寸', keyMic: 'Table Size', keyVn: 'Kích thước bàn làm việc', valueCn: '4200×1250mm', valueMic: '4200×1250mm' },
+          { keyCn: '开距', keyMic: 'Opening Distance', keyVn: 'Hành trình mở', valueCn: '1000mm', valueMic: '1000mm' },
+          { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '200T', valueMic: '200T' },
+          { keyCn: '规格', keyMic: 'Specification', keyVn: 'Thông số kỹ thuật', valueCn: '分四段', valueMic: '4 Sections', valueVn: 'Chia bốn đoạn' },
+          { keyCn: '缸数', keyMic: 'Cylinder Quantity', keyVn: 'Số xi-lanh', valueCn: '4支120缸', valueMic: '4 x D120mm Cylinders', valueVn: '4 xi-lanh 120' },
+          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '7.5kW', valueMic: '7.5kW' },
+        ],
+        features: []
+      },
+      {
+        id: 'mh3248x100t-20260425',
+        model: 'MH3248x100T',
+        cn: '冷压机',
+        mic: 'Cold Press',
+        vn: 'Máy ép lạnh',
+        images: [
+          '/冷压机/冷压机_MH3248x100T_20260425_黑黄白/冷压机_MH3248x100T_20260425_黑黄白 _up(4)_001.webp',
+          '/冷压机/冷压机_MH3248x100T_20260425_黑黄白/冷压机_MH3248x100T_20260425_黑黄白 _up(5)_001.webp',
+          '/冷压机/冷压机_MH3248x100T_20260425_黑黄白/冷压机_MH3248x100T_20260425_黑黄白_up (3)_001.webp',
+        ],
+        specs: [
+          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '3200×1600mm', valueMic: '3200×1600mm' },
+          { keyCn: '油缸数量', keyMic: 'Number of Cylinders', keyVn: 'Số lượng xi-lanh', valueCn: '6支', valueMic: '6 Pcs', valueVn: '6 cái' },
+          { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '100T', valueMic: '100T' },
+          { keyCn: '机器重量', keyMic: 'Machine Weight', keyVn: 'Trọng lượng máy', valueCn: '约4600kg', valueMic: 'approx. 4600kg', valueVn: 'Khoảng 4600kg' },
+          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '5.5kW', valueMic: '5.5kW' },
+          { keyCn: '最大加工高度', keyMic: 'Max Processing Height', keyVn: 'Chiều cao gia công tối đa', valueCn: '1000mm', valueMic: '1000mm' },
+        ],
+        features: []
+      },
+      {
+        id: 'mh3248x100t-20260509',
+        model: 'MH3248x100T',
+        cn: '冷压机',
+        mic: 'Cold Press',
+        vn: 'Máy ép lạnh',
+        images: [
+          '/冷压机/冷压机_MH3248x100T_20260509_黄白/冷压机_MH3248x100T_20260509_黄白 (1)_up_001.webp',
+          '/冷压机/冷压机_MH3248x100T_20260509_黄白/冷压机_MH3248x100T_20260509_黄白 (3)_up_001.webp',
+          '/冷压机/冷压机_MH3248x100T_20260509_黄白/冷压机_MH3248x100T_20260509_黄白 (4)_up_001.webp',
+        ],
+        specs: [
+          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '4000×2200mm', valueMic: '4000×2200mm' },
+          { keyCn: '油缸数量', keyMic: 'Number of Cylinders', keyVn: 'Số lượng xi-lanh', valueCn: '6支', valueMic: '6 Pcs', valueVn: '6 cái' },
+          { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '100T', valueMic: '100T' },
+          { keyCn: '液压电机', keyMic: 'Hydraulic Motor', keyVn: 'Động cơ thủy lực', valueCn: '5.5kW', valueMic: '5.5kW' },
+          { keyCn: '送料电机', keyMic: 'Feeding Motor', keyVn: 'Động cơ cấp liệu', valueCn: '2.2kW', valueMic: '2.2kW' },
+          { keyCn: '最大加工高度', keyMic: 'Max Processing Height', keyVn: 'Chiều cao gia công tối đa', valueCn: '1300mm', valueMic: '1300mm' },
+        ],
+        features: []
+      },
+      {
+        id: 'mh3248-30t-20260429',
+        model: 'MH3248*30T',
+        cn: '冷压机',
+        mic: 'Cold Press',
+        vn: 'Máy ép lạnh',
+        images: [
+          '/冷压机/冷压机_MH3248x30T_20260429_黄绿白/冷压机_MH3248x30T_20260429_黄绿白_1_up_001.webp',
+          '/冷压机/冷压机_MH3248x30T_20260429_黄绿白/冷压机_MH3248x30T_20260429_黄绿白_2_up_001.webp',
+        ],
+        specs: [
+          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '400×160mm×2', valueMic: '400×160mm×2' },
+          { keyCn: '缸数', keyMic: 'Cylinder Count', keyVn: 'Số xi-lanh', valueCn: '2支', valueMic: '2 PCS', valueVn: '2 cái' },
+          { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '30T', valueMic: '30T' },
+          { keyCn: '最大加工高度', keyMic: 'Max Processing Height', keyVn: 'Chiều cao gia công tối đa', valueCn: '650mm', valueMic: '650mm' },
+          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '4kW', valueMic: '4kW' },
+        ],
+        features: []
+      },
+      {
+        id: 'mh3248x50t-20260604',
+        model: 'MH3248x50T',
+        cn: '冷压机',
+        mic: 'Cold Press',
+        vn: 'Máy ép lạnh',
+        images: [
+          '/冷压机/冷压机_MH3248x50T_20260604_黄白/冷压机_MH3248x50T_20260604_黄白 (4)_up_001.webp',
+          '/冷压机/冷压机_MH3248x50T_20260604_黄白/冷压机_MH3248x50T_20260604_黄白 (2)_up_001.webp',
+          '/冷压机/冷压机_MH3248x50T_20260604_黄白/冷压机_MH3248x50T_20260604_黄白 (1)_up_001.webp',
+          '/冷压机/冷压机_MH3248x50T_20260604_黄白/冷压机_MH3248x50T_20260604_黄白 (6)_up_001.webp',
+        ],
+        specs: [
+          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '5000×2500mm', valueMic: '5000×2500mm' },
+          { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '50T（5-50T 可调）', valueMic: '50T (adjustable 5-50T)', valueVn: '50T (điều chỉnh 5-50T)' },
+          { keyCn: '油缸数量及直径', keyMic: 'Cylinder Qty & Diameter', keyVn: 'Số lượng và đường kính xi-lanh', valueCn: '6支 D100/70mm', valueMic: '6 cylinders, D100/70mm', valueVn: '6 cái D100/70mm' },
+          { keyCn: '压板开距', keyMic: 'Plate Opening Distance', keyVn: 'Hành trình mở tấm ép', valueCn: '1000mm', valueMic: '1000mm' },
+          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '7.5kW+2.2kW', valueMic: '7.5kW+2.2kW' },
+          { keyCn: '平整度', keyMic: 'Flatness', keyVn: 'Độ phẳng', valueCn: '0.15mm/m', valueMic: '0.15mm/m' },
+          { keyCn: '下台承重', keyMic: 'Lower Table Load Capacity', keyVn: 'Tải bàn dưới', valueCn: '5t', valueMic: '5t' },
+          { keyCn: '控制方式', keyMic: 'Control Method', keyVn: 'Chế độ điều khiển', valueCn: '自动进出按键控制', valueMic: 'Auto in/out button control', valueVn: 'Điều khiển tự động vào ra bằng nút bấm' },
+          { keyCn: '台面加工', keyMic: 'Table Processing', keyVn: 'Gia công mặt bàn', valueCn: '上下台面精磨，龙门铣床加工', valueMic: 'Precision-ground upper/lower tables, gantry milling machine processing', valueVn: 'Mặt bàn trên dưới mài tinh, thân máy gia công bằng máy phay giường' },
+        ],
+        features: []
+      },
+      {
+        id: 'mh3248x50t-20260414',
+        model: 'MH3248x50T',
+        cn: '冷压机',
+        mic: 'Cold Press',
+        vn: 'Máy ép lạnh',
+        images: [
+          '/冷压机/冷压机_MH3248x50T_20260414_黄白/冷压机_MH3248x50T_20260414_黄白 (1)_up_001.webp',
+          '/冷压机/冷压机_MH3248x50T_20260414_黄白/冷压机_MH3248x50T_20260414_黄白 (1)_up_002.webp',
+          '/冷压机/冷压机_MH3248x50T_20260414_黄白/冷压机_MH3248x50T_20260414_黄白 (1)_up_003.webp',
+        ],
+        specs: [
+          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '3000×1300mm', valueMic: '3000×1300mm' },
+          { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '50T', valueMic: '50T' },
+          { keyCn: '行程', keyMic: 'Stroke', keyVn: 'Hành trình', valueCn: '1300mm', valueMic: '1300mm' },
+          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '4kW', valueMic: '4kW' },
+          { keyCn: '油缸', keyMic: 'Cylinders', keyVn: 'Xi-lanh thủy lực', valueCn: '2支', valueMic: '2 pcs', valueVn: '2 cái' },
+        ],
+        features: []
+      },
+
+    ]
+  },
+  {
+    id: 'multi-blade-saw',
+    cn: '多片锯',
+    mic: 'Multi-blade Saw',
+    vn: 'Máy cưa đa lưỡi',
+    descCn: '一次性多片切割，大幅提高生产效率，切割精度高，适用于实木、板材的纵向开料。',
+    descMic: 'Multiple blade cutting in one pass for high efficiency. Suitable for solid wood and panel longitudinal cutting.',
+    descVn: 'Cắt nhiều lưỡi trong một lần, nâng cao hiệu suất và độ chính xác. Phù hợp cắt dọc gỗ tự nhiên và ván.',
+    icon: '⚙️',
+    color: "url('/multi-blade-saw-bg.webp')",
+    models: [
+      {
+        id: 'mj1300-xd5-20240716',
+        model: 'MJ1300-XD5',
+        cn: '多片锯',
+        mic: 'Multi-blade Saw',
+        vn: 'Máy cưa đa lưỡi',
+        images: [
+          '/多片锯/多片锯_MJ1300-XD5_20240716_蓝白/多片锯_MJ1300-XD5_20240716_蓝白_up_001.webp'
+        ],
+        specs: [
+          { keyCn: '防护罩', keyMic: 'Safety Guard', keyVn: 'Vỏ bảo vệ', valueCn: '全封闭式防护罩，带板料防反弹保护装置', valueMic: 'Fully enclosed safety guard with anti-rebound device for sheet materials', valueVn: 'Vỏ bảo vệ kín, có thiết bị bảo vệ chống văng phôi' },
+          { keyCn: '整机总功率', keyMic: 'Total Power', keyVn: 'Tổng công suất', valueCn: '32.2kW', valueMic: '32.2kW' },
+          { keyCn: '主电机功率', keyMic: 'Main Motor Power', keyVn: 'Công suất động cơ chính', valueCn: '30kW', valueMic: '30kW' },
+          { keyCn: '主轴配置', keyMic: 'Spindle Configuration', keyVn: 'Cấu hình trục chính', valueCn: '下锯，可升降', valueMic: 'Lower saw blade, adjustable height', valueVn: 'Cưa dưới, có thể nâng hạ' },
+          { keyCn: '送料电机', keyMic: 'Feed Motor', keyVn: 'Động cơ cấp liệu', valueCn: '功率2.2kW，无极调速0-12M/min', valueMic: '2.2kW, variable speed 0-12M/min', valueVn: 'Công suất 2.2kW, điều chỉnh tốc độ vô cấp 0-12M/min' },
+          { keyCn: '加工厚度', keyMic: 'Processing Thickness', keyVn: 'Độ dày gia công', valueCn: '5-50mm', valueMic: '5-50mm' },
+          { keyCn: '加工宽度', keyMic: 'Processing Width', keyVn: 'Chiều rộng gia công', valueCn: '1240mm', valueMic: '1240mm' },
+          { keyCn: '最少加工长度', keyMic: 'Minimum Processing Length', keyVn: 'Chiều dài gia công tối thiểu', valueCn: '650mm', valueMic: '650mm' },
+          { keyCn: '锯片规格', keyMic: 'Blade Specification', keyVn: 'Thông số lưỡi cưa', valueCn: '直径255×3.0×85mm，48T（带双键槽）', valueMic: 'Diameter 255×3.0×85mm, 48T (with double keyway)', valueVn: 'Đường kính 255×3.0×85mm, 48T (có rãnh then kép)' },
+          { keyCn: '主轴直径', keyMic: 'Spindle Diameter', keyVn: 'Đường kính trục chính', valueCn: '85mm', valueMic: '85mm' },
+          { keyCn: '超耐磨胶辊', keyMic: 'Ultra-wear-resistant Rubber Rollers', keyVn: 'Con lăn cao su chống mài mòn', valueCn: '前四组后三组（上下共14条）', valueMic: '4 groups front, 3 groups back (14 rollers total)', valueVn: 'Bốn nhóm trước, ba nhóm sau (tổng cộng 14 thanh trên dưới)' },
+          { keyCn: '吸尘口直径', keyMic: 'Dust Extraction Port', keyVn: 'Đường kính cổng hút bụi', valueCn: '150mm', valueMic: '150mm' },
+          { keyCn: '外形尺寸', keyMic: 'Overall Dimensions', keyVn: 'Kích thước tổng thể', valueCn: '2300×1760×1200mm', valueMic: '2300×1760×1200mm' },
+          { keyCn: '重量', keyMic: 'Weight', keyVn: 'Trọng lượng', valueCn: '约2吨', valueMic: 'Approx. 2 tons', valueVn: 'Khoảng 2 tấn' },
+          { keyCn: '含隔套', keyMic: 'Included Spacers', keyVn: 'Bao gồm đệm lót', valueCn: '一种开料规格隔套1套', valueMic: '1 set of cutting specification spacers', valueVn: '1 bộ đệm lót cho một thông số cắt' },
+          { keyCn: '锯片', keyMic: 'Saw Blades', keyVn: 'Lưỡi cưa', valueCn: '不含', valueMic: 'Not included', valueVn: 'Không bao gồm' },
+          { keyCn: '包装', keyMic: 'Packaging', keyVn: 'Đóng gói', valueCn: '珍珠棉缠绕膜', valueMic: 'EPE stretch film', valueVn: 'Màng xốp PE quấn' }
+        ],
+        features: []
+      }
+    ]
+  },
+  {
+    id: 'lifting-platform',
+    cn: '升降平台',
+    mic: 'Lifting Platform',
+    vn: 'Bục nâng',
+    descCn: '液压升降，承重能力强，操作安全便捷，广泛用于木工生产线的物料搬运与高度调节。',
+    descMic: 'Hydraulic lifting with strong load capacity. Safe and easy to operate for material handling in woodworking production lines.',
+    descVn: 'Nâng hạ thủy lực, sức chịu tải mạnh, vận hành an toàn và tiện lợi, dùng rộng rãi trong dây chuyền sản xuất gỗ.',
+    icon: '🔧',
+    color: "url('/lifting-platform-bg.webp')",
+    models: []
+  },
+  {
+    id: 'splicing-machine',
+    cn: '拼板机',
+    mic: 'Splicing Machine',
+    vn: 'Máy ghép gỗ',
+    descCn: '高效拼板设备，适用于木板拼接，拼接牢固平整。',
+    descMic: 'Efficient splicing equipment for wood board splicing with strong and flat joints.',
+    descVn: 'Thiết bị ghép ván gỗ hiệu quả, mối ghép chắc chắn và phẳng.',
+    icon: '📐',
+    color: "url('/splicing-machine-bg.webp')",
+    models: [
+      {
+        id: 'mh1325-20260608',
+        model: 'MH1325',
+        cn: '拼板机',
+        mic: 'Splicing Machine',
+        vn: 'Máy ghép gỗ',
+        images: [
+          '/拼板机/拼板机_MH1325_20260608_黄白/拼板机_MH1325_20260608_黄白 (3)_up_001.webp',
+          '/拼板机/拼板机_MH1325_20260608_黄白/拼板机_MH1325_20260608_黄白 (1)_up_002.webp',
+          '/拼板机/拼板机_MH1325_20260608_黄白/拼板机_MH1325_20260608_黄白 (1)_up_001.webp',
+          '/拼板机/拼板机_MH1325_20260608_黄白/拼板机_MH1325_20260608_黄白 (2)_up_001.webp',
+          '/拼板机/拼板机_MH1325_20260608_黄白/拼板机_MH1325_20260608_黄白 (2)_up_002.webp'
+        ],
+        specs: [
+          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '3200×1300mm', valueMic: '3200×1300mm' },
+          { keyCn: '工作行程', keyMic: 'Working Stroke', keyVn: 'Hành trình làm việc', valueCn: '400mm', valueMic: '400mm' },
+          { keyCn: '主油缸', keyMic: 'Main Cylinder', keyVn: 'Xi-lanh chính', valueCn: '15T', valueMic: '15T' },
+          { keyCn: '副油缸', keyMic: 'Secondary Cylinder', keyVn: 'Xi-lanh phụ', valueCn: '30T', valueMic: '30T' },
+          { keyCn: '外形尺寸', keyMic: 'Overall Dimensions', keyVn: 'Kích thước tổng thể', valueCn: '4080×1800×2460mm', valueMic: '4080×1800×2460mm' },
+          { keyCn: '重量', keyMic: 'Weight', keyVn: 'Trọng lượng', valueCn: '约3000kg', valueMic: 'approx. 3000kg', valueVn: 'Khoảng 3000kg' },
+          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '4+1.1kW', valueMic: '4+1.1kW' }
+        ],
+        features: []
+      },
+      {
+        id: 'mh1325-20260610',
+        model: 'MH1325',
+        cn: '拼板机',
+        mic: 'Splicing Machine',
+        vn: 'Máy ghép gỗ',
+        images: [
+          '/拼板机/拼板机_MH1325_20260610_黄白/拼板机_MH1325_20260610_黄白 (1)_up_001.webp',
+          '/拼板机/拼板机_MH1325_20260610_黄白/拼板机_MH1325_20260610_黄白 (2)_up_001.webp'
+        ],
+        specs: [
+          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '2500×1300mm', valueMic: '2500×1300mm' },
+          { keyCn: '电压', keyMic: 'Voltage', keyVn: 'Điện áp', valueCn: '380V 50HZ 3P', valueMic: '380V 50HZ 3P' },
+          { keyCn: '电机功率', keyMic: 'Motor Power', keyVn: 'Công suất động cơ', valueCn: '4+1.1kW', valueMic: '4+1.1kW' },
+          { keyCn: '有效工作行程', keyMic: 'Effective Working Stroke', keyVn: 'Hành trình làm việc hiệu dụng', valueCn: '400mm', valueMic: '400mm' },
+          { keyCn: '主油缸', keyMic: 'Main Cylinder', keyVn: 'Xi-lanh chính', valueCn: '15T', valueMic: '15T' },
+          { keyCn: '侧油缸', keyMic: 'Side Cylinder', keyVn: 'Xi-lanh bên', valueCn: '30T', valueMic: '30T' },
+          { keyCn: '重量', keyMic: 'Weight', keyVn: 'Trọng lượng', valueCn: '约3000kg', valueMic: 'Approx. 3000kg', valueVn: 'Khoảng 3000kg' }
+        ],
+        features: []
+      }
+    ]
+  },
+  {
+    id: 'door-frame-machine',
+    cn: '门框组合机',
+    mic: 'Door Frame Assembly Machine',
+    vn: 'Máy ghép khung cửa',
+    descCn: '专业门框生产设备，高效组装，精度高。',
+    descMic: 'Professional door frame production equipment with high efficiency and precision.',
+    descVn: 'Thiết bị sản xuất khung cửa chuyên nghiệp, lắp ráp hiệu quả và độ chính xác cao.',
+    icon: '🚪',
+    color: "url('/door-frame-bg.webp')",
+    models: [
+      {
+        id: 'mh2210-20260325',
+        model: 'MH2210',
+        cn: '门框组合机',
+        mic: 'Door Frame Assembly Machine',
+        vn: 'Máy ghép khung cửa',
+        images: [
+          '/门框组合机/门框组合机_MH2210_20260325_蓝白/门框组合机_MH2210_20260325_蓝白_up_001.webp'
+        ],
+        specs: [
+          { keyCn: '最大组合尺寸', keyMic: 'Max. Combination Size', keyVn: 'Kích thước ghép tối đa', valueCn: '1220×2440mm', valueMic: '1220×2440mm' },
+          { keyCn: '液压电机功率', keyMic: 'Hydraulic Motor Power', keyVn: 'Công suất động cơ thủy lực', valueCn: '2.2kW', valueMic: '2.2kW' },
+          { keyCn: '重量', keyMic: 'Weight', keyVn: 'Trọng lượng', valueCn: '约2000kg', valueMic: 'Approx. 2000kg', valueVn: 'Khoảng 2000kg' },
+          { keyCn: '正压油缸', keyMic: 'Front Pressing Cylinders', keyVn: 'Xi-lanh ép thuận', valueCn: '4条', valueMic: '4 Pcs', valueVn: '4 thanh' },
+          { keyCn: '侧压油缸', keyMic: 'Side Pressing Cylinders', keyVn: 'Xi-lanh ép ngang', valueCn: '3条', valueMic: '3 Pcs', valueVn: '3 thanh' },
+          { keyCn: '单面或双面', keyMic: 'Single/Double Sided', keyVn: 'Một mặt hoặc hai mặt', valueCn: '双面', valueMic: 'Double-sided', valueVn: 'Hai mặt' },
+          { keyCn: '压料架', keyMic: 'Material Pressing Frame', keyVn: 'Khung ép', valueCn: '有', valueMic: 'Included', valueVn: 'Có' }
+        ],
+        features: []
+      }
+    ]
+  },
+  {
+    id: 'parts',
+    cn: '零件',
+    mic: 'Parts',
+    vn: 'Phụ tùng',
+    descCn: '各类机械零件和配件，高品质原厂零部件。',
+    descMic: 'Various mechanical parts and accessories, high-quality OEM components.',
+    descVn: 'Các loại phụ tùng và linh kiện máy móc, chất lượng cao theo tiêu chuẩn nhà sản xuất.',
+    icon: '🔩',
+    color: "url('/parts-bg.webp')",
+    models: [
+      {
+        id: 'xiao-you-gang-50-dao-tao-20260507',
+        model: 'Small Cylinder 50 Guide Sleeve',
+        cn: '油缸导套',
+        mic: 'Oil Cylinder Guide Sleeve',
+        vn: 'Bạc dẫn hướng xi-lanh',
+        images: [
+          '/零件/油缸导套_小油缸50导套_20260507_金属色/油缸导套_小油缸50导套_20260507_金属色_up_001.webp'
+        ],
+        specs: [],
+        features: []
+      },
+      {
+        id: 'dai-jiao-ban-20260508',
+        model: '带胶板',
+        cn: '链条',
+        mic: 'Chain',
+        vn: 'Xích',
+        images: [
+          '/零件/链条_带胶板_20260508_金属白/链条_带胶板_20260508_金属白 (1)_up_001.webp'
+        ],
+        specs: [
+          { keyCn: '产品名称', keyMic: 'Product Name', keyVn: 'Tên sản phẩm', valueCn: '链条', valueMic: 'Chain', valueVn: 'Xích' },
+          { keyCn: '型号', keyMic: 'Model', keyVn: 'Mẫu / Model', valueCn: '带胶板', valueMic: 'With Rubber Pad', valueVn: 'Có tấm keo' },
+          { keyCn: '颜色', keyMic: 'Color', keyVn: 'Màu sắc', valueCn: '金属白', valueMic: 'Metallic White', valueVn: 'Trắng kim loại' },
+          { keyCn: '数量', keyMic: 'Quantity', keyVn: 'Số lượng', valueCn: '56节', valueMic: '56 Sections', valueVn: '56 đốt' }
+        ],
+        features: []
+      }
+    ]
+  },
+  {
+    id: 'other',
+    cn: '其他',
+    mic: 'Other Products',
+    vn: 'Khác',
+    descCn: '更多木工机械设备，满足您的多样化需求。',
+    descMic: 'More woodworking machinery to meet your diverse needs.',
+    descVn: 'Nhiều loại máy móc gỗ khác đáp ứng nhu cầu đa dạng của bạn.',
+    icon: '📦',
+    color: "url('/other-bg.webp')",
+    models: [
+      {
+        id: "mj105m-20260328",
+        model: "MJ105M",
+        cn: "母榫机",
+        mic: "Mortise Machine",
+        vn: "Máy làm mộng",
+        images: [
+          "/母榫机/母榫机_MJ105M_20260328_蓝白/母榫机_MJ105M_20260328_蓝白_1_up_001.webp",
+          "/母榫机/母榫机_MJ105M_20260328_蓝白/母榫机_MJ105M_20260328_蓝白_4_up_001.webp"
+        ],
+        specs: [
+          { keyCn: "台面尺寸", keyMic: "Table Size", valueCn: "800×1000mm", valueMic: "800×1000mm" },
+          { keyCn: "槽宽", keyMic: "Groove Width", valueCn: "25mm", valueMic: "25mm" },
+          { keyCn: "槽长", keyMic: "Groove Length", valueCn: "800mm", valueMic: "800mm" },
+          { keyCn: "燕尾槽调节范围", keyMic: "Dovetail Groove Adjustment Range", valueCn: "10mm-200mm", valueMic: "10mm-200mm" },
+          { keyCn: "前拖把电机", keyMic: "Front Drag Motor", valueCn: "3kW方电机，带锯片夹，电机横置", valueMic: "3kW square motor with saw blade clamp, motor mounted horizontally" },
+          { keyCn: "后拖把电机", keyMic: "Rear Drag Motor", valueCn: "3kW电机，配高速皮带及可装镂刀的主轴", valueMic: "3kW motor with high-speed belt and spindle for router bits" },
+          { keyCn: "电机调节方式", keyMic: "Motor Adjustment Method", valueCn: "上下前后丝杆调节", valueMic: "Up/down/front/back lead screw adjustment" },
+          { keyCn: "配置", keyMic: "Configuration", valueCn: "可装送料器的方座", valueMic: "Square base for material feeder installation" },
+          { keyCn: "定位", keyMic: "Positioning", valueCn: "配铝合金定位", valueMic: "Aluminum alloy positioning guide" }
+        ],
+        features: []
+      },
+      {
+        id: "mx5115-20260429",
+        model: "MX5115立铣",
+        cn: "立式铣床",
+        mic: "Vertical Milling Machine",
+        vn: "Máy phay đứng",
+        images: [
+          "/立式铣床/立式铣床_MX5115立铣_20260429_蓝白/立式铣床_MX5115立铣_20260429_蓝白 (12)_up_001.webp",
+          "/立式铣床/立式铣床_MX5115立铣_20260429_蓝白/立式铣床_MX5115立铣_20260429_蓝白 (13)_up_001.webp",
+          "/立式铣床/立式铣床_MX5115立铣_20260429_蓝白/立式铣床_MX5115立铣_20260429_蓝白 (30)_up_001.webp"
+        ],
+        specs: [
+          { keyCn: "工作台尺寸", keyMic: "Table Size", valueCn: "640×580mm", valueMic: "640×580mm" },
+          { keyCn: "工作台升降行程", keyMic: "Table Lifting Stroke", valueCn: "100mm", valueMic: "100mm" },
+          { keyCn: "工作台倾斜角度", keyMic: "Table Tilting Angle", valueCn: "45°", valueMic: "45°" },
+          { keyCn: "最大铣削厚度", keyMic: "Max Milling Thickness", valueCn: "50mm", valueMic: "50mm" },
+          { keyCn: "刀夹直径", keyMic: "Tool Holder Diameter", valueCn: "12.7mm", valueMic: "12.7mm" },
+          { keyCn: "主轴转速", keyMic: "Spindle Speed", valueCn: "18000r/min", valueMic: "18000r/min" },
+          { keyCn: "安装功率", keyMic: "Installed Power", valueCn: "3kW", valueMic: "3kW" },
+          { keyCn: "外形尺寸", keyMic: "Overall Dimensions", valueCn: "1000×600×900mm", valueMic: "1000×600×900mm" },
+          { keyCn: "重量", keyMic: "Weight", valueCn: "约170kg", valueMic: "Approx. 170kg" }
+        ],
+        features: []
+      },
+      {
+        id: "mj153-20250516",
+        model: "MJ153",
+        cn: "单片锯",
+        mic: "Single Blade Saw",
+        vn: "Máy cưa đơn",
+        images: [
+          "/其他/其他_单片锯_MJ153_20250516_灰白/单片锯_MJ153_20250516_灰白_up_001.webp"
+        ],
+        specs: [
+          { keyCn: "锯片直径", keyMic: "Blade Diameter", valueCn: "305mm", valueMic: "305mm" },
+          { keyCn: "最大加工厚度", keyMic: "Max Processing Thickness", valueCn: "85mm", valueMic: "85mm" },
+          { keyCn: "锯切宽度", keyMic: "Cutting Width", valueCn: "360mm", valueMic: "360mm" },
+          { keyCn: "主轴转速", keyMic: "Spindle Speed", valueCn: "3700r/min", valueMic: "3700r/min" },
+          { keyCn: "主轴直径", keyMic: "Spindle Diameter", valueCn: "25.4mm", valueMic: "25.4mm" },
+          { keyCn: "送料速度", keyMic: "Feeding Speed", valueCn: "12-32m/min", valueMic: "12-32m/min" },
+          { keyCn: "送料电机功率", keyMic: "Feeding Motor Power", valueCn: "0.75kW", valueMic: "0.75kW" },
+          { keyCn: "主电机功率", keyMic: "Main Motor Power", valueCn: "7.5kW", valueMic: "7.5kW" },
+          { keyCn: "总功率", keyMic: "Total Power", valueCn: "8.25kW", valueMic: "8.25kW" },
+          { keyCn: "工作台尺寸", keyMic: "Table Size", valueCn: "1500×950mm", valueMic: "1500×950mm" },
+          { keyCn: "外形尺寸", keyMic: "Overall Dimensions", valueCn: "1600×1050×1500mm", valueMic: "1600×1050×1500mm" },
+          { keyCn: "重量", keyMic: "Weight", valueCn: "约750kg", valueMic: "Approx. 750kg" }
+        ],
+        features: []
+      }
+    ]
+  },
+]
+
+// 根据系列ID获取产品系列
+export function getSeriesById(seriesId: string): ProductSeries | undefined {
+  return productSeries.find(s => s.id === seriesId)
+}
+
+// 根据系列ID和型号ID获取产品型号
+export function getModelById(seriesId: string, modelId: string): ProductModel | undefined {
+  const series = getSeriesById(seriesId)
+  if (!series) return undefined
+  return series.models.find(m => m.id === modelId)
+}
+
+// 获取所有产品型号（扁平化，用于搜索等场景）
+export function getAllModels(): { series: ProductSeries; model: ProductModel }[] {
+  const result: { series: ProductSeries; model: ProductModel }[] = []
+  for (const series of productSeries) {
+    for (const model of series.models) {
+      result.push({ series, model })
+    }
+  }
+  return result
+}

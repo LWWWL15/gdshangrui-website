@@ -1,0 +1,11 @@
+node_modules/
+dist/
+dist_old_*/
+.vite/
+.vite-ssg-temp/
+.env
+.env.local
+*.log
+.DS_Store
+Thumbs.db
+vite.config.ts.timestamp-*.mjs

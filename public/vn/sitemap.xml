@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://gdshangrui.com/vn/</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/about</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/about"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- 产品系列页 -->
+  <url>
+    <loc>https://gdshangrui.com/vn/products/hot-press</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/hot-press"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/hot-press"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/hot-press"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/hot-press"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/cold-press</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/cold-press"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/cold-press"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/cold-press"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/cold-press"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/multi-blade-saw</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/multi-blade-saw"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/multi-blade-saw"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/multi-blade-saw"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/multi-blade-saw"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/splicing-machine</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/splicing-machine"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/splicing-machine"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/splicing-machine"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/splicing-machine"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/door-frame-machine</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/door-frame-machine"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/door-frame-machine"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/door-frame-machine"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/door-frame-machine"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/lifting-platform</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/lifting-platform"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/lifting-platform"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/lifting-platform"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/lifting-platform"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/parts</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/parts"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/parts"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/parts"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/parts"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/other</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/other"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/other"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/other"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/other"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 热压机型号页 -->
+  <url>
+    <loc>https://gdshangrui.com/vn/products/hot-press/mh3848x120t-20260205</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/hot-press/mh3848x120t-20260205"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/hot-press/mh3848x120t-20260205"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/hot-press/mh3848x120t-20260205"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/hot-press/mh3848x120t-20260205"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/hot-press/mh3848x120t-20260428</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/hot-press/mh3848x120t-20260428"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/hot-press/mh3848x120t-20260428"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/hot-press/mh3848x120t-20260428"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/hot-press/mh3848x120t-20260428"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/hot-press/mh3848x120t-20240810</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/hot-press/mh3848x120t-20240810"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/hot-press/mh3848x120t-20240810"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/hot-press/mh3848x120t-20240810"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/hot-press/mh3848x120t-20240810"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- 冷压机型号页 -->
+  <url>
+    <loc>https://gdshangrui.com/vn/products/cold-press/mh3248-50t-20260207</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/cold-press/mh3248-50t-20260207"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/cold-press/mh3248-50t-20260207"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/cold-press/mh3248-50t-20260207"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/cold-press/mh3248-50t-20260207"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/cold-press/mh3248x200t-20251020</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/cold-press/mh3248x200t-20251020"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/cold-press/mh3248x200t-20251020"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/cold-press/mh3248x200t-20251020"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/cold-press/mh3248x200t-20251020"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/cold-press/mh3248x100t-20260425</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/cold-press/mh3248x100t-20260425"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/cold-press/mh3248x100t-20260425"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/cold-press/mh3248x100t-20260425"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/cold-press/mh3248x100t-20260425"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/cold-press/mh3248x100t-20260509</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/cold-press/mh3248x100t-20260509"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/cold-press/mh3248x100t-20260509"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/cold-press/mh3248x100t-20260509"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/cold-press/mh3248x100t-20260509"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/cold-press/mh3248-30t-20260429</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/cold-press/mh3248-30t-20260429"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/cold-press/mh3248-30t-20260429"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/cold-press/mh3248-30t-20260429"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/cold-press/mh3248-30t-20260429"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/cold-press/mh3248x50t-20260604</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/cold-press/mh3248x50t-20260604"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/cold-press/mh3248x50t-20260604"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/cold-press/mh3248x50t-20260604"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/cold-press/mh3248x50t-20260604"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/cold-press/mh3248x50t-20260414</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/cold-press/mh3248x50t-20260414"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/cold-press/mh3248x50t-20260414"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/cold-press/mh3248x50t-20260414"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/cold-press/mh3248x50t-20260414"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- 多片锯型号页 -->
+  <url>
+    <loc>https://gdshangrui.com/vn/products/multi-blade-saw/mj1300-xd5-20240716</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/multi-blade-saw/mj1300-xd5-20240716"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/multi-blade-saw/mj1300-xd5-20240716"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/multi-blade-saw/mj1300-xd5-20240716"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/multi-blade-saw/mj1300-xd5-20240716"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- 拼板机型号页 -->
+  <url>
+    <loc>https://gdshangrui.com/vn/products/splicing-machine/mh1325-20260608</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/splicing-machine/mh1325-20260608"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/splicing-machine/mh1325-20260608"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/splicing-machine/mh1325-20260608"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/splicing-machine/mh1325-20260608"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/splicing-machine/mh1325-20260610</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/splicing-machine/mh1325-20260610"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/splicing-machine/mh1325-20260610"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/splicing-machine/mh1325-20260610"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/splicing-machine/mh1325-20260610"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- 门框组合机型号页 -->
+  <url>
+    <loc>https://gdshangrui.com/vn/products/door-frame-machine/mh2210-20260325</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/door-frame-machine/mh2210-20260325"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/door-frame-machine/mh2210-20260325"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/door-frame-machine/mh2210-20260325"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/door-frame-machine/mh2210-20260325"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- 零件型号页 -->
+  <url>
+    <loc>https://gdshangrui.com/vn/products/parts/xiao-you-gang-50-dao-tao-20260507</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/parts/xiao-you-gang-50-dao-tao-20260507"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/parts/xiao-you-gang-50-dao-tao-20260507"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/parts/xiao-you-gang-50-dao-tao-20260507"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/parts/xiao-you-gang-50-dao-tao-20260507"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/parts/dai-jiao-ban-20260508</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/parts/dai-jiao-ban-20260508"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/parts/dai-jiao-ban-20260508"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/parts/dai-jiao-ban-20260508"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/parts/dai-jiao-ban-20260508"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- 其他型号页 -->
+  <url>
+    <loc>https://gdshangrui.com/vn/products/other/mj105m-20260328</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/other/mj105m-20260328"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/other/mj105m-20260328"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/other/mj105m-20260328"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/other/mj105m-20260328"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/other/mx5115-20260429</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/other/mx5115-20260429"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/other/mx5115-20260429"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/other/mx5115-20260429"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/other/mx5115-20260429"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/products/other/mj153-20250516</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/products/other/mj153-20250516"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/products/other/mj153-20250516"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/products/other/mj153-20250516"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/products/other/mj153-20250516"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- 联系和工具页 -->
+  <url>
+    <loc>https://gdshangrui.com/vn/contact</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/contact"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/tools</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/tools"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/tools"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/tools/pressure-calculator</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/tools/pressure-calculator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/tools/pressure-calculator"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/tools/pressure-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/tools/pressure-calculator"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://gdshangrui.com/vn/tools/ground-pressure-calculator</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://gdshangrui.com/zh/tools/ground-pressure-calculator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gdshangrui.com/en/tools/ground-pressure-calculator"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://gdshangrui.com/vn/tools/ground-pressure-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gdshangrui.com/en/tools/ground-pressure-calculator"/>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
