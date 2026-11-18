@@ -2,7 +2,9 @@
   <div class="home">
     <!-- Section 1: Hero Banner with Overlay Text -->
     <section class="hero-banner">
-      <div class="hero-banner-bg"></div>
+      <!-- 2026-11-18 SEO 体检修复：CSS background 改 <img fetchpriority=high>，
+           消除 LCP resourceLoadDelay 10s（CSS 背景图要等 CSS 下载+解析才发现，浏览器无法提前加载） -->
+      <img class="hero-banner-bg" src="/hero-banner-bg.jpg" alt="" fetchpriority="high" decoding="async" />
       <div class="hero-banner-content">
         <h1 class="hero-banner-title">{{ t('您的上上之选！', 'Your Great Pick!', 'Bộ chọn tuyệt vời của bạn!', 'Ваш лучший выбор!') }}</h1>
         <p class="hero-banner-subtitle">{{ t('ISO9001 | CE 认证 | OEM, ODM', 'ISO9001 | CE Certificate | OEM, ODM', 'ISO9001 | Chứng nhận CE | OEM, ODM', 'ISO9001 | Сертификат CE | OEM, ODM') }}</p>
@@ -245,12 +247,18 @@ let autoTimer: number | null = null
 const pauseAuto = () => { if (autoTimer !== null) { window.clearInterval(autoTimer); autoTimer = null } }
 const resumeAuto = () => { if (autoTimer === null) startAuto() }
 const startAuto = () => {
+  // 2026-11-18 性能优化：
+  // ① 页面不可见时（切标签页/最小化）暂停轮播，不白白烧主线程
+  // ② 用户开启「减少动态效果」时不自动轮播
+  // ③ 轮播间隔 1.5s → 4s：smooth scroll 是持续的 Style&Layout 开销，
+  //    是本页 TBT 主因之一；拉长间隔观感依旧自然
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  if (document.hidden) return
   autoTimer = window.setInterval(() => {
     const el = scrollContainer.value
     if (!el || !bestSellers.value.length) return
-    const card = el.querySelector('.bestseller-card') as HTMLElement | null
-    if (!card) return
-    const stepW = card.offsetWidth + 24 // 卡片宽 + gap
+    // 2026-11-18 性能：卡片宽固定 280px（CSS 里也写死），缓存步长避免每 tick 读 offsetWidth 强制重排
+    const stepW = 280 + 24 // 卡片宽 + gap
     // 平滑滚一张；滚进复制的第二份时瞬间无声回退一份宽度（视觉无变化，继续向右无缝）
     const target = el.scrollLeft + stepW
     const half = stepW * bestSellers.value.length
@@ -260,32 +268,39 @@ const startAuto = () => {
     } else {
       el.scrollTo({ left: target, behavior: 'smooth' })
     }
-  }, 1500)
+  }, 4000)
 }
-onMounted(() => startAuto())
-onBeforeUnmount(() => pauseAuto())
+onMounted(() => {
+  startAuto()
+  document.addEventListener('visibilitychange', onVisibility)
+})
+onBeforeUnmount(() => {
+  pauseAuto()
+  document.removeEventListener('visibilitychange', onVisibility)
+})
+const onVisibility = () => {
+  if (document.hidden) pauseAuto()
+  else resumeAuto()
+}
 
 // 圆点指示：activeIndex = 当前最左边完整可见的卡片序号；点圆点跳到对应卡片
 const activeIndex = ref(0)
 const goToSlide = (i: number) => {
   const el = scrollContainer.value
   if (!el) return
-  const card = el.querySelector('.bestseller-card') as HTMLElement | null
-  if (!card) return
-  el.scrollTo({ left: i * (card.offsetWidth + 24), behavior: 'smooth' })
+  if (!el) return
+  el.scrollTo({ left: i * (280 + 24), behavior: 'smooth' })
 }
 const updateDots = () => {
   const el = scrollContainer.value
   if (!el || !bestSellers.value.length) return
-  const card = el.querySelector('.bestseller-card') as HTMLElement | null
-  if (!card) return
-  const stepW = card.offsetWidth + 24
+  const stepW = 280 + 24
   const idx = Math.round(el.scrollLeft / stepW) % bestSellers.value.length
   activeIndex.value = idx
 }
 onMounted(() => { scrollContainer.value?.addEventListener('scroll', updateDots, { passive: true }) })
 onBeforeUnmount(() => { scrollContainer.value?.removeEventListener('scroll', updateDots) })
-const loopCards = computed(() => [...bestSellers.value, ...bestSellers.value, ...bestSellers.value])
+const loopCards = computed(() => [...bestSellers.value, ...bestSellers.value])
 
 // Best Sellers: 取所有型号产品
 const bestSellers = computed(() => {
@@ -378,10 +393,11 @@ const values = [
 .hero-banner-bg {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   background: #1a2744;
-  background-image: url('/hero-banner-bg.jpg');
-  background-size: cover;
-  background-position: center;
 
   &::after {
     content: '';
@@ -392,8 +408,7 @@ const values = [
   }
 
   @media (max-width: $bp-sm) {
-    background-size: cover;
-    background-position: center 30%;
+    object-position: center 30%;
   }
 }
 

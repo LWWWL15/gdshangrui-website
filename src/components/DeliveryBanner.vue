@@ -62,6 +62,8 @@ function makeTile(file: string): HTMLAnchorElement {
   a.target = '_blank'
   a.rel = 'noopener'
   a.className = 'delivery-tile'
+  // 2026-11-18 a11y：无文字的链接必须有可辨识名称（Lighthouse link-name）
+  a.setAttribute('aria-label', t('查看出货实拍大图', 'View delivery photo', 'Xem ảnh xuất hàng', 'Фото отгрузки'))
   const img = document.createElement('img')
   img.loading = 'lazy'
   img.decoding = 'async'

@@ -7,18 +7,19 @@
 
     <div class="container header-inner">
       <!-- Mobile Logo -->
-      <a class="mobile-logo" @click="handleBrandClick">
+      <!-- 2026-11-18 SEO：无 href 的 <a> 对爬虫不可爬（Lighthouse crawlable-anchors 扣分），改 router-link -->
+      <router-link :to="`/${lang}/`" class="mobile-logo">
         <img src="/logo-white.png" :alt="t('上锐机械标志', 'Shang Rui Machinery logo', 'Logo Shang Rui Machinery', 'Логотип Shang Rui Machinery')" class="mobile-logo-img" />
         <span>SHANG RUI</span>
-      </a>
+      </router-link>
 
       <!-- Brand wrapper -->
       <div class="header-brand">
         <!-- Logo -->
-        <a @click="handleBrandClick" class="logo">
+        <router-link :to="`/${lang}/`" class="logo">
           <img src="/logo-white.png" :alt="t('上锐机械标志', 'Shang Rui Machinery logo', 'Logo Shang Rui Machinery', 'Логотип Shang Rui Machinery')" class="logo-img" />
           <span class="logo-text">SHANG RUI</span>
-        </a>
+        </router-link>
 
         <!-- Social Icons -->
         <div class="header-social-icons">
