@@ -14,7 +14,7 @@
         <div class="about-grid">
           <div class="about-content">
             <h2>{{ t('确实的实绩与信任', 'Proven Track Record & Trust', 'Kết quả thực tế và niềm tin', 'Подтверждённые результаты и доверие') }}</h2>
-            <p>{{ t('上锐机械自2013年创业以来，一直专注于木工机械的定制、制造和出口。目前，我们已向越南、沙特、印尼、韩国等20多个国家出口产品，拥有1000多家客户。', 'Founded in 2013, Shang Rui Machinery has consistently focused on customization, manufacturing and export of woodworking machinery. We now have export experience to 20+ countries including Vietnam, Saudi Arabia, Indonesia, South Korea, and serve 1000+ customers worldwide.', 'Năm 2013, Shang Rui Machinery được thành lập và tập trung vào tùy chỉnh, sản xuất và xuất khẩu máy móc gỗ. Chúng tôi hiện có kinh nghiệm xuất khẩu sang 20+ quốc gia bao gồm Việt Nam, Ả Rập Xê Út, Indonesia, Hàn Quốc, và phục vụ hơn 1000 khách hàng trên toàn cầu.', 'С момента основания в 2013 году Shang Rui Machinery неизменно специализируется на индивидуальном проектировании, производстве и экспорте деревообрабатывающих станков. Сегодня мы экспортируем продукцию в более чем 20 стран, включая Вьетнам, Саудовскую Аравию, Индонезию, Республику Корея, и обслуживаем свыше 1 000 клиентов по всему миру.') }}</p>
+            <p>{{ t('上锐机械自2013年创业以来，一直专注于木工机械的定制、制造和出口。目前，我们已向越南、沙特、印尼、韩国等20多个国家出口产品，拥有10000多家客户。', 'Founded in 2013, Shang Rui Machinery has consistently focused on customization, manufacturing and export of woodworking machinery. We now have export experience to 20+ countries including Vietnam, Saudi Arabia, Indonesia, South Korea, and serve 10000+ customers worldwide.', 'Năm 2013, Shang Rui Machinery được thành lập và tập trung vào tùy chỉnh, sản xuất và xuất khẩu máy móc gỗ. Chúng tôi hiện có kinh nghiệm xuất khẩu sang 20+ quốc gia bao gồm Việt Nam, Ả Rập Xê Út, Indonesia, Hàn Quốc, và phục vụ hơn 10000 khách hàng trên toàn cầu.', 'С момента основания в 2013 году Shang Rui Machinery неизменно специализируется на индивидуальном проектировании, производстве и экспорте деревообрабатывающих станков. Сегодня мы экспортируем продукцию в более чем 20 стран, включая Вьетнам, Саудовскую Аравию, Индонезию, Республику Корея, и обслуживаем свыше 10 000 клиентов по всему миру.') }}</p>
             <p>{{ t('在严格的质量管理下制造每一件产品，我们已获得CE认证和ISO-9001认证，提供符合国际标准的产品。', 'We manufacture each product under strict quality control. We hold CE and ISO-9001 certifications, delivering products that comply with international standards.', 'Chúng tôi sản xuất từng sản phẩm dưới sự kiểm soát chất lượng nghiêm ngặt. Chúng tôi có chứng nhận CE và ISO-9001, cung cấp sản phẩm tuân thủ các tiêu chuẩn quốc tế.', 'Каждое изделие изготавливается при строгом контроле качества. Мы имеем сертификаты CE и ISO-9001, что подтверждает соответствие нашей продукции международным стандартам.') }}</p>
             <div class="about-stats">
               <div class="about-stat">
@@ -26,7 +26,7 @@
                 <span class="label">{{ t('出口国家', 'Export Countries', 'Quốc gia xuất khẩu', 'Стран экспорта') }}</span>
               </div>
               <div class="about-stat">
-                <span class="num">1000+</span>
+                <span class="num">10000+</span>
                 <span class="label">{{ t('合作客户', 'Customers', 'Khách hàng', 'Клиентов') }}</span>
               </div>
             </div>
