@@ -149,6 +149,41 @@
           </div>
         </div>
 
+        <!-- 同系列参数对比表（2026-11-19：真 HTML 表格，利于 AI 摘引与收录） -->
+        <div v-if="compareTable" class="compare-table-wrap">
+          <h2>{{ t('同系列型号参数对比', 'Compare Models in This Series', 'So sánh các mẫu trong dòng', 'Сравнение моделей серии') }}</h2>
+          <div class="compare-scroll">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th class="compare-key">{{ t('参数', 'Specification', 'Thông số', 'Параметр') }}</th>
+                  <th
+                    v-for="(name, i) in compareTable.models"
+                    :key="i"
+                    :class="{ 'is-current': i === compareTable.currentIdx }"
+                  >
+                    <router-link
+                      v-if="i !== compareTable.currentIdx"
+                      :to="`/${lang}/products/${seriesId}/${series!.models.filter(m => m.specs && m.specs.length > 0)[i].id}`"
+                    >{{ name }}</router-link>
+                    <template v-else>{{ name }}</template>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="row in compareTable.rows" :key="row.key">
+                  <td class="compare-key">{{ row.key }}</td>
+                  <td
+                    v-for="(v, i) in row.values"
+                    :key="i"
+                    :class="{ 'is-current': i === compareTable.currentIdx }"
+                  >{{ v }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         <!-- 同系列其他型号 -->
         <div v-if="otherModels.length > 0" class="other-models">
           <h2>{{ t('同系列其他型号', 'Other Models in This Series', 'Các mẫu khác trong dòng này', 'Другие модели в этой серии') }}</h2>
@@ -218,6 +253,38 @@ onUnmounted(() => window.removeEventListener('keydown', handleKeydown))
 const otherModels = computed(() => {
   if (!series.value) return []
   return series.value.models.filter(m => m.id !== modelId.value)
+})
+
+// 2026-11-19 SEO：同系列参数对比表（真 HTML 表格，AI 引用高价值源）。
+// 行 = 参数键（同 keyCn 归并），列 = 同系列全部型号（含当前型号）。
+// 全部数据来自 products.ts 已有 specs，不编造；只有 ≥2 个型号且有 specs 时渲染。
+// 语言 → spec 字段后缀（specs 数据结构里 keyCn/keyMic/keyVn/keyRu）
+const specLangKey = computed(() =>
+  lang.value === 'cn' ? 'Cn' : lang.value === 'vn' ? 'Vn' : lang.value === 'ru' ? 'Ru' : 'Mic'
+)
+
+const compareTable = computed(() => {
+  if (!series.value || series.value.models.length < 2) return null
+  const models = series.value.models.filter(m => m.specs && m.specs.length > 0)
+  if (models.length < 2) return null
+  // 归并所有参数键（按首次出现顺序）
+  const keyOrder: string[] = []
+  for (const m of models) for (const s of m.specs!) if (!keyOrder.includes(s.keyCn)) keyOrder.push(s.keyCn)
+  const rows = keyOrder.map(keyCn => {
+    const first = models.flatMap(m => m.specs!).find(s => s.keyCn === keyCn)! as any
+    const keyText = first[`key${specLangKey.value}`] || first.keyMic || keyCn
+    const values = models.map(m => {
+      const s = m.specs!.find(x => x.keyCn === keyCn) as any
+      if (!s) return '—'
+      return s[`value${specLangKey.value}`] || s.valueMic || s.valueCn || '—'
+    })
+    return { key: keyText, values }
+  })
+  return {
+    models: models.map(m => m.model.replace(/立铣$/, '')),
+    currentIdx: models.findIndex(m => m.id === modelId.value),
+    rows,
+  }
 })
 
 // WhatsApp 询价文本
@@ -646,6 +713,52 @@ const copySpecs = async () => {
       color: $c-text-primary;
       font-weight: $fw-semibold;
     }
+  }
+}
+
+// 2026-11-19 同系列参数对比表
+.compare-table-wrap {
+  margin-top: $s-xl;
+
+  h2 {
+    font-size: $fs-lg;
+    margin-bottom: $s-md;
+  }
+}
+
+.compare-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.compare-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  border: 1px solid $c-border;
+
+  th, td {
+    padding: $s-sm $s-md;
+    border-bottom: 1px solid $c-border;
+    text-align: left;
+    font-size: $fs-sm;
+    white-space: nowrap;
+  }
+
+  thead th {
+    background: $c-bg-secondary;
+    font-weight: $fw-semibold;
+  }
+
+  td.compare-key, th.compare-key {
+    color: $c-text-muted;
+    font-weight: 400;
+    min-width: 140px;
+  }
+
+  .is-current {
+    background: rgba(26, 111, 212, 0.06);
+    font-weight: $fw-semibold;
   }
 }
 
