@@ -280,6 +280,11 @@ const compareTable = computed(() => {
     })
     return { key: keyText, values }
   })
+  // 2026-11-20：填充该参数的型号数多的行排前面（稳定排序，同数量保持原顺序）
+  rows.sort((a, b) => {
+    const filled = (r: typeof a) => r.values.filter(v => v !== '—').length
+    return filled(b) - filled(a)
+  })
   return {
     models: models.map(m => m.model.replace(/立铣$/, '')),
     currentIdx: models.findIndex(m => m.id === modelId.value),
@@ -742,7 +747,8 @@ const copySpecs = async () => {
     border-bottom: 1px solid $c-border;
     text-align: left;
     font-size: $fs-sm;
-    white-space: nowrap;
+    word-break: break-word;
+    white-space: normal;
   }
 
   thead th {
@@ -753,7 +759,15 @@ const copySpecs = async () => {
   td.compare-key, th.compare-key {
     color: $c-text-muted;
     font-weight: 400;
+    width: 140px;
     min-width: 140px;
+    white-space: nowrap;
+  }
+
+  td:not(.compare-key) {
+    width: 220px;
+    min-width: 220px;
+    max-width: 220px;
   }
 
   .is-current {

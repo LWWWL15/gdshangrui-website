@@ -226,6 +226,7 @@ export const productSeries: ProductSeries[] = [
           { keyCn: '热油泵功率', keyMic: 'Hot Oil Pump Power', keyVn: 'Công suất bơm dầu nóng', valueCn: '2.2kW', valueMic: '2.2kW', valueRu: '2,2 кВт', keyRu: 'Мощность маслонагревательного насоса' },
           { keyCn: '油缸', keyMic: 'Hydraulic Cylinders', keyVn: 'Xi-lanh thủy lực', valueCn: 'φ100×4PCS', valueMic: 'φ100×4PCS', valueRu: 'φ100 × 4 шт.', keyRu: 'Гидроцилиндры' },
           { keyCn: '压板尺寸', keyMic: 'Press Plate Size', keyVn: 'Kích thước tấm ép', valueCn: '1370×1200×40mm', valueMic: '1370×1200×40mm', valueRu: '1370 × 1200 × 40 мм', keyRu: 'Размер пресс-плиты' },
+          { keyCn: '包装', keyMic: 'Packaging', keyVn: 'Bao bì', valueCn: '珍珠棉缠绕膜', valueMic: 'EPE stretch film wrapping', valueVn: 'Màng xốp EPE quấn', valueRu: 'Пупырчатая плёнка EPE + стрейч-плёнка', keyRu: 'Упаковка' },
         ],
         features: []
       },
@@ -242,14 +243,15 @@ export const productSeries: ProductSeries[] = [
           '/hot-press/hot-press_MH3848x120T_20260428_black-yellow-white/hot-press_MH3848x120T_20260428_untranslated-7_up_001.webp',
         ],
         specs: [
-          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '2500×1300mm', valueMic: '2500×1300mm', valueRu: '2500 × 1300 мм', keyRu: 'Размер стола' },
+          { keyCn: '压板尺寸', keyMic: 'Press Plate Size', keyVn: 'Kích thước tấm ép', valueCn: '2500×1300mm', valueMic: '2500×1300mm', valueRu: '2500 × 1300 мм', keyRu: 'Размер пресс-плиты' },
           { keyCn: '开距', keyMic: 'Opening Distance', keyVn: 'Hành trình mở', valueCn: '100mm', valueMic: '100mm', valueRu: '100 мм', keyRu: 'Раскрытие' },
-          { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '120T', valueMic: '120T', valueRu: '120 т', keyRu: 'Максимальное усилие' },
-          { keyCn: '规格', keyMic: 'Specification', keyVn: 'Thông số kỹ thuật', valueCn: '3层', valueMic: '3 Layers', valueVn: '3 tầng', valueRu: '3 этажа', keyRu: 'Спецификация' },
-          { keyCn: '缸数', keyMic: 'Cylinder Quantity', keyVn: 'Số xi-lanh', valueCn: '8支φ90', valueMic: '8 Cylinders φ90', valueVn: '8 cái φ90', valueRu: '8 шт., φ90', keyRu: 'Количество цилиндров' },
-          { keyCn: '液压电机', keyMic: 'Hydraulic Motor', keyVn: 'Động cơ thủy lực', valueCn: '5.5kW', valueMic: '5.5kW', valueRu: '5,5 кВт', keyRu: 'Гидравлический двигатель' },
-          { keyCn: '热油泵', keyMic: 'Hot Oil Pump', keyVn: 'Bơm dầu nóng', valueCn: '1.5kW', valueMic: '1.5kW', valueRu: '1,5 кВт', keyRu: 'Маслонагревательный насос' },
-          { keyCn: '发热管', keyMic: 'Heating Tubes', keyVn: 'Ống nhiệt', valueCn: '48kW', valueMic: '48kW', valueRu: '48 кВт', keyRu: 'ТЭНы (трубчатые электронагреватели)' },
+          { keyCn: '最大工作压力', keyMic: 'Max Working Pressure', keyVn: 'Áp suất làm việc tối đa', valueCn: '120T', valueMic: '120T', valueRu: '120 т', keyRu: 'Максимальное рабочее усилие' },
+          { keyCn: '工作层数', keyMic: 'Working Layers', keyVn: 'Số tầng làm việc', valueCn: '3层', valueMic: '3 Layers', valueVn: '3 tầng', valueRu: '3 этажа', keyRu: 'Количество рабочих этажей' },
+          { keyCn: '油缸', keyMic: 'Hydraulic Cylinders', keyVn: 'Xi-lanh thủy lực', valueCn: '8支φ90', valueMic: '8 Cylinders φ90', valueVn: '8 cái φ90', valueRu: '8 шт., φ90', keyRu: 'Гидроцилиндры' },
+          { keyCn: '液压电机功率', keyMic: 'Hydraulic Motor Power', keyVn: 'Công suất động cơ thủy lực', valueCn: '5.5kW', valueMic: '5.5kW', valueRu: '5,5 кВт', keyRu: 'Мощность гидравлического двигателя' },
+          { keyCn: '热油泵功率', keyMic: 'Hot Oil Pump Power', keyVn: 'Công suất bơm dầu nóng', valueCn: '1.5kW', valueMic: '1.5kW', valueRu: '1,5 кВт', keyRu: 'Мощность маслонагревательного насоса' },
+          { keyCn: '发热管功率', keyMic: 'Heating Tube Power', keyVn: 'Công suất ống nhiệt', valueCn: '48kW', valueMic: '48kW', valueRu: '48 кВт', keyRu: 'Мощность ТЭНов' },
+          { keyCn: '包装', keyMic: 'Packaging', keyVn: 'Bao bì', valueCn: '珍珠棉缠绕膜', valueMic: 'EPE stretch film wrapping', valueVn: 'Màng xốp EPE quấn', valueRu: 'Пупырчатая плёнка EPE + стрейч-плёнка', keyRu: 'Упаковка' },
         ],
         features: []
       },
@@ -264,12 +266,13 @@ export const productSeries: ProductSeries[] = [
           '/hot-press/hot-press_MH3848x120T_20240810_red-blue-white/hot-press_MH3848x120T_20240810_red-blue-white_up_001.webp'
         ],
         specs: [
-          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '3000×1300mm', valueMic: '3000×1300mm', valueRu: '3000 × 1300 мм', keyRu: 'Размер стола' },
+          { keyCn: '压板尺寸', keyMic: 'Press Plate Size', keyVn: 'Kích thước tấm ép', valueCn: '3000×1300mm', valueMic: '3000×1300mm', valueRu: '3000 × 1300 мм', keyRu: 'Размер пресс-плиты' },
           { keyCn: '开距', keyMic: 'Opening Distance', keyVn: 'Hành trình mở', valueCn: '150mm', valueMic: '150mm', valueRu: '150 мм', keyRu: 'Раскрытие' },
-          { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '120T', valueMic: '120T', valueRu: '120 т', keyRu: 'Максимальное усилие' },
+          { keyCn: '最大工作压力', keyMic: 'Max Working Pressure', keyVn: 'Áp suất làm việc tối đa', valueCn: '120T', valueMic: '120T', valueRu: '120 т', keyRu: 'Максимальное рабочее усилие' },
           { keyCn: '最高温度', keyMic: 'Max Temperature', keyVn: 'Nhiệt độ tối đa', valueCn: '120°C', valueMic: '120°C', valueRu: '120 °C', keyRu: 'Максимальная температура' },
-          { keyCn: '层数', keyMic: 'Layers', keyVn: 'Số tầng', valueCn: '2层', valueMic: '2 Layers', valueVn: '2 tầng', valueRu: '2 этажа', keyRu: 'Количество этажей' },
-          { keyCn: '压向', keyMic: 'Pressing Direction', keyVn: 'Hướng ép', valueCn: '下往上压', valueMic: 'Bottom-up pressing', valueVn: 'Ép từ dưới lên', valueRu: 'Снизу вверх', keyRu: 'Направление прессования' }
+          { keyCn: '工作层数', keyMic: 'Working Layers', keyVn: 'Số tầng làm việc', valueCn: '2层', valueMic: '2 Layers', valueVn: '2 tầng', valueRu: '2 этажа', keyRu: 'Количество рабочих этажей' },
+          { keyCn: '加压方向', keyMic: 'Pressing Direction', keyVn: 'Hướng ép', valueCn: '下往上压', valueMic: 'Bottom-up pressing', valueVn: 'Ép từ dưới lên', valueRu: 'Снизу вверх', keyRu: 'Направление прессования' },
+          { keyCn: '包装', keyMic: 'Packaging', keyVn: 'Bao bì', valueCn: '珍珠棉缠绕膜', valueMic: 'EPE stretch film wrapping', valueVn: 'Màng xốp EPE quấn', valueRu: 'Пупырчатая плёнка EPE + стрейч-плёнка', keyRu: 'Упаковка' }
         ],
         features: []
       },
@@ -285,21 +288,21 @@ export const productSeries: ProductSeries[] = [
           '/hot-press/hot-press_MH3848x160T_20260618_black-yellow-white/hot-press_MH3848x160T_20260618_black-yellow-white_up (4)_001.webp',
         ],
         specs: [
-          { keyCn: '热压板规格', keyMic: 'Platen Size', keyVn: 'Kích thước tấm ép', valueCn: '3000×1500×42mm', valueMic: '3000×1500×42mm', valueVn: '3000×1500×42mm', valueRu: '3000 × 1500 × 42 мм', keyRu: 'Размер пресс-плиты' },
+          { keyCn: '压板尺寸', keyMic: 'Press Plate Size', keyVn: 'Kích thước tấm ép', valueCn: '3000×1500×42mm', valueMic: '3000×1500×42mm', valueVn: '3000×1500×42mm', valueRu: '3000 × 1500 × 42 мм', keyRu: 'Размер пресс-плиты' },
           { keyCn: '工作层数', keyMic: 'Working Layers', keyVn: 'Số tầng làm việc', valueCn: '3层', valueMic: '3 Layers', valueVn: '3 tầng', valueRu: '3 этажа', keyRu: 'Количество рабочих этажей' },
-          { keyCn: '层距', keyMic: 'Layer Spacing', keyVn: 'Khoảng cách tầng', valueCn: '100mm', valueMic: '100mm', valueRu: '100 мм', keyRu: 'Расстояние между этажами' },
+          { keyCn: '开距', keyMic: 'Opening Distance', keyVn: 'Hành trình mở', valueCn: '100mm', valueMic: '100mm', valueRu: '100 мм', keyRu: 'Раскрытие' },
           { keyCn: '加压方向', keyMic: 'Pressing Direction', keyVn: 'Hướng ép', valueCn: '下往上压', valueMic: 'Bottom-up pressing', valueVn: 'Ép từ dưới lên', valueRu: 'Снизу вверх', keyRu: 'Направление прессования' },
           { keyCn: '最大工作压力', keyMic: 'Max Working Pressure', keyVn: 'Áp suất làm việc tối đa', valueCn: '160T', valueMic: '160T', valueRu: '160 т', keyRu: 'Максимальное рабочее усилие' },
           { keyCn: '油缸', keyMic: 'Hydraulic Cylinders', keyVn: 'Xi-lanh thủy lực', valueCn: '90缸×10支', valueMic: '90 Cylinders × 10 PCS', valueVn: '90 xi-lanh × 10 cái', valueRu: '90 цилиндров × 10 шт.', keyRu: 'Гидроцилиндры' },
-          { keyCn: '加热温度', keyMic: 'Heating Temperature', keyVn: 'Nhiệt độ gia nhiệt', valueCn: '常温-120℃', valueMic: 'Room temp – 120°C', valueVn: 'Nhiệt độ phòng – 120°C', valueRu: 'От комнатной температуры до 120 °C', keyRu: 'Температура нагрева' },
+          { keyCn: '最高温度', keyMic: 'Max Temperature', keyVn: 'Nhiệt độ tối đa', valueCn: '常温-120℃', valueMic: 'Room temp – 120°C', valueVn: 'Nhiệt độ phòng – 120°C', valueRu: 'От комнатной температуры до 120 °C', keyRu: 'Максимальная температура' },
           { keyCn: '液压电机功率', keyMic: 'Hydraulic Motor Power', keyVn: 'Công suất động cơ thủy lực', valueCn: '5.5kW', valueMic: '5.5kW', valueRu: '5,5 кВт', keyRu: 'Мощность гидравлического двигателя' },
           { keyCn: '热油泵功率', keyMic: 'Hot Oil Pump Power', keyVn: 'Công suất bơm dầu nóng', valueCn: '2.2kW', valueMic: '2.2kW', valueRu: '2,2 кВт', keyRu: 'Мощность маслонагревательного насоса' },
-          { keyCn: '热管功率', keyMic: 'Heating Tube Power', keyVn: 'Công suất ống nhiệt', valueCn: '72kW', valueMic: '72kW', valueRu: '72 кВт', keyRu: 'Мощность ТЭНов' },
+          { keyCn: '发热管功率', keyMic: 'Heating Tube Power', keyVn: 'Công suất ống nhiệt', valueCn: '72kW', valueMic: '72kW', valueRu: '72 кВт', keyRu: 'Мощность ТЭНов' },
           { keyCn: '热压板表面', keyMic: 'Platen Surface', keyVn: 'Bề mặt tấm ép', valueCn: '铺高温膜', valueMic: 'Covered with high-temperature film', valueVn: 'Phủ màng chịu nhiệt cao', valueRu: 'Покрыта высокотемпературной плёнкой', keyRu: 'Поверхность пресс-плиты' },
           { keyCn: '电压', keyMic: 'Voltage', keyVn: 'Điện áp', valueCn: '415V 50Hz 3P', valueMic: '415V 50Hz 3P', valueVn: '415V 50Hz 3P', valueRu: '415 В, 50 Гц, 3 фазы', keyRu: 'Напряжение' },
           { keyCn: '总功率', keyMic: 'Total Power', keyVn: 'Tổng công suất', valueCn: '79.7kW', valueMic: '79.7kW', valueRu: '79,7 кВт', keyRu: 'Общая мощность' },
-          { keyCn: '包装', keyMic: 'Packaging', keyVn: 'Bao bì', valueCn: '珍珠棉缠绕膜', valueMic: 'EPE pearl cotton + stretch film', valueVn: 'Màng xốp EPE + màng PE', valueRu: 'Пупырчатая плёнка EPE + стрейч-плёнка', keyRu: 'Упаковка' },
-          { keyCn: '外形尺寸', keyMic: 'Overall Dimensions', keyVn: 'Kích thước tổng thể', valueCn: '4400×1950×2160mm', valueMic: '4400×1950×2160mm', valueVn: '4400×1950×2160mm', valueRu: '4400 × 1950 × 2160 мм', keyRu: 'Габаритные размеры' },
+          { keyCn: '包装', keyMic: 'Packaging', keyVn: 'Bao bì', valueCn: '珍珠棉缠绕膜', valueMic: 'EPE stretch film wrapping', valueVn: 'Màng xốp EPE quấn', valueRu: 'Пупырчатая плёнка EPE + стрейч-плёнка', keyRu: 'Упаковка' },
+          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions (Approx.)', keyVn: 'Kích thước tổng thể (khoảng)', valueCn: '4400×1950×2160mm', valueMic: '4400×1950×2160mm', valueVn: '4400×1950×2160mm', valueRu: '4400 × 1950 × 2160 мм', keyRu: 'Габариты (прибл.)' },
         ],
         features: []
       },
@@ -316,12 +319,13 @@ export const productSeries: ProductSeries[] = [
           '/hot-press/hot-press_MH3848x160T_20261008_blue-white/hot-press_MH3848x160T_20261008_blue-white_up(3)_001.webp'
         ],
         specs: [
-          { keyCn: '层数', keyMic: 'Number of Layers', keyVn: 'Số tầng', keyRu: 'Количество слоёв', valueCn: '5层', valueMic: '5 Layers', valueVn: '5 tầng', valueRu: '5 слоёв' },
+          { keyCn: '工作层数', keyMic: 'Working Layers', keyVn: 'Số tầng làm việc', keyRu: 'Количество рабочих этажей', valueCn: '5层', valueMic: '5 Layers', valueVn: '5 tầng', valueRu: '5 слоёв' },
           { keyCn: '电压', keyMic: 'Voltage', keyVn: 'Điện áp', keyRu: 'Напряжение', valueCn: '415V/50HZ/3P', valueMic: '415V/50HZ/3P', valueVn: '415V/50HZ/3P', valueRu: '415 В / 50 Гц / 3 фазы' },
           { keyCn: '总功率', keyMic: 'Total Power', keyVn: 'Tổng công suất', keyRu: 'Общая мощность', valueCn: '80.5kW', valueMic: '80.5kW', valueVn: '80.5kW', valueRu: '80,5 кВт' },
           { keyCn: '控制系统', keyMic: 'Control System', keyVn: 'Hệ thống điều khiển', keyRu: 'Система управления', valueCn: '带PLC', valueMic: 'With PLC', valueVn: 'Có PLC', valueRu: 'С ПЛК' },
           { keyCn: '重量约', keyMic: 'Approx. Weight', keyVn: 'Trọng lượng (khoảng)', keyRu: 'Вес (прибл.)', valueCn: '9500kg', valueMic: '9500kg', valueVn: '9500 kg', valueRu: '9500 кг' },
-          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions (Approx.)', keyVn: 'Kích thước tổng thể (khoảng)', keyRu: 'Габариты (прибл.)', valueCn: '3800×1800×2500mm', valueMic: '3800×1800×2500mm', valueVn: '3800×1800×2500 mm', valueRu: '3800×1800×2500 мм' }
+          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions (Approx.)', keyVn: 'Kích thước tổng thể (khoảng)', keyRu: 'Габариты (прибл.)', valueCn: '3800×1800×2500mm', valueMic: '3800×1800×2500mm', valueVn: '3800×1800×2500 mm', valueRu: '3800×1800×2500 мм' },
+          { keyCn: '包装', keyMic: 'Packaging', keyVn: 'Bao bì', keyRu: 'Упаковка', valueCn: '珍珠棉缠绕膜', valueMic: 'EPE stretch film wrapping', valueVn: 'Màng xốp EPE quấn', valueRu: 'Пупырчатая плёнка EPE + стрейч-плёнка' }
         ],
         features: []
       },
@@ -491,22 +495,14 @@ export const productSeries: ProductSeries[] = [
           '/cold-press/cold-press_MH3248x50T_20260207_yellow-white/cold-press_MH3248x50T_20260207_yellow-white_3_up_001.webp',
         ],
         specs: [
-          { keyCn: '工作台尺寸', keyMic: 'Table Size', keyVn: 'Kích thước bàn làm việc', valueCn: '2500x1300mm', valueMic: '2500x1300mm', valueRu: '2500 × 1300 мм', keyRu: 'Размер рабочего стола' },
+          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '2500x1300mm', valueMic: '2500x1300mm', valueRu: '2500 × 1300 мм', keyRu: 'Размер стола' },
           { keyCn: '行程高度', keyMic: 'Stroke Height', keyVn: 'Chiều cao hành trình', valueCn: '1300mm', valueMic: '1300mm', valueRu: '1300 мм', keyRu: 'Высота хода' },
           { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '50T', valueMic: '50T', valueRu: '50 т', keyRu: 'Максимальное усилие' },
           { keyCn: '油缸直径及数量', keyMic: 'Cylinder Diameter & Qty', keyVn: 'Đường kính và số lượng xi-lanh', valueCn: 'D125/90mm x 2PCS', valueMic: 'D125/90mm x 2PCS', valueRu: 'D125/90 мм × 2 шт.', keyRu: 'Диаметр и количество гидроцилиндров' },
           { keyCn: '液压电机功率', keyMic: 'Hydraulic Motor Power', keyVn: 'Công suất động cơ thủy lực', valueCn: '4KW', valueMic: '4KW', valueRu: '4 кВт', keyRu: 'Мощность гидравлического двигателя' },
           { keyCn: '电压', keyMic: 'Voltage', keyVn: 'Điện áp', valueCn: '380V 60HZ 3PH', valueMic: '380V 60HZ 3PH', valueRu: '380 В, 60 Гц, 3 фазы', keyRu: 'Напряжение' },
-          { keyCn: '下工作台', keyMic: 'Lower Table', keyVn: 'Bàn làm việc dưới', valueCn: '三排气缸升降滚轮', valueMic: 'Triple-row cylinder lifting rollers', valueVn: 'Con lăn nâng hạ bằng xi-lanh ba hàng', valueRu: 'Подъёмные ролики на трёхрядных цилиндрах', keyRu: 'Нижний рабочий стол' },
-          { keyCn: '载重', keyMic: 'Load Capacity', keyVn: 'Tải trọng', valueCn: '1000KG', valueMic: '1000KG', valueRu: '1000 кг', keyRu: 'Грузоподъёмность' },
-          { keyCn: '台面每边气缸数量', keyMic: 'Cylinders Per Side', keyVn: 'Số xi-lanh mỗi cạnh bàn', valueCn: '3条', valueMic: '3 pcs', valueVn: '3 thanh', valueRu: '3 шт.', keyRu: 'Количество цилиндров на стороне стола' },
-          { keyCn: '气缸内径', keyMic: 'Cylinder Bore', keyVn: 'Đường kính trong xi-lanh', valueCn: '100mm', valueMic: '100mm', valueRu: '100 мм', keyRu: 'Внутренний диаметр цилиндра' },
-          { keyCn: '气缸行程', keyMic: 'Cylinder Stroke', keyVn: 'Hành trình xi-lanh', valueCn: '20mm', valueMic: '20mm', valueRu: '20 мм', keyRu: 'Ход цилиндра' },
-          { keyCn: '滚轮升起最高', keyMic: 'Max Roller Lift', keyVn: 'Chiều cao nâng tối đa con lăn', valueCn: '15mm', valueMic: '15mm', valueRu: '15 мм', keyRu: 'Максимальный подъём роликов' },
-          { keyCn: '滚轮直径', keyMic: 'Roller Diameter', keyVn: 'Đường kính con lăn', valueCn: '50mm', valueMic: '50mm', valueRu: '50 мм', keyRu: 'Диаметр ролика' },
-          { keyCn: '滚轮长度', keyMic: 'Roller Length', keyVn: 'Chiều dài con lăn', valueCn: '90mm', valueMic: '90mm', valueRu: '90 мм', keyRu: 'Длина ролика' },
-          { keyCn: '滚轮中心间距', keyMic: 'Roller Center Distance', keyVn: 'Khoảng cách tâm con lăn', valueCn: '150mm', valueMic: '150mm', valueRu: '150 мм', keyRu: 'Расстояние между центрами роликов' },
-          { keyCn: '每排滚轮数量', keyMic: 'Rollers Per Row', keyVn: 'Số con lăn mỗi hàng', valueCn: '10个', valueMic: '10 pcs', valueVn: '10 cái', valueRu: '10 шт.', keyRu: 'Количество роликов в ряду' },
+          { keyCn: '载重', keyMic: 'Load Capacity', keyVn: 'Tải trọng', valueCn: '1000kg', valueMic: '1000kg', valueRu: '1000 кг', keyRu: 'Грузоподъёмность' },
+          { keyCn: '规格', keyMic: 'Specification', keyVn: 'Thông số kỹ thuật', valueCn: '下工作台为三排气缸升降滚轮：台面每边气缸3条，气缸内径100mm，气缸行程20mm；滚轮升起最高15mm，滚轮直径50mm，滚轮长度90mm，滚轮中心间距150mm，每排滚轮10个', valueMic: 'Lower table with triple-row cylinder lifting rollers: 3 cylinders per side, cylinder bore 100mm, cylinder stroke 20mm; max roller lift 15mm, roller diameter 50mm, roller length 90mm, roller center distance 150mm, 10 rollers per row', valueVn: 'Bàn dưới dùng con lăn nâng hạ bằng xi-lanh ba hàng: mỗi cạnh bàn 3 xi-lanh, đường kính trong xi-lanh 100mm, hành trình xi-lanh 20mm; con lăn nâng cao tối đa 15mm, đường kính con lăn 50mm, chiều dài con lăn 90mm, khoảng cách tâm con lăn 150mm, mỗi hàng 10 con lăn', valueRu: 'Нижний стол с подъёмными роликами на трёхрядных цилиндрах: 3 цилиндра на сторону, внутренний диаметр цилиндра 100 мм, ход цилиндра 20 мм; максимальный подъём роликов 15 мм, диаметр ролика 50 мм, длина ролика 90 мм, расстояние между центрами роликов 150 мм, 10 роликов в ряду', keyRu: 'Спецификация' },
         ],
         features: []
       },
@@ -522,12 +518,12 @@ export const productSeries: ProductSeries[] = [
           '/cold-press/cold-press_MH3248x200T_20251020_yellow-white/cold-press_MH3248x200T_20251020_yellow-white_2_up_001.webp',
         ],
         specs: [
-          { keyCn: '工作台尺寸', keyMic: 'Table Size', keyVn: 'Kích thước bàn làm việc', valueCn: '4200×1250mm', valueMic: '4200×1250mm', valueRu: '4200 × 1250 мм', keyRu: 'Размер рабочего стола' },
-          { keyCn: '开距', keyMic: 'Opening Distance', keyVn: 'Hành trình mở', valueCn: '1000mm', valueMic: '1000mm', valueRu: '1000 мм', keyRu: 'Раскрытие' },
+          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '4200×1250mm', valueMic: '4200×1250mm', valueRu: '4200 × 1250 мм', keyRu: 'Размер стола' },
           { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '200T', valueMic: '200T', valueRu: '200 т', keyRu: 'Максимальное усилие' },
           { keyCn: '规格', keyMic: 'Specification', keyVn: 'Thông số kỹ thuật', valueCn: '分四段', valueMic: '4 Sections', valueVn: 'Chia bốn đoạn', valueRu: '4 секции', keyRu: 'Спецификация' },
-          { keyCn: '缸数', keyMic: 'Cylinder Quantity', keyVn: 'Số xi-lanh', valueCn: '4支120缸', valueMic: '4 x D120mm Cylinders', valueVn: '4 xi-lanh 120', valueRu: '4 цилиндра D120 мм', keyRu: 'Количество цилиндров' },
-          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '7.5kW', valueMic: '7.5kW', valueRu: '7,5 кВт', keyRu: 'Мощность' },
+          { keyCn: '油缸直径及数量', keyMic: 'Cylinder Diameter & Qty', keyVn: 'Đường kính và số lượng xi-lanh', valueCn: '4支120缸', valueMic: '4 x D120mm Cylinders', valueVn: '4 xi-lanh 120', valueRu: '4 цилиндра D120 мм', keyRu: 'Диаметр и количество гидроцилиндров' },
+          { keyCn: '液压电机功率', keyMic: 'Hydraulic Motor Power', keyVn: 'Công suất động cơ thủy lực', valueCn: '7.5kW', valueMic: '7.5kW', valueRu: '7,5 кВт', keyRu: 'Мощность гидравлического двигателя' },
+          { keyCn: '行程高度', keyMic: 'Stroke Height', keyVn: 'Chiều cao hành trình', valueCn: '1000mm', valueMic: '1000mm', valueRu: '1000 мм', keyRu: 'Высота хода' },
         ],
         features: []
       },
@@ -545,11 +541,11 @@ export const productSeries: ProductSeries[] = [
         ],
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '3200×1600mm', valueMic: '3200×1600mm', valueRu: '3200 × 1600 мм', keyRu: 'Размер стола' },
-          { keyCn: '油缸数量', keyMic: 'Number of Cylinders', keyVn: 'Số lượng xi-lanh', valueCn: '6支', valueMic: '6 Pcs', valueVn: '6 cái', valueRu: '6 шт.', keyRu: 'Количество гидроцилиндров' },
+          { keyCn: '油缸直径及数量', keyMic: 'Cylinder Diameter & Qty', keyVn: 'Đường kính và số lượng xi-lanh', valueCn: '6支', valueMic: '6 Pcs', valueVn: '6 cái', valueRu: '6 шт.', keyRu: 'Диаметр и количество гидроцилиндров' },
           { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '100T', valueMic: '100T', valueRu: '100 т', keyRu: 'Максимальное усилие' },
-          { keyCn: '机器重量', keyMic: 'Machine Weight', keyVn: 'Trọng lượng máy', valueCn: '约4600kg', valueMic: 'approx. 4600kg', valueVn: 'Khoảng 4600kg', valueRu: 'ок. 4600 кг', keyRu: 'Масса станка' },
-          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '5.5kW', valueMic: '5.5kW', valueRu: '5,5 кВт', keyRu: 'Мощность' },
-          { keyCn: '最大加工高度', keyMic: 'Max Processing Height', keyVn: 'Chiều cao gia công tối đa', valueCn: '1000mm', valueMic: '1000mm', valueRu: '1000 мм', keyRu: 'Максимальная высота обработки' },
+          { keyCn: '重量约', keyMic: 'Approx. Weight', keyVn: 'Trọng lượng (khoảng)', valueCn: '4600kg', valueMic: '4600kg', valueVn: '4600kg', valueRu: '4600 кг', keyRu: 'Вес (прибл.)' },
+          { keyCn: '液压电机功率', keyMic: 'Hydraulic Motor Power', keyVn: 'Công suất động cơ thủy lực', valueCn: '5.5kW', valueMic: '5.5kW', valueRu: '5,5 кВт', keyRu: 'Мощность гидравлического двигателя' },
+          { keyCn: '行程高度', keyMic: 'Stroke Height', keyVn: 'Chiều cao hành trình', valueCn: '1000mm', valueMic: '1000mm', valueRu: '1000 мм', keyRu: 'Высота хода' },
         ],
         features: []
       },
@@ -567,17 +563,17 @@ export const productSeries: ProductSeries[] = [
         ],
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '4000×2200mm', valueMic: '4000×2200mm', valueRu: '4000 × 2200 мм', keyRu: 'Размер стола' },
-          { keyCn: '油缸数量', keyMic: 'Number of Cylinders', keyVn: 'Số lượng xi-lanh', valueCn: '6支', valueMic: '6 Pcs', valueVn: '6 cái', valueRu: '6 шт.', keyRu: 'Количество гидроцилиндров' },
+          { keyCn: '油缸直径及数量', keyMic: 'Cylinder Diameter & Qty', keyVn: 'Đường kính và số lượng xi-lanh', valueCn: '6支', valueMic: '6 Pcs', valueVn: '6 cái', valueRu: '6 шт.', keyRu: 'Диаметр и количество гидроцилиндров' },
           { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '100T', valueMic: '100T', valueRu: '100 т', keyRu: 'Максимальное усилие' },
-          { keyCn: '液压电机', keyMic: 'Hydraulic Motor', keyVn: 'Động cơ thủy lực', valueCn: '5.5kW', valueMic: '5.5kW', valueRu: '5,5 кВт', keyRu: 'Гидравлический двигатель' },
-          { keyCn: '送料电机', keyMic: 'Feeding Motor', keyVn: 'Động cơ cấp liệu', valueCn: '2.2kW', valueMic: '2.2kW', valueRu: '2,2 кВт', keyRu: 'Двигатель подачи' },
-          { keyCn: '最大加工高度', keyMic: 'Max Processing Height', keyVn: 'Chiều cao gia công tối đa', valueCn: '1300mm', valueMic: '1300mm', valueRu: '1300 мм', keyRu: 'Максимальная высота обработки' },
+          { keyCn: '液压电机功率', keyMic: 'Hydraulic Motor Power', keyVn: 'Công suất động cơ thủy lực', valueCn: '5.5kW', valueMic: '5.5kW', valueRu: '5,5 кВт', keyRu: 'Мощность гидравлического двигателя' },
+          { keyCn: '送料电机功率', keyMic: 'Feed Motor Power', keyVn: 'Công suất động cơ cấp liệu', valueCn: '2.2kW', valueMic: '2.2kW', valueRu: '2,2 кВт', keyRu: 'Мощность двигателя подачи' },
+          { keyCn: '行程高度', keyMic: 'Stroke Height', keyVn: 'Chiều cao hành trình', valueCn: '1300mm', valueMic: '1300mm', valueRu: '1300 мм', keyRu: 'Высота хода' },
         ],
         features: []
       },
       {
-        id: 'mh3248-30t-20260429',
-        model: 'MH3248*30T',
+        id: 'mh3248x30t-20260429',
+        model: 'MH3248x30T',
         cn: '冷压机',
         mic: 'Cold Press',
         vn: 'Máy ép lạnh',
@@ -588,10 +584,10 @@ export const productSeries: ProductSeries[] = [
         ],
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '400×160mm×2', valueMic: '400×160mm×2', valueRu: '400 × 160 мм × 2', keyRu: 'Размер стола' },
-          { keyCn: '缸数', keyMic: 'Cylinder Count', keyVn: 'Số xi-lanh', valueCn: '2支', valueMic: '2 PCS', valueVn: '2 cái', valueRu: '2 шт.', keyRu: 'Количество цилиндров' },
+          { keyCn: '油缸直径及数量', keyMic: 'Cylinder Diameter & Qty', keyVn: 'Đường kính và số lượng xi-lanh', valueCn: '2支', valueMic: '2 PCS', valueVn: '2 cái', valueRu: '2 шт.', keyRu: 'Диаметр и количество гидроцилиндров' },
           { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '30T', valueMic: '30T', valueRu: '30 т', keyRu: 'Максимальное усилие' },
-          { keyCn: '最大加工高度', keyMic: 'Max Processing Height', keyVn: 'Chiều cao gia công tối đa', valueCn: '650mm', valueMic: '650mm', valueRu: '650 мм', keyRu: 'Максимальная высота обработки' },
-          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '4kW', valueMic: '4kW', valueRu: '4 кВт', keyRu: 'Мощность' },
+          { keyCn: '行程高度', keyMic: 'Stroke Height', keyVn: 'Chiều cao hành trình', valueCn: '650mm', valueMic: '650mm', valueRu: '650 мм', keyRu: 'Высота хода' },
+          { keyCn: '液压电机功率', keyMic: 'Hydraulic Motor Power', keyVn: 'Công suất động cơ thủy lực', valueCn: '4kW', valueMic: '4kW', valueRu: '4 кВт', keyRu: 'Мощность гидравлического двигателя' },
         ],
         features: []
       },
@@ -611,13 +607,12 @@ export const productSeries: ProductSeries[] = [
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '5000×2500mm', valueMic: '5000×2500mm', valueRu: '5000 × 2500 мм', keyRu: 'Размер стола' },
           { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '50T（5-50T 可调）', valueMic: '50T (adjustable 5-50T)', valueVn: '50T (điều chỉnh 5-50T)', valueRu: '50 т (регулируется в диапазоне 5–50 т)', keyRu: 'Максимальное усилие' },
-          { keyCn: '油缸数量及直径', keyMic: 'Cylinder Qty & Diameter', keyVn: 'Số lượng và đường kính xi-lanh', valueCn: '6支 D100/70mm', valueMic: '6 cylinders, D100/70mm', valueVn: '6 cái D100/70mm', valueRu: '6 шт., D100/70 мм', keyRu: 'Количество и диаметр гидроцилиндров' },
-          { keyCn: '压板开距', keyMic: 'Plate Opening Distance', keyVn: 'Hành trình mở tấm ép', valueCn: '1000mm', valueMic: '1000mm', valueRu: '1000 мм', keyRu: 'Раскрытие пресс-плиты' },
-          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '7.5kW+2.2kW', valueMic: '7.5kW+2.2kW', valueRu: '7,5 кВт + 2,2 кВт', keyRu: 'Мощность' },
-          { keyCn: '平整度', keyMic: 'Flatness', keyVn: 'Độ phẳng', valueCn: '0.15mm/m', valueMic: '0.15mm/m', valueRu: '0,15 мм/м', keyRu: 'Плоскостность' },
-          { keyCn: '下台承重', keyMic: 'Lower Table Load Capacity', keyVn: 'Tải bàn dưới', valueCn: '5t', valueMic: '5t', valueRu: '5 т', keyRu: 'Грузоподъёмность нижнего стола' },
-          { keyCn: '控制方式', keyMic: 'Control Method', keyVn: 'Chế độ điều khiển', valueCn: '自动进出按键控制', valueMic: 'Auto in/out button control', valueVn: 'Điều khiển tự động vào ra bằng nút bấm', valueRu: 'Кнопочное управление автоматической подачей/выводом', keyRu: 'Способ управления' },
-          { keyCn: '台面加工', keyMic: 'Table Processing', keyVn: 'Gia công mặt bàn', valueCn: '上下台面精磨，龙门铣床加工', valueMic: 'Precision-ground upper/lower tables, gantry milling machine processing', valueVn: 'Mặt bàn trên dưới mài tinh, thân máy gia công bằng máy phay giường', valueRu: 'Верхний и нижний столы — тонкое шлифование; корпус — обработка на портальном фрезерном станке', keyRu: 'Обработка стола' },
+          { keyCn: '油缸直径及数量', keyMic: 'Cylinder Diameter & Qty', keyVn: 'Đường kính và số lượng xi-lanh', valueCn: '6支 D100/70mm', valueMic: '6 cylinders, D100/70mm', valueVn: '6 cái D100/70mm', valueRu: '6 шт., D100/70 мм', keyRu: 'Диаметр и количество гидроцилиндров' },
+          { keyCn: '行程高度', keyMic: 'Stroke Height', keyVn: 'Chiều cao hành trình', valueCn: '1000mm', valueMic: '1000mm', valueRu: '1000 мм', keyRu: 'Высота хода' },
+          { keyCn: '载重', keyMic: 'Load Capacity', keyVn: 'Tải trọng', valueCn: '5000kg', valueMic: '5000kg', valueRu: '5000 кг', keyRu: 'Грузоподъёмность' },
+          { keyCn: '液压电机功率', keyMic: 'Hydraulic Motor Power', keyVn: 'Công suất động cơ thủy lực', valueCn: '7.5kW', valueMic: '7.5kW', valueRu: '7,5 кВт', keyRu: 'Мощность гидравлического двигателя' },
+          { keyCn: '送料电机功率', keyMic: 'Feed Motor Power', keyVn: 'Công suất động cơ cấp liệu', valueCn: '2.2kW', valueMic: '2.2kW', valueRu: '2,2 кВт', keyRu: 'Мощность двигателя подачи' },
+          { keyCn: '规格', keyMic: 'Specification', keyVn: 'Thông số kỹ thuật', valueCn: '平整度0.15mm/m；自动进出按键控制；上下台面精磨，龙门铣床加工', valueMic: 'Flatness 0.15mm/m; auto in/out button control; precision-ground upper/lower tables, gantry milling machine processing', valueVn: 'Độ phẳng 0.15mm/m; điều khiển tự động vào ra bằng nút bấm; mặt bàn trên dưới mài tinh, gia công bằng máy phay giường', valueRu: 'Плоскостность 0,15 мм/м; кнопочное управление автоматической подачей/выводом; верхний и нижний столы — тонкое шлифование, обработка на портальном фрезерном станке', keyRu: 'Спецификация' },
         ],
         features: []
       },
@@ -636,9 +631,9 @@ export const productSeries: ProductSeries[] = [
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '3000×1300mm', valueMic: '3000×1300mm', valueRu: '3000 × 1300 мм', keyRu: 'Размер стола' },
           { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', valueCn: '50T', valueMic: '50T', valueRu: '50 т', keyRu: 'Максимальное усилие' },
-          { keyCn: '行程', keyMic: 'Stroke', keyVn: 'Hành trình', valueCn: '1300mm', valueMic: '1300mm', valueRu: '1300 мм', keyRu: 'Ход' },
-          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '4kW', valueMic: '4kW', valueRu: '4 кВт', keyRu: 'Мощность' },
-          { keyCn: '油缸', keyMic: 'Cylinders', keyVn: 'Xi-lanh thủy lực', valueCn: '2支', valueMic: '2 pcs', valueVn: '2 cái', valueRu: '2 шт.', keyRu: 'Гидроцилиндры' },
+          { keyCn: '行程高度', keyMic: 'Stroke Height', keyVn: 'Chiều cao hành trình', valueCn: '1300mm', valueMic: '1300mm', valueRu: '1300 мм', keyRu: 'Высота хода' },
+          { keyCn: '液压电机功率', keyMic: 'Hydraulic Motor Power', keyVn: 'Công suất động cơ thủy lực', valueCn: '4kW', valueMic: '4kW', valueRu: '4 кВт', keyRu: 'Мощность гидравлического двигателя' },
+          { keyCn: '油缸直径及数量', keyMic: 'Cylinder Diameter & Qty', keyVn: 'Đường kính và số lượng xi-lanh', valueCn: '2支', valueMic: '2 pcs', valueVn: '2 cái', valueRu: '2 шт.', keyRu: 'Диаметр и количество гидроцилиндров' },
         ],
         features: []
       },
@@ -655,15 +650,11 @@ export const productSeries: ProductSeries[] = [
           '/cold-press/cold-press_MH3248x150Tx3_20190123_yellow-white/cold-press_MH3248x150Tx3_20190123_yellow-white_up(1)_002.webp',
         ],
         specs: [
-          { keyCn: '每段台面尺寸', keyMic: 'Table Size per Section', keyVn: 'Kích thước bàn mỗi đoạn', valueCn: '1250×1500mm', valueMic: '1250×1500mm', valueVn: '1250×1500mm', valueRu: '1250 × 1500 мм', keyRu: 'Размер стола каждой секции' },
-          { keyCn: '开距', keyMic: 'Opening Distance', keyVn: 'Hành trình mở', valueCn: '1300mm', valueMic: '1300mm', valueVn: '1300mm', valueRu: '1300 мм', keyRu: 'Раскрытие' },
-          { keyCn: '每段压力', keyMic: 'Pressure per Section', keyVn: 'Áp suất mỗi đoạn', valueCn: '50T', valueMic: '50T', valueVn: '50T', valueRu: '50 т', keyRu: 'Усилие на секцию' },
-          { keyCn: '规格', keyMic: 'Specification', keyVn: 'Thông số kỹ thuật', valueCn: '分三段', valueMic: '3 Sections', valueVn: '3 đoạn', valueRu: '3 секции', keyRu: 'Спецификация' },
-          { keyCn: '缸数', keyMic: 'Cylinder Quantity', keyVn: 'Số xi-lanh', valueCn: '每段 2 条，共 6 条', valueMic: '2 per section, 6 total', valueVn: '2 mỗi đoạn, tổng 6 cái', valueRu: '2 на секцию, всего 6 шт.', keyRu: 'Количество цилиндров' },
-          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '5.5kW', valueMic: '5.5kW', valueVn: '5.5kW', valueRu: '5,5 кВт', keyRu: 'Мощность' },
-          { keyCn: '下台面', keyMic: 'Lower Table', keyVn: 'Bàn làm việc dưới', valueCn: '配升降滚轮', valueMic: 'With lifting rollers', valueVn: 'Có con lăn nâng hạ', valueRu: 'С подъёмными роликами', keyRu: 'Нижний стол' },
-          { keyCn: '外形尺寸', keyMic: 'Overall Dimensions', keyVn: 'Kích thước tổng thể', valueCn: '约 4250×1500×2300mm', valueMic: 'Approx. 4250×1500×2300mm', valueVn: 'Khoảng 4250×1500×2300mm', valueRu: 'ок. 4250 × 1500 × 2300 мм', keyRu: 'Габаритные размеры' },
-          { keyCn: '重量', keyMic: 'Weight', keyVn: 'Trọng lượng', valueCn: '约 2000kg', valueMic: 'Approx. 2000kg', valueVn: 'Khoảng 2000kg', valueRu: 'ок. 2000 кг', keyRu: 'Масса' },
+          { keyCn: '规格', keyMic: 'Specification', keyVn: 'Thông số kỹ thuật', valueCn: '分三段；每段台面尺寸1250×1500mm；每段压力50T；下工作台配升降滚轮', valueMic: '3 sections; table size per section 1250×1500mm; pressure per section 50T; lower table with lifting rollers', valueVn: '3 đoạn; kích thước bàn mỗi đoạn 1250×1500mm; áp suất mỗi đoạn 50T; bàn dưới có con lăn nâng hạ', valueRu: '3 секции; размер стола каждой секции 1250×1500 мм; усилие на секцию 50 т; нижний стол с подъёмными роликами', keyRu: 'Спецификация' },
+          { keyCn: '油缸直径及数量', keyMic: 'Cylinder Diameter & Qty', keyVn: 'Đường kính và số lượng xi-lanh', valueCn: '每段 2 条，共 6 条', valueMic: '2 per section, 6 total', valueVn: '2 mỗi đoạn, tổng 6 cái', valueRu: '2 на секцию, всего 6 шт.', keyRu: 'Диаметр и количество гидроцилиндров' },
+          { keyCn: '液压电机功率', keyMic: 'Hydraulic Motor Power', keyVn: 'Công suất động cơ thủy lực', valueCn: '5.5kW', valueMic: '5.5kW', valueVn: '5.5kW', valueRu: '5,5 кВт', keyRu: 'Мощность гидравлического двигателя' },
+          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions (Approx.)', keyVn: 'Kích thước tổng thể (khoảng)', valueCn: '4250×1500×2300mm', valueMic: '4250×1500×2300mm', valueVn: '4250×1500×2300mm', valueRu: '4250 × 1500 × 2300 мм', keyRu: 'Габариты (прибл.)' },
+          { keyCn: '重量约', keyMic: 'Approx. Weight', keyVn: 'Trọng lượng (khoảng)', valueCn: '2000kg', valueMic: '2000kg', valueVn: '2000kg', valueRu: '2000 кг', keyRu: 'Вес (прибл.)' },
         ],
         features: []
       },
@@ -680,10 +671,10 @@ export const productSeries: ProductSeries[] = [
         ],
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', keyRu: 'Размер стола', valueCn: '1000×800mm', valueMic: '1000×800mm', valueVn: '1000×800mm', valueRu: '1000 × 800 мм' },
-          { keyCn: '开距', keyMic: 'Opening Distance', keyVn: 'Hành trình mở', keyRu: 'Раскрытие', valueCn: '1000mm', valueMic: '1000mm', valueVn: '1000mm', valueRu: '1000 мм' },
+          { keyCn: '行程高度', keyMic: 'Stroke Height', keyVn: 'Chiều cao hành trình', keyRu: 'Высота хода', valueCn: '1000mm', valueMic: '1000mm', valueVn: '1000mm', valueRu: '1000 мм' },
           { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', keyRu: 'Максимальное усилие', valueCn: '60T', valueMic: '60T', valueVn: '60T', valueRu: '60 т' },
-          { keyCn: '缸数', keyMic: 'Cylinder Quantity', keyVn: 'Số xi-lanh', keyRu: 'Количество цилиндров', valueCn: '2支', valueMic: '2 Pcs', valueVn: '2 cái', valueRu: '2 шт.' },
-          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', keyRu: 'Мощность', valueCn: '4kW', valueMic: '4kW', valueVn: '4kW', valueRu: '4 кВт' },
+          { keyCn: '油缸直径及数量', keyMic: 'Cylinder Diameter & Qty', keyVn: 'Đường kính và số lượng xi-lanh', keyRu: 'Диаметр и количество гидроцилиндров', valueCn: '2支', valueMic: '2 Pcs', valueVn: '2 cái', valueRu: '2 шт.' },
+          { keyCn: '液压电机功率', keyMic: 'Hydraulic Motor Power', keyVn: 'Công suất động cơ thủy lực', keyRu: 'Мощность гидравлического двигателя', valueCn: '4kW', valueMic: '4kW', valueVn: '4kW', valueRu: '4 кВт' },
         ],
         features: []
       },
@@ -700,10 +691,10 @@ export const productSeries: ProductSeries[] = [
         ],
         specs: [
           { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', keyRu: 'Размер стола', valueCn: '3000×1250mm', valueMic: '3000×1250mm', valueVn: '3000×1250mm', valueRu: '3000 × 1250 мм' },
-          { keyCn: '开距', keyMic: 'Opening Distance', keyVn: 'Hành trình mở', keyRu: 'Раскрытие', valueCn: '1000mm', valueMic: '1000mm', valueVn: '1000mm', valueRu: '1000 мм' },
+          { keyCn: '行程高度', keyMic: 'Stroke Height', keyVn: 'Chiều cao hành trình', keyRu: 'Высота хода', valueCn: '1000mm', valueMic: '1000mm', valueVn: '1000mm', valueRu: '1000 мм' },
           { keyCn: '最大压力', keyMic: 'Max Pressure', keyVn: 'Áp suất tối đa', keyRu: 'Максимальное усилие', valueCn: '250T', valueMic: '250T', valueVn: '250T', valueRu: '250 т' },
-          { keyCn: '缸数', keyMic: 'Cylinder Quantity', keyVn: 'Số xi-lanh', keyRu: 'Количество цилиндров', valueCn: '8支140/100缸', valueMic: '8 x D140/100mm Cylinders', valueVn: '8 xi-lanh D140/100mm', valueRu: '8 цилиндров D140/100 мм' },
-          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', keyRu: 'Мощность', valueCn: '7.5kW', valueMic: '7.5kW', valueVn: '7.5kW', valueRu: '7,5 кВт' },
+          { keyCn: '油缸直径及数量', keyMic: 'Cylinder Diameter & Qty', keyVn: 'Đường kính và số lượng xi-lanh', keyRu: 'Диаметр и количество гидроцилиндров', valueCn: '8支140/100缸', valueMic: '8 x D140/100mm Cylinders', valueVn: '8 xi-lanh D140/100mm', valueRu: '8 цилиндров D140/100 мм' },
+          { keyCn: '液压电机功率', keyMic: 'Hydraulic Motor Power', keyVn: 'Công suất động cơ thủy lực', keyRu: 'Мощность гидравлического двигателя', valueCn: '7.5kW', valueMic: '7.5kW', valueVn: '7.5kW', valueRu: '7,5 кВт' },
           { keyCn: '电压', keyMic: 'Voltage', keyVn: 'Điện áp', keyRu: 'Напряжение', valueCn: '380V 50HZ 3PH', valueMic: '380V 50HZ 3PH', valueVn: '380V 50HZ 3PH', valueRu: '380 В, 50 Гц, 3 фазы' },
         ],
         features: []
@@ -875,7 +866,8 @@ export const productSeries: ProductSeries[] = [
           { keyCn: '整机总功率', keyMic: 'Total Power', keyVn: 'Tổng công suất', valueCn: '32.2kW', valueMic: '32.2kW', valueRu: '32,2 кВт', keyRu: 'Общая мощность' },
           { keyCn: '主电机功率', keyMic: 'Main Motor Power', keyVn: 'Công suất động cơ chính', valueCn: '30kW', valueMic: '30kW', valueRu: '30 кВт', keyRu: 'Мощность главного двигателя' },
           { keyCn: '主轴配置', keyMic: 'Spindle Configuration', keyVn: 'Cấu hình trục chính', valueCn: '下锯，可升降', valueMic: 'Lower saw blade, adjustable height', valueVn: 'Cưa dưới, có thể nâng hạ', valueRu: 'Нижняя пила, регулируемая по высоте', keyRu: 'Конфигурация шпинделя' },
-          { keyCn: '送料电机', keyMic: 'Feed Motor', keyVn: 'Động cơ cấp liệu', valueCn: '功率2.2kW，无极调速0-12M/min', valueMic: '2.2kW, variable speed 0-12M/min', valueVn: 'Công suất 2.2kW, điều chỉnh tốc độ vô cấp 0-12M/min', valueRu: '2,2 кВт, бесступенчатая регулировка скорости 0–12 м/мин', keyRu: 'Двигатель подачи' },
+          { keyCn: '送料电机功率', keyMic: 'Feed Motor Power', keyVn: 'Công suất động cơ cấp liệu', valueCn: '2.2kW', valueMic: '2.2kW', valueRu: '2,2 кВт', keyRu: 'Мощность двигателя подачи' },
+          { keyCn: '送料速度', keyMic: 'Feed Speed', keyVn: 'Tốc độ cấp liệu', valueCn: '无极调速0-12M/min', valueMic: 'Variable speed 0-12M/min', valueVn: 'Điều chỉnh tốc độ vô cấp 0-12M/min', valueRu: 'Бесступенчатая регулировка 0–12 м/мин', keyRu: 'Скорость подачи' },
           { keyCn: '加工厚度', keyMic: 'Processing Thickness', keyVn: 'Độ dày gia công', valueCn: '5-50mm', valueMic: '5-50mm', valueRu: '5–50 мм', keyRu: 'Толщина обработки' },
           { keyCn: '加工宽度', keyMic: 'Processing Width', keyVn: 'Chiều rộng gia công', valueCn: '1240mm', valueMic: '1240mm', valueRu: '1240 мм', keyRu: 'Ширина обработки' },
           { keyCn: '最少加工长度', keyMic: 'Minimum Processing Length', keyVn: 'Chiều dài gia công tối thiểu', valueCn: '650mm', valueMic: '650mm', valueRu: '650 мм', keyRu: 'Минимальная длина обработки' },
@@ -883,11 +875,11 @@ export const productSeries: ProductSeries[] = [
           { keyCn: '主轴直径', keyMic: 'Spindle Diameter', keyVn: 'Đường kính trục chính', valueCn: '85mm', valueMic: '85mm', valueRu: '85 мм', keyRu: 'Диаметр шпинделя' },
           { keyCn: '超耐磨胶辊', keyMic: 'Ultra-wear-resistant Rubber Rollers', keyVn: 'Con lăn cao su chống mài mòn', valueCn: '前四组后三组（上下共14条）', valueMic: '4 groups front, 3 groups back (14 rollers total)', valueVn: 'Bốn nhóm trước, ba nhóm sau (tổng cộng 14 thanh trên dưới)', valueRu: '4 группы спереди, 3 группы сзади (всего 14 роликов сверху и снизу)', keyRu: 'Износостойкие резиновые ролики' },
           { keyCn: '吸尘口直径', keyMic: 'Dust Extraction Port', keyVn: 'Đường kính cổng hút bụi', valueCn: '150mm', valueMic: '150mm', valueRu: '150 мм', keyRu: 'Диаметр аспирационного патрубка' },
-          { keyCn: '外形尺寸', keyMic: 'Overall Dimensions', keyVn: 'Kích thước tổng thể', valueCn: '2300×1760×1200mm', valueMic: '2300×1760×1200mm', valueRu: '2300 × 1760 × 1200 мм', keyRu: 'Габаритные размеры' },
-          { keyCn: '重量', keyMic: 'Weight', keyVn: 'Trọng lượng', valueCn: '约2吨', valueMic: 'Approx. 2 tons', valueVn: 'Khoảng 2 tấn', valueRu: 'ок. 2 т', keyRu: 'Масса' },
+          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions (Approx.)', keyVn: 'Kích thước tổng thể (khoảng)', valueCn: '2300×1760×1200mm', valueMic: '2300×1760×1200mm', valueRu: '2300 × 1760 × 1200 мм', keyRu: 'Габариты (прибл.)' },
+          { keyCn: '重量约', keyMic: 'Approx. Weight', keyVn: 'Trọng lượng (khoảng)', valueCn: '2000kg', valueMic: '2000kg', valueVn: '2000kg', valueRu: '2000 кг', keyRu: 'Вес (прибл.)' },
           { keyCn: '含隔套', keyMic: 'Included Spacers', keyVn: 'Bao gồm đệm lót', valueCn: '一种开料规格隔套1套', valueMic: '1 set of cutting specification spacers', valueVn: '1 bộ đệm lót cho một thông số cắt', valueRu: '1 комплект проставочных втулок для одного типоразмера раскроя', keyRu: 'Комплект проставочных втулок' },
           { keyCn: '锯片', keyMic: 'Saw Blades', keyVn: 'Lưỡi cưa', valueCn: '不含', valueMic: 'Not included', valueVn: 'Không bao gồm', valueRu: 'Не включены', keyRu: 'Пильные диски' },
-          { keyCn: '包装', keyMic: 'Packaging', keyVn: 'Đóng gói', valueCn: '珍珠棉缠绕膜', valueMic: 'EPE stretch film', valueVn: 'Màng xốp PE quấn', valueRu: 'Вспененный полиэтилен (EPE), стрейч-плёнка', keyRu: 'Упаковка' }
+          { keyCn: '包装', keyMic: 'Packaging', keyVn: 'Đóng gói', valueCn: '珍珠棉缠绕膜', valueMic: 'EPE stretch film wrapping', valueVn: 'Màng xốp EPE quấn', valueRu: 'Вспененный полиэтилен (EPE), стрейч-плёнка', keyRu: 'Упаковка' }
         ],
         features: []
       },
@@ -904,7 +896,8 @@ export const productSeries: ProductSeries[] = [
         ],
         specs: [
           { keyCn: '整机总功率', keyMic: 'Total Power', keyVn: 'Tổng công suất', keyRu: 'Общая мощность', valueCn: '23.5kW', valueMic: '23.5kW', valueVn: '23.5kW', valueRu: '23,5 кВт' },
-          { keyCn: '主轴电机', keyMic: 'Spindle Motor', keyVn: 'Động cơ trục chính', keyRu: 'Шпиндельный двигатель', valueCn: '22kW，下锯可升降', valueMic: '22kW, lower blade, height adjustable', valueVn: '22kW, cưa dưới, nâng hạ được', valueRu: '22 кВт, нижняя пила, регулировка по высоте' },
+          { keyCn: '主电机功率', keyMic: 'Main Motor Power', keyVn: 'Công suất động cơ chính', keyRu: 'Мощность главного двигателя', valueCn: '22kW', valueMic: '22kW', valueVn: '22kW', valueRu: '22 кВт' },
+          { keyCn: '主轴配置', keyMic: 'Spindle Configuration', keyVn: 'Cấu hình trục chính', keyRu: 'Конфигурация шпинделя', valueCn: '下锯，可升降', valueMic: 'Lower saw blade, adjustable height', valueVn: 'Cưa dưới, có thể nâng hạ', valueRu: 'Нижняя пила, регулируемая по высоте' },
           { keyCn: '送料速度', keyMic: 'Feed Speed', keyVn: 'Tốc độ cấp liệu', keyRu: 'Скорость подачи', valueCn: '无极调速 0-12m/min', valueMic: 'Stepless adjustment 0-12m/min', valueVn: 'Điều chỉnh vô cấp 0-12m/min', valueRu: 'Бесступенчато 0–12 м/мин' },
           { keyCn: '送料电机功率', keyMic: 'Feed Motor Power', keyVn: 'Công suất động cơ cấp liệu', keyRu: 'Мощность двигателя подачи', valueCn: '1.5kW', valueMic: '1.5kW', valueVn: '1.5kW', valueRu: '1,5 кВт' },
           { keyCn: '加工厚度', keyMic: 'Processing Thickness', keyVn: 'Độ dày gia công', keyRu: 'Толщина обработки', valueCn: '5-30mm', valueMic: '5-30mm', valueVn: '5-30mm', valueRu: '5–30 мм' },
@@ -914,9 +907,12 @@ export const productSeries: ProductSeries[] = [
           { keyCn: '主轴直径', keyMic: 'Spindle Diameter', keyVn: 'Đường kính trục chính', keyRu: 'Диаметр шпинделя', valueCn: '74mm', valueMic: '74mm', valueVn: '74mm', valueRu: '74 мм' },
           { keyCn: '超耐磨胶辊', keyMic: 'Ultra-wear-resistant Rubber Rollers', keyVn: 'Con lăn cao su chống mài mòn', keyRu: 'Износостойкие резиновые ролики', valueCn: '前三组后三组（上下共12条）', valueMic: '3 groups front, 3 groups back (12 rollers total)', valueVn: '3 nhóm trước, 3 nhóm sau (tổng cộng 12 thanh trên dưới)', valueRu: '3 группы спереди, 3 сзади (всего 12 роликов сверху и снизу)' },
           { keyCn: '吸尘口直径', keyMic: 'Dust Extraction Port', keyVn: 'Đường kính cổng hút bụi', keyRu: 'Диаметр аспирационного патрубка', valueCn: '150mm', valueMic: '150mm', valueVn: '150mm', valueRu: '150 мм' },
-          { keyCn: '包装', keyMic: 'Packaging', keyVn: 'Đóng gói', keyRu: 'Упаковка', valueCn: '珍珠棉缠绕膜', valueMic: 'EPE stretch film', valueVn: 'Màng xốp PE quấn', valueRu: 'Вспененный полиэтилен (EPE), стрейч-плёнка' },
-          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions', keyVn: 'Kích thước tổng thể', keyRu: 'Габаритные размеры', valueCn: '约2300×1760×1200mm', valueMic: 'Approx. 2300×1760×1200mm', valueVn: 'Khoảng 2300×1760×1200mm', valueRu: 'ок. 2300 × 1760 × 1200 мм' },
-          { keyCn: '重量约', keyMic: 'Weight', keyVn: 'Trọng lượng', keyRu: 'Масса', valueCn: '约2000kg', valueMic: 'Approx. 2000kg', valueVn: 'Khoảng 2000kg', valueRu: 'ок. 2000 кг' }
+          { keyCn: '防护罩', keyMic: 'Safety Guard', keyVn: 'Vỏ bảo vệ', valueCn: '全封闭式防护罩，带板料防反弹保护装置', valueMic: 'Fully enclosed safety guard with anti-rebound device for sheet materials', valueVn: 'Vỏ bảo vệ kín, có thiết bị bảo vệ chống văng phôi', valueRu: 'Полностью закрытый защитный кожух с устройством защиты от отскока заготовки', keyRu: 'Защитный кожух' },
+          { keyCn: '含隔套', keyMic: 'Included Spacers', keyVn: 'Bao gồm đệm lót', valueCn: '一种开料规格隔套1套', valueMic: '1 set of cutting specification spacers', valueVn: '1 bộ đệm lót cho một thông số cắt', valueRu: '1 комплект проставочных втулок для одного типоразмера раскроя', keyRu: 'Комплект проставочных втулок' },
+          { keyCn: '锯片', keyMic: 'Saw Blades', keyVn: 'Lưỡi cưa', valueCn: '不含', valueMic: 'Not included', valueVn: 'Không bao gồm', valueRu: 'Не включены', keyRu: 'Пильные диски' },
+          { keyCn: '包装', keyMic: 'Packaging', keyVn: 'Đóng gói', keyRu: 'Упаковка', valueCn: '珍珠棉缠绕膜', valueMic: 'EPE stretch film wrapping', valueVn: 'Màng xốp EPE quấn', valueRu: 'Вспененный полиэтилен (EPE), стрейч-плёнка' },
+          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions (Approx.)', keyVn: 'Kích thước tổng thể (khoảng)', keyRu: 'Габариты (прибл.)', valueCn: '2300×1760×1200mm', valueMic: '2300×1760×1200mm', valueVn: '2300×1760×1200mm', valueRu: '2300 × 1760 × 1200 мм' },
+          { keyCn: '重量约', keyMic: 'Approx. Weight', keyVn: 'Trọng lượng (khoảng)', keyRu: 'Вес (прибл.)', valueCn: '2000kg', valueMic: '2000kg', valueVn: '2000kg', valueRu: '2000 кг' }
         ],
         features: []
       }
@@ -1310,8 +1306,8 @@ export const productSeries: ProductSeries[] = [
           { keyCn: '工作行程', keyMic: 'Working Stroke', keyVn: 'Hành trình làm việc', valueCn: '400mm', valueMic: '400mm', valueRu: '400 мм', keyRu: 'Рабочий ход' },
           { keyCn: '主油缸', keyMic: 'Main Cylinder', keyVn: 'Xi-lanh chính', valueCn: '15T', valueMic: '15T', valueRu: '15 т', keyRu: 'Главный цилиндр' },
           { keyCn: '副油缸', keyMic: 'Secondary Cylinder', keyVn: 'Xi-lanh phụ', valueCn: '30T', valueMic: '30T', valueRu: '30 т', keyRu: 'Вспомогательный цилиндр' },
-          { keyCn: '外形尺寸', keyMic: 'Overall Dimensions', keyVn: 'Kích thước tổng thể', valueCn: '4080×1800×2460mm', valueMic: '4080×1800×2460mm', valueRu: '4080 × 1800 × 2460 мм', keyRu: 'Габаритные размеры' },
-          { keyCn: '重量', keyMic: 'Weight', keyVn: 'Trọng lượng', valueCn: '约3000kg', valueMic: 'approx. 3000kg', valueVn: 'Khoảng 3000kg', valueRu: 'ок. 3000 кг', keyRu: 'Масса' },
+          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions (Approx.)', keyVn: 'Kích thước tổng thể (khoảng)', valueCn: '4080×1800×2460mm', valueMic: '4080×1800×2460mm', valueRu: '4080 × 1800 × 2460 мм', keyRu: 'Габариты (прибл.)' },
+          { keyCn: '重量约', keyMic: 'Approx. Weight', keyVn: 'Trọng lượng (khoảng)', valueCn: '3000kg', valueMic: '3000kg', valueVn: '3000kg', valueRu: '3000 кг', keyRu: 'Вес (прибл.)' },
           { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '4+1.1kW', valueMic: '4+1.1kW', valueRu: '4 + 1,1 кВт', keyRu: 'Мощность' }
         ],
         features: []
@@ -1334,7 +1330,37 @@ export const productSeries: ProductSeries[] = [
           { keyCn: '有效工作行程', keyMic: 'Effective Working Stroke', keyVn: 'Hành trình làm việc hiệu dụng', valueCn: '400mm', valueMic: '400mm', valueRu: '400 мм', keyRu: 'Эффективный рабочий ход' },
           { keyCn: '主油缸', keyMic: 'Main Cylinder', keyVn: 'Xi-lanh chính', valueCn: '15T', valueMic: '15T', valueRu: '15 т', keyRu: 'Главный цилиндр' },
           { keyCn: '侧油缸', keyMic: 'Side Cylinder', keyVn: 'Xi-lanh bên', valueCn: '30T', valueMic: '30T', valueRu: '30 т', keyRu: 'Боковой цилиндр' },
-          { keyCn: '重量', keyMic: 'Weight', keyVn: 'Trọng lượng', valueCn: '约3000kg', valueMic: 'Approx. 3000kg', valueVn: 'Khoảng 3000kg', valueRu: 'ок. 3000 кг', keyRu: 'Масса' }
+          { keyCn: '重量约', keyMic: 'Approx. Weight', keyVn: 'Trọng lượng (khoảng)', valueCn: '3000kg', valueMic: '3000kg', valueVn: '3000kg', valueRu: '3000 кг', keyRu: 'Вес (прибл.)' }
+        ],
+        features: []
+      },
+      {
+        id: 'mh1325-20251212',
+        model: 'MH1325',
+        cn: '拼板机',
+        mic: 'Splicing Machine',
+        vn: 'Máy ghép gỗ',
+        ru: 'Пресс для сращивания',
+        images: [
+          '/拼板机/拼板机_MH1325_20251212_黄白/拼板机_MH1325_20251212_黄白_up(1)_001.webp',
+          '/拼板机/拼板机_MH1325_20251212_黄白/拼板机_MH1325_20251212_黄白_up(2)_001.webp',
+          '/拼板机/拼板机_MH1325_20251212_黄白/拼板机_MH1325_20251212_黄白_up(2)_002.webp'
+        ],
+        specs: [
+          { keyCn: '台面尺寸', keyMic: 'Table Size', keyVn: 'Kích thước mặt bàn', valueCn: '2500×1250mm', valueMic: '2500×1250mm', valueRu: '2500 × 1250 мм', keyRu: 'Размер стола' },
+          { keyCn: '板长', keyMic: 'Board Length', keyVn: 'Chiều dài ván', valueCn: '1900-2400mm', valueMic: '1900-2400mm', valueRu: '1900–2400 мм', keyRu: 'Длина доски' },
+          { keyCn: '板宽', keyMic: 'Board Width', keyVn: 'Chiều rộng ván', valueCn: '1120-1220mm', valueMic: '1120-1220mm', valueRu: '1120–1220 мм', keyRu: 'Ширина доски' },
+          { keyCn: '板重量', keyMic: 'Board Weight', keyVn: 'Trọng lượng ván', valueCn: '≤200kg', valueMic: '≤200kg', valueRu: '≤200 кг', keyRu: 'Вес доски' },
+          { keyCn: '最大拼板厚度', keyMic: 'Max Panel Thickness', keyVn: 'Độ dày ghép tối đa', valueCn: '100mm', valueMic: '100mm', valueRu: '100 мм', keyRu: 'Макс. толщина сращивания' },
+          { keyCn: '最小拼板厚度', keyMic: 'Min Panel Thickness', keyVn: 'Độ dày ghép tối thiểu', valueCn: '10mm', valueMic: '10mm', valueRu: '10 мм', keyRu: 'Мин. толщина сращивания' },
+          { keyCn: '开距', keyMic: 'Opening', keyVn: 'Khoảng cách mở', valueCn: '400mm', valueMic: '400mm', valueRu: '400 мм', keyRu: 'Просвет' },
+          { keyCn: '上压压力', keyMic: 'Top Press Force', keyVn: 'Lực ép trên', valueCn: '30T', valueMic: '30T', valueRu: '30 т', keyRu: 'Усилие верхнего пресса' },
+          { keyCn: '上压油缸', keyMic: 'Top Cylinder', keyVn: 'Xi-lanh ép trên', valueCn: '2支*D80/60*550mm', valueMic: '2×D80/60×550mm', valueRu: '2 × D80/60 × 550 мм', keyRu: 'Верхний цилиндр' },
+          { keyCn: '侧压压力', keyMic: 'Side Press Force', keyVn: 'Lực ép bên', valueCn: '60T', valueMic: '60T', valueRu: '60 т', keyRu: 'Усилие бокового пресса' },
+          { keyCn: '侧压油缸', keyMic: 'Side Cylinder', keyVn: 'Xi-lanh ép bên', valueCn: '8支*HOB63*150LA', valueMic: '8×HOB63×150LA', valueRu: '8 × HOB63 × 150LA', keyRu: 'Боковой цилиндр' },
+          { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '4kW', valueMic: '4kW', valueRu: '4 кВт', keyRu: 'Мощность' },
+          { keyCn: '电压', keyMic: 'Voltage', keyVn: 'Điện áp', valueCn: '380V 50HZ 3P', valueMic: '380V 50HZ 3P', valueRu: '380 В, 50 Гц, 3 фазы', keyRu: 'Напряжение' },
+          { keyCn: '配置', keyMic: 'Configuration', keyVn: 'Cấu hình', valueCn: '配龙门机下料；拼板夹300个；喷防锈漆；风炮2个', valueMic: 'Beam-saw cutting; 300 panel clamps; anti-rust paint; 2 air guns', valueVn: 'Cắt bằng máy portal; 300 kẹp ghép; sơn chống gỉ; 2 súng hơi', valueRu: 'Раскрой на балочной пиле; 300 зажимов; антикоррозийная краска; 2 пневмопистолета', keyRu: 'Комплектация' }
         ],
         features: []
       }
@@ -1502,7 +1528,7 @@ export const productSeries: ProductSeries[] = [
         specs: [
           { keyCn: '最大组合尺寸', keyMic: 'Max. Combination Size', keyVn: 'Kích thước ghép tối đa', valueCn: '1220×2440mm', valueMic: '1220×2440mm', valueRu: '1220 × 2440 мм', keyRu: 'Максимальный размер заготовки' },
           { keyCn: '液压电机功率', keyMic: 'Hydraulic Motor Power', keyVn: 'Công suất động cơ thủy lực', valueCn: '2.2kW', valueMic: '2.2kW', valueRu: '2,2 кВт', keyRu: 'Мощность гидравлического двигателя' },
-          { keyCn: '重量', keyMic: 'Weight', keyVn: 'Trọng lượng', valueCn: '约2000kg', valueMic: 'Approx. 2000kg', valueVn: 'Khoảng 2000kg', valueRu: 'ок. 2000 кг', keyRu: 'Масса' },
+          { keyCn: '重量约', keyMic: 'Approx. Weight', keyVn: 'Trọng lượng (khoảng)', valueCn: '2000kg', valueMic: '2000kg', valueVn: '2000kg', valueRu: '2000 кг', keyRu: 'Вес (прибл.)' },
           { keyCn: '正压油缸', keyMic: 'Front Pressing Cylinders', keyVn: 'Xi-lanh ép thuận', valueCn: '4条', valueMic: '4 Pcs', valueVn: '4 thanh', valueRu: '4 шт.', keyRu: 'Цилиндры прямого прессования' },
           { keyCn: '侧压油缸', keyMic: 'Side Pressing Cylinders', keyVn: 'Xi-lanh ép ngang', valueCn: '3条', valueMic: '3 Pcs', valueVn: '3 thanh', valueRu: '3 шт.', keyRu: 'Цилиндры бокового прессования' },
           { keyCn: '单面或双面', keyMic: 'Single/Double Sided', keyVn: 'Một mặt hoặc hai mặt', valueCn: '双面', valueMic: 'Double-sided', valueVn: 'Hai mặt', valueRu: 'Двусторонний', keyRu: 'Односторонний / двусторонний' },
@@ -1910,8 +1936,8 @@ export const productSeries: ProductSeries[] = [
           { keyCn: '刀架', keyMic: 'Tool Rest', keyVn: 'Bộ gốc dao', valueCn: '单刀架（不含刀具）', valueMic: 'Single Tool Rest (excl. tools)', valueVn: 'Một gốc dao (không kèm dao)', valueRu: 'Однопозиционные каретки (без резцов)', keyRu: 'Каретка резцедержателя' },
           { keyCn: '中心圈', keyMic: 'Steady Rest', keyVn: 'Chống tâm', valueCn: '不含', valueMic: 'Not included', valueVn: 'Không bao gồm', valueRu: 'Не входит', keyRu: 'Цанговый суппорт' },
           { keyCn: '电压', keyMic: 'Voltage', keyVn: 'Điện áp', valueCn: '380V 50Hz 3相', valueMic: '380V 50Hz 3-phase', valueVn: '380V 50Hz 3 pha', valueRu: '380 В, 50 Гц, 3 фазы', keyRu: 'Напряжение' },
-          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions (approx.)', keyVn: 'Kích thước tổng thể (khoảng)', valueCn: '约2700×850×1500mm', valueMic: 'Approx. 2700×850×1500mm', valueVn: 'Khoảng 2700×850×1500 mm', valueRu: 'Около 2700 × 850 × 1500 мм', keyRu: 'Габариты (прибл.)' },
-          { keyCn: '重量约', keyMic: 'Weight (approx.)', keyVn: 'Trọng lượng (khoảng)', valueCn: '约430kg', valueMic: 'Approx. 430kg', valueVn: 'Khoảng 430 kg', valueRu: 'Около 430 кг', keyRu: 'Вес (прибл.)' },
+          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions (Approx.)', keyVn: 'Kích thước tổng thể (khoảng)', valueCn: '2700×850×1500mm', valueMic: '2700×850×1500mm', valueVn: '2700×850×1500mm', valueRu: '2700 × 850 × 1500 мм', keyRu: 'Габариты (прибл.)' },
+          { keyCn: '重量约', keyMic: 'Approx. Weight', keyVn: 'Trọng lượng (khoảng)', valueCn: '430kg', valueMic: '430kg', valueVn: '430kg', valueRu: '430 кг', keyRu: 'Вес (прибл.)' },
           { keyCn: '随机附件', keyMic: 'Standard Accessories', keyVn: 'Phụ kiện đi kèm', valueCn: '靠模直角支架2个、扳手', valueMic: '2 pcs right-angle steady-rest brackets, wrench', valueVn: '2 giá đỡ góc vuông, cẩn vặt', valueRu: '2 кронштейна угловых упоров, гаечный ключ', keyRu: 'Стандартные принадлежности' },
           { keyCn: '功率', keyMic: 'Power', keyVn: 'Công suất', valueCn: '2.2kW×4', valueMic: '2.2kW×4', valueVn: '2,2kW×4', valueRu: '2,2 кВт × 4', keyRu: 'Мощность' }
         ],
@@ -1940,8 +1966,8 @@ export const productSeries: ProductSeries[] = [
           { keyCn: '主轴转速', keyMic: 'Spindle Speed', keyVn: 'Tốc độ trục chính', valueCn: '6000r/min', valueMic: '6000r/min', valueVn: '6000 vòng/phút', valueRu: '6000 об/мин', keyRu: 'Частота вращения шпинделя' },
           { keyCn: '电机功率', keyMic: 'Motor Power', keyVn: 'Công suất động cơ', valueCn: '9.2kW', valueMic: '9.2kW', valueVn: '9,2 kW', valueRu: '9,2 кВт', keyRu: 'Мощность двигателя' },
           { keyCn: '电压', keyMic: 'Voltage', keyVn: 'Điện áp', valueCn: '380V 50Hz 3PH', valueMic: '380V 50Hz 3PH', valueVn: '380V 50Hz 3 pha', valueRu: '380 В, 50 Гц, 3 фазы', keyRu: 'Напряжение' },
-          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions (approx.)', keyVn: 'Kích thước tổng thể (khoảng)', valueCn: '约1900×1000×1400mm', valueMic: '1900×1000×1400mm', valueVn: '1900×1000×1400 mm', valueRu: '1900×1000×1400 мм', keyRu: 'Габариты (прибл.)' },
-          { keyCn: '重量约', keyMic: 'Weight (approx.)', keyVn: 'Trọng lượng (khoảng)', valueCn: '约400kg', valueMic: '400kg', valueVn: '400 kg', valueRu: '400 кг', keyRu: 'Вес (прибл.)' }
+          { keyCn: '外形尺寸约', keyMic: 'Overall Dimensions (Approx.)', keyVn: 'Kích thước tổng thể (khoảng)', valueCn: '1900×1000×1400mm', valueMic: '1900×1000×1400mm', valueVn: '1900×1000×1400mm', valueRu: '1900 × 1000 × 1400 мм', keyRu: 'Габариты (прибл.)' },
+          { keyCn: '重量约', keyMic: 'Approx. Weight', keyVn: 'Trọng lượng (khoảng)', valueCn: '400kg', valueMic: '400kg', valueVn: '400kg', valueRu: '400 кг', keyRu: 'Вес (прибл.)' }
         ],
         features: []
       }
